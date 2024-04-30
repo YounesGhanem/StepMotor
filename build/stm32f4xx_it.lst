@@ -1,0 +1,320 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32f4xx_it.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.SysTick_Handler,"ax",%progbits
+  20              		.align	1
+  21              		.global	SysTick_Handler
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	SysTick_Handler:
+  27              	.LFB128:
+  28              		.file 1 "Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c"
+   1:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+   2:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   ******************************************************************************
+   3:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @file    stm32f4xx_it.c
+   4:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @date    13/05/2015 09:14:38
+   5:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @brief   Interrupt Service Routines.
+   6:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   ******************************************************************************
+   7:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *
+   8:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * COPYRIGHT(c) 2015 STMicroelectronics
+   9:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *
+  10:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  11:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * are permitted provided that the following conditions are met:
+  12:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  13:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *      this list of conditions and the following disclaimer.
+  14:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  15:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *      this list of conditions and the following disclaimer in the documentation
+  16:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *      and/or other materials provided with the distribution.
+  17:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  18:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *      may be used to endorse or promote products derived from this software
+  19:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *      without specific prior written permission.
+  20:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *
+  21:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  24:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  25:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  26:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  27:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  28:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  29:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  30:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 2
+
+
+  31:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   *
+  32:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   ******************************************************************************
+  33:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   */
+  34:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /* Includes ------------------------------------------------------------------*/
+  35:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** #include "stm32f4xx_it.h"
+  36:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** #include "xnucleoihm02a1_interface.h"
+  37:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** #include "example_usart.h"
+  38:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  39:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  40:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @addtogroup MicrosteppingMotor_Example
+  41:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @{
+  42:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   */
+  43:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  44:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  45:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @addtogroup STM32F4XX_IT
+  46:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @{
+  47:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   */
+  48:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  49:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /******************************************************************************/
+  50:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
+  51:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /******************************************************************************/
+  52:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  53:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  54:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @addtogroup STM32F4XX_IT_Exported_Functions
+  55:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   * @{
+  56:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   */
+  57:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  58:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  59:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** * @brief This function handles System tick timer.
+  60:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** */
+  61:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** void SysTick_Handler(void)
+  62:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** {
+  29              		.loc 1 62 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 7, -8
+  37              		.cfi_offset 14, -4
+  38 0002 00AF     		add	r7, sp, #0
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_register 7
+  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_IncTick();
+  41              		.loc 1 63 3
+  42 0004 FFF7FEFF 		bl	HAL_IncTick
+  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_SYSTICK_IRQHandler();
+  43              		.loc 1 64 3
+  44 0008 FFF7FEFF 		bl	HAL_SYSTICK_IRQHandler
+  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** }
+  45              		.loc 1 65 1
+  46 000c 00BF     		nop
+  47 000e 80BD     		pop	{r7, pc}
+  48              		.cfi_endproc
+  49              	.LFE128:
+  51              		.section	.text.EXTI1_IRQHandler,"ax",%progbits
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 3
+
+
+  52              		.align	1
+  53              		.global	EXTI1_IRQHandler
+  54              		.syntax unified
+  55              		.thumb
+  56              		.thumb_func
+  58              	EXTI1_IRQHandler:
+  59              	.LFB129:
+  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /******************************************************************************/
+  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /* STM32F4xx Peripheral Interrupt Handlers                                    */
+  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
+  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /* For the available peripheral interrupt handler names,                      */
+  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /* please refer to the startup file (startup_stm32f4xx.s).                    */
+  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /******************************************************************************/
+  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** * @brief This function handles EXTI Line1 interrupt.
+  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** */
+  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** void EXTI1_IRQHandler(void)
+  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** {
+  60              		.loc 1 78 1
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 1, uses_anonymous_args = 0
+  64 0000 80B5     		push	{r7, lr}
+  65              	.LCFI2:
+  66              		.cfi_def_cfa_offset 8
+  67              		.cfi_offset 7, -8
+  68              		.cfi_offset 14, -4
+  69 0002 00AF     		add	r7, sp, #0
+  70              	.LCFI3:
+  71              		.cfi_def_cfa_register 7
+  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
+  72              		.loc 1 79 3
+  73 0004 0220     		movs	r0, #2
+  74 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** }
+  75              		.loc 1 80 1
+  76 000a 00BF     		nop
+  77 000c 80BD     		pop	{r7, pc}
+  78              		.cfi_endproc
+  79              	.LFE129:
+  81              		.section	.text.EXTI0_IRQHandler,"ax",%progbits
+  82              		.align	1
+  83              		.global	EXTI0_IRQHandler
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  88              	EXTI0_IRQHandler:
+  89              	.LFB130:
+  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** * @brief This function handles EXTI Line0 interrupt.
+  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** */
+  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** void EXTI0_IRQHandler(void)
+  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** {
+  90              		.loc 1 86 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 4
+
+
+  91              		.cfi_startproc
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 1, uses_anonymous_args = 0
+  94 0000 80B5     		push	{r7, lr}
+  95              	.LCFI4:
+  96              		.cfi_def_cfa_offset 8
+  97              		.cfi_offset 7, -8
+  98              		.cfi_offset 14, -4
+  99 0002 00AF     		add	r7, sp, #0
+ 100              	.LCFI5:
+ 101              		.cfi_def_cfa_register 7
+  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
+ 102              		.loc 1 87 3
+ 103 0004 0120     		movs	r0, #1
+ 104 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** }
+ 105              		.loc 1 88 1
+ 106 000a 00BF     		nop
+ 107 000c 80BD     		pop	{r7, pc}
+ 108              		.cfi_endproc
+ 109              	.LFE130:
+ 111              		.section	.text.USART2_IRQHandler,"ax",%progbits
+ 112              		.align	1
+ 113              		.global	USART2_IRQHandler
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 118              	USART2_IRQHandler:
+ 119              	.LFB131:
+  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** * @brief This function handles USART2 global interrupt.
+  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** */
+  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** void USART2_IRQHandler(void)
+  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** {
+ 120              		.loc 1 94 1
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 1, uses_anonymous_args = 0
+ 124 0000 80B5     		push	{r7, lr}
+ 125              	.LCFI6:
+ 126              		.cfi_def_cfa_offset 8
+ 127              		.cfi_offset 7, -8
+ 128              		.cfi_offset 14, -4
+ 129 0002 00AF     		add	r7, sp, #0
+ 130              	.LCFI7:
+ 131              		.cfi_def_cfa_register 7
+  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_UART_IRQHandler(&huart2);
+ 132              		.loc 1 95 3
+ 133 0004 0348     		ldr	r0, .L5
+ 134 0006 FFF7FEFF 		bl	HAL_UART_IRQHandler
+  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   USART_ITCharManager(&huart2);
+ 135              		.loc 1 96 3
+ 136 000a 0248     		ldr	r0, .L5
+ 137 000c FFF7FEFF 		bl	USART_ITCharManager
+  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** }
+ 138              		.loc 1 97 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 5
+
+
+ 139 0010 00BF     		nop
+ 140 0012 80BD     		pop	{r7, pc}
+ 141              	.L6:
+ 142              		.align	2
+ 143              	.L5:
+ 144 0014 00000000 		.word	huart2
+ 145              		.cfi_endproc
+ 146              	.LFE131:
+ 148              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 149              		.align	1
+ 150              		.global	EXTI15_10_IRQHandler
+ 151              		.syntax unified
+ 152              		.thumb
+ 153              		.thumb_func
+ 155              	EXTI15_10_IRQHandler:
+ 156              	.LFB132:
+  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** 
+  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** /**
+ 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** * @brief This function handles EXTI Line[15:10] interrupts.
+ 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** */
+ 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** void EXTI15_10_IRQHandler(void)
+ 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** {
+ 157              		.loc 1 103 1
+ 158              		.cfi_startproc
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 1, uses_anonymous_args = 0
+ 161 0000 80B5     		push	{r7, lr}
+ 162              	.LCFI8:
+ 163              		.cfi_def_cfa_offset 8
+ 164              		.cfi_offset 7, -8
+ 165              		.cfi_offset 14, -4
+ 166 0002 00AF     		add	r7, sp, #0
+ 167              	.LCFI9:
+ 168              		.cfi_def_cfa_register 7
+ 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
+ 169              		.loc 1 104 3
+ 170 0004 4FF40050 		mov	r0, #8192
+ 171 0008 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_it.c **** }
+ 172              		.loc 1 105 1
+ 173 000c 00BF     		nop
+ 174 000e 80BD     		pop	{r7, pc}
+ 175              		.cfi_endproc
+ 176              	.LFE132:
+ 178              		.text
+ 179              	.Letext0:
+ 180              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 181              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 182              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 183              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 184              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 185              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 186              		.file 8 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_it.c
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:20     .text.SysTick_Handler:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:26     .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:52     .text.EXTI1_IRQHandler:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:58     .text.EXTI1_IRQHandler:00000000 EXTI1_IRQHandler
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:82     .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:88     .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:112    .text.USART2_IRQHandler:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:118    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:144    .text.USART2_IRQHandler:00000014 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:149    .text.EXTI15_10_IRQHandler:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccKHK09c.s:155    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+HAL_SYSTICK_IRQHandler
+HAL_GPIO_EXTI_IRQHandler
+HAL_UART_IRQHandler
+USART_ITCharManager
+huart2

@@ -1,0 +1,418 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"params.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	MotorParameterInitData
+  20              		.section	.rodata.MotorParameterInitData,"a"
+  21              		.align	2
+  24              	MotorParameterInitData:
+  25 0000 00001041 		.word	1091567616
+  26 0004 00004843 		.word	1128792064
+  27 0008 9A99D93F 		.word	1071225242
+  28 000c 0AD74340 		.word	1078187786
+  29 0010 00007043 		.word	1131413504
+  30 0014 0000C843 		.word	1137180672
+  31 0018 0000C843 		.word	1137180672
+  32 001c 0000A043 		.word	1134559232
+  33 0020 00000000 		.word	0
+  34 0024 CDAC1644 		.word	1142336717
+  35 0028 0AD74340 		.word	1078187786
+  36 002c 0AD74340 		.word	1078187786
+  37 0030 0AD74340 		.word	1078187786
+  38 0034 0AD74340 		.word	1078187786
+  39 0038 7B147642 		.word	1115034747
+  40 003c 689ACD39 		.word	969775720
+  41 0040 3598283A 		.word	975738933
+  42 0044 3598283A 		.word	975738933
+  43 0048 00       		.byte	0
+  44 0049 000000   		.space	3
+  45 004c 00605245 		.word	1163026432
+  46 0050 00403F45 		.word	1161773056
+  47 0054 07       		.byte	7
+  48 0055 FF       		.byte	-1
+  49 0056 882E     		.short	11912
+  50 0058 00001041 		.word	1091567616
+  51 005c 00004843 		.word	1128792064
+  52 0060 9A99D93F 		.word	1071225242
+  53 0064 0AD74340 		.word	1078187786
+  54 0068 00007043 		.word	1131413504
+  55 006c 0000C843 		.word	1137180672
+  56 0070 0000C843 		.word	1137180672
+  57 0074 0000A043 		.word	1134559232
+  58 0078 00000000 		.word	0
+  59 007c CDAC1644 		.word	1142336717
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 2
+
+
+  60 0080 0AD74340 		.word	1078187786
+  61 0084 0AD74340 		.word	1078187786
+  62 0088 0AD74340 		.word	1078187786
+  63 008c 0AD74340 		.word	1078187786
+  64 0090 7B147642 		.word	1115034747
+  65 0094 689ACD39 		.word	969775720
+  66 0098 3598283A 		.word	975738933
+  67 009c 3598283A 		.word	975738933
+  68 00a0 00       		.byte	0
+  69 00a1 000000   		.space	3
+  70 00a4 00605245 		.word	1163026432
+  71 00a8 00403F45 		.word	1161773056
+  72 00ac 07       		.byte	7
+  73 00ad FF       		.byte	-1
+  74 00ae 882E     		.short	11912
+  75 00b0 00001041 		.word	1091567616
+  76 00b4 00004843 		.word	1128792064
+  77 00b8 9A99D93F 		.word	1071225242
+  78 00bc 0AD74340 		.word	1078187786
+  79 00c0 00007043 		.word	1131413504
+  80 00c4 0000C843 		.word	1137180672
+  81 00c8 0000C843 		.word	1137180672
+  82 00cc 0000A043 		.word	1134559232
+  83 00d0 00000000 		.word	0
+  84 00d4 CDAC1644 		.word	1142336717
+  85 00d8 0AD74340 		.word	1078187786
+  86 00dc 0AD74340 		.word	1078187786
+  87 00e0 0AD74340 		.word	1078187786
+  88 00e4 0AD74340 		.word	1078187786
+  89 00e8 7B147642 		.word	1115034747
+  90 00ec 689ACD39 		.word	969775720
+  91 00f0 3598283A 		.word	975738933
+  92 00f4 3598283A 		.word	975738933
+  93 00f8 00       		.byte	0
+  94 00f9 000000   		.space	3
+  95 00fc 00605245 		.word	1163026432
+  96 0100 00403F45 		.word	1161773056
+  97 0104 07       		.byte	7
+  98 0105 FF       		.byte	-1
+  99 0106 882E     		.short	11912
+ 100 0108 00001041 		.word	1091567616
+ 101 010c 0000C843 		.word	1137180672
+ 102 0110 9A99D93F 		.word	1071225242
+ 103 0114 0AD74340 		.word	1078187786
+ 104 0118 00007043 		.word	1131413504
+ 105 011c 0000C843 		.word	1137180672
+ 106 0120 0000C843 		.word	1137180672
+ 107 0124 0000A043 		.word	1134559232
+ 108 0128 00000000 		.word	0
+ 109 012c CDAC1644 		.word	1142336717
+ 110 0130 0AD74340 		.word	1078187786
+ 111 0134 0AD74340 		.word	1078187786
+ 112 0138 0AD74340 		.word	1078187786
+ 113 013c 0AD74340 		.word	1078187786
+ 114 0140 7B147642 		.word	1115034747
+ 115 0144 689ACD39 		.word	969775720
+ 116 0148 3598283A 		.word	975738933
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 3
+
+
+ 117 014c 3598283A 		.word	975738933
+ 118 0150 00       		.byte	0
+ 119 0151 000000   		.space	3
+ 120 0154 00605245 		.word	1163026432
+ 121 0158 00403F45 		.word	1161773056
+ 122 015c 07       		.byte	7
+ 123 015d FF       		.byte	-1
+ 124 015e 882E     		.short	11912
+ 125 0160 00001041 		.word	1091567616
+ 126 0164 0000C843 		.word	1137180672
+ 127 0168 9A99D93F 		.word	1071225242
+ 128 016c 0AD74340 		.word	1078187786
+ 129 0170 00007043 		.word	1131413504
+ 130 0174 0000C843 		.word	1137180672
+ 131 0178 0000C843 		.word	1137180672
+ 132 017c 0000A043 		.word	1134559232
+ 133 0180 00000000 		.word	0
+ 134 0184 CDAC1644 		.word	1142336717
+ 135 0188 0AD74340 		.word	1078187786
+ 136 018c 0AD74340 		.word	1078187786
+ 137 0190 0AD74340 		.word	1078187786
+ 138 0194 0AD74340 		.word	1078187786
+ 139 0198 7B147642 		.word	1115034747
+ 140 019c 689ACD39 		.word	969775720
+ 141 01a0 3598283A 		.word	975738933
+ 142 01a4 3598283A 		.word	975738933
+ 143 01a8 00       		.byte	0
+ 144 01a9 000000   		.space	3
+ 145 01ac 00605245 		.word	1163026432
+ 146 01b0 00403F45 		.word	1161773056
+ 147 01b4 07       		.byte	7
+ 148 01b5 FF       		.byte	-1
+ 149 01b6 882E     		.short	11912
+ 150 01b8 00001041 		.word	1091567616
+ 151 01bc 0000C843 		.word	1137180672
+ 152 01c0 9A99D93F 		.word	1071225242
+ 153 01c4 0AD74340 		.word	1078187786
+ 154 01c8 00007043 		.word	1131413504
+ 155 01cc 0000C843 		.word	1137180672
+ 156 01d0 0000C843 		.word	1137180672
+ 157 01d4 0000A043 		.word	1134559232
+ 158 01d8 00000000 		.word	0
+ 159 01dc CDAC1644 		.word	1142336717
+ 160 01e0 0AD74340 		.word	1078187786
+ 161 01e4 0AD74340 		.word	1078187786
+ 162 01e8 0AD74340 		.word	1078187786
+ 163 01ec 0AD74340 		.word	1078187786
+ 164 01f0 7B147642 		.word	1115034747
+ 165 01f4 689ACD39 		.word	969775720
+ 166 01f8 3598283A 		.word	975738933
+ 167 01fc 3598283A 		.word	975738933
+ 168 0200 00       		.byte	0
+ 169 0201 000000   		.space	3
+ 170 0204 00605245 		.word	1163026432
+ 171 0208 00403F45 		.word	1161773056
+ 172 020c 07       		.byte	7
+ 173 020d FF       		.byte	-1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 4
+
+
+ 174 020e 882E     		.short	11912
+ 175 0210 00001041 		.word	1091567616
+ 176 0214 0000C843 		.word	1137180672
+ 177 0218 9A99D93F 		.word	1071225242
+ 178 021c 0AD74340 		.word	1078187786
+ 179 0220 00007043 		.word	1131413504
+ 180 0224 0000C843 		.word	1137180672
+ 181 0228 0000C843 		.word	1137180672
+ 182 022c 0000A043 		.word	1134559232
+ 183 0230 00000000 		.word	0
+ 184 0234 CDAC1644 		.word	1142336717
+ 185 0238 0AD74340 		.word	1078187786
+ 186 023c 0AD74340 		.word	1078187786
+ 187 0240 0AD74340 		.word	1078187786
+ 188 0244 0AD74340 		.word	1078187786
+ 189 0248 7B147642 		.word	1115034747
+ 190 024c 689ACD39 		.word	969775720
+ 191 0250 3598283A 		.word	975738933
+ 192 0254 3598283A 		.word	975738933
+ 193 0258 00       		.byte	0
+ 194 0259 000000   		.space	3
+ 195 025c 00605245 		.word	1163026432
+ 196 0260 00403F45 		.word	1161773056
+ 197 0264 07       		.byte	7
+ 198 0265 FF       		.byte	-1
+ 199 0266 882E     		.short	11912
+ 200 0268 00001041 		.word	1091567616
+ 201 026c 0000C843 		.word	1137180672
+ 202 0270 9A99D93F 		.word	1071225242
+ 203 0274 0AD74340 		.word	1078187786
+ 204 0278 00007043 		.word	1131413504
+ 205 027c 0000C843 		.word	1137180672
+ 206 0280 0000C843 		.word	1137180672
+ 207 0284 0000A043 		.word	1134559232
+ 208 0288 00000000 		.word	0
+ 209 028c CDAC1644 		.word	1142336717
+ 210 0290 0AD74340 		.word	1078187786
+ 211 0294 0AD74340 		.word	1078187786
+ 212 0298 0AD74340 		.word	1078187786
+ 213 029c 0AD74340 		.word	1078187786
+ 214 02a0 7B147642 		.word	1115034747
+ 215 02a4 689ACD39 		.word	969775720
+ 216 02a8 3598283A 		.word	975738933
+ 217 02ac 3598283A 		.word	975738933
+ 218 02b0 00       		.byte	0
+ 219 02b1 000000   		.space	3
+ 220 02b4 00605245 		.word	1163026432
+ 221 02b8 00403F45 		.word	1161773056
+ 222 02bc 07       		.byte	7
+ 223 02bd FF       		.byte	-1
+ 224 02be 882E     		.short	11912
+ 225              		.section	.text.GetMotorParameterInitData,"ax",%progbits
+ 226              		.align	1
+ 227              		.global	GetMotorParameterInitData
+ 228              		.syntax unified
+ 229              		.thumb
+ 230              		.thumb_func
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 5
+
+
+ 232              	GetMotorParameterInitData:
+ 233              	.LFB0:
+ 234              		.file 1 "Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c"
+   1:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+   2:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   ******************************************************************************
+   3:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @file    params.c
+   4:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @author  IPD SYSTEM LAB & TECH MKTG
+   5:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @version V0.0.1
+   6:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @date    04-June-2015
+   7:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @brief   This file contains the parameters for the used stepper motors.
+   8:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   ******************************************************************************
+   9:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @attention
+  10:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *
+  11:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * <h2><center>&copy; COPYRIGHT(c) 2014 STMicroelectronics</center></h2>
+  12:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *
+  13:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  14:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * are permitted provided that the following conditions are met:
+  15:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  16:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *      this list of conditions and the following disclaimer.
+  17:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  18:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *      this list of conditions and the following disclaimer in the documentation
+  19:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *      and/or other materials provided with the distribution.
+  20:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  21:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *      may be used to endorse or promote products derived from this software
+  22:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *      without specific prior written permission.
+  23:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *
+  24:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  27:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  28:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  29:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  30:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  31:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  32:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  33:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  34:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *
+  35:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   ******************************************************************************
+  36:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */ 
+  37:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  38:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /* Includes ------------------------------------------------------------------*/
+  39:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** #include "params.h"
+  40:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** #include "xnucleoihm02a1.h"
+  41:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  42:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+  43:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @addtogroup   MotionControl
+  44:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @{
+  45:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+  46:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  47:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+  48:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @addtogroup MicrosteppingMotor_Example
+  49:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @{
+  50:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+  51:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  52:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+  53:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @addtogroup Attached_Motor_Parameters
+  54:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @{
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 6
+
+
+  55:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+  56:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  57:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+  58:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @addtogroup Parameters_Exported_Constants
+  59:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @{
+  60:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+  61:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+  62:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @brief  This array contains the initial parameters for the motors that are
+  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   *         linked with each L6470 mounted on each stacked X-NUCLEO-IHM02A1.
+  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** const MotorParameterData_t MotorParameterInitData[EXPBRD_MOUNTED_NR_MAX][L6470DAISYCHAINSIZE] = {
+  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   {
+  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 200, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 200, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   },
+  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   {
+  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 200, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 400, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   },
+  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   {
+  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 400, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 400, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   },
+  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   {
+  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 400, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****     {9.0, 400, 1.7, 3.06, 240.0, 400.0, 400.0, 320.0, 0.0, 602.7, 3.06, 3.06,\
+  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****       3.06, 3.06, 61.52, 392.1569e-6, 643.1372e-6, 643.1372e-6, 0,\
+  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****         3.06*1000*1.10, 3.06*1000*1.00, MICROSTEP_1_128, 0xFF, 0x2E88},
+  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   },
+  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** };
+ 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   
+ 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+ 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @}
+ 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */    /* Parameters_Exported_Constants */
+ 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+ 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+ 106:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @addtogroup Parameters_Exported_Functions
+ 107:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @{
+ 108:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+ 109:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** 
+ 110:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** /**
+ 111:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @brief  Return the initial motor parameters.
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 7
+
+
+ 112:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @param  index   The index inside the array of parameters to point the right data.
+ 113:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   * @retval MotorParameterData_t*   The pointer to the data structure of parameters.
+ 114:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   */
+ 115:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** MotorParameterData_t *GetMotorParameterInitData(void)
+ 116:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** {
+ 235              		.loc 1 116 1
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 0
+ 238              		@ frame_needed = 1, uses_anonymous_args = 0
+ 239              		@ link register save eliminated.
+ 240 0000 80B4     		push	{r7}
+ 241              	.LCFI0:
+ 242              		.cfi_def_cfa_offset 4
+ 243              		.cfi_offset 7, -4
+ 244 0002 00AF     		add	r7, sp, #0
+ 245              	.LCFI1:
+ 246              		.cfi_def_cfa_register 7
+ 117:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c ****   return (MotorParameterData_t*)(MotorParameterInitData);
+ 247              		.loc 1 117 10
+ 248 0004 024B     		ldr	r3, .L3
+ 118:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/params.c **** }
+ 249              		.loc 1 118 1
+ 250 0006 1846     		mov	r0, r3
+ 251 0008 BD46     		mov	sp, r7
+ 252              	.LCFI2:
+ 253              		.cfi_def_cfa_register 13
+ 254              		@ sp needed
+ 255 000a 5DF8047B 		ldr	r7, [sp], #4
+ 256              	.LCFI3:
+ 257              		.cfi_restore 7
+ 258              		.cfi_def_cfa_offset 0
+ 259 000e 7047     		bx	lr
+ 260              	.L4:
+ 261              		.align	2
+ 262              	.L3:
+ 263 0010 00000000 		.word	MotorParameterInitData
+ 264              		.cfi_endproc
+ 265              	.LFE0:
+ 267              		.text
+ 268              	.Letext0:
+ 269              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 270              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 271              		.file 4 "Drivers/BSP/Components/Common/microstepping_motor.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 params.c
+C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s:24     .rodata.MotorParameterInitData:00000000 MotorParameterInitData
+C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s:21     .rodata.MotorParameterInitData:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s:226    .text.GetMotorParameterInitData:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s:232    .text.GetMotorParameterInitData:00000000 GetMotorParameterInitData
+C:\Users\ep_ygh\AppData\Local\Temp\ccjKKbbg.s:263    .text.GetMotorParameterInitData:00000010 $d
+
+NO UNDEFINED SYMBOLS

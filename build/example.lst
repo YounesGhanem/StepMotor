@@ -1,0 +1,1475 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"example.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.rodata
+  20              		.align	2
+  21              	.LC0:
+  22 0000 496E6974 		.ascii	"Initial values for registers:\015\012\000"
+  22      69616C20 
+  22      76616C75 
+  22      65732066 
+  22      6F722072 
+  23              		.align	2
+  24              	.LC1:
+  25 0020 43757374 		.ascii	"Custom values for registers:\015\012\000"
+  25      6F6D2076 
+  25      616C7565 
+  25      7320666F 
+  25      72207265 
+  26              		.section	.text.MicrosteppingMotor_Example_01,"ax",%progbits
+  27              		.align	1
+  28              		.global	MicrosteppingMotor_Example_01
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	MicrosteppingMotor_Example_01:
+  34              	.LFB128:
+  35              		.file 1 "Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c"
+   1:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+   2:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   ******************************************************************************
+   3:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @file       example.c
+   4:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @date       01/10/2014 12:00:00
+   5:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief      Example functions for the X-NUCLEO-IHM02A1
+   6:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** ******************************************************************************
+   7:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *
+   8:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * COPYRIGHT(c) 2014 STMicroelectronics
+   9:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *
+  10:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  11:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * are permitted provided that the following conditions are met:
+  12:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  13:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *      this list of conditions and the following disclaimer.
+  14:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  15:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *      this list of conditions and the following disclaimer in the documentation
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 2
+
+
+  16:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *      and/or other materials provided with the distribution.
+  17:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  18:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *      may be used to endorse or promote products derived from this software
+  19:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *      without specific prior written permission.
+  20:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *
+  21:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  24:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  25:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  26:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  27:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  28:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  29:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  30:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  31:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *
+  32:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   ******************************************************************************
+  33:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  34:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  35:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #include "example.h"
+  36:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #include "example_usart.h"
+  37:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #include "params.h"
+  38:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #include "xnucleoihm02a1.h"
+  39:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  40:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  41:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @addtogroup MicrosteppingMotor_Example
+  42:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @{
+  43:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  44:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  45:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  46:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @addtogroup Example
+  47:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @{
+  48:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  49:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  50:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  51:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @defgroup   ExamplePrivateFunctions
+  52:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief      Example Private Functions.
+  53:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @{
+  54:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  55:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  56:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** uint16_t BSP_ST1S14_PGOOD(void);
+  57:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** uint32_t usrPow(uint8_t base, uint8_t exponent);
+  58:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  59:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  60:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @}
+  61:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */ /* End of ExamplePrivateFunctions */
+  62:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @addtogroup ExamplePrivateFunctions
+  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief      Example Private Functions.
+  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @{
+  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @addtogroup ExampleExportedFunctions
+  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief      Example Exported Functions.
+  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @{
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 3
+
+
+  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief  Example no.1 for X-NUCLEO-IHM02A1.
+  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @note	Perform a complete motor axis revolution as MPR_1 equal movements,
+  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			for each L6470 mounted on all stacked X-NUCLEO-IHM02A1.
+  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			At the end of each movement there is a delay of DELAY_1 ms.
+  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *     	After each motor has performed a complete revolution there is a
+  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			delay of DELAY_2 ms.
+  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			Now all motors for each X-NUCLEO-IHM02A1 will start at the same
+  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			time.
+  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			They are going to run at INIT_SPEED for DELAY_3 ms.
+  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			After that all motors for each X-NUCLEO-IHM02A1 will get a HardStop
+  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			at the same time.
+  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			Perform a complete motor axis revolution as MPR_2 equal movements,
+  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			for each L6470 mounted on all stacked X-NUCLEO-IHM02A1.
+  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			At the end of each movement there is a delay of DELAY_1 ms.
+  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			After that all motors for each X-NUCLEO-IHM02A1 will get a HardHiZ
+  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   *			at the same time.
+  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** void MicrosteppingMotor_Example_01(void)
+  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** {
+  36              		.loc 1 94 1
+  37              		.cfi_startproc
+  38              		@ args = 0, pretend = 0, frame = 32
+  39              		@ frame_needed = 1, uses_anonymous_args = 0
+  40 0000 90B5     		push	{r4, r7, lr}
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 12
+  43              		.cfi_offset 4, -12
+  44              		.cfi_offset 7, -8
+  45              		.cfi_offset 14, -4
+  46 0002 89B0     		sub	sp, sp, #36
+  47              	.LCFI1:
+  48              		.cfi_def_cfa_offset 48
+  49 0004 00AF     		add	r7, sp, #0
+  50              	.LCFI2:
+  51              		.cfi_def_cfa_register 7
+  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define MPR_1     4			  //!< Motor Movements Per Revolution 1st option
+  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define MPR_2     8			  //!< Motor Movements Per Revolution 2nd option
+  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define DELAY_1   1000		//!< Delay time 1st option
+  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define DELAY_2   2500		//!< Delay time 2nd option
+  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define DELAY_3   10000   //!< Delay time 3rd option
+ 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint32_t Step;
+ 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint32_t Speed;
+ 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint8_t MovementPerRevolution;
+ 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint8_t i;
+ 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint8_t board, device;
+ 106:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 107:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint8_t id;
+ 108:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 109:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   StepperMotorBoardHandle_t *StepperMotorBoardHandle;
+ 110:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   MotorParameterData_t *MotorParameterDataGlobal, *MotorParameterDataSingle;
+ 111:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 112:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   #ifdef NUCLEO_USE_USART
+ 113:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   USART_Transmit(&huart2, (uint8_t *)"Initial values for registers:\r\n");
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 4
+
+
+  52              		.loc 1 113 3
+  53 0006 A549     		ldr	r1, .L30
+  54 0008 A548     		ldr	r0, .L30+4
+  55 000a FFF7FEFF 		bl	USART_Transmit
+ 114:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   USART_PrintAllRegisterValues();
+  56              		.loc 1 114 3
+  57 000e FFF7FEFF 		bl	USART_PrintAllRegisterValues
+ 115:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   #endif
+ 116:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 117:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   /* Setup each X-NUCLEO-IHM02A1 Expansion Board ******************************/
+ 118:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 119:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   /* Get the parameters for the motor connected with the 1st stepper motor driver of the 1st steppe
+ 120:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   MotorParameterDataGlobal = GetMotorParameterInitData();
+  58              		.loc 1 120 30
+  59 0012 FFF7FEFF 		bl	GetMotorParameterInitData
+  60 0016 7861     		str	r0, [r7, #20]
+ 121:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (id = 0; id < EXPBRD_MOUNTED_NR; id++)
+  61              		.loc 1 122 11
+  62 0018 0023     		movs	r3, #0
+  63 001a 3B77     		strb	r3, [r7, #28]
+  64              		.loc 1 122 3
+  65 001c 16E0     		b	.L2
+  66              	.L3:
+ 123:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 124:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle = BSP_GetExpansionBoardHandle(EXPBRD_ID(id));
+  67              		.loc 1 124 31 discriminator 3
+  68 001e 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
+  69 0020 1846     		mov	r0, r3
+  70 0022 FFF7FEFF 		bl	EXPBRD_ID
+  71 0026 0346     		mov	r3, r0
+  72 0028 1846     		mov	r0, r3
+  73 002a FFF7FEFF 		bl	BSP_GetExpansionBoardHandle
+  74 002e B861     		str	r0, [r7, #24]
+ 125:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     MotorParameterDataSingle = MotorParameterDataGlobal+(id*L6470DAISYCHAINSIZE);
+  75              		.loc 1 125 56 discriminator 3
+  76 0030 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
+  77 0032 B022     		movs	r2, #176
+  78 0034 02FB03F3 		mul	r3, r2, r3
+  79              		.loc 1 125 30 discriminator 3
+  80 0038 7A69     		ldr	r2, [r7, #20]
+  81 003a 1344     		add	r3, r3, r2
+  82 003c FB60     		str	r3, [r7, #12]
+ 126:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle->Config(MotorParameterDataSingle);
+  83              		.loc 1 126 28 discriminator 3
+  84 003e BB69     		ldr	r3, [r7, #24]
+  85 0040 5B68     		ldr	r3, [r3, #4]
+  86              		.loc 1 126 5 discriminator 3
+  87 0042 F868     		ldr	r0, [r7, #12]
+  88 0044 9847     		blx	r3
+  89              	.LVL0:
+ 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+  90              		.loc 1 122 42 discriminator 3
+  91 0046 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
+  92 0048 0133     		adds	r3, r3, #1
+  93 004a 3B77     		strb	r3, [r7, #28]
+  94              	.L2:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 5
+
+
+ 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+  95              		.loc 1 122 3 discriminator 1
+  96 004c 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
+  97 004e 002B     		cmp	r3, #0
+  98 0050 E5D0     		beq	.L3
+ 127:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 128:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 129:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   #ifdef NUCLEO_USE_USART
+ 130:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   USART_Transmit(&huart2, (uint8_t *)"Custom values for registers:\r\n");
+  99              		.loc 1 130 3
+ 100 0052 9449     		ldr	r1, .L30+8
+ 101 0054 9248     		ldr	r0, .L30+4
+ 102 0056 FFF7FEFF 		bl	USART_Transmit
+ 131:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   USART_PrintAllRegisterValues();
+ 103              		.loc 1 131 3
+ 104 005a FFF7FEFF 		bl	USART_PrintAllRegisterValues
+ 132:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   #endif
+ 133:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 134:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   /****************************************************************************/
+ 135:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 136:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   MovementPerRevolution = MPR_1;
+ 105              		.loc 1 136 25
+ 106 005e 0423     		movs	r3, #4
+ 107 0060 FB74     		strb	r3, [r7, #19]
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (board = EXPBRD_ID(0); board <= EXPBRD_ID(EXPBRD_MOUNTED_NR-1); board++)
+ 108              		.loc 1 137 16
+ 109 0062 0020     		movs	r0, #0
+ 110 0064 FFF7FEFF 		bl	EXPBRD_ID
+ 111 0068 0346     		mov	r3, r0
+ 112 006a BB77     		strb	r3, [r7, #30]
+ 113              		.loc 1 137 3
+ 114 006c 59E0     		b	.L4
+ 115              	.L10:
+ 138:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 139:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle = BSP_GetExpansionBoardHandle(board);
+ 116              		.loc 1 139 31
+ 117 006e BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 118 0070 1846     		mov	r0, r3
+ 119 0072 FFF7FEFF 		bl	BSP_GetExpansionBoardHandle
+ 120 0076 B861     		str	r0, [r7, #24]
+ 140:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 141:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     for (device = L6470_ID(0); device <= L6470_ID(L6470DAISYCHAINSIZE-1); device++)
+ 121              		.loc 1 141 19
+ 122 0078 0020     		movs	r0, #0
+ 123 007a FFF7FEFF 		bl	L6470_ID
+ 124 007e 0346     		mov	r3, r0
+ 125 0080 7B77     		strb	r3, [r7, #29]
+ 126              		.loc 1 141 5
+ 127 0082 43E0     		b	.L5
+ 128              	.L9:
+ 142:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 143:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Get the parameters for the motor connected with the actual stepper motor driver of the act
+ 144:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       MotorParameterDataSingle = MotorParameterDataGlobal+((board*L6470DAISYCHAINSIZE)+device);
+ 129              		.loc 1 144 66
+ 130 0084 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 131 0086 5A00     		lsls	r2, r3, #1
+ 132              		.loc 1 144 87
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 6
+
+
+ 133 0088 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 134 008a 1344     		add	r3, r3, r2
+ 135 008c 1A46     		mov	r2, r3
+ 136              		.loc 1 144 58
+ 137 008e 5823     		movs	r3, #88
+ 138 0090 02FB03F3 		mul	r3, r2, r3
+ 139              		.loc 1 144 32
+ 140 0094 7A69     		ldr	r2, [r7, #20]
+ 141 0096 1344     		add	r3, r3, r2
+ 142 0098 FB60     		str	r3, [r7, #12]
+ 145:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       Step = ((uint32_t)MotorParameterDataSingle->fullstepsperrevolution * usrPow(2, MotorParameter
+ 143              		.loc 1 145 49
+ 144 009a FB68     		ldr	r3, [r7, #12]
+ 145 009c D3ED017A 		vldr.32	s15, [r3, #4]
+ 146              		.loc 1 145 15
+ 147 00a0 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 148 00a4 17EE904A 		vmov	r4, s15	@ int
+ 149              		.loc 1 145 76
+ 150 00a8 FB68     		ldr	r3, [r7, #12]
+ 151 00aa 93F85430 		ldrb	r3, [r3, #84]	@ zero_extendqisi2
+ 152 00ae 1946     		mov	r1, r3
+ 153 00b0 0220     		movs	r0, #2
+ 154 00b2 FFF7FEFF 		bl	usrPow
+ 155 00b6 0346     		mov	r3, r0
+ 156              		.loc 1 145 74
+ 157 00b8 03FB04F2 		mul	r2, r3, r4
+ 158              		.loc 1 145 123
+ 159 00bc FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 160              		.loc 1 145 12
+ 161 00be B2FBF3F3 		udiv	r3, r2, r3
+ 162 00c2 BB60     		str	r3, [r7, #8]
+ 146:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       
+ 147:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       for (i=0; i<MovementPerRevolution; i++)
+ 163              		.loc 1 147 13
+ 164 00c4 0023     		movs	r3, #0
+ 165 00c6 FB77     		strb	r3, [r7, #31]
+ 166              		.loc 1 147 7
+ 167 00c8 19E0     		b	.L6
+ 168              	.L8:
+ 148:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 149:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         StepperMotorBoardHandle->Command->Move(board, device, L6470_DIR_FWD_ID, Step);
+ 169              		.loc 1 149 32
+ 170 00ca BB69     		ldr	r3, [r7, #24]
+ 171 00cc 9B68     		ldr	r3, [r3, #8]
+ 172              		.loc 1 149 41
+ 173 00ce 1C69     		ldr	r4, [r3, #16]
+ 174              		.loc 1 149 9
+ 175 00d0 797F     		ldrb	r1, [r7, #29]	@ zero_extendqisi2
+ 176 00d2 B87F     		ldrb	r0, [r7, #30]	@ zero_extendqisi2
+ 177 00d4 BB68     		ldr	r3, [r7, #8]
+ 178 00d6 0122     		movs	r2, #1
+ 179 00d8 A047     		blx	r4
+ 180              	.LVL1:
+ 150:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         while(StepperMotorBoardHandle->Command->CheckStatusRegisterFlag(board, device, BUSY_ID) == 
+ 181              		.loc 1 150 14
+ 182 00da 00BF     		nop
+ 183              	.L7:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 7
+
+
+ 184              		.loc 1 150 38 discriminator 1
+ 185 00dc BB69     		ldr	r3, [r7, #24]
+ 186 00de 9B68     		ldr	r3, [r3, #8]
+ 187              		.loc 1 150 47 discriminator 1
+ 188 00e0 9B6C     		ldr	r3, [r3, #72]
+ 189              		.loc 1 150 15 discriminator 1
+ 190 00e2 797F     		ldrb	r1, [r7, #29]	@ zero_extendqisi2
+ 191 00e4 B87F     		ldrb	r0, [r7, #30]	@ zero_extendqisi2
+ 192 00e6 0122     		movs	r2, #1
+ 193 00e8 9847     		blx	r3
+ 194              	.LVL2:
+ 195 00ea 0346     		mov	r3, r0
+ 196              		.loc 1 150 14 discriminator 1
+ 197 00ec 002B     		cmp	r3, #0
+ 198 00ee F5D0     		beq	.L7
+ 151:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         HAL_Delay(DELAY_1);
+ 199              		.loc 1 151 9 discriminator 2
+ 200 00f0 4FF47A70 		mov	r0, #1000
+ 201 00f4 FFF7FEFF 		bl	HAL_Delay
+ 147:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 202              		.loc 1 147 43 discriminator 2
+ 203 00f8 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 204 00fa 0133     		adds	r3, r3, #1
+ 205 00fc FB77     		strb	r3, [r7, #31]
+ 206              	.L6:
+ 147:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 207              		.loc 1 147 7 discriminator 1
+ 208 00fe FA7F     		ldrb	r2, [r7, #31]	@ zero_extendqisi2
+ 209 0100 FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 210 0102 9A42     		cmp	r2, r3
+ 211 0104 E1D3     		bcc	.L8
+ 141:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 212              		.loc 1 141 81 discriminator 2
+ 213 0106 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 214 0108 0133     		adds	r3, r3, #1
+ 215 010a 7B77     		strb	r3, [r7, #29]
+ 216              	.L5:
+ 141:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 217              		.loc 1 141 42 discriminator 1
+ 218 010c 0120     		movs	r0, #1
+ 219 010e FFF7FEFF 		bl	L6470_ID
+ 220 0112 0346     		mov	r3, r0
+ 221 0114 1A46     		mov	r2, r3
+ 141:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 222              		.loc 1 141 5 discriminator 1
+ 223 0116 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 224 0118 9342     		cmp	r3, r2
+ 225 011a B3D9     		bls	.L9
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 226              		.loc 1 137 76 discriminator 2
+ 227 011c BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 228 011e 0133     		adds	r3, r3, #1
+ 229 0120 BB77     		strb	r3, [r7, #30]
+ 230              	.L4:
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 231              		.loc 1 137 39 discriminator 1
+ 232 0122 0020     		movs	r0, #0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 8
+
+
+ 233 0124 FFF7FEFF 		bl	EXPBRD_ID
+ 234 0128 0346     		mov	r3, r0
+ 235 012a 1A46     		mov	r2, r3
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 236              		.loc 1 137 3 discriminator 1
+ 237 012c BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 238 012e 9342     		cmp	r3, r2
+ 239 0130 9DD9     		bls	.L10
+ 152:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       }
+ 153:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 154:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 155:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 156:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   HAL_Delay(DELAY_2);
+ 240              		.loc 1 156 3
+ 241 0132 40F6C410 		movw	r0, #2500
+ 242 0136 FFF7FEFF 		bl	HAL_Delay
+ 157:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 158:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (board = EXPBRD_ID(0); board <= EXPBRD_ID(EXPBRD_MOUNTED_NR-1); board++)
+ 243              		.loc 1 158 16
+ 244 013a 0020     		movs	r0, #0
+ 245 013c FFF7FEFF 		bl	EXPBRD_ID
+ 246 0140 0346     		mov	r3, r0
+ 247 0142 BB77     		strb	r3, [r7, #30]
+ 248              		.loc 1 158 3
+ 249 0144 36E0     		b	.L11
+ 250              	.L14:
+ 159:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 160:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 161:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     for (device = L6470_ID(0); device <= L6470_ID(L6470DAISYCHAINSIZE-1); device++)
+ 251              		.loc 1 161 19
+ 252 0146 0020     		movs	r0, #0
+ 253 0148 FFF7FEFF 		bl	L6470_ID
+ 254 014c 0346     		mov	r3, r0
+ 255 014e 7B77     		strb	r3, [r7, #29]
+ 256              		.loc 1 161 5
+ 257 0150 21E0     		b	.L12
+ 258              	.L13:
+ 162:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 163:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Get the parameters for the motor connected with the actual stepper motor driver of the act
+ 164:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       MotorParameterDataSingle = MotorParameterDataGlobal+((board*L6470DAISYCHAINSIZE)+device);
+ 259              		.loc 1 164 66 discriminator 3
+ 260 0152 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 261 0154 5A00     		lsls	r2, r3, #1
+ 262              		.loc 1 164 87 discriminator 3
+ 263 0156 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 264 0158 1344     		add	r3, r3, r2
+ 265 015a 1A46     		mov	r2, r3
+ 266              		.loc 1 164 58 discriminator 3
+ 267 015c 5823     		movs	r3, #88
+ 268 015e 02FB03F3 		mul	r3, r2, r3
+ 269              		.loc 1 164 32 discriminator 3
+ 270 0162 7A69     		ldr	r2, [r7, #20]
+ 271 0164 1344     		add	r3, r3, r2
+ 272 0166 FB60     		str	r3, [r7, #12]
+ 165:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       
+ 166:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Set Speed */
+ 167:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       Speed = Step_s_2_Speed(MotorParameterDataSingle->speed);
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 9
+
+
+ 273              		.loc 1 167 15 discriminator 3
+ 274 0168 FB68     		ldr	r3, [r7, #12]
+ 275 016a D3ED047A 		vldr.32	s15, [r3, #16]
+ 276 016e B0EE670A 		vmov.f32	s0, s15
+ 277 0172 FFF7FEFF 		bl	Step_s_2_Speed
+ 278 0176 7860     		str	r0, [r7, #4]
+ 168:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       
+ 169:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Prepare the stepper driver to be ready to perform a command */
+ 170:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       StepperMotorBoardHandle->StepperMotorDriverHandle[device]->Command->PrepareRun(device, L6470_
+ 279              		.loc 1 170 56 discriminator 3
+ 280 0178 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 281 017a BA69     		ldr	r2, [r7, #24]
+ 282 017c 0233     		adds	r3, r3, #2
+ 283 017e 9B00     		lsls	r3, r3, #2
+ 284 0180 1344     		add	r3, r3, r2
+ 285 0182 5B68     		ldr	r3, [r3, #4]
+ 286              		.loc 1 170 64 discriminator 3
+ 287 0184 9B68     		ldr	r3, [r3, #8]
+ 288              		.loc 1 170 73 discriminator 3
+ 289 0186 1B6D     		ldr	r3, [r3, #80]
+ 290              		.loc 1 170 7 discriminator 3
+ 291 0188 787F     		ldrb	r0, [r7, #29]	@ zero_extendqisi2
+ 292 018a 7A68     		ldr	r2, [r7, #4]
+ 293 018c 0121     		movs	r1, #1
+ 294 018e 9847     		blx	r3
+ 295              	.LVL3:
+ 161:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 296              		.loc 1 161 81 discriminator 3
+ 297 0190 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 298 0192 0133     		adds	r3, r3, #1
+ 299 0194 7B77     		strb	r3, [r7, #29]
+ 300              	.L12:
+ 161:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 301              		.loc 1 161 42 discriminator 1
+ 302 0196 0120     		movs	r0, #1
+ 303 0198 FFF7FEFF 		bl	L6470_ID
+ 304 019c 0346     		mov	r3, r0
+ 305 019e 1A46     		mov	r2, r3
+ 161:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 306              		.loc 1 161 5 discriminator 1
+ 307 01a0 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 308 01a2 9342     		cmp	r3, r2
+ 309 01a4 D5D9     		bls	.L13
+ 171:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 172:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 173:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle->Command->PerformPreparedApplicationCommand();
+ 310              		.loc 1 173 28 discriminator 2
+ 311 01a6 BB69     		ldr	r3, [r7, #24]
+ 312 01a8 9B68     		ldr	r3, [r3, #8]
+ 313              		.loc 1 173 37 discriminator 2
+ 314 01aa DB6C     		ldr	r3, [r3, #76]
+ 315              		.loc 1 173 5 discriminator 2
+ 316 01ac 9847     		blx	r3
+ 317              	.LVL4:
+ 158:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 318              		.loc 1 158 76 discriminator 2
+ 319 01ae BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 10
+
+
+ 320 01b0 0133     		adds	r3, r3, #1
+ 321 01b2 BB77     		strb	r3, [r7, #30]
+ 322              	.L11:
+ 158:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 323              		.loc 1 158 39 discriminator 1
+ 324 01b4 0020     		movs	r0, #0
+ 325 01b6 FFF7FEFF 		bl	EXPBRD_ID
+ 326 01ba 0346     		mov	r3, r0
+ 327 01bc 1A46     		mov	r2, r3
+ 158:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 328              		.loc 1 158 3 discriminator 1
+ 329 01be BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 330 01c0 9342     		cmp	r3, r2
+ 331 01c2 C0D9     		bls	.L14
+ 174:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 175:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 176:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   HAL_Delay(DELAY_3);
+ 332              		.loc 1 176 3
+ 333 01c4 42F21070 		movw	r0, #10000
+ 334 01c8 FFF7FEFF 		bl	HAL_Delay
+ 177:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 178:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (board = EXPBRD_ID(0); board <= EXPBRD_ID(EXPBRD_MOUNTED_NR-1); board++)
+ 335              		.loc 1 178 16
+ 336 01cc 0020     		movs	r0, #0
+ 337 01ce FFF7FEFF 		bl	EXPBRD_ID
+ 338 01d2 0346     		mov	r3, r0
+ 339 01d4 BB77     		strb	r3, [r7, #30]
+ 340              		.loc 1 178 3
+ 341 01d6 23E0     		b	.L15
+ 342              	.L18:
+ 179:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 180:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 181:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     for (device = L6470_ID(0); device <= L6470_ID(L6470DAISYCHAINSIZE-1); device++)
+ 343              		.loc 1 181 19
+ 344 01d8 0020     		movs	r0, #0
+ 345 01da FFF7FEFF 		bl	L6470_ID
+ 346 01de 0346     		mov	r3, r0
+ 347 01e0 7B77     		strb	r3, [r7, #29]
+ 348              		.loc 1 181 5
+ 349 01e2 0EE0     		b	.L16
+ 350              	.L17:
+ 182:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 183:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Prepare the stepper driver to be ready to perform a command */
+ 184:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       StepperMotorBoardHandle->StepperMotorDriverHandle[device]->Command->PrepareHardStop(device);
+ 351              		.loc 1 184 56 discriminator 3
+ 352 01e4 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 353 01e6 BA69     		ldr	r2, [r7, #24]
+ 354 01e8 0233     		adds	r3, r3, #2
+ 355 01ea 9B00     		lsls	r3, r3, #2
+ 356 01ec 1344     		add	r3, r3, r2
+ 357 01ee 5B68     		ldr	r3, [r3, #4]
+ 358              		.loc 1 184 64 discriminator 3
+ 359 01f0 9B68     		ldr	r3, [r3, #8]
+ 360              		.loc 1 184 73 discriminator 3
+ 361 01f2 D3F88030 		ldr	r3, [r3, #128]
+ 362              		.loc 1 184 7 discriminator 3
+ 363 01f6 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 11
+
+
+ 364 01f8 1046     		mov	r0, r2
+ 365 01fa 9847     		blx	r3
+ 366              	.LVL5:
+ 181:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 367              		.loc 1 181 81 discriminator 3
+ 368 01fc 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 369 01fe 0133     		adds	r3, r3, #1
+ 370 0200 7B77     		strb	r3, [r7, #29]
+ 371              	.L16:
+ 181:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 372              		.loc 1 181 42 discriminator 1
+ 373 0202 0120     		movs	r0, #1
+ 374 0204 FFF7FEFF 		bl	L6470_ID
+ 375 0208 0346     		mov	r3, r0
+ 376 020a 1A46     		mov	r2, r3
+ 181:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 377              		.loc 1 181 5 discriminator 1
+ 378 020c 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 379 020e 9342     		cmp	r3, r2
+ 380 0210 E8D9     		bls	.L17
+ 185:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 186:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 187:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle->Command->PerformPreparedApplicationCommand();
+ 381              		.loc 1 187 28 discriminator 2
+ 382 0212 BB69     		ldr	r3, [r7, #24]
+ 383 0214 9B68     		ldr	r3, [r3, #8]
+ 384              		.loc 1 187 37 discriminator 2
+ 385 0216 DB6C     		ldr	r3, [r3, #76]
+ 386              		.loc 1 187 5 discriminator 2
+ 387 0218 9847     		blx	r3
+ 388              	.LVL6:
+ 178:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 389              		.loc 1 178 76 discriminator 2
+ 390 021a BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 391 021c 0133     		adds	r3, r3, #1
+ 392 021e BB77     		strb	r3, [r7, #30]
+ 393              	.L15:
+ 178:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 394              		.loc 1 178 39 discriminator 1
+ 395 0220 0020     		movs	r0, #0
+ 396 0222 FFF7FEFF 		bl	EXPBRD_ID
+ 397 0226 0346     		mov	r3, r0
+ 398 0228 1A46     		mov	r2, r3
+ 178:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 399              		.loc 1 178 3 discriminator 1
+ 400 022a BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 401 022c 9342     		cmp	r3, r2
+ 402 022e D3D9     		bls	.L18
+ 188:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 189:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 190:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   MovementPerRevolution = MPR_2;
+ 403              		.loc 1 190 25
+ 404 0230 0823     		movs	r3, #8
+ 405 0232 FB74     		strb	r3, [r7, #19]
+ 191:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (board = EXPBRD_ID(0); board <= EXPBRD_ID(EXPBRD_MOUNTED_NR-1); board++)
+ 406              		.loc 1 191 16
+ 407 0234 0020     		movs	r0, #0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 12
+
+
+ 408 0236 FFF7FEFF 		bl	EXPBRD_ID
+ 409 023a 0346     		mov	r3, r0
+ 410 023c BB77     		strb	r3, [r7, #30]
+ 411              		.loc 1 191 3
+ 412 023e 5FE0     		b	.L19
+ 413              	.L25:
+ 192:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 193:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle = BSP_GetExpansionBoardHandle(board);
+ 414              		.loc 1 193 31
+ 415 0240 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 416 0242 1846     		mov	r0, r3
+ 417 0244 FFF7FEFF 		bl	BSP_GetExpansionBoardHandle
+ 418 0248 B861     		str	r0, [r7, #24]
+ 194:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 195:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     for (device = L6470_ID(0); device <= L6470_ID(L6470DAISYCHAINSIZE-1); device++)
+ 419              		.loc 1 195 19
+ 420 024a 0020     		movs	r0, #0
+ 421 024c FFF7FEFF 		bl	L6470_ID
+ 422 0250 0346     		mov	r3, r0
+ 423 0252 7B77     		strb	r3, [r7, #29]
+ 424              		.loc 1 195 5
+ 425 0254 49E0     		b	.L20
+ 426              	.L24:
+ 196:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 197:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Get the parameters for the motor connected with the actual stepper motor driver of the act
+ 198:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       MotorParameterDataSingle = MotorParameterDataGlobal+((board*L6470DAISYCHAINSIZE)+device);
+ 427              		.loc 1 198 66
+ 428 0256 BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 429 0258 5A00     		lsls	r2, r3, #1
+ 430              		.loc 1 198 87
+ 431 025a 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 432 025c 1344     		add	r3, r3, r2
+ 433 025e 1A46     		mov	r2, r3
+ 434              		.loc 1 198 58
+ 435 0260 5823     		movs	r3, #88
+ 436 0262 02FB03F3 		mul	r3, r2, r3
+ 437              		.loc 1 198 32
+ 438 0266 7A69     		ldr	r2, [r7, #20]
+ 439 0268 1344     		add	r3, r3, r2
+ 440 026a FB60     		str	r3, [r7, #12]
+ 199:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       Step = ((uint32_t)MotorParameterDataSingle->fullstepsperrevolution * usrPow(2, MotorParameter
+ 441              		.loc 1 199 49
+ 442 026c FB68     		ldr	r3, [r7, #12]
+ 443 026e D3ED017A 		vldr.32	s15, [r3, #4]
+ 444              		.loc 1 199 15
+ 445 0272 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 446 0276 17EE904A 		vmov	r4, s15	@ int
+ 447              		.loc 1 199 76
+ 448 027a FB68     		ldr	r3, [r7, #12]
+ 449 027c 93F85430 		ldrb	r3, [r3, #84]	@ zero_extendqisi2
+ 450 0280 1946     		mov	r1, r3
+ 451 0282 0220     		movs	r0, #2
+ 452 0284 FFF7FEFF 		bl	usrPow
+ 453 0288 0346     		mov	r3, r0
+ 454              		.loc 1 199 74
+ 455 028a 03FB04F2 		mul	r2, r3, r4
+ 456              		.loc 1 199 123
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 13
+
+
+ 457 028e FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 458              		.loc 1 199 12
+ 459 0290 B2FBF3F3 		udiv	r3, r2, r3
+ 460 0294 BB60     		str	r3, [r7, #8]
+ 200:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       
+ 201:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       for (i=0; i<MovementPerRevolution; i++)
+ 461              		.loc 1 201 13
+ 462 0296 0023     		movs	r3, #0
+ 463 0298 FB77     		strb	r3, [r7, #31]
+ 464              		.loc 1 201 7
+ 465 029a 1FE0     		b	.L21
+ 466              	.L31:
+ 467              		.align	2
+ 468              	.L30:
+ 469 029c 00000000 		.word	.LC0
+ 470 02a0 00000000 		.word	huart2
+ 471 02a4 20000000 		.word	.LC1
+ 472              	.L23:
+ 202:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 203:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         StepperMotorBoardHandle->Command->Move(board, device, L6470_DIR_FWD_ID, Step);
+ 473              		.loc 1 203 32
+ 474 02a8 BB69     		ldr	r3, [r7, #24]
+ 475 02aa 9B68     		ldr	r3, [r3, #8]
+ 476              		.loc 1 203 41
+ 477 02ac 1C69     		ldr	r4, [r3, #16]
+ 478              		.loc 1 203 9
+ 479 02ae 797F     		ldrb	r1, [r7, #29]	@ zero_extendqisi2
+ 480 02b0 B87F     		ldrb	r0, [r7, #30]	@ zero_extendqisi2
+ 481 02b2 BB68     		ldr	r3, [r7, #8]
+ 482 02b4 0122     		movs	r2, #1
+ 483 02b6 A047     		blx	r4
+ 484              	.LVL7:
+ 204:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         while(StepperMotorBoardHandle->Command->CheckStatusRegisterFlag(board, device, BUSY_ID) == 
+ 485              		.loc 1 204 14
+ 486 02b8 00BF     		nop
+ 487              	.L22:
+ 488              		.loc 1 204 38 discriminator 1
+ 489 02ba BB69     		ldr	r3, [r7, #24]
+ 490 02bc 9B68     		ldr	r3, [r3, #8]
+ 491              		.loc 1 204 47 discriminator 1
+ 492 02be 9B6C     		ldr	r3, [r3, #72]
+ 493              		.loc 1 204 15 discriminator 1
+ 494 02c0 797F     		ldrb	r1, [r7, #29]	@ zero_extendqisi2
+ 495 02c2 B87F     		ldrb	r0, [r7, #30]	@ zero_extendqisi2
+ 496 02c4 0122     		movs	r2, #1
+ 497 02c6 9847     		blx	r3
+ 498              	.LVL8:
+ 499 02c8 0346     		mov	r3, r0
+ 500              		.loc 1 204 14 discriminator 1
+ 501 02ca 002B     		cmp	r3, #0
+ 502 02cc F5D0     		beq	.L22
+ 205:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         HAL_Delay(DELAY_1);
+ 503              		.loc 1 205 9 discriminator 2
+ 504 02ce 4FF47A70 		mov	r0, #1000
+ 505 02d2 FFF7FEFF 		bl	HAL_Delay
+ 201:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 506              		.loc 1 201 43 discriminator 2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 14
+
+
+ 507 02d6 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 508 02d8 0133     		adds	r3, r3, #1
+ 509 02da FB77     		strb	r3, [r7, #31]
+ 510              	.L21:
+ 201:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       {
+ 511              		.loc 1 201 7 discriminator 1
+ 512 02dc FA7F     		ldrb	r2, [r7, #31]	@ zero_extendqisi2
+ 513 02de FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 514 02e0 9A42     		cmp	r2, r3
+ 515 02e2 E1D3     		bcc	.L23
+ 195:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 516              		.loc 1 195 81 discriminator 2
+ 517 02e4 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 518 02e6 0133     		adds	r3, r3, #1
+ 519 02e8 7B77     		strb	r3, [r7, #29]
+ 520              	.L20:
+ 195:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 521              		.loc 1 195 42 discriminator 1
+ 522 02ea 0120     		movs	r0, #1
+ 523 02ec FFF7FEFF 		bl	L6470_ID
+ 524 02f0 0346     		mov	r3, r0
+ 525 02f2 1A46     		mov	r2, r3
+ 195:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 526              		.loc 1 195 5 discriminator 1
+ 527 02f4 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 528 02f6 9342     		cmp	r3, r2
+ 529 02f8 ADD9     		bls	.L24
+ 191:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 530              		.loc 1 191 76 discriminator 2
+ 531 02fa BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 532 02fc 0133     		adds	r3, r3, #1
+ 533 02fe BB77     		strb	r3, [r7, #30]
+ 534              	.L19:
+ 191:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 535              		.loc 1 191 39 discriminator 1
+ 536 0300 0020     		movs	r0, #0
+ 537 0302 FFF7FEFF 		bl	EXPBRD_ID
+ 538 0306 0346     		mov	r3, r0
+ 539 0308 1A46     		mov	r2, r3
+ 191:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 540              		.loc 1 191 3 discriminator 1
+ 541 030a BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 542 030c 9342     		cmp	r3, r2
+ 543 030e 97D9     		bls	.L25
+ 206:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       }
+ 207:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 208:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 209:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 210:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (board = EXPBRD_ID(0); board <= EXPBRD_ID(EXPBRD_MOUNTED_NR-1); board++)
+ 544              		.loc 1 210 16
+ 545 0310 0020     		movs	r0, #0
+ 546 0312 FFF7FEFF 		bl	EXPBRD_ID
+ 547 0316 0346     		mov	r3, r0
+ 548 0318 BB77     		strb	r3, [r7, #30]
+ 549              		.loc 1 210 3
+ 550 031a 23E0     		b	.L26
+ 551              	.L29:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 15
+
+
+ 211:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 212:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 213:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     for (device = L6470_ID(0); device <= L6470_ID(L6470DAISYCHAINSIZE-1); device++)
+ 552              		.loc 1 213 19
+ 553 031c 0020     		movs	r0, #0
+ 554 031e FFF7FEFF 		bl	L6470_ID
+ 555 0322 0346     		mov	r3, r0
+ 556 0324 7B77     		strb	r3, [r7, #29]
+ 557              		.loc 1 213 5
+ 558 0326 0EE0     		b	.L27
+ 559              	.L28:
+ 214:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 215:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       /* Prepare the stepper driver to be ready to perform a command */
+ 216:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****       StepperMotorBoardHandle->StepperMotorDriverHandle[device]->Command->PrepareHardHiZ(device);
+ 560              		.loc 1 216 56 discriminator 3
+ 561 0328 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 562 032a BA69     		ldr	r2, [r7, #24]
+ 563 032c 0233     		adds	r3, r3, #2
+ 564 032e 9B00     		lsls	r3, r3, #2
+ 565 0330 1344     		add	r3, r3, r2
+ 566 0332 5B68     		ldr	r3, [r3, #4]
+ 567              		.loc 1 216 64 discriminator 3
+ 568 0334 9B68     		ldr	r3, [r3, #8]
+ 569              		.loc 1 216 73 discriminator 3
+ 570 0336 D3F88830 		ldr	r3, [r3, #136]
+ 571              		.loc 1 216 7 discriminator 3
+ 572 033a 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
+ 573 033c 1046     		mov	r0, r2
+ 574 033e 9847     		blx	r3
+ 575              	.LVL9:
+ 213:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 576              		.loc 1 213 81 discriminator 3
+ 577 0340 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 578 0342 0133     		adds	r3, r3, #1
+ 579 0344 7B77     		strb	r3, [r7, #29]
+ 580              	.L27:
+ 213:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 581              		.loc 1 213 42 discriminator 1
+ 582 0346 0120     		movs	r0, #1
+ 583 0348 FFF7FEFF 		bl	L6470_ID
+ 584 034c 0346     		mov	r3, r0
+ 585 034e 1A46     		mov	r2, r3
+ 213:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     {
+ 586              		.loc 1 213 5 discriminator 1
+ 587 0350 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 588 0352 9342     		cmp	r3, r2
+ 589 0354 E8D9     		bls	.L28
+ 217:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 218:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     
+ 219:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle->Command->PerformPreparedApplicationCommand();
+ 590              		.loc 1 219 28 discriminator 2
+ 591 0356 BB69     		ldr	r3, [r7, #24]
+ 592 0358 9B68     		ldr	r3, [r3, #8]
+ 593              		.loc 1 219 37 discriminator 2
+ 594 035a DB6C     		ldr	r3, [r3, #76]
+ 595              		.loc 1 219 5 discriminator 2
+ 596 035c 9847     		blx	r3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 16
+
+
+ 597              	.LVL10:
+ 210:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 598              		.loc 1 210 76 discriminator 2
+ 599 035e BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 600 0360 0133     		adds	r3, r3, #1
+ 601 0362 BB77     		strb	r3, [r7, #30]
+ 602              	.L26:
+ 210:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 603              		.loc 1 210 39 discriminator 1
+ 604 0364 0020     		movs	r0, #0
+ 605 0366 FFF7FEFF 		bl	EXPBRD_ID
+ 606 036a 0346     		mov	r3, r0
+ 607 036c 1A46     		mov	r2, r3
+ 210:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 608              		.loc 1 210 3 discriminator 1
+ 609 036e BB7F     		ldrb	r3, [r7, #30]	@ zero_extendqisi2
+ 610 0370 9342     		cmp	r3, r2
+ 611 0372 D3D9     		bls	.L29
+ 220:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 221:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 222:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   /* Switch on the user LED */
+ 223:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     BSP_LED_On(LED2);
+ 612              		.loc 1 223 5
+ 613 0374 0020     		movs	r0, #0
+ 614 0376 FFF7FEFF 		bl	BSP_LED_On
+ 224:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** }
+ 615              		.loc 1 224 1
+ 616 037a 00BF     		nop
+ 617 037c 2437     		adds	r7, r7, #36
+ 618              	.LCFI3:
+ 619              		.cfi_def_cfa_offset 12
+ 620 037e BD46     		mov	sp, r7
+ 621              	.LCFI4:
+ 622              		.cfi_def_cfa_register 13
+ 623              		@ sp needed
+ 624 0380 90BD     		pop	{r4, r7, pc}
+ 625              		.cfi_endproc
+ 626              	.LFE128:
+ 628 0382 00BF     		.section	.text.ControlMotorWithButton,"ax",%progbits
+ 629              		.align	1
+ 630              		.global	ControlMotorWithButton
+ 631              		.syntax unified
+ 632              		.thumb
+ 633              		.thumb_func
+ 635              	ControlMotorWithButton:
+ 636              	.LFB129:
+ 225:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 226:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 227:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 228:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 229:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 230:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define MOTOR_STEPS 200
+ 231:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #define DELAY_BETWEEN_MOVEMENTS 1000
+ 232:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+ 233:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  * @fn void ControlMotorWithButton(void)
+ 234:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  * @brief Controls the stepper motor direction based on button press using polling.
+ 235:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  *
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 17
+
+
+ 236:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  * This function initializes the motor and then enters a loop where it continuously
+ 237:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  * checks the state of a button. On detecting a button press, it moves the motor
+ 238:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  * 200 steps in the current direction and then toggles the direction for the next press.
+ 239:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****  */
+ 240:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** void ControlMotorWithButton(void) 
+ 241:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** {
+ 637              		.loc 1 241 1
+ 638              		.cfi_startproc
+ 639              		@ args = 0, pretend = 0, frame = 24
+ 640              		@ frame_needed = 1, uses_anonymous_args = 0
+ 641 0000 90B5     		push	{r4, r7, lr}
+ 642              	.LCFI5:
+ 643              		.cfi_def_cfa_offset 12
+ 644              		.cfi_offset 4, -12
+ 645              		.cfi_offset 7, -8
+ 646              		.cfi_offset 14, -4
+ 647 0002 87B0     		sub	sp, sp, #28
+ 648              	.LCFI6:
+ 649              		.cfi_def_cfa_offset 40
+ 650 0004 00AF     		add	r7, sp, #0
+ 651              	.LCFI7:
+ 652              		.cfi_def_cfa_register 7
+ 242:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     static uint8_t direction = L6470_DIR_FWD_ID;  // Start in forward direction
+ 243:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     uint8_t  MovementPerRevolution;
+ 244:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     uint32_t Step;
+ 245:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     static uint8_t lastButtonState = GPIO_PIN_RESET;  // Store the last state of the button
+ 246:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 247:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle_t *StepperMotorBoardHandle;
+ 248:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     MotorParameterData_t *MotorParameterDataGlobal, *MotorParameterDataSingle;
+ 249:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 250:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     // Initialize the motor as per the original example
+ 251:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     MotorParameterDataGlobal = GetMotorParameterInitData();
+ 653              		.loc 1 251 32
+ 654 0006 FFF7FEFF 		bl	GetMotorParameterInitData
+ 655 000a 7861     		str	r0, [r7, #20]
+ 252:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle = BSP_GetExpansionBoardHandle(EXPBRD_ID(0));
+ 656              		.loc 1 252 31
+ 657 000c 0020     		movs	r0, #0
+ 658 000e FFF7FEFF 		bl	EXPBRD_ID
+ 659 0012 0346     		mov	r3, r0
+ 660 0014 1846     		mov	r0, r3
+ 661 0016 FFF7FEFF 		bl	BSP_GetExpansionBoardHandle
+ 662 001a 3861     		str	r0, [r7, #16]
+ 253:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     MotorParameterDataSingle = MotorParameterDataGlobal;
+ 663              		.loc 1 253 30
+ 664 001c 7B69     		ldr	r3, [r7, #20]
+ 665 001e FB60     		str	r3, [r7, #12]
+ 254:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     StepperMotorBoardHandle->Config(MotorParameterDataSingle);
+ 666              		.loc 1 254 28
+ 667 0020 3B69     		ldr	r3, [r7, #16]
+ 668 0022 5B68     		ldr	r3, [r3, #4]
+ 669              		.loc 1 254 5
+ 670 0024 F868     		ldr	r0, [r7, #12]
+ 671 0026 9847     		blx	r3
+ 672              	.LVL11:
+ 255:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****      
+ 256:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 18
+
+
+ 257:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     MovementPerRevolution = MPR_1;
+ 673              		.loc 1 257 27
+ 674 0028 0423     		movs	r3, #4
+ 675 002a FB72     		strb	r3, [r7, #11]
+ 676              	.L35:
+ 677              	.LBB2:
+ 258:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     // Main program loop
+ 259:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     while (1) {
+ 260:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         uint8_t currentButtonState = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);  // Read the current sta
+ 678              		.loc 1 260 38
+ 679 002c 4FF40051 		mov	r1, #8192
+ 680 0030 2348     		ldr	r0, .L36
+ 681 0032 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 682 0036 0346     		mov	r3, r0
+ 683 0038 BB72     		strb	r3, [r7, #10]
+ 261:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 262:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         if (currentButtonState == GPIO_PIN_SET && lastButtonState == GPIO_PIN_RESET) {  // Check fo
+ 684              		.loc 1 262 12
+ 685 003a BB7A     		ldrb	r3, [r7, #10]	@ zero_extendqisi2
+ 686 003c 012B     		cmp	r3, #1
+ 687 003e 37D1     		bne	.L33
+ 688              		.loc 1 262 67 discriminator 1
+ 689 0040 204B     		ldr	r3, .L36+4
+ 690 0042 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 691              		.loc 1 262 48 discriminator 1
+ 692 0044 002B     		cmp	r3, #0
+ 693 0046 33D1     		bne	.L33
+ 263:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             // Move the motor
+ 264:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             //Step =  25600;
+ 265:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             Step = ((uint32_t)MotorParameterDataSingle->fullstepsperrevolution * usrPow(2, MotorPar
+ 694              		.loc 1 265 55
+ 695 0048 FB68     		ldr	r3, [r7, #12]
+ 696 004a D3ED017A 		vldr.32	s15, [r3, #4]
+ 697              		.loc 1 265 21
+ 698 004e FCEEE77A 		vcvt.u32.f32	s15, s15
+ 699 0052 17EE904A 		vmov	r4, s15	@ int
+ 700              		.loc 1 265 82
+ 701 0056 FB68     		ldr	r3, [r7, #12]
+ 702 0058 93F85430 		ldrb	r3, [r3, #84]	@ zero_extendqisi2
+ 703 005c 1946     		mov	r1, r3
+ 704 005e 0220     		movs	r0, #2
+ 705 0060 FFF7FEFF 		bl	usrPow
+ 706 0064 0346     		mov	r3, r0
+ 707              		.loc 1 265 18
+ 708 0066 04FB03F3 		mul	r3, r4, r3
+ 709 006a 7B60     		str	r3, [r7, #4]
+ 266:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****            //StepperMotorBoardHandle->Command->Move(0, 1, direction, MOTOR_STEPS);
+ 267:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             StepperMotorBoardHandle->Command->Move(0, 1, direction, Step);
+ 710              		.loc 1 267 36
+ 711 006c 3B69     		ldr	r3, [r7, #16]
+ 712 006e 9B68     		ldr	r3, [r3, #8]
+ 713              		.loc 1 267 45
+ 714 0070 1C69     		ldr	r4, [r3, #16]
+ 715              		.loc 1 267 13
+ 716 0072 154B     		ldr	r3, .L36+8
+ 717 0074 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 718 0076 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 19
+
+
+ 719 0078 0121     		movs	r1, #1
+ 720 007a 0020     		movs	r0, #0
+ 721 007c A047     		blx	r4
+ 722              	.LVL12:
+ 268:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             while (StepperMotorBoardHandle->Command->CheckStatusRegisterFlag(0, 0, BUSY_ID) == 0);
+ 723              		.loc 1 268 19
+ 724 007e 00BF     		nop
+ 725              	.L34:
+ 726              		.loc 1 268 43 discriminator 1
+ 727 0080 3B69     		ldr	r3, [r7, #16]
+ 728 0082 9B68     		ldr	r3, [r3, #8]
+ 729              		.loc 1 268 52 discriminator 1
+ 730 0084 9B6C     		ldr	r3, [r3, #72]
+ 731              		.loc 1 268 20 discriminator 1
+ 732 0086 0122     		movs	r2, #1
+ 733 0088 0021     		movs	r1, #0
+ 734 008a 0020     		movs	r0, #0
+ 735 008c 9847     		blx	r3
+ 736              	.LVL13:
+ 737 008e 0346     		mov	r3, r0
+ 738              		.loc 1 268 19 discriminator 1
+ 739 0090 002B     		cmp	r3, #0
+ 740 0092 F5D0     		beq	.L34
+ 269:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             HAL_Delay(DELAY_BETWEEN_MOVEMENTS);
+ 741              		.loc 1 269 13
+ 742 0094 4FF47A70 		mov	r0, #1000
+ 743 0098 FFF7FEFF 		bl	HAL_Delay
+ 270:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 271:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             // Toggle direction for the next button press
+ 272:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****             direction = (direction == L6470_DIR_FWD_ID) ? L6470_DIR_REV_ID : L6470_DIR_FWD_ID;
+ 744              		.loc 1 272 76
+ 745 009c 0A4B     		ldr	r3, .L36+8
+ 746 009e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 747 00a0 012B     		cmp	r3, #1
+ 748 00a2 14BF     		ite	ne
+ 749 00a4 0123     		movne	r3, #1
+ 750 00a6 0023     		moveq	r3, #0
+ 751 00a8 DBB2     		uxtb	r3, r3
+ 752 00aa 1A46     		mov	r2, r3
+ 753              		.loc 1 272 23
+ 754 00ac 064B     		ldr	r3, .L36+8
+ 755 00ae 1A70     		strb	r2, [r3]
+ 756              	.L33:
+ 273:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         }
+ 274:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 275:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         lastButtonState = currentButtonState;  // Update the last state of the button
+ 757              		.loc 1 275 25
+ 758 00b0 044A     		ldr	r2, .L36+4
+ 759 00b2 BB7A     		ldrb	r3, [r7, #10]
+ 760 00b4 1370     		strb	r3, [r2]
+ 276:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         HAL_Delay(10);  // Short delay for debouncing and reducing CPU load
+ 761              		.loc 1 276 9
+ 762 00b6 0A20     		movs	r0, #10
+ 763 00b8 FFF7FEFF 		bl	HAL_Delay
+ 764              	.LBE2:
+ 259:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****         uint8_t currentButtonState = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);  // Read the current sta
+ 765              		.loc 1 259 15
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 20
+
+
+ 766 00bc B6E7     		b	.L35
+ 767              	.L37:
+ 768 00be 00BF     		.align	2
+ 769              	.L36:
+ 770 00c0 00080240 		.word	1073874944
+ 771 00c4 00000000 		.word	lastButtonState.1
+ 772 00c8 00000000 		.word	direction.0
+ 773              		.cfi_endproc
+ 774              	.LFE129:
+ 776              		.section	.text.BSP_ST1S14_PGOOD,"ax",%progbits
+ 777              		.align	1
+ 778              		.global	BSP_ST1S14_PGOOD
+ 779              		.syntax unified
+ 780              		.thumb
+ 781              		.thumb_func
+ 783              	BSP_ST1S14_PGOOD:
+ 784              	.LFB130:
+ 277:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     }
+ 278:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** }
+ 279:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 280:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 281:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 282:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 283:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 284:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 285:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 286:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 287:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 288:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 289:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 290:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 291:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 292:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 293:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 294:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+ 295:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @}
+ 296:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */ /* End of ExampleExportedFunctions */
+ 297:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 298:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+ 299:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief  This function return the ADC conversion result about the ST1S14 PGOOD.
+ 300:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @retval PGOOD The number into the range [0, 4095] as [0, 3.3]V.
+ 301:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @note   It will just return 0 if USE_ST1S14_PGOOD is not defined.
+ 302:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+ 303:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** uint16_t BSP_ST1S14_PGOOD(void)
+ 304:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** {
+ 785              		.loc 1 304 1
+ 786              		.cfi_startproc
+ 787              		@ args = 0, pretend = 0, frame = 0
+ 788              		@ frame_needed = 1, uses_anonymous_args = 0
+ 789              		@ link register save eliminated.
+ 790 0000 80B4     		push	{r7}
+ 791              	.LCFI8:
+ 792              		.cfi_def_cfa_offset 4
+ 793              		.cfi_offset 7, -4
+ 794 0002 00AF     		add	r7, sp, #0
+ 795              	.LCFI9:
+ 796              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 21
+
+
+ 305:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #ifdef USE_ST1S14_PGOOD
+ 306:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   HAL_ADC_Start(&HADC);
+ 307:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   HAL_ADC_PollForConversion(&HADC, 100);
+ 308:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 309:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   return HAL_ADC_GetValue(&HADC);
+ 310:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #else
+ 311:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   return 0;
+ 797              		.loc 1 311 10
+ 798 0004 0023     		movs	r3, #0
+ 312:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** #endif
+ 313:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** }
+ 799              		.loc 1 313 1
+ 800 0006 1846     		mov	r0, r3
+ 801 0008 BD46     		mov	sp, r7
+ 802              	.LCFI10:
+ 803              		.cfi_def_cfa_register 13
+ 804              		@ sp needed
+ 805 000a 5DF8047B 		ldr	r7, [sp], #4
+ 806              	.LCFI11:
+ 807              		.cfi_restore 7
+ 808              		.cfi_def_cfa_offset 0
+ 809 000e 7047     		bx	lr
+ 810              		.cfi_endproc
+ 811              	.LFE130:
+ 813              		.section	.text.usrPow,"ax",%progbits
+ 814              		.align	1
+ 815              		.global	usrPow
+ 816              		.syntax unified
+ 817              		.thumb
+ 818              		.thumb_func
+ 820              	usrPow:
+ 821              	.LFB131:
+ 314:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 315:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+ 316:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief  Calculates the power of a number.
+ 317:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @param  base      the base
+ 318:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @param  exponent  the exponent
+ 319:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @retval power     the result as (base^exponent)
+ 320:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @note   There is not OVF control.
+ 321:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+ 322:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** uint32_t usrPow(uint8_t base, uint8_t exponent)
+ 323:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** {
+ 822              		.loc 1 323 1
+ 823              		.cfi_startproc
+ 824              		@ args = 0, pretend = 0, frame = 16
+ 825              		@ frame_needed = 1, uses_anonymous_args = 0
+ 826              		@ link register save eliminated.
+ 827 0000 80B4     		push	{r7}
+ 828              	.LCFI12:
+ 829              		.cfi_def_cfa_offset 4
+ 830              		.cfi_offset 7, -4
+ 831 0002 85B0     		sub	sp, sp, #20
+ 832              	.LCFI13:
+ 833              		.cfi_def_cfa_offset 24
+ 834 0004 00AF     		add	r7, sp, #0
+ 835              	.LCFI14:
+ 836              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 22
+
+
+ 837 0006 0346     		mov	r3, r0
+ 838 0008 0A46     		mov	r2, r1
+ 839 000a FB71     		strb	r3, [r7, #7]
+ 840 000c 1346     		mov	r3, r2
+ 841 000e BB71     		strb	r3, [r7, #6]
+ 324:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint8_t i;
+ 325:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   uint32_t power = 1;
+ 842              		.loc 1 325 12
+ 843 0010 0123     		movs	r3, #1
+ 844 0012 BB60     		str	r3, [r7, #8]
+ 326:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 327:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   for (i=0; i<exponent; i++)
+ 845              		.loc 1 327 9
+ 846 0014 0023     		movs	r3, #0
+ 847 0016 FB73     		strb	r3, [r7, #15]
+ 848              		.loc 1 327 3
+ 849 0018 07E0     		b	.L41
+ 850              	.L42:
+ 328:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     power *= base;
+ 851              		.loc 1 328 11 discriminator 3
+ 852 001a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 853 001c BB68     		ldr	r3, [r7, #8]
+ 854 001e 02FB03F3 		mul	r3, r2, r3
+ 855 0022 BB60     		str	r3, [r7, #8]
+ 327:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     power *= base;
+ 856              		.loc 1 327 26 discriminator 3
+ 857 0024 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 858 0026 0133     		adds	r3, r3, #1
+ 859 0028 FB73     		strb	r3, [r7, #15]
+ 860              	.L41:
+ 327:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     power *= base;
+ 861              		.loc 1 327 3 discriminator 1
+ 862 002a FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 863 002c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 864 002e 9A42     		cmp	r2, r3
+ 865 0030 F3D3     		bcc	.L42
+ 329:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   
+ 330:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   return power;
+ 866              		.loc 1 330 10
+ 867 0032 BB68     		ldr	r3, [r7, #8]
+ 331:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** }
+ 868              		.loc 1 331 1
+ 869 0034 1846     		mov	r0, r3
+ 870 0036 1437     		adds	r7, r7, #20
+ 871              	.LCFI15:
+ 872              		.cfi_def_cfa_offset 4
+ 873 0038 BD46     		mov	sp, r7
+ 874              	.LCFI16:
+ 875              		.cfi_def_cfa_register 13
+ 876              		@ sp needed
+ 877 003a 5DF8047B 		ldr	r7, [sp], #4
+ 878              	.LCFI17:
+ 879              		.cfi_restore 7
+ 880              		.cfi_def_cfa_offset 0
+ 881 003e 7047     		bx	lr
+ 882              		.cfi_endproc
+ 883              	.LFE131:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 23
+
+
+ 885              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 886              		.align	1
+ 887              		.global	HAL_GPIO_EXTI_Callback
+ 888              		.syntax unified
+ 889              		.thumb
+ 890              		.thumb_func
+ 892              	HAL_GPIO_EXTI_Callback:
+ 893              	.LFB132:
+ 332:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** 
+ 333:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** /**
+ 334:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @brief  EXTI line detection callbacks.
+ 335:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @param  GPIO_Pin: Specifies the port pin connected to corresponding EXTI line.
+ 336:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   * @retval None
+ 337:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   */
+ 338:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+ 339:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** {
+ 894              		.loc 1 339 1
+ 895              		.cfi_startproc
+ 896              		@ args = 0, pretend = 0, frame = 8
+ 897              		@ frame_needed = 1, uses_anonymous_args = 0
+ 898 0000 80B5     		push	{r7, lr}
+ 899              	.LCFI18:
+ 900              		.cfi_def_cfa_offset 8
+ 901              		.cfi_offset 7, -8
+ 902              		.cfi_offset 14, -4
+ 903 0002 82B0     		sub	sp, sp, #8
+ 904              	.LCFI19:
+ 905              		.cfi_def_cfa_offset 16
+ 906 0004 00AF     		add	r7, sp, #0
+ 907              	.LCFI20:
+ 908              		.cfi_def_cfa_register 7
+ 909 0006 0346     		mov	r3, r0
+ 910 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 340:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   switch (GPIO_Pin)
+ 911              		.loc 1 340 3
+ 912 000a FB88     		ldrh	r3, [r7, #6]
+ 913 000c B3F5005F 		cmp	r3, #8192
+ 914 0010 07D0     		beq	.L45
+ 915 0012 B3F5005F 		cmp	r3, #8192
+ 916 0016 0DDC     		bgt	.L49
+ 917 0018 012B     		cmp	r3, #1
+ 918 001a 05D0     		beq	.L47
+ 919 001c 022B     		cmp	r3, #2
+ 920 001e 06D0     		beq	.L48
+ 341:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   {
+ 342:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   case GPIO_PIN_13:
+ 343:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     BSP_EmergencyStop();
+ 344:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 345:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   case L6470_nBUSY_SYNC_GPIO_PIN:
+ 346:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     BSP_L6470_BusySynchEventManager();
+ 347:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 348:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   case L6470_nFLAG_GPIO_PIN:
+ 349:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     BSP_L6470_FlagEventManager();
+ 350:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 351:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 352:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c **** }
+ 921              		.loc 1 352 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 24
+
+
+ 922 0020 08E0     		b	.L49
+ 923              	.L45:
+ 343:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 924              		.loc 1 343 5
+ 925 0022 FFF7FEFF 		bl	BSP_EmergencyStop
+ 344:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   case L6470_nBUSY_SYNC_GPIO_PIN:
+ 926              		.loc 1 344 5
+ 927 0026 05E0     		b	.L46
+ 928              	.L47:
+ 346:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 929              		.loc 1 346 5
+ 930 0028 FFF7FEFF 		bl	BSP_L6470_BusySynchEventManager
+ 347:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   case L6470_nFLAG_GPIO_PIN:
+ 931              		.loc 1 347 5
+ 932 002c 02E0     		b	.L46
+ 933              	.L48:
+ 349:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****     break;
+ 934              		.loc 1 349 5
+ 935 002e FFF7FEFF 		bl	BSP_L6470_FlagEventManager
+ 350:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/example.c ****   }
+ 936              		.loc 1 350 5
+ 937 0032 00BF     		nop
+ 938              	.L46:
+ 939              	.L49:
+ 940              		.loc 1 352 1
+ 941 0034 00BF     		nop
+ 942 0036 0837     		adds	r7, r7, #8
+ 943              	.LCFI21:
+ 944              		.cfi_def_cfa_offset 8
+ 945 0038 BD46     		mov	sp, r7
+ 946              	.LCFI22:
+ 947              		.cfi_def_cfa_register 13
+ 948              		@ sp needed
+ 949 003a 80BD     		pop	{r7, pc}
+ 950              		.cfi_endproc
+ 951              	.LFE132:
+ 953              		.section	.bss.lastButtonState.1,"aw",%nobits
+ 956              	lastButtonState.1:
+ 957 0000 00       		.space	1
+ 958              		.section	.data.direction.0,"aw"
+ 961              	direction.0:
+ 962 0000 01       		.byte	1
+ 963              		.text
+ 964              	.Letext0:
+ 965              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 966              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 967              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 968              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 969              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 970              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 971              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 972              		.file 9 "Drivers/BSP/STM32F4xx-Nucleo/stm32f4xx_nucleo.h"
+ 973              		.file 10 "Drivers/BSP/Components/Common/microstepping_motor.h"
+ 974              		.file 11 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 example.c
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:20     .rodata:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:27     .text.MicrosteppingMotor_Example_01:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:33     .text.MicrosteppingMotor_Example_01:00000000 MicrosteppingMotor_Example_01
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:820    .text.usrPow:00000000 usrPow
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:469    .text.MicrosteppingMotor_Example_01:0000029c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:474    .text.MicrosteppingMotor_Example_01:000002a8 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:629    .text.ControlMotorWithButton:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:635    .text.ControlMotorWithButton:00000000 ControlMotorWithButton
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:770    .text.ControlMotorWithButton:000000c0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:956    .bss.lastButtonState.1:00000000 lastButtonState.1
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:961    .data.direction.0:00000000 direction.0
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:777    .text.BSP_ST1S14_PGOOD:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:783    .text.BSP_ST1S14_PGOOD:00000000 BSP_ST1S14_PGOOD
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:814    .text.usrPow:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:886    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:892    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\ep_ygh\AppData\Local\Temp\cc5M4xAH.s:957    .bss.lastButtonState.1:00000000 $d
+
+UNDEFINED SYMBOLS
+USART_Transmit
+USART_PrintAllRegisterValues
+GetMotorParameterInitData
+EXPBRD_ID
+BSP_GetExpansionBoardHandle
+L6470_ID
+HAL_Delay
+Step_s_2_Speed
+huart2
+BSP_LED_On
+HAL_GPIO_ReadPin
+BSP_EmergencyStop
+BSP_L6470_BusySynchEventManager
+BSP_L6470_FlagEventManager

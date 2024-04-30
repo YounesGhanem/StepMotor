@@ -1,0 +1,3750 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32f4xx_hal_adc_ex.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HAL_ADCEx_InjectedStart,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_ADCEx_InjectedStart
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_ADCEx_InjectedStart:
+  27              	.LFB128:
+  28              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c"
+   1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+   2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ******************************************************************************
+   3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @file    stm32f4xx_hal_adc_ex.c
+   4:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @author  MCD Application Team
+   5:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @version V1.4.1
+   6:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @date    09-October-2015
+   7:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief   This file provides firmware functions to manage the following 
+   8:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *          functionalities of the ADC extension peripheral:
+   9:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *           + Extended features functions
+  10:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         
+  11:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   @verbatim
+  12:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ==============================================================================
+  13:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                     ##### How to use this driver #####
+  14:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ==============================================================================
+  15:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     [..]
+  16:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     (#)Initialize the ADC low level resources by implementing the HAL_ADC_MspInit():
+  17:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (##) Enable the ADC interface clock using __HAL_RCC_ADC_CLK_ENABLE()
+  18:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (##) ADC pins configuration
+  19:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Enable the clock for the ADC GPIOs using the following function:
+  20:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                    __HAL_RCC_GPIOx_CLK_ENABLE()  
+  21:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Configure these ADC pins in analog mode using HAL_GPIO_Init() 
+  22:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (##) In case of using interrupts (e.g. HAL_ADC_Start_IT())
+  23:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Configure the ADC interrupt priority using HAL_NVIC_SetPriority()
+  24:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Enable the ADC IRQ handler using HAL_NVIC_EnableIRQ()
+  25:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) In ADC IRQ handler, call HAL_ADC_IRQHandler()
+  26:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (##) In case of using DMA to control data transfer (e.g. HAL_ADC_Start_DMA())
+  27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Enable the DMAx interface clock using __HAL_RCC_DMAx_CLK_ENABLE()
+  28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Configure and enable two DMA streams stream for managing data
+  29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  transfer from peripheral to memory (output stream)
+  30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Associate the initialized DMA handle to the ADC DMA handle
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 2
+
+
+  31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  using  __HAL_LINKDMA()
+  32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Configure the priority and enable the NVIC for the transfer complete
+  33:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  interrupt on the two DMA Streams. The output stream should have higher
+  34:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  priority than the input stream.                  
+  35:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      (#) Configure the ADC Prescaler, conversion resolution and data alignment 
+  36:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****          using the HAL_ADC_Init() function. 
+  37:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+  38:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      (#) Configure the ADC Injected channels group features, use HAL_ADC_Init()
+  39:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****          and HAL_ADC_ConfigChannel() functions.
+  40:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****          
+  41:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      (#) Three operation modes are available within this driver :     
+  42:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+  43:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      *** Polling mode IO operation ***
+  44:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      =================================
+  45:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      [..]    
+  46:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Start the ADC peripheral using HAL_ADCEx_InjectedStart() 
+  47:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Wait for end of conversion using HAL_ADC_PollForConversion(), at this stage
+  48:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****            user can specify the value of timeout according to his end application      
+  49:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) To read the ADC converted values, use the HAL_ADCEx_InjectedGetValue() function.
+  50:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Stop the ADC peripheral using HAL_ADCEx_InjectedStop()
+  51:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+  52:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      *** Interrupt mode IO operation ***    
+  53:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      ===================================
+  54:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      [..]    
+  55:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Start the ADC peripheral using HAL_ADCEx_InjectedStart_IT() 
+  56:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Use HAL_ADC_IRQHandler() called under ADC_IRQHandler() Interrupt subroutine
+  57:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) At ADC end of conversion HAL_ADCEx_InjectedConvCpltCallback() function is executed and u
+  58:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             add his own code by customization of function pointer HAL_ADCEx_InjectedConvCpltCallbac
+  59:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) In case of ADC Error, HAL_ADCEx_InjectedErrorCallback() function is executed and user ca
+  60:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             add his own code by customization of function pointer HAL_ADCEx_InjectedErrorCallback
+  61:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Stop the ADC peripheral using HAL_ADCEx_InjectedStop_IT()
+  62:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        
+  63:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             
+  64:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      *** DMA mode IO operation ***    
+  65:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      ==============================
+  66:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      [..]    
+  67:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Start the ADC peripheral using HAL_ADCEx_InjectedStart_DMA(), at this stage the user spe
+  68:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****            of data to be transferred at each end of conversion 
+  69:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) At The end of data transfer ba HAL_ADCEx_InjectedConvCpltCallback() function is executed
+  70:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             add his own code by customization of function pointer HAL_ADCEx_InjectedConvCpltCallbac
+  71:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) In case of transfer Error, HAL_ADCEx_InjectedErrorCallback() function is executed and us
+  72:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             add his own code by customization of function pointer HAL_ADCEx_InjectedErrorCallback
+  73:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         (+) Stop the ADC peripheral using HAL_ADCEx_InjectedStop_DMA()
+  74:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         
+  75:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      *** Multi mode ADCs Regular channels configuration ***
+  76:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      ======================================================
+  77:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      [..]        
+  78:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Select the Multi mode ADC regular channels features (dual or triple mode)  
+  79:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****           and configure the DMA mode using HAL_ADCEx_MultiModeConfigChannel() functions. 
+  80:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Start the ADC peripheral using HAL_ADCEx_MultiModeStart_DMA(), at this stage the user sp
+  81:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****            of data to be transferred at each end of conversion           
+  82:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****        (+) Read the ADCs converted values using the HAL_ADCEx_MultiModeGetValue() function.
+  83:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+  84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+  85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     @endverbatim
+  86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ******************************************************************************
+  87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @attention
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 3
+
+
+  88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+  89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * <h2><center>&copy; COPYRIGHT(c) 2015 STMicroelectronics</center></h2>
+  90:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+  91:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  92:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * are permitted provided that the following conditions are met:
+  93:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  94:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *      this list of conditions and the following disclaimer.
+  95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *      this list of conditions and the following disclaimer in the documentation
+  97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *      and/or other materials provided with the distribution.
+  98:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  99:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *      may be used to endorse or promote products derived from this software
+ 100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *      without specific prior written permission.
+ 101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ 103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ 104:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ 105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ 106:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ 107:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ 108:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ 109:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ 110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ 111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ******************************************************************************
+ 114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */ 
+ 115:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 116:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Includes ------------------------------------------------------------------*/
+ 117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #include "stm32f4xx_hal.h"
+ 118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @addtogroup STM32F4xx_HAL_Driver
+ 120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
+ 121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 122:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @defgroup ADCEx ADCEx
+ 124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief ADC Extended driver modules
+ 125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
+ 126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */ 
+ 127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #ifdef HAL_ADC_MODULE_ENABLED
+ 129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Private typedef -----------------------------------------------------------*/
+ 131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Private define ------------------------------------------------------------*/ 
+ 132:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Private macro -------------------------------------------------------------*/
+ 133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Private variables ---------------------------------------------------------*/
+ 134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @addtogroup ADCEx_Private_Functions
+ 135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
+ 136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Private function prototypes -----------------------------------------------*/
+ 138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAConvCplt(DMA_HandleTypeDef *hdma);
+ 139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAError(DMA_HandleTypeDef *hdma);
+ 140:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAHalfConvCplt(DMA_HandleTypeDef *hdma); 
+ 141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @}
+ 143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 4
+
+
+ 145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Exported functions --------------------------------------------------------*/
+ 146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @defgroup ADCEx_Exported_Functions ADC Exported Functions
+ 147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
+ 148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @defgroup ADCEx_Exported_Functions_Group1  Extended features functions 
+ 151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *  @brief    Extended features functions  
+ 152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** @verbatim   
+ 154:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****  ===============================================================================
+ 155:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  ##### Extended features functions #####
+ 156:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****  ===============================================================================  
+ 157:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     [..]  This section provides functions allowing to:
+ 158:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Start conversion of injected channel.
+ 159:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Stop conversion of injected channel.
+ 160:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Start multimode and enable DMA transfer.
+ 161:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Stop multimode and disable DMA transfer.
+ 162:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Get result of injected channel conversion.
+ 163:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Get result of multimode conversion.
+ 164:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Configure injected channels.
+ 165:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       (+) Configure multimode.
+ 166:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                
+ 167:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** @endverbatim
+ 168:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
+ 169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 170:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 171:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 172:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Enables the selected ADC software start conversion of the injected channels.
+ 173:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 174:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 175:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status
+ 176:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 177:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStart(ADC_HandleTypeDef* hadc)
+ 178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+  29              		.loc 1 178 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 24
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 80B4     		push	{r7}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 4
+  37              		.cfi_offset 7, -4
+  38 0002 87B0     		sub	sp, sp, #28
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 32
+  41 0004 00AF     		add	r7, sp, #0
+  42              	.LCFI2:
+  43              		.cfi_def_cfa_register 7
+  44 0006 7860     		str	r0, [r7, #4]
+ 179:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __IO uint32_t counter = 0;
+  45              		.loc 1 179 17
+  46 0008 0023     		movs	r3, #0
+  47 000a FB60     		str	r3, [r7, #12]
+ 180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   uint32_t tmp1 = 0, tmp2 = 0;
+  48              		.loc 1 180 12
+  49 000c 0023     		movs	r3, #0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 5
+
+
+  50 000e 7B61     		str	r3, [r7, #20]
+  51              		.loc 1 180 22
+  52 0010 0023     		movs	r3, #0
+  53 0012 3B61     		str	r3, [r7, #16]
+ 181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+  54              		.loc 1 183 3
+  55 0014 7B68     		ldr	r3, [r7, #4]
+  56 0016 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+  57 001a 012B     		cmp	r3, #1
+  58 001c 01D1     		bne	.L2
+  59              		.loc 1 183 3 is_stmt 0 discriminator 1
+  60 001e 0223     		movs	r3, #2
+  61 0020 8BE0     		b	.L3
+  62              	.L2:
+  63              		.loc 1 183 3 discriminator 2
+  64 0022 7B68     		ldr	r3, [r7, #4]
+  65 0024 0122     		movs	r2, #1
+  66 0026 83F83C20 		strb	r2, [r3, #60]
+ 184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if a regular conversion is ongoing */
+ 186:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(hadc->State == HAL_ADC_STATE_BUSY_REG)
+  67              		.loc 1 186 10 is_stmt 1 discriminator 2
+  68 002a 7B68     		ldr	r3, [r7, #4]
+  69 002c 93F83D30 		ldrb	r3, [r3, #61]
+  70 0030 DBB2     		uxtb	r3, r3
+  71              		.loc 1 186 5 discriminator 2
+  72 0032 122B     		cmp	r3, #18
+  73 0034 04D1     		bne	.L4
+ 187:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 189:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_BUSY_INJ_REG;  
+  74              		.loc 1 189 17
+  75 0036 7B68     		ldr	r3, [r7, #4]
+  76 0038 3222     		movs	r2, #50
+  77 003a 83F83D20 		strb	r2, [r3, #61]
+  78 003e 03E0     		b	.L5
+  79              	.L4:
+ 190:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 191:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 193:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_BUSY_INJ;
+  80              		.loc 1 194 17
+  81 0040 7B68     		ldr	r3, [r7, #4]
+  82 0042 2222     		movs	r2, #34
+  83 0044 83F83D20 		strb	r2, [r3, #61]
+  84              	.L5:
+ 195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   } 
+ 196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if ADC peripheral is disabled in order to enable it and wait during 
+ 198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      Tstab time the ADC's stabilization */
+ 199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if((hadc->Instance->CR2 & ADC_CR2_ADON) != ADC_CR2_ADON)
+  85              		.loc 1 199 11
+  86 0048 7B68     		ldr	r3, [r7, #4]
+  87 004a 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 6
+
+
+  88              		.loc 1 199 21
+  89 004c 9B68     		ldr	r3, [r3, #8]
+  90              		.loc 1 199 27
+  91 004e 03F00103 		and	r3, r3, #1
+  92              		.loc 1 199 5
+  93 0052 012B     		cmp	r3, #1
+  94 0054 18D0     		beq	.L6
+ 200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
+ 201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the Peripheral */
+ 202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     __HAL_ADC_ENABLE(hadc);
+  95              		.loc 1 202 5
+  96 0056 7B68     		ldr	r3, [r7, #4]
+  97 0058 1B68     		ldr	r3, [r3]
+  98 005a 9A68     		ldr	r2, [r3, #8]
+  99 005c 7B68     		ldr	r3, [r7, #4]
+ 100 005e 1B68     		ldr	r3, [r3]
+ 101 0060 42F00102 		orr	r2, r2, #1
+ 102 0064 9A60     		str	r2, [r3, #8]
+ 203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Delay for temperature sensor stabilization time */
+ 205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Compute number of CPU cycles to wait for */
+ 206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     counter = (ADC_STAB_DELAY_US * (SystemCoreClock / 1000000));
+ 103              		.loc 1 206 53
+ 104 0066 384B     		ldr	r3, .L11
+ 105 0068 1B68     		ldr	r3, [r3]
+ 106 006a 384A     		ldr	r2, .L11+4
+ 107 006c A2FB0323 		umull	r2, r3, r2, r3
+ 108 0070 9A0C     		lsrs	r2, r3, #18
+ 109              		.loc 1 206 34
+ 110 0072 1346     		mov	r3, r2
+ 111 0074 5B00     		lsls	r3, r3, #1
+ 112 0076 1344     		add	r3, r3, r2
+ 113              		.loc 1 206 13
+ 114 0078 FB60     		str	r3, [r7, #12]
+ 207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 115              		.loc 1 207 10
+ 116 007a 02E0     		b	.L7
+ 117              	.L8:
+ 208:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 209:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       counter--;
+ 118              		.loc 1 209 14
+ 119 007c FB68     		ldr	r3, [r7, #12]
+ 120 007e 013B     		subs	r3, r3, #1
+ 121 0080 FB60     		str	r3, [r7, #12]
+ 122              	.L7:
+ 207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 123              		.loc 1 207 19
+ 124 0082 FB68     		ldr	r3, [r7, #12]
+ 207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 125              		.loc 1 207 10
+ 126 0084 002B     		cmp	r3, #0
+ 127 0086 F9D1     		bne	.L8
+ 128              	.L6:
+ 210:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 211:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if Multimode enabled */
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 7
+
+
+ 214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(HAL_IS_BIT_CLR(ADC->CCR, ADC_CCR_MULTI))
+ 129              		.loc 1 214 6
+ 130 0088 314B     		ldr	r3, .L11+8
+ 131 008a 5B68     		ldr	r3, [r3, #4]
+ 132 008c 03F01F03 		and	r3, r3, #31
+ 133              		.loc 1 214 5
+ 134 0090 002B     		cmp	r3, #0
+ 135 0092 24D1     		bne	.L9
+ 215:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 216:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp1 = HAL_IS_BIT_CLR(hadc->Instance->CR2, ADC_CR2_JEXTEN);
+ 136              		.loc 1 216 12
+ 137 0094 7B68     		ldr	r3, [r7, #4]
+ 138 0096 1B68     		ldr	r3, [r3]
+ 139 0098 9B68     		ldr	r3, [r3, #8]
+ 140 009a 03F44013 		and	r3, r3, #3145728
+ 141 009e 002B     		cmp	r3, #0
+ 142 00a0 0CBF     		ite	eq
+ 143 00a2 0123     		moveq	r3, #1
+ 144 00a4 0023     		movne	r3, #0
+ 145 00a6 DBB2     		uxtb	r3, r3
+ 146              		.loc 1 216 10
+ 147 00a8 7B61     		str	r3, [r7, #20]
+ 217:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp2 = HAL_IS_BIT_CLR(hadc->Instance->CR1, ADC_CR1_JAUTO);
+ 148              		.loc 1 217 12
+ 149 00aa 7B68     		ldr	r3, [r7, #4]
+ 150 00ac 1B68     		ldr	r3, [r3]
+ 151 00ae 5B68     		ldr	r3, [r3, #4]
+ 152 00b0 03F48063 		and	r3, r3, #1024
+ 153 00b4 002B     		cmp	r3, #0
+ 154 00b6 0CBF     		ite	eq
+ 155 00b8 0123     		moveq	r3, #1
+ 156 00ba 0023     		movne	r3, #0
+ 157 00bc DBB2     		uxtb	r3, r3
+ 158              		.loc 1 217 10
+ 159 00be 3B61     		str	r3, [r7, #16]
+ 218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     if(tmp1 && tmp2)
+ 160              		.loc 1 218 7
+ 161 00c0 7B69     		ldr	r3, [r7, #20]
+ 162 00c2 002B     		cmp	r3, #0
+ 163 00c4 34D0     		beq	.L10
+ 164              		.loc 1 218 13 discriminator 1
+ 165 00c6 3B69     		ldr	r3, [r7, #16]
+ 166 00c8 002B     		cmp	r3, #0
+ 167 00ca 31D0     		beq	.L10
+ 219:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 220:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Enable the selected ADC software conversion for injected group */
+ 221:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->CR2 |= ADC_CR2_JSWSTART;
+ 168              		.loc 1 221 11
+ 169 00cc 7B68     		ldr	r3, [r7, #4]
+ 170 00ce 1B68     		ldr	r3, [r3]
+ 171              		.loc 1 221 27
+ 172 00d0 9A68     		ldr	r2, [r3, #8]
+ 173              		.loc 1 221 11
+ 174 00d2 7B68     		ldr	r3, [r7, #4]
+ 175 00d4 1B68     		ldr	r3, [r3]
+ 176              		.loc 1 221 27
+ 177 00d6 42F48002 		orr	r2, r2, #4194304
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 8
+
+
+ 178 00da 9A60     		str	r2, [r3, #8]
+ 179 00dc 28E0     		b	.L10
+ 180              	.L9:
+ 222:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 223:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 224:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 226:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp1 = HAL_IS_BIT_CLR(hadc->Instance->CR2, ADC_CR2_JEXTEN);
+ 181              		.loc 1 226 12
+ 182 00de 7B68     		ldr	r3, [r7, #4]
+ 183 00e0 1B68     		ldr	r3, [r3]
+ 184 00e2 9B68     		ldr	r3, [r3, #8]
+ 185 00e4 03F44013 		and	r3, r3, #3145728
+ 186 00e8 002B     		cmp	r3, #0
+ 187 00ea 0CBF     		ite	eq
+ 188 00ec 0123     		moveq	r3, #1
+ 189 00ee 0023     		movne	r3, #0
+ 190 00f0 DBB2     		uxtb	r3, r3
+ 191              		.loc 1 226 10
+ 192 00f2 7B61     		str	r3, [r7, #20]
+ 227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp2 = HAL_IS_BIT_CLR(hadc->Instance->CR1, ADC_CR1_JAUTO);
+ 193              		.loc 1 227 12
+ 194 00f4 7B68     		ldr	r3, [r7, #4]
+ 195 00f6 1B68     		ldr	r3, [r3]
+ 196 00f8 5B68     		ldr	r3, [r3, #4]
+ 197 00fa 03F48063 		and	r3, r3, #1024
+ 198 00fe 002B     		cmp	r3, #0
+ 199 0100 0CBF     		ite	eq
+ 200 0102 0123     		moveq	r3, #1
+ 201 0104 0023     		movne	r3, #0
+ 202 0106 DBB2     		uxtb	r3, r3
+ 203              		.loc 1 227 10
+ 204 0108 3B61     		str	r3, [r7, #16]
+ 228:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     if((hadc->Instance == ADC1) && tmp1 && tmp2)  
+ 205              		.loc 1 228 13
+ 206 010a 7B68     		ldr	r3, [r7, #4]
+ 207 010c 1B68     		ldr	r3, [r3]
+ 208              		.loc 1 228 7
+ 209 010e 114A     		ldr	r2, .L11+12
+ 210 0110 9342     		cmp	r3, r2
+ 211 0112 0DD1     		bne	.L10
+ 212              		.loc 1 228 33 discriminator 1
+ 213 0114 7B69     		ldr	r3, [r7, #20]
+ 214 0116 002B     		cmp	r3, #0
+ 215 0118 0AD0     		beq	.L10
+ 216              		.loc 1 228 41 discriminator 2
+ 217 011a 3B69     		ldr	r3, [r7, #16]
+ 218 011c 002B     		cmp	r3, #0
+ 219 011e 07D0     		beq	.L10
+ 229:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 230:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Enable the selected ADC software conversion for injected group */
+ 231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->CR2 |= ADC_CR2_JSWSTART;
+ 220              		.loc 1 231 11
+ 221 0120 7B68     		ldr	r3, [r7, #4]
+ 222 0122 1B68     		ldr	r3, [r3]
+ 223              		.loc 1 231 27
+ 224 0124 9A68     		ldr	r2, [r3, #8]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 9
+
+
+ 225              		.loc 1 231 11
+ 226 0126 7B68     		ldr	r3, [r7, #4]
+ 227 0128 1B68     		ldr	r3, [r3]
+ 228              		.loc 1 231 27
+ 229 012a 42F48002 		orr	r2, r2, #4194304
+ 230 012e 9A60     		str	r2, [r3, #8]
+ 231              	.L10:
+ 232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 233:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 236:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 232              		.loc 1 236 3
+ 233 0130 7B68     		ldr	r3, [r7, #4]
+ 234 0132 0022     		movs	r2, #0
+ 235 0134 83F83C20 		strb	r2, [r3, #60]
+ 237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 236              		.loc 1 239 10
+ 237 0138 0023     		movs	r3, #0
+ 238              	.L3:
+ 240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 239              		.loc 1 240 1
+ 240 013a 1846     		mov	r0, r3
+ 241 013c 1C37     		adds	r7, r7, #28
+ 242              	.LCFI3:
+ 243              		.cfi_def_cfa_offset 4
+ 244 013e BD46     		mov	sp, r7
+ 245              	.LCFI4:
+ 246              		.cfi_def_cfa_register 13
+ 247              		@ sp needed
+ 248 0140 5DF8047B 		ldr	r7, [sp], #4
+ 249              	.LCFI5:
+ 250              		.cfi_restore 7
+ 251              		.cfi_def_cfa_offset 0
+ 252 0144 7047     		bx	lr
+ 253              	.L12:
+ 254 0146 00BF     		.align	2
+ 255              	.L11:
+ 256 0148 00000000 		.word	SystemCoreClock
+ 257 014c 83DE1B43 		.word	1125899907
+ 258 0150 00230140 		.word	1073816320
+ 259 0154 00200140 		.word	1073815552
+ 260              		.cfi_endproc
+ 261              	.LFE128:
+ 263              		.section	.text.HAL_ADCEx_InjectedStart_IT,"ax",%progbits
+ 264              		.align	1
+ 265              		.global	HAL_ADCEx_InjectedStart_IT
+ 266              		.syntax unified
+ 267              		.thumb
+ 268              		.thumb_func
+ 270              	HAL_ADCEx_InjectedStart_IT:
+ 271              	.LFB129:
+ 241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 243:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Enables the interrupt and starts ADC conversion of injected channels.
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 10
+
+
+ 244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 245:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 246:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 247:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status.
+ 248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 249:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStart_IT(ADC_HandleTypeDef* hadc)
+ 250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 272              		.loc 1 250 1
+ 273              		.cfi_startproc
+ 274              		@ args = 0, pretend = 0, frame = 24
+ 275              		@ frame_needed = 1, uses_anonymous_args = 0
+ 276              		@ link register save eliminated.
+ 277 0000 80B4     		push	{r7}
+ 278              	.LCFI6:
+ 279              		.cfi_def_cfa_offset 4
+ 280              		.cfi_offset 7, -4
+ 281 0002 87B0     		sub	sp, sp, #28
+ 282              	.LCFI7:
+ 283              		.cfi_def_cfa_offset 32
+ 284 0004 00AF     		add	r7, sp, #0
+ 285              	.LCFI8:
+ 286              		.cfi_def_cfa_register 7
+ 287 0006 7860     		str	r0, [r7, #4]
+ 251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __IO uint32_t counter = 0;
+ 288              		.loc 1 251 17
+ 289 0008 0023     		movs	r3, #0
+ 290 000a FB60     		str	r3, [r7, #12]
+ 252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   uint32_t tmp1 = 0, tmp2 =0;
+ 291              		.loc 1 252 12
+ 292 000c 0023     		movs	r3, #0
+ 293 000e 7B61     		str	r3, [r7, #20]
+ 294              		.loc 1 252 22
+ 295 0010 0023     		movs	r3, #0
+ 296 0012 3B61     		str	r3, [r7, #16]
+ 253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+ 297              		.loc 1 255 3
+ 298 0014 7B68     		ldr	r3, [r7, #4]
+ 299 0016 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+ 300 001a 012B     		cmp	r3, #1
+ 301 001c 01D1     		bne	.L14
+ 302              		.loc 1 255 3 is_stmt 0 discriminator 1
+ 303 001e 0223     		movs	r3, #2
+ 304 0020 9EE0     		b	.L15
+ 305              	.L14:
+ 306              		.loc 1 255 3 discriminator 2
+ 307 0022 7B68     		ldr	r3, [r7, #4]
+ 308 0024 0122     		movs	r2, #1
+ 309 0026 83F83C20 		strb	r2, [r3, #60]
+ 256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if a regular conversion is ongoing */
+ 258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(hadc->State == HAL_ADC_STATE_BUSY_REG)
+ 310              		.loc 1 258 10 is_stmt 1 discriminator 2
+ 311 002a 7B68     		ldr	r3, [r7, #4]
+ 312 002c 93F83D30 		ldrb	r3, [r3, #61]
+ 313 0030 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 11
+
+
+ 314              		.loc 1 258 5 discriminator 2
+ 315 0032 122B     		cmp	r3, #18
+ 316 0034 04D1     		bne	.L16
+ 259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_BUSY_INJ_REG;  
+ 317              		.loc 1 261 17
+ 318 0036 7B68     		ldr	r3, [r7, #4]
+ 319 0038 3222     		movs	r2, #50
+ 320 003a 83F83D20 		strb	r2, [r3, #61]
+ 321 003e 03E0     		b	.L17
+ 322              	.L16:
+ 262:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 263:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 264:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 265:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_BUSY_INJ;
+ 323              		.loc 1 266 17
+ 324 0040 7B68     		ldr	r3, [r7, #4]
+ 325 0042 2222     		movs	r2, #34
+ 326 0044 83F83D20 		strb	r2, [r3, #61]
+ 327              	.L17:
+ 267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set ADC error code to none */
+ 270:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->ErrorCode = HAL_ADC_ERROR_NONE;
+ 328              		.loc 1 270 19
+ 329 0048 7B68     		ldr	r3, [r7, #4]
+ 330 004a 0022     		movs	r2, #0
+ 331 004c 1A64     		str	r2, [r3, #64]
+ 271:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 272:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if ADC peripheral is disabled in order to enable it and wait during 
+ 273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      Tstab time the ADC's stabilization */
+ 274:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if((hadc->Instance->CR2 & ADC_CR2_ADON) != ADC_CR2_ADON)
+ 332              		.loc 1 274 11
+ 333 004e 7B68     		ldr	r3, [r7, #4]
+ 334 0050 1B68     		ldr	r3, [r3]
+ 335              		.loc 1 274 21
+ 336 0052 9B68     		ldr	r3, [r3, #8]
+ 337              		.loc 1 274 27
+ 338 0054 03F00103 		and	r3, r3, #1
+ 339              		.loc 1 274 5
+ 340 0058 012B     		cmp	r3, #1
+ 341 005a 18D0     		beq	.L18
+ 275:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
+ 276:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the Peripheral */
+ 277:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     __HAL_ADC_ENABLE(hadc);
+ 342              		.loc 1 277 5
+ 343 005c 7B68     		ldr	r3, [r7, #4]
+ 344 005e 1B68     		ldr	r3, [r3]
+ 345 0060 9A68     		ldr	r2, [r3, #8]
+ 346 0062 7B68     		ldr	r3, [r7, #4]
+ 347 0064 1B68     		ldr	r3, [r3]
+ 348 0066 42F00102 		orr	r2, r2, #1
+ 349 006a 9A60     		str	r2, [r3, #8]
+ 278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 279:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Delay for temperature sensor stabilization time */
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 12
+
+
+ 280:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Compute number of CPU cycles to wait for */
+ 281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     counter = (ADC_STAB_DELAY_US * (SystemCoreClock / 1000000));
+ 350              		.loc 1 281 53
+ 351 006c 3F4B     		ldr	r3, .L23
+ 352 006e 1B68     		ldr	r3, [r3]
+ 353 0070 3F4A     		ldr	r2, .L23+4
+ 354 0072 A2FB0323 		umull	r2, r3, r2, r3
+ 355 0076 9A0C     		lsrs	r2, r3, #18
+ 356              		.loc 1 281 34
+ 357 0078 1346     		mov	r3, r2
+ 358 007a 5B00     		lsls	r3, r3, #1
+ 359 007c 1344     		add	r3, r3, r2
+ 360              		.loc 1 281 13
+ 361 007e FB60     		str	r3, [r7, #12]
+ 282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 362              		.loc 1 282 10
+ 363 0080 02E0     		b	.L19
+ 364              	.L20:
+ 283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       counter--;
+ 365              		.loc 1 284 14
+ 366 0082 FB68     		ldr	r3, [r7, #12]
+ 367 0084 013B     		subs	r3, r3, #1
+ 368 0086 FB60     		str	r3, [r7, #12]
+ 369              	.L19:
+ 282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 370              		.loc 1 282 19
+ 371 0088 FB68     		ldr	r3, [r7, #12]
+ 282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 372              		.loc 1 282 10
+ 373 008a 002B     		cmp	r3, #0
+ 374 008c F9D1     		bne	.L20
+ 375              	.L18:
+ 285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 286:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 287:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 288:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable the ADC end of conversion interrupt for injected group */
+ 289:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_ENABLE_IT(hadc, ADC_IT_JEOC);
+ 376              		.loc 1 289 3
+ 377 008e 7B68     		ldr	r3, [r7, #4]
+ 378 0090 1B68     		ldr	r3, [r3]
+ 379 0092 5A68     		ldr	r2, [r3, #4]
+ 380 0094 7B68     		ldr	r3, [r7, #4]
+ 381 0096 1B68     		ldr	r3, [r3]
+ 382 0098 42F08002 		orr	r2, r2, #128
+ 383 009c 5A60     		str	r2, [r3, #4]
+ 290:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 291:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable the ADC overrun interrupt */
+ 292:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_ENABLE_IT(hadc, ADC_IT_OVR);
+ 384              		.loc 1 292 3
+ 385 009e 7B68     		ldr	r3, [r7, #4]
+ 386 00a0 1B68     		ldr	r3, [r3]
+ 387 00a2 5A68     		ldr	r2, [r3, #4]
+ 388 00a4 7B68     		ldr	r3, [r7, #4]
+ 389 00a6 1B68     		ldr	r3, [r3]
+ 390 00a8 42F08062 		orr	r2, r2, #67108864
+ 391 00ac 5A60     		str	r2, [r3, #4]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 13
+
+
+ 293:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 294:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if Multimode enabled */
+ 295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(HAL_IS_BIT_CLR(ADC->CCR, ADC_CCR_MULTI))
+ 392              		.loc 1 295 6
+ 393 00ae 314B     		ldr	r3, .L23+8
+ 394 00b0 5B68     		ldr	r3, [r3, #4]
+ 395 00b2 03F01F03 		and	r3, r3, #31
+ 396              		.loc 1 295 5
+ 397 00b6 002B     		cmp	r3, #0
+ 398 00b8 24D1     		bne	.L21
+ 296:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp1 = HAL_IS_BIT_CLR(hadc->Instance->CR2, ADC_CR2_JEXTEN);
+ 399              		.loc 1 297 12
+ 400 00ba 7B68     		ldr	r3, [r7, #4]
+ 401 00bc 1B68     		ldr	r3, [r3]
+ 402 00be 9B68     		ldr	r3, [r3, #8]
+ 403 00c0 03F44013 		and	r3, r3, #3145728
+ 404 00c4 002B     		cmp	r3, #0
+ 405 00c6 0CBF     		ite	eq
+ 406 00c8 0123     		moveq	r3, #1
+ 407 00ca 0023     		movne	r3, #0
+ 408 00cc DBB2     		uxtb	r3, r3
+ 409              		.loc 1 297 10
+ 410 00ce 7B61     		str	r3, [r7, #20]
+ 298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp2 = HAL_IS_BIT_CLR(hadc->Instance->CR1, ADC_CR1_JAUTO);
+ 411              		.loc 1 298 12
+ 412 00d0 7B68     		ldr	r3, [r7, #4]
+ 413 00d2 1B68     		ldr	r3, [r3]
+ 414 00d4 5B68     		ldr	r3, [r3, #4]
+ 415 00d6 03F48063 		and	r3, r3, #1024
+ 416 00da 002B     		cmp	r3, #0
+ 417 00dc 0CBF     		ite	eq
+ 418 00de 0123     		moveq	r3, #1
+ 419 00e0 0023     		movne	r3, #0
+ 420 00e2 DBB2     		uxtb	r3, r3
+ 421              		.loc 1 298 10
+ 422 00e4 3B61     		str	r3, [r7, #16]
+ 299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     if(tmp1 && tmp2)
+ 423              		.loc 1 299 7
+ 424 00e6 7B69     		ldr	r3, [r7, #20]
+ 425 00e8 002B     		cmp	r3, #0
+ 426 00ea 34D0     		beq	.L22
+ 427              		.loc 1 299 13 discriminator 1
+ 428 00ec 3B69     		ldr	r3, [r7, #16]
+ 429 00ee 002B     		cmp	r3, #0
+ 430 00f0 31D0     		beq	.L22
+ 300:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 301:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Enable the selected ADC software conversion for injected group */
+ 302:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->CR2 |= ADC_CR2_JSWSTART;
+ 431              		.loc 1 302 11
+ 432 00f2 7B68     		ldr	r3, [r7, #4]
+ 433 00f4 1B68     		ldr	r3, [r3]
+ 434              		.loc 1 302 27
+ 435 00f6 9A68     		ldr	r2, [r3, #8]
+ 436              		.loc 1 302 11
+ 437 00f8 7B68     		ldr	r3, [r7, #4]
+ 438 00fa 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 14
+
+
+ 439              		.loc 1 302 27
+ 440 00fc 42F48002 		orr	r2, r2, #4194304
+ 441 0100 9A60     		str	r2, [r3, #8]
+ 442 0102 28E0     		b	.L22
+ 443              	.L21:
+ 303:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 304:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 305:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 306:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 307:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp1 = HAL_IS_BIT_CLR(hadc->Instance->CR2, ADC_CR2_JEXTEN);
+ 444              		.loc 1 307 12
+ 445 0104 7B68     		ldr	r3, [r7, #4]
+ 446 0106 1B68     		ldr	r3, [r3]
+ 447 0108 9B68     		ldr	r3, [r3, #8]
+ 448 010a 03F44013 		and	r3, r3, #3145728
+ 449 010e 002B     		cmp	r3, #0
+ 450 0110 0CBF     		ite	eq
+ 451 0112 0123     		moveq	r3, #1
+ 452 0114 0023     		movne	r3, #0
+ 453 0116 DBB2     		uxtb	r3, r3
+ 454              		.loc 1 307 10
+ 455 0118 7B61     		str	r3, [r7, #20]
+ 308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     tmp2 = HAL_IS_BIT_CLR(hadc->Instance->CR1, ADC_CR1_JAUTO);
+ 456              		.loc 1 308 12
+ 457 011a 7B68     		ldr	r3, [r7, #4]
+ 458 011c 1B68     		ldr	r3, [r3]
+ 459 011e 5B68     		ldr	r3, [r3, #4]
+ 460 0120 03F48063 		and	r3, r3, #1024
+ 461 0124 002B     		cmp	r3, #0
+ 462 0126 0CBF     		ite	eq
+ 463 0128 0123     		moveq	r3, #1
+ 464 012a 0023     		movne	r3, #0
+ 465 012c DBB2     		uxtb	r3, r3
+ 466              		.loc 1 308 10
+ 467 012e 3B61     		str	r3, [r7, #16]
+ 309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     if((hadc->Instance == ADC1) && tmp1 && tmp2)  
+ 468              		.loc 1 309 13
+ 469 0130 7B68     		ldr	r3, [r7, #4]
+ 470 0132 1B68     		ldr	r3, [r3]
+ 471              		.loc 1 309 7
+ 472 0134 104A     		ldr	r2, .L23+12
+ 473 0136 9342     		cmp	r3, r2
+ 474 0138 0DD1     		bne	.L22
+ 475              		.loc 1 309 33 discriminator 1
+ 476 013a 7B69     		ldr	r3, [r7, #20]
+ 477 013c 002B     		cmp	r3, #0
+ 478 013e 0AD0     		beq	.L22
+ 479              		.loc 1 309 41 discriminator 2
+ 480 0140 3B69     		ldr	r3, [r7, #16]
+ 481 0142 002B     		cmp	r3, #0
+ 482 0144 07D0     		beq	.L22
+ 310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 311:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Enable the selected ADC software conversion for injected group */
+ 312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->CR2 |= ADC_CR2_JSWSTART;
+ 483              		.loc 1 312 11
+ 484 0146 7B68     		ldr	r3, [r7, #4]
+ 485 0148 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 15
+
+
+ 486              		.loc 1 312 27
+ 487 014a 9A68     		ldr	r2, [r3, #8]
+ 488              		.loc 1 312 11
+ 489 014c 7B68     		ldr	r3, [r7, #4]
+ 490 014e 1B68     		ldr	r3, [r3]
+ 491              		.loc 1 312 27
+ 492 0150 42F48002 		orr	r2, r2, #4194304
+ 493 0154 9A60     		str	r2, [r3, #8]
+ 494              	.L22:
+ 313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 495              		.loc 1 317 3
+ 496 0156 7B68     		ldr	r3, [r7, #4]
+ 497 0158 0022     		movs	r2, #0
+ 498 015a 83F83C20 		strb	r2, [r3, #60]
+ 318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 319:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 320:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 499              		.loc 1 320 10
+ 500 015e 0023     		movs	r3, #0
+ 501              	.L15:
+ 321:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 502              		.loc 1 321 1
+ 503 0160 1846     		mov	r0, r3
+ 504 0162 1C37     		adds	r7, r7, #28
+ 505              	.LCFI9:
+ 506              		.cfi_def_cfa_offset 4
+ 507 0164 BD46     		mov	sp, r7
+ 508              	.LCFI10:
+ 509              		.cfi_def_cfa_register 13
+ 510              		@ sp needed
+ 511 0166 5DF8047B 		ldr	r7, [sp], #4
+ 512              	.LCFI11:
+ 513              		.cfi_restore 7
+ 514              		.cfi_def_cfa_offset 0
+ 515 016a 7047     		bx	lr
+ 516              	.L24:
+ 517              		.align	2
+ 518              	.L23:
+ 519 016c 00000000 		.word	SystemCoreClock
+ 520 0170 83DE1B43 		.word	1125899907
+ 521 0174 00230140 		.word	1073816320
+ 522 0178 00200140 		.word	1073815552
+ 523              		.cfi_endproc
+ 524              	.LFE129:
+ 526              		.section	.text.HAL_ADCEx_InjectedStop,"ax",%progbits
+ 527              		.align	1
+ 528              		.global	HAL_ADCEx_InjectedStop
+ 529              		.syntax unified
+ 530              		.thumb
+ 531              		.thumb_func
+ 533              	HAL_ADCEx_InjectedStop:
+ 534              	.LFB130:
+ 322:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 16
+
+
+ 323:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Disables ADC and stop conversion of injected channels.
+ 325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 326:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @note   Caution: This function will stop also regular channels.  
+ 327:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 328:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 330:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status.
+ 331:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 332:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStop(ADC_HandleTypeDef* hadc)
+ 333:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 535              		.loc 1 333 1
+ 536              		.cfi_startproc
+ 537              		@ args = 0, pretend = 0, frame = 8
+ 538              		@ frame_needed = 1, uses_anonymous_args = 0
+ 539              		@ link register save eliminated.
+ 540 0000 80B4     		push	{r7}
+ 541              	.LCFI12:
+ 542              		.cfi_def_cfa_offset 4
+ 543              		.cfi_offset 7, -4
+ 544 0002 83B0     		sub	sp, sp, #12
+ 545              	.LCFI13:
+ 546              		.cfi_def_cfa_offset 16
+ 547 0004 00AF     		add	r7, sp, #0
+ 548              	.LCFI14:
+ 549              		.cfi_def_cfa_register 7
+ 550 0006 7860     		str	r0, [r7, #4]
+ 334:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable the Peripheral */
+ 335:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE(hadc);
+ 551              		.loc 1 335 3
+ 552 0008 7B68     		ldr	r3, [r7, #4]
+ 553 000a 1B68     		ldr	r3, [r3]
+ 554 000c 9A68     		ldr	r2, [r3, #8]
+ 555 000e 7B68     		ldr	r3, [r7, #4]
+ 556 0010 1B68     		ldr	r3, [r3]
+ 557 0012 22F00102 		bic	r2, r2, #1
+ 558 0016 9A60     		str	r2, [r3, #8]
+ 336:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 337:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Change ADC state */
+ 338:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->State = HAL_ADC_STATE_READY;
+ 559              		.loc 1 338 15
+ 560 0018 7B68     		ldr	r3, [r7, #4]
+ 561 001a 0122     		movs	r2, #1
+ 562 001c 83F83D20 		strb	r2, [r3, #61]
+ 339:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 563              		.loc 1 341 10
+ 564 0020 0023     		movs	r3, #0
+ 342:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 565              		.loc 1 342 1
+ 566 0022 1846     		mov	r0, r3
+ 567 0024 0C37     		adds	r7, r7, #12
+ 568              	.LCFI15:
+ 569              		.cfi_def_cfa_offset 4
+ 570 0026 BD46     		mov	sp, r7
+ 571              	.LCFI16:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 17
+
+
+ 572              		.cfi_def_cfa_register 13
+ 573              		@ sp needed
+ 574 0028 5DF8047B 		ldr	r7, [sp], #4
+ 575              	.LCFI17:
+ 576              		.cfi_restore 7
+ 577              		.cfi_def_cfa_offset 0
+ 578 002c 7047     		bx	lr
+ 579              		.cfi_endproc
+ 580              	.LFE130:
+ 582              		.section	.text.HAL_ADCEx_InjectedPollForConversion,"ax",%progbits
+ 583              		.align	1
+ 584              		.global	HAL_ADCEx_InjectedPollForConversion
+ 585              		.syntax unified
+ 586              		.thumb
+ 587              		.thumb_func
+ 589              	HAL_ADCEx_InjectedPollForConversion:
+ 590              	.LFB131:
+ 343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 344:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 345:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Poll for injected conversion complete
+ 346:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 347:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 348:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  Timeout: Timeout value in millisecond.  
+ 349:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status
+ 350:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 351:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedPollForConversion(ADC_HandleTypeDef* hadc, uint32_t Timeout)
+ 352:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 591              		.loc 1 352 1
+ 592              		.cfi_startproc
+ 593              		@ args = 0, pretend = 0, frame = 16
+ 594              		@ frame_needed = 1, uses_anonymous_args = 0
+ 595 0000 80B5     		push	{r7, lr}
+ 596              	.LCFI18:
+ 597              		.cfi_def_cfa_offset 8
+ 598              		.cfi_offset 7, -8
+ 599              		.cfi_offset 14, -4
+ 600 0002 84B0     		sub	sp, sp, #16
+ 601              	.LCFI19:
+ 602              		.cfi_def_cfa_offset 24
+ 603 0004 00AF     		add	r7, sp, #0
+ 604              	.LCFI20:
+ 605              		.cfi_def_cfa_register 7
+ 606 0006 7860     		str	r0, [r7, #4]
+ 607 0008 3960     		str	r1, [r7]
+ 353:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   uint32_t tickstart = 0;
+ 608              		.loc 1 353 12
+ 609 000a 0023     		movs	r3, #0
+ 610 000c FB60     		str	r3, [r7, #12]
+ 354:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 355:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Get tick */ 
+ 356:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   tickstart = HAL_GetTick();
+ 611              		.loc 1 356 15
+ 612 000e FFF7FEFF 		bl	HAL_GetTick
+ 613 0012 F860     		str	r0, [r7, #12]
+ 357:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 358:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check End of conversion flag */
+ 359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   while(!(__HAL_ADC_GET_FLAG(hadc, ADC_FLAG_JEOC)))
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 18
+
+
+ 614              		.loc 1 359 8
+ 615 0014 18E0     		b	.L28
+ 616              	.L31:
+ 360:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 361:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Check for the Timeout */
+ 362:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     if(Timeout != HAL_MAX_DELAY)
+ 617              		.loc 1 362 7
+ 618 0016 3B68     		ldr	r3, [r7]
+ 619 0018 B3F1FF3F 		cmp	r3, #-1
+ 620 001c 14D0     		beq	.L28
+ 363:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 364:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       if((Timeout == 0)||((HAL_GetTick() - tickstart ) > Timeout))
+ 621              		.loc 1 364 9
+ 622 001e 3B68     		ldr	r3, [r7]
+ 623 0020 002B     		cmp	r3, #0
+ 624 0022 07D0     		beq	.L29
+ 625              		.loc 1 364 28 discriminator 1
+ 626 0024 FFF7FEFF 		bl	HAL_GetTick
+ 627 0028 0246     		mov	r2, r0
+ 628              		.loc 1 364 42 discriminator 1
+ 629 002a FB68     		ldr	r3, [r7, #12]
+ 630 002c D31A     		subs	r3, r2, r3
+ 631              		.loc 1 364 24 discriminator 1
+ 632 002e 3A68     		ldr	r2, [r7]
+ 633 0030 9A42     		cmp	r2, r3
+ 634 0032 09D2     		bcs	.L28
+ 635              	.L29:
+ 365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       {
+ 366:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         hadc->State= HAL_ADC_STATE_TIMEOUT;
+ 636              		.loc 1 366 20
+ 637 0034 7B68     		ldr	r3, [r7, #4]
+ 638 0036 0322     		movs	r2, #3
+ 639 0038 83F83D20 		strb	r2, [r3, #61]
+ 367:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         /* Process unlocked */
+ 368:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         __HAL_UNLOCK(hadc);
+ 640              		.loc 1 368 9
+ 641 003c 7B68     		ldr	r3, [r7, #4]
+ 642 003e 0022     		movs	r2, #0
+ 643 0040 83F83C20 		strb	r2, [r3, #60]
+ 369:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****         return HAL_TIMEOUT;
+ 644              		.loc 1 369 16
+ 645 0044 0323     		movs	r3, #3
+ 646 0046 16E0     		b	.L30
+ 647              	.L28:
+ 359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 648              		.loc 1 359 11
+ 649 0048 7B68     		ldr	r3, [r7, #4]
+ 650 004a 1B68     		ldr	r3, [r3]
+ 651 004c 1B68     		ldr	r3, [r3]
+ 652 004e 03F00403 		and	r3, r3, #4
+ 359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 653              		.loc 1 359 8
+ 654 0052 042B     		cmp	r3, #4
+ 655 0054 DFD1     		bne	.L31
+ 370:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       }
+ 371:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 19
+
+
+ 373:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 374:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if a regular conversion is ready */
+ 375:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(hadc->State == HAL_ADC_STATE_EOC_REG)
+ 656              		.loc 1 375 10
+ 657 0056 7B68     		ldr	r3, [r7, #4]
+ 658 0058 93F83D30 		ldrb	r3, [r3, #61]
+ 659 005c DBB2     		uxtb	r3, r3
+ 660              		.loc 1 375 5
+ 661 005e 152B     		cmp	r3, #21
+ 662 0060 04D1     		bne	.L32
+ 376:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 377:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 378:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_EOC_INJ_REG;  
+ 663              		.loc 1 378 17
+ 664 0062 7B68     		ldr	r3, [r7, #4]
+ 665 0064 3522     		movs	r2, #53
+ 666 0066 83F83D20 		strb	r2, [r3, #61]
+ 667 006a 03E0     		b	.L33
+ 668              	.L32:
+ 379:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 380:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 381:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 382:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 383:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_EOC_INJ;
+ 669              		.loc 1 383 17
+ 670 006c 7B68     		ldr	r3, [r7, #4]
+ 671 006e 2522     		movs	r2, #37
+ 672 0070 83F83D20 		strb	r2, [r3, #61]
+ 673              	.L33:
+ 384:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 385:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 386:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return ADC state */
+ 387:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 674              		.loc 1 387 10
+ 675 0074 0023     		movs	r3, #0
+ 676              	.L30:
+ 388:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }      
+ 677              		.loc 1 388 1
+ 678 0076 1846     		mov	r0, r3
+ 679 0078 1037     		adds	r7, r7, #16
+ 680              	.LCFI21:
+ 681              		.cfi_def_cfa_offset 8
+ 682 007a BD46     		mov	sp, r7
+ 683              	.LCFI22:
+ 684              		.cfi_def_cfa_register 13
+ 685              		@ sp needed
+ 686 007c 80BD     		pop	{r7, pc}
+ 687              		.cfi_endproc
+ 688              	.LFE131:
+ 690              		.section	.text.HAL_ADCEx_InjectedStop_IT,"ax",%progbits
+ 691              		.align	1
+ 692              		.global	HAL_ADCEx_InjectedStop_IT
+ 693              		.syntax unified
+ 694              		.thumb
+ 695              		.thumb_func
+ 697              	HAL_ADCEx_InjectedStop_IT:
+ 698              	.LFB132:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 20
+
+
+ 389:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 390:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 391:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Disables the interrupt and stop ADC conversion of injected channels.
+ 392:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * 
+ 393:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @note   Caution: This function will stop also regular channels.  
+ 394:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 395:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 396:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 397:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status.
+ 398:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 399:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStop_IT(ADC_HandleTypeDef* hadc)
+ 400:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 699              		.loc 1 400 1
+ 700              		.cfi_startproc
+ 701              		@ args = 0, pretend = 0, frame = 8
+ 702              		@ frame_needed = 1, uses_anonymous_args = 0
+ 703              		@ link register save eliminated.
+ 704 0000 80B4     		push	{r7}
+ 705              	.LCFI23:
+ 706              		.cfi_def_cfa_offset 4
+ 707              		.cfi_offset 7, -4
+ 708 0002 83B0     		sub	sp, sp, #12
+ 709              	.LCFI24:
+ 710              		.cfi_def_cfa_offset 16
+ 711 0004 00AF     		add	r7, sp, #0
+ 712              	.LCFI25:
+ 713              		.cfi_def_cfa_register 7
+ 714 0006 7860     		str	r0, [r7, #4]
+ 401:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable the ADC end of conversion interrupt for regular group */
+ 402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE_IT(hadc, ADC_IT_EOC);
+ 715              		.loc 1 402 3
+ 716 0008 7B68     		ldr	r3, [r7, #4]
+ 717 000a 1B68     		ldr	r3, [r3]
+ 718 000c 5A68     		ldr	r2, [r3, #4]
+ 719 000e 7B68     		ldr	r3, [r7, #4]
+ 720 0010 1B68     		ldr	r3, [r3]
+ 721 0012 22F02002 		bic	r2, r2, #32
+ 722 0016 5A60     		str	r2, [r3, #4]
+ 403:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 404:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable the ADC end of conversion interrupt for injected group */
+ 405:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE_IT(hadc, ADC_CR1_JEOCIE);
+ 723              		.loc 1 405 3
+ 724 0018 7B68     		ldr	r3, [r7, #4]
+ 725 001a 1B68     		ldr	r3, [r3]
+ 726 001c 5A68     		ldr	r2, [r3, #4]
+ 727 001e 7B68     		ldr	r3, [r7, #4]
+ 728 0020 1B68     		ldr	r3, [r3]
+ 729 0022 22F08002 		bic	r2, r2, #128
+ 730 0026 5A60     		str	r2, [r3, #4]
+ 406:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 407:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable the Peripheral */
+ 408:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE(hadc);
+ 731              		.loc 1 408 3
+ 732 0028 7B68     		ldr	r3, [r7, #4]
+ 733 002a 1B68     		ldr	r3, [r3]
+ 734 002c 9A68     		ldr	r2, [r3, #8]
+ 735 002e 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 21
+
+
+ 736 0030 1B68     		ldr	r3, [r3]
+ 737 0032 22F00102 		bic	r2, r2, #1
+ 738 0036 9A60     		str	r2, [r3, #8]
+ 409:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 410:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Change ADC state */
+ 411:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->State = HAL_ADC_STATE_READY;
+ 739              		.loc 1 411 15
+ 740 0038 7B68     		ldr	r3, [r7, #4]
+ 741 003a 0122     		movs	r2, #1
+ 742 003c 83F83D20 		strb	r2, [r3, #61]
+ 412:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 413:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 414:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 743              		.loc 1 414 10
+ 744 0040 0023     		movs	r3, #0
+ 415:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 745              		.loc 1 415 1
+ 746 0042 1846     		mov	r0, r3
+ 747 0044 0C37     		adds	r7, r7, #12
+ 748              	.LCFI26:
+ 749              		.cfi_def_cfa_offset 4
+ 750 0046 BD46     		mov	sp, r7
+ 751              	.LCFI27:
+ 752              		.cfi_def_cfa_register 13
+ 753              		@ sp needed
+ 754 0048 5DF8047B 		ldr	r7, [sp], #4
+ 755              	.LCFI28:
+ 756              		.cfi_restore 7
+ 757              		.cfi_def_cfa_offset 0
+ 758 004c 7047     		bx	lr
+ 759              		.cfi_endproc
+ 760              	.LFE132:
+ 762              		.section	.rodata
+ 763              		.align	2
+ 764              	.LC0:
+ 765 0000 44726976 		.ascii	"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_"
+ 765      6572732F 
+ 765      53544D33 
+ 765      32463478 
+ 765      785F4841 
+ 766 0033 65782E63 		.ascii	"ex.c\000"
+ 766      00
+ 767              		.section	.text.HAL_ADCEx_InjectedGetValue,"ax",%progbits
+ 768              		.align	1
+ 769              		.global	HAL_ADCEx_InjectedGetValue
+ 770              		.syntax unified
+ 771              		.thumb
+ 772              		.thumb_func
+ 774              	HAL_ADCEx_InjectedGetValue:
+ 775              	.LFB133:
+ 416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 417:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Gets the converted value from data register of injected channel.
+ 419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 420:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 421:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  InjectedRank: the ADC injected rank.
+ 422:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *          This parameter can be one of the following values:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 22
+
+
+ 423:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *            @arg ADC_INJECTED_RANK_1: Injected Channel1 selected
+ 424:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *            @arg ADC_INJECTED_RANK_2: Injected Channel2 selected
+ 425:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *            @arg ADC_INJECTED_RANK_3: Injected Channel3 selected
+ 426:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *            @arg ADC_INJECTED_RANK_4: Injected Channel4 selected
+ 427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** uint32_t HAL_ADCEx_InjectedGetValue(ADC_HandleTypeDef* hadc, uint32_t InjectedRank)
+ 430:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 776              		.loc 1 430 1
+ 777              		.cfi_startproc
+ 778              		@ args = 0, pretend = 0, frame = 16
+ 779              		@ frame_needed = 1, uses_anonymous_args = 0
+ 780 0000 80B5     		push	{r7, lr}
+ 781              	.LCFI29:
+ 782              		.cfi_def_cfa_offset 8
+ 783              		.cfi_offset 7, -8
+ 784              		.cfi_offset 14, -4
+ 785 0002 84B0     		sub	sp, sp, #16
+ 786              	.LCFI30:
+ 787              		.cfi_def_cfa_offset 24
+ 788 0004 00AF     		add	r7, sp, #0
+ 789              	.LCFI31:
+ 790              		.cfi_def_cfa_register 7
+ 791 0006 7860     		str	r0, [r7, #4]
+ 792 0008 3960     		str	r1, [r7]
+ 431:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __IO uint32_t tmp = 0;
+ 793              		.loc 1 431 17
+ 794 000a 0023     		movs	r3, #0
+ 795 000c FB60     		str	r3, [r7, #12]
+ 432:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 433:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check the parameters */
+ 434:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_INJECTED_RANK(InjectedRank));
+ 796              		.loc 1 434 3
+ 797 000e 3B68     		ldr	r3, [r7]
+ 798 0010 002B     		cmp	r3, #0
+ 799 0012 02D0     		beq	.L37
+ 800              		.loc 1 434 3 is_stmt 0 discriminator 2
+ 801 0014 3B68     		ldr	r3, [r7]
+ 802 0016 042B     		cmp	r3, #4
+ 803 0018 04D9     		bls	.L38
+ 804              	.L37:
+ 805              		.loc 1 434 3 discriminator 3
+ 806 001a 4FF4D971 		mov	r1, #434
+ 807 001e 1848     		ldr	r0, .L48
+ 808 0020 FFF7FEFF 		bl	assert_failed
+ 809              	.L38:
+ 435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 436:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****    /* Clear the ADCx's flag for injected end of conversion */
+ 437:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****    __HAL_ADC_CLEAR_FLAG(hadc,ADC_FLAG_JEOC);
+ 810              		.loc 1 437 4 is_stmt 1
+ 811 0024 7B68     		ldr	r3, [r7, #4]
+ 812 0026 1B68     		ldr	r3, [r3]
+ 813 0028 6FF00402 		mvn	r2, #4
+ 814 002c 1A60     		str	r2, [r3]
+ 438:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 439:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return the selected ADC converted value */ 
+ 440:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   switch(InjectedRank)
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 23
+
+
+ 815              		.loc 1 440 3
+ 816 002e 3B68     		ldr	r3, [r7]
+ 817 0030 013B     		subs	r3, r3, #1
+ 818 0032 032B     		cmp	r3, #3
+ 819 0034 1ED8     		bhi	.L47
+ 820 0036 01A2     		adr	r2, .L41
+ 821 0038 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 822              		.p2align 2
+ 823              	.L41:
+ 824 003c 6B000000 		.word	.L44+1
+ 825 0040 61000000 		.word	.L43+1
+ 826 0044 57000000 		.word	.L42+1
+ 827 0048 4D000000 		.word	.L40+1
+ 828              		.p2align 1
+ 829              	.L40:
+ 441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
+ 442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case ADC_INJECTED_RANK_4:
+ 443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 444:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       tmp =  hadc->Instance->JDR4;
+ 830              		.loc 1 444 18
+ 831 004c 7B68     		ldr	r3, [r7, #4]
+ 832 004e 1B68     		ldr	r3, [r3]
+ 833              		.loc 1 444 28
+ 834 0050 9B6C     		ldr	r3, [r3, #72]
+ 835              		.loc 1 444 11
+ 836 0052 FB60     		str	r3, [r7, #12]
+ 445:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }  
+ 446:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     break;
+ 837              		.loc 1 446 5
+ 838 0054 0FE0     		b	.L45
+ 839              	.L42:
+ 447:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case ADC_INJECTED_RANK_3: 
+ 448:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {  
+ 449:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       tmp =  hadc->Instance->JDR3;
+ 840              		.loc 1 449 18
+ 841 0056 7B68     		ldr	r3, [r7, #4]
+ 842 0058 1B68     		ldr	r3, [r3]
+ 843              		.loc 1 449 28
+ 844 005a 5B6C     		ldr	r3, [r3, #68]
+ 845              		.loc 1 449 11
+ 846 005c FB60     		str	r3, [r7, #12]
+ 450:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }  
+ 451:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     break;
+ 847              		.loc 1 451 5
+ 848 005e 0AE0     		b	.L45
+ 849              	.L43:
+ 452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case ADC_INJECTED_RANK_2: 
+ 453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {  
+ 454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       tmp =  hadc->Instance->JDR2;
+ 850              		.loc 1 454 18
+ 851 0060 7B68     		ldr	r3, [r7, #4]
+ 852 0062 1B68     		ldr	r3, [r3]
+ 853              		.loc 1 454 28
+ 854 0064 1B6C     		ldr	r3, [r3, #64]
+ 855              		.loc 1 454 11
+ 856 0066 FB60     		str	r3, [r7, #12]
+ 455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 24
+
+
+ 456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     break;
+ 857              		.loc 1 456 5
+ 858 0068 05E0     		b	.L45
+ 859              	.L44:
+ 457:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case ADC_INJECTED_RANK_1:
+ 458:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 459:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       tmp =  hadc->Instance->JDR1;
+ 860              		.loc 1 459 18
+ 861 006a 7B68     		ldr	r3, [r7, #4]
+ 862 006c 1B68     		ldr	r3, [r3]
+ 863              		.loc 1 459 28
+ 864 006e DB6B     		ldr	r3, [r3, #60]
+ 865              		.loc 1 459 11
+ 866 0070 FB60     		str	r3, [r7, #12]
+ 460:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 461:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     break;
+ 867              		.loc 1 461 5
+ 868 0072 00E0     		b	.L45
+ 869              	.L47:
+ 462:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     default:
+ 463:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     break;  
+ 870              		.loc 1 463 5
+ 871 0074 00BF     		nop
+ 872              	.L45:
+ 464:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 465:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return tmp;
+ 873              		.loc 1 465 10
+ 874 0076 FB68     		ldr	r3, [r7, #12]
+ 466:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 875              		.loc 1 466 1
+ 876 0078 1846     		mov	r0, r3
+ 877 007a 1037     		adds	r7, r7, #16
+ 878              	.LCFI32:
+ 879              		.cfi_def_cfa_offset 8
+ 880 007c BD46     		mov	sp, r7
+ 881              	.LCFI33:
+ 882              		.cfi_def_cfa_register 13
+ 883              		@ sp needed
+ 884 007e 80BD     		pop	{r7, pc}
+ 885              	.L49:
+ 886              		.align	2
+ 887              	.L48:
+ 888 0080 00000000 		.word	.LC0
+ 889              		.cfi_endproc
+ 890              	.LFE133:
+ 892              		.section	.text.HAL_ADCEx_MultiModeStart_DMA,"ax",%progbits
+ 893              		.align	1
+ 894              		.global	HAL_ADCEx_MultiModeStart_DMA
+ 895              		.syntax unified
+ 896              		.thumb
+ 897              		.thumb_func
+ 899              	HAL_ADCEx_MultiModeStart_DMA:
+ 900              	.LFB134:
+ 467:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 468:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 469:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Enables ADC DMA request after last transfer (Multi-ADC mode) and enables ADC peripheral
+ 470:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * 
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 25
+
+
+ 471:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @note   Caution: This function must be used only with the ADC master.  
+ 472:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
+ 473:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 474:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 475:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  pData:   Pointer to buffer in which transferred from ADC peripheral to memory will be s
+ 476:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  Length:  The length of data to be transferred from ADC peripheral to memory.  
+ 477:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status
+ 478:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 479:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_MultiModeStart_DMA(ADC_HandleTypeDef* hadc, uint32_t* pData, uint32_t L
+ 480:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 901              		.loc 1 480 1
+ 902              		.cfi_startproc
+ 903              		@ args = 0, pretend = 0, frame = 24
+ 904              		@ frame_needed = 1, uses_anonymous_args = 0
+ 905 0000 80B5     		push	{r7, lr}
+ 906              	.LCFI34:
+ 907              		.cfi_def_cfa_offset 8
+ 908              		.cfi_offset 7, -8
+ 909              		.cfi_offset 14, -4
+ 910 0002 86B0     		sub	sp, sp, #24
+ 911              	.LCFI35:
+ 912              		.cfi_def_cfa_offset 32
+ 913 0004 00AF     		add	r7, sp, #0
+ 914              	.LCFI36:
+ 915              		.cfi_def_cfa_register 7
+ 916 0006 F860     		str	r0, [r7, #12]
+ 917 0008 B960     		str	r1, [r7, #8]
+ 918 000a 7A60     		str	r2, [r7, #4]
+ 481:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __IO uint32_t counter = 0;
+ 919              		.loc 1 481 17
+ 920 000c 0023     		movs	r3, #0
+ 921 000e 7B61     		str	r3, [r7, #20]
+ 482:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 483:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check the parameters */
+ 484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(hadc->Init.ContinuousConvMode));
+ 922              		.loc 1 484 3
+ 923 0010 FB68     		ldr	r3, [r7, #12]
+ 924 0012 9B69     		ldr	r3, [r3, #24]
+ 925 0014 002B     		cmp	r3, #0
+ 926 0016 08D0     		beq	.L51
+ 927              		.loc 1 484 3 is_stmt 0 discriminator 1
+ 928 0018 FB68     		ldr	r3, [r7, #12]
+ 929 001a 9B69     		ldr	r3, [r3, #24]
+ 930 001c 012B     		cmp	r3, #1
+ 931 001e 04D0     		beq	.L51
+ 932              		.loc 1 484 3 discriminator 2
+ 933 0020 4FF4F271 		mov	r1, #484
+ 934 0024 4D48     		ldr	r0, .L62
+ 935 0026 FFF7FEFF 		bl	assert_failed
+ 936              	.L51:
+ 485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_EXT_TRIG_EDGE(hadc->Init.ExternalTrigConvEdge));
+ 937              		.loc 1 485 3 is_stmt 1
+ 938 002a FB68     		ldr	r3, [r7, #12]
+ 939 002c 1B6B     		ldr	r3, [r3, #48]
+ 940 002e 002B     		cmp	r3, #0
+ 941 0030 13D0     		beq	.L52
+ 942              		.loc 1 485 3 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 26
+
+
+ 943 0032 FB68     		ldr	r3, [r7, #12]
+ 944 0034 1B6B     		ldr	r3, [r3, #48]
+ 945 0036 B3F1805F 		cmp	r3, #268435456
+ 946 003a 0ED0     		beq	.L52
+ 947              		.loc 1 485 3 discriminator 2
+ 948 003c FB68     		ldr	r3, [r7, #12]
+ 949 003e 1B6B     		ldr	r3, [r3, #48]
+ 950 0040 B3F1005F 		cmp	r3, #536870912
+ 951 0044 09D0     		beq	.L52
+ 952              		.loc 1 485 3 discriminator 3
+ 953 0046 FB68     		ldr	r3, [r7, #12]
+ 954 0048 1B6B     		ldr	r3, [r3, #48]
+ 955 004a B3F1405F 		cmp	r3, #805306368
+ 956 004e 04D0     		beq	.L52
+ 957              		.loc 1 485 3 discriminator 4
+ 958 0050 40F2E511 		movw	r1, #485
+ 959 0054 4148     		ldr	r0, .L62
+ 960 0056 FFF7FEFF 		bl	assert_failed
+ 961              	.L52:
+ 486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(hadc->Init.DMAContinuousRequests));
+ 962              		.loc 1 486 3 is_stmt 1
+ 963 005a FB68     		ldr	r3, [r7, #12]
+ 964 005c DB69     		ldr	r3, [r3, #28]
+ 965 005e 002B     		cmp	r3, #0
+ 966 0060 08D0     		beq	.L53
+ 967              		.loc 1 486 3 is_stmt 0 discriminator 1
+ 968 0062 FB68     		ldr	r3, [r7, #12]
+ 969 0064 DB69     		ldr	r3, [r3, #28]
+ 970 0066 012B     		cmp	r3, #1
+ 971 0068 04D0     		beq	.L53
+ 972              		.loc 1 486 3 discriminator 2
+ 973 006a 4FF4F371 		mov	r1, #486
+ 974 006e 3B48     		ldr	r0, .L62
+ 975 0070 FFF7FEFF 		bl	assert_failed
+ 976              	.L53:
+ 487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 489:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+ 977              		.loc 1 489 3 is_stmt 1
+ 978 0074 FB68     		ldr	r3, [r7, #12]
+ 979 0076 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+ 980 007a 012B     		cmp	r3, #1
+ 981 007c 01D1     		bne	.L54
+ 982              		.loc 1 489 3 is_stmt 0 discriminator 1
+ 983 007e 0223     		movs	r3, #2
+ 984 0080 67E0     		b	.L55
+ 985              	.L54:
+ 986              		.loc 1 489 3 discriminator 2
+ 987 0082 FB68     		ldr	r3, [r7, #12]
+ 988 0084 0122     		movs	r2, #1
+ 989 0086 83F83C20 		strb	r2, [r3, #60]
+ 490:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 491:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable ADC overrun interrupt */
+ 492:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_ENABLE_IT(hadc, ADC_IT_OVR);
+ 990              		.loc 1 492 3 is_stmt 1 discriminator 2
+ 991 008a FB68     		ldr	r3, [r7, #12]
+ 992 008c 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 27
+
+
+ 993 008e 5A68     		ldr	r2, [r3, #4]
+ 994 0090 FB68     		ldr	r3, [r7, #12]
+ 995 0092 1B68     		ldr	r3, [r3]
+ 996 0094 42F08062 		orr	r2, r2, #67108864
+ 997 0098 5A60     		str	r2, [r3, #4]
+ 493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 494:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if (hadc->Init.DMAContinuousRequests != DISABLE)
+ 998              		.loc 1 494 17 discriminator 2
+ 999 009a FB68     		ldr	r3, [r7, #12]
+ 1000 009c DB69     		ldr	r3, [r3, #28]
+ 1001              		.loc 1 494 6 discriminator 2
+ 1002 009e 002B     		cmp	r3, #0
+ 1003 00a0 06D0     		beq	.L56
+ 495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 496:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the selected ADC DMA request after last transfer */
+ 497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC->CCR |= ADC_CCR_DDS;
+ 1004              		.loc 1 497 14
+ 1005 00a2 2F4B     		ldr	r3, .L62+4
+ 1006 00a4 5B68     		ldr	r3, [r3, #4]
+ 1007 00a6 2E4A     		ldr	r2, .L62+4
+ 1008 00a8 43F40053 		orr	r3, r3, #8192
+ 1009 00ac 5360     		str	r3, [r2, #4]
+ 1010 00ae 05E0     		b	.L57
+ 1011              	.L56:
+ 498:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 499:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 501:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Disable the selected ADC EOC rising on each regular channel conversion */
+ 502:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC->CCR &= ~ADC_CCR_DDS;
+ 1012              		.loc 1 502 14
+ 1013 00b0 2B4B     		ldr	r3, .L62+4
+ 1014 00b2 5B68     		ldr	r3, [r3, #4]
+ 1015 00b4 2A4A     		ldr	r2, .L62+4
+ 1016 00b6 23F40053 		bic	r3, r3, #8192
+ 1017 00ba 5360     		str	r3, [r2, #4]
+ 1018              	.L57:
+ 503:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 505:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set the DMA transfer complete callback */
+ 506:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->DMA_Handle->XferCpltCallback = ADC_MultiModeDMAConvCplt;
+ 1019              		.loc 1 506 7
+ 1020 00bc FB68     		ldr	r3, [r7, #12]
+ 1021 00be 9B6B     		ldr	r3, [r3, #56]
+ 1022              		.loc 1 506 38
+ 1023 00c0 284A     		ldr	r2, .L62+8
+ 1024 00c2 DA63     		str	r2, [r3, #60]
+ 507:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 508:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set the DMA half transfer complete callback */
+ 509:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->DMA_Handle->XferHalfCpltCallback = ADC_MultiModeDMAHalfConvCplt;
+ 1025              		.loc 1 509 7
+ 1026 00c4 FB68     		ldr	r3, [r7, #12]
+ 1027 00c6 9B6B     		ldr	r3, [r3, #56]
+ 1028              		.loc 1 509 42
+ 1029 00c8 274A     		ldr	r2, .L62+12
+ 1030 00ca 1A64     		str	r2, [r3, #64]
+ 510:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      
+ 511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set the DMA error callback */
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 28
+
+
+ 512:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->DMA_Handle->XferErrorCallback = ADC_MultiModeDMAError ;
+ 1031              		.loc 1 512 7
+ 1032 00cc FB68     		ldr	r3, [r7, #12]
+ 1033 00ce 9B6B     		ldr	r3, [r3, #56]
+ 1034              		.loc 1 512 39
+ 1035 00d0 264A     		ldr	r2, .L62+16
+ 1036 00d2 9A64     		str	r2, [r3, #72]
+ 513:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 514:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable the DMA Stream */
+ 515:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   HAL_DMA_Start_IT(hadc->DMA_Handle, (uint32_t)&ADC->CDR, (uint32_t)pData, Length);
+ 1037              		.loc 1 515 3
+ 1038 00d4 FB68     		ldr	r3, [r7, #12]
+ 1039 00d6 986B     		ldr	r0, [r3, #56]
+ 1040 00d8 BA68     		ldr	r2, [r7, #8]
+ 1041 00da 7B68     		ldr	r3, [r7, #4]
+ 1042 00dc 2449     		ldr	r1, .L62+20
+ 1043 00de FFF7FEFF 		bl	HAL_DMA_Start_IT
+ 516:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 517:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Change ADC state */
+ 518:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->State = HAL_ADC_STATE_BUSY_REG;
+ 1044              		.loc 1 518 15
+ 1045 00e2 FB68     		ldr	r3, [r7, #12]
+ 1046 00e4 1222     		movs	r2, #18
+ 1047 00e6 83F83D20 		strb	r2, [r3, #61]
+ 519:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 520:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if ADC peripheral is disabled in order to enable it and wait during 
+ 521:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      Tstab time the ADC's stabilization */
+ 522:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if((hadc->Instance->CR2 & ADC_CR2_ADON) != ADC_CR2_ADON)
+ 1048              		.loc 1 522 11
+ 1049 00ea FB68     		ldr	r3, [r7, #12]
+ 1050 00ec 1B68     		ldr	r3, [r3]
+ 1051              		.loc 1 522 21
+ 1052 00ee 9B68     		ldr	r3, [r3, #8]
+ 1053              		.loc 1 522 27
+ 1054 00f0 03F00103 		and	r3, r3, #1
+ 1055              		.loc 1 522 5
+ 1056 00f4 012B     		cmp	r3, #1
+ 1057 00f6 18D0     		beq	.L58
+ 523:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
+ 524:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the Peripheral */
+ 525:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     __HAL_ADC_ENABLE(hadc);
+ 1058              		.loc 1 525 5
+ 1059 00f8 FB68     		ldr	r3, [r7, #12]
+ 1060 00fa 1B68     		ldr	r3, [r3]
+ 1061 00fc 9A68     		ldr	r2, [r3, #8]
+ 1062 00fe FB68     		ldr	r3, [r7, #12]
+ 1063 0100 1B68     		ldr	r3, [r3]
+ 1064 0102 42F00102 		orr	r2, r2, #1
+ 1065 0106 9A60     		str	r2, [r3, #8]
+ 526:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 527:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Delay for temperature sensor stabilization time */
+ 528:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Compute number of CPU cycles to wait for */
+ 529:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     counter = (ADC_STAB_DELAY_US * (SystemCoreClock / 1000000));
+ 1066              		.loc 1 529 53
+ 1067 0108 1A4B     		ldr	r3, .L62+24
+ 1068 010a 1B68     		ldr	r3, [r3]
+ 1069 010c 1A4A     		ldr	r2, .L62+28
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 29
+
+
+ 1070 010e A2FB0323 		umull	r2, r3, r2, r3
+ 1071 0112 9A0C     		lsrs	r2, r3, #18
+ 1072              		.loc 1 529 34
+ 1073 0114 1346     		mov	r3, r2
+ 1074 0116 5B00     		lsls	r3, r3, #1
+ 1075 0118 1344     		add	r3, r3, r2
+ 1076              		.loc 1 529 13
+ 1077 011a 7B61     		str	r3, [r7, #20]
+ 530:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 1078              		.loc 1 530 10
+ 1079 011c 02E0     		b	.L59
+ 1080              	.L60:
+ 531:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
+ 532:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       counter--;
+ 1081              		.loc 1 532 14
+ 1082 011e 7B69     		ldr	r3, [r7, #20]
+ 1083 0120 013B     		subs	r3, r3, #1
+ 1084 0122 7B61     		str	r3, [r7, #20]
+ 1085              	.L59:
+ 530:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 1086              		.loc 1 530 19
+ 1087 0124 7B69     		ldr	r3, [r7, #20]
+ 530:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     while(counter != 0)
+ 1088              		.loc 1 530 10
+ 1089 0126 002B     		cmp	r3, #0
+ 1090 0128 F9D1     		bne	.L60
+ 1091              	.L58:
+ 533:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
+ 534:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 535:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 536:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* if no external trigger present enable software conversion of regular channels */
+ 537:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if((hadc->Instance->CR2 & ADC_CR2_EXTEN) == RESET) 
+ 1092              		.loc 1 537 11
+ 1093 012a FB68     		ldr	r3, [r7, #12]
+ 1094 012c 1B68     		ldr	r3, [r3]
+ 1095              		.loc 1 537 21
+ 1096 012e 9B68     		ldr	r3, [r3, #8]
+ 1097              		.loc 1 537 27
+ 1098 0130 03F04053 		and	r3, r3, #805306368
+ 1099              		.loc 1 537 5
+ 1100 0134 002B     		cmp	r3, #0
+ 1101 0136 07D1     		bne	.L61
+ 538:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 539:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the selected ADC software conversion for regular group */
+ 540:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 |= (uint32_t)ADC_CR2_SWSTART;
+ 1102              		.loc 1 540 9
+ 1103 0138 FB68     		ldr	r3, [r7, #12]
+ 1104 013a 1B68     		ldr	r3, [r3]
+ 1105              		.loc 1 540 25
+ 1106 013c 9A68     		ldr	r2, [r3, #8]
+ 1107              		.loc 1 540 9
+ 1108 013e FB68     		ldr	r3, [r7, #12]
+ 1109 0140 1B68     		ldr	r3, [r3]
+ 1110              		.loc 1 540 25
+ 1111 0142 42F08042 		orr	r2, r2, #1073741824
+ 1112 0146 9A60     		str	r2, [r3, #8]
+ 1113              	.L61:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 30
+
+
+ 541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 544:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 1114              		.loc 1 544 3
+ 1115 0148 FB68     		ldr	r3, [r7, #12]
+ 1116 014a 0022     		movs	r2, #0
+ 1117 014c 83F83C20 		strb	r2, [r3, #60]
+ 545:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 547:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 1118              		.loc 1 547 10
+ 1119 0150 0023     		movs	r3, #0
+ 1120              	.L55:
+ 548:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 1121              		.loc 1 548 1
+ 1122 0152 1846     		mov	r0, r3
+ 1123 0154 1837     		adds	r7, r7, #24
+ 1124              	.LCFI37:
+ 1125              		.cfi_def_cfa_offset 8
+ 1126 0156 BD46     		mov	sp, r7
+ 1127              	.LCFI38:
+ 1128              		.cfi_def_cfa_register 13
+ 1129              		@ sp needed
+ 1130 0158 80BD     		pop	{r7, pc}
+ 1131              	.L63:
+ 1132 015a 00BF     		.align	2
+ 1133              	.L62:
+ 1134 015c 00000000 		.word	.LC0
+ 1135 0160 00230140 		.word	1073816320
+ 1136 0164 00000000 		.word	ADC_MultiModeDMAConvCplt
+ 1137 0168 00000000 		.word	ADC_MultiModeDMAHalfConvCplt
+ 1138 016c 00000000 		.word	ADC_MultiModeDMAError
+ 1139 0170 08230140 		.word	1073816328
+ 1140 0174 00000000 		.word	SystemCoreClock
+ 1141 0178 83DE1B43 		.word	1125899907
+ 1142              		.cfi_endproc
+ 1143              	.LFE134:
+ 1145              		.section	.text.HAL_ADCEx_MultiModeStop_DMA,"ax",%progbits
+ 1146              		.align	1
+ 1147              		.global	HAL_ADCEx_MultiModeStop_DMA
+ 1148              		.syntax unified
+ 1149              		.thumb
+ 1150              		.thumb_func
+ 1152              	HAL_ADCEx_MultiModeStop_DMA:
+ 1153              	.LFB135:
+ 549:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 550:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 551:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Disables ADC DMA (multi-ADC mode) and disables ADC peripheral    
+ 552:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 553:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 554:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status
+ 555:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 556:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_MultiModeStop_DMA(ADC_HandleTypeDef* hadc)
+ 557:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 1154              		.loc 1 557 1
+ 1155              		.cfi_startproc
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 31
+
+
+ 1156              		@ args = 0, pretend = 0, frame = 8
+ 1157              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1158 0000 80B5     		push	{r7, lr}
+ 1159              	.LCFI39:
+ 1160              		.cfi_def_cfa_offset 8
+ 1161              		.cfi_offset 7, -8
+ 1162              		.cfi_offset 14, -4
+ 1163 0002 82B0     		sub	sp, sp, #8
+ 1164              	.LCFI40:
+ 1165              		.cfi_def_cfa_offset 16
+ 1166 0004 00AF     		add	r7, sp, #0
+ 1167              	.LCFI41:
+ 1168              		.cfi_def_cfa_register 7
+ 1169 0006 7860     		str	r0, [r7, #4]
+ 558:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 559:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+ 1170              		.loc 1 559 3
+ 1171 0008 7B68     		ldr	r3, [r7, #4]
+ 1172 000a 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+ 1173 000e 012B     		cmp	r3, #1
+ 1174 0010 01D1     		bne	.L65
+ 1175              		.loc 1 559 3 is_stmt 0 discriminator 1
+ 1176 0012 0223     		movs	r3, #2
+ 1177 0014 27E0     		b	.L66
+ 1178              	.L65:
+ 1179              		.loc 1 559 3 discriminator 2
+ 1180 0016 7B68     		ldr	r3, [r7, #4]
+ 1181 0018 0122     		movs	r2, #1
+ 1182 001a 83F83C20 		strb	r2, [r3, #60]
+ 560:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 561:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable the Peripheral */
+ 562:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE(hadc);
+ 1183              		.loc 1 562 3 is_stmt 1 discriminator 2
+ 1184 001e 7B68     		ldr	r3, [r7, #4]
+ 1185 0020 1B68     		ldr	r3, [r3]
+ 1186 0022 9A68     		ldr	r2, [r3, #8]
+ 1187 0024 7B68     		ldr	r3, [r7, #4]
+ 1188 0026 1B68     		ldr	r3, [r3]
+ 1189 0028 22F00102 		bic	r2, r2, #1
+ 1190 002c 9A60     		str	r2, [r3, #8]
+ 563:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 564:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable ADC overrun interrupt */
+ 565:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_ADC_DISABLE_IT(hadc, ADC_IT_OVR);
+ 1191              		.loc 1 565 3 discriminator 2
+ 1192 002e 7B68     		ldr	r3, [r7, #4]
+ 1193 0030 1B68     		ldr	r3, [r3]
+ 1194 0032 5A68     		ldr	r2, [r3, #4]
+ 1195 0034 7B68     		ldr	r3, [r7, #4]
+ 1196 0036 1B68     		ldr	r3, [r3]
+ 1197 0038 22F08062 		bic	r2, r2, #67108864
+ 1198 003c 5A60     		str	r2, [r3, #4]
+ 566:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 567:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable the selected ADC DMA request after last transfer */
+ 568:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR &= ~ADC_CCR_DDS;
+ 1199              		.loc 1 568 12 discriminator 2
+ 1200 003e 0C4B     		ldr	r3, .L67
+ 1201 0040 5B68     		ldr	r3, [r3, #4]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 32
+
+
+ 1202 0042 0B4A     		ldr	r2, .L67
+ 1203 0044 23F40053 		bic	r3, r3, #8192
+ 1204 0048 5360     		str	r3, [r2, #4]
+ 569:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 570:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Disable the ADC DMA Stream */
+ 571:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   HAL_DMA_Abort(hadc->DMA_Handle);
+ 1205              		.loc 1 571 3 discriminator 2
+ 1206 004a 7B68     		ldr	r3, [r7, #4]
+ 1207 004c 9B6B     		ldr	r3, [r3, #56]
+ 1208 004e 1846     		mov	r0, r3
+ 1209 0050 FFF7FEFF 		bl	HAL_DMA_Abort
+ 572:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 573:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Change ADC state */
+ 574:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->State = HAL_ADC_STATE_READY;
+ 1210              		.loc 1 574 15 discriminator 2
+ 1211 0054 7B68     		ldr	r3, [r7, #4]
+ 1212 0056 0122     		movs	r2, #1
+ 1213 0058 83F83D20 		strb	r2, [r3, #61]
+ 575:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 576:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 577:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 1214              		.loc 1 577 3 discriminator 2
+ 1215 005c 7B68     		ldr	r3, [r7, #4]
+ 1216 005e 0022     		movs	r2, #0
+ 1217 0060 83F83C20 		strb	r2, [r3, #60]
+ 578:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 579:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 580:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 1218              		.loc 1 580 10 discriminator 2
+ 1219 0064 0023     		movs	r3, #0
+ 1220              	.L66:
+ 581:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 1221              		.loc 1 581 1
+ 1222 0066 1846     		mov	r0, r3
+ 1223 0068 0837     		adds	r7, r7, #8
+ 1224              	.LCFI42:
+ 1225              		.cfi_def_cfa_offset 8
+ 1226 006a BD46     		mov	sp, r7
+ 1227              	.LCFI43:
+ 1228              		.cfi_def_cfa_register 13
+ 1229              		@ sp needed
+ 1230 006c 80BD     		pop	{r7, pc}
+ 1231              	.L68:
+ 1232 006e 00BF     		.align	2
+ 1233              	.L67:
+ 1234 0070 00230140 		.word	1073816320
+ 1235              		.cfi_endproc
+ 1236              	.LFE135:
+ 1238              		.section	.text.HAL_ADCEx_MultiModeGetValue,"ax",%progbits
+ 1239              		.align	1
+ 1240              		.global	HAL_ADCEx_MultiModeGetValue
+ 1241              		.syntax unified
+ 1242              		.thumb
+ 1243              		.thumb_func
+ 1245              	HAL_ADCEx_MultiModeGetValue:
+ 1246              	.LFB136:
+ 582:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 33
+
+
+ 583:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 584:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Returns the last ADC1, ADC2 and ADC3 regular conversions results 
+ 585:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         data in the selected multi mode.
+ 586:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 587:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 588:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval The converted data value.
+ 589:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 590:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** uint32_t HAL_ADCEx_MultiModeGetValue(ADC_HandleTypeDef* hadc)
+ 591:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 1247              		.loc 1 591 1
+ 1248              		.cfi_startproc
+ 1249              		@ args = 0, pretend = 0, frame = 8
+ 1250              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1251              		@ link register save eliminated.
+ 1252 0000 80B4     		push	{r7}
+ 1253              	.LCFI44:
+ 1254              		.cfi_def_cfa_offset 4
+ 1255              		.cfi_offset 7, -4
+ 1256 0002 83B0     		sub	sp, sp, #12
+ 1257              	.LCFI45:
+ 1258              		.cfi_def_cfa_offset 16
+ 1259 0004 00AF     		add	r7, sp, #0
+ 1260              	.LCFI46:
+ 1261              		.cfi_def_cfa_register 7
+ 1262 0006 7860     		str	r0, [r7, #4]
+ 592:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return the multi mode conversion value */
+ 593:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return ADC->CDR;
+ 1263              		.loc 1 593 13
+ 1264 0008 034B     		ldr	r3, .L71
+ 1265 000a 9B68     		ldr	r3, [r3, #8]
+ 594:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 1266              		.loc 1 594 1
+ 1267 000c 1846     		mov	r0, r3
+ 1268 000e 0C37     		adds	r7, r7, #12
+ 1269              	.LCFI47:
+ 1270              		.cfi_def_cfa_offset 4
+ 1271 0010 BD46     		mov	sp, r7
+ 1272              	.LCFI48:
+ 1273              		.cfi_def_cfa_register 13
+ 1274              		@ sp needed
+ 1275 0012 5DF8047B 		ldr	r7, [sp], #4
+ 1276              	.LCFI49:
+ 1277              		.cfi_restore 7
+ 1278              		.cfi_def_cfa_offset 0
+ 1279 0016 7047     		bx	lr
+ 1280              	.L72:
+ 1281              		.align	2
+ 1282              	.L71:
+ 1283 0018 00230140 		.word	1073816320
+ 1284              		.cfi_endproc
+ 1285              	.LFE136:
+ 1287              		.section	.text.HAL_ADCEx_InjectedConvCpltCallback,"ax",%progbits
+ 1288              		.align	1
+ 1289              		.weak	HAL_ADCEx_InjectedConvCpltCallback
+ 1290              		.syntax unified
+ 1291              		.thumb
+ 1292              		.thumb_func
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 34
+
+
+ 1294              	HAL_ADCEx_InjectedConvCpltCallback:
+ 1295              	.LFB137:
+ 595:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 596:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 597:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Injected conversion complete callback in non blocking mode 
+ 598:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 599:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 600:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 601:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 602:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** __weak void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc)
+ 603:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 1296              		.loc 1 603 1
+ 1297              		.cfi_startproc
+ 1298              		@ args = 0, pretend = 0, frame = 8
+ 1299              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1300              		@ link register save eliminated.
+ 1301 0000 80B4     		push	{r7}
+ 1302              	.LCFI50:
+ 1303              		.cfi_def_cfa_offset 4
+ 1304              		.cfi_offset 7, -4
+ 1305 0002 83B0     		sub	sp, sp, #12
+ 1306              	.LCFI51:
+ 1307              		.cfi_def_cfa_offset 16
+ 1308 0004 00AF     		add	r7, sp, #0
+ 1309              	.LCFI52:
+ 1310              		.cfi_def_cfa_register 7
+ 1311 0006 7860     		str	r0, [r7, #4]
+ 604:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* NOTE : This function Should not be modified, when the callback is needed,
+ 605:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****             the HAL_ADC_InjectedConvCpltCallback could be implemented in the user file
+ 606:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****    */
+ 607:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 1312              		.loc 1 607 1
+ 1313 0008 00BF     		nop
+ 1314 000a 0C37     		adds	r7, r7, #12
+ 1315              	.LCFI53:
+ 1316              		.cfi_def_cfa_offset 4
+ 1317 000c BD46     		mov	sp, r7
+ 1318              	.LCFI54:
+ 1319              		.cfi_def_cfa_register 13
+ 1320              		@ sp needed
+ 1321 000e 5DF8047B 		ldr	r7, [sp], #4
+ 1322              	.LCFI55:
+ 1323              		.cfi_restore 7
+ 1324              		.cfi_def_cfa_offset 0
+ 1325 0012 7047     		bx	lr
+ 1326              		.cfi_endproc
+ 1327              	.LFE137:
+ 1329              		.section	.text.HAL_ADCEx_InjectedConfigChannel,"ax",%progbits
+ 1330              		.align	1
+ 1331              		.global	HAL_ADCEx_InjectedConfigChannel
+ 1332              		.syntax unified
+ 1333              		.thumb
+ 1334              		.thumb_func
+ 1336              	HAL_ADCEx_InjectedConfigChannel:
+ 1337              	.LFB138:
+ 608:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 609:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 35
+
+
+ 610:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Configures for the selected ADC injected channel its corresponding
+ 611:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         rank in the sequencer and its sample time.
+ 612:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
+ 613:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         the configuration information for the specified ADC.
+ 614:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  sConfigInjected: ADC configuration structure for injected channel. 
+ 615:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 616:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 617:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedConfigChannel(ADC_HandleTypeDef* hadc, ADC_InjectionConfTypeDef
+ 618:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 1338              		.loc 1 618 1
+ 1339              		.cfi_startproc
+ 1340              		@ args = 0, pretend = 0, frame = 16
+ 1341              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1342 0000 80B5     		push	{r7, lr}
+ 1343              	.LCFI56:
+ 1344              		.cfi_def_cfa_offset 8
+ 1345              		.cfi_offset 7, -8
+ 1346              		.cfi_offset 14, -4
+ 1347 0002 84B0     		sub	sp, sp, #16
+ 1348              	.LCFI57:
+ 1349              		.cfi_def_cfa_offset 24
+ 1350 0004 00AF     		add	r7, sp, #0
+ 1351              	.LCFI58:
+ 1352              		.cfi_def_cfa_register 7
+ 1353 0006 7860     		str	r0, [r7, #4]
+ 1354 0008 3960     		str	r1, [r7]
+ 619:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 620:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #ifdef USE_FULL_ASSERT  
+ 621:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   uint32_t tmp = 0;
+ 1355              		.loc 1 621 12
+ 1356 000a 0023     		movs	r3, #0
+ 1357 000c FB60     		str	r3, [r7, #12]
+ 622:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #endif /* USE_FULL_ASSERT  */
+ 623:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 624:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check the parameters */
+ 625:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_CHANNEL(sConfigInjected->InjectedChannel));
+ 1358              		.loc 1 625 3
+ 1359 000e 3B68     		ldr	r3, [r7]
+ 1360 0010 1B68     		ldr	r3, [r3]
+ 1361 0012 122B     		cmp	r3, #18
+ 1362 0014 04D9     		bls	.L75
+ 1363              		.loc 1 625 3 is_stmt 0 discriminator 1
+ 1364 0016 40F27121 		movw	r1, #625
+ 1365 001a 8248     		ldr	r0, .L108
+ 1366 001c FFF7FEFF 		bl	assert_failed
+ 1367              	.L75:
+ 626:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_INJECTED_RANK(sConfigInjected->InjectedRank));
+ 1368              		.loc 1 626 3 is_stmt 1
+ 1369 0020 3B68     		ldr	r3, [r7]
+ 1370 0022 5B68     		ldr	r3, [r3, #4]
+ 1371 0024 002B     		cmp	r3, #0
+ 1372 0026 03D0     		beq	.L76
+ 1373              		.loc 1 626 3 is_stmt 0 discriminator 2
+ 1374 0028 3B68     		ldr	r3, [r7]
+ 1375 002a 5B68     		ldr	r3, [r3, #4]
+ 1376 002c 042B     		cmp	r3, #4
+ 1377 002e 04D9     		bls	.L77
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 36
+
+
+ 1378              	.L76:
+ 1379              		.loc 1 626 3 discriminator 3
+ 1380 0030 40F27221 		movw	r1, #626
+ 1381 0034 7B48     		ldr	r0, .L108
+ 1382 0036 FFF7FEFF 		bl	assert_failed
+ 1383              	.L77:
+ 627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_SAMPLE_TIME(sConfigInjected->InjectedSamplingTime));
+ 1384              		.loc 1 627 3 is_stmt 1
+ 1385 003a 3B68     		ldr	r3, [r7]
+ 1386 003c 9B68     		ldr	r3, [r3, #8]
+ 1387 003e 002B     		cmp	r3, #0
+ 1388 0040 20D0     		beq	.L78
+ 1389              		.loc 1 627 3 is_stmt 0 discriminator 1
+ 1390 0042 3B68     		ldr	r3, [r7]
+ 1391 0044 9B68     		ldr	r3, [r3, #8]
+ 1392 0046 012B     		cmp	r3, #1
+ 1393 0048 1CD0     		beq	.L78
+ 1394              		.loc 1 627 3 discriminator 2
+ 1395 004a 3B68     		ldr	r3, [r7]
+ 1396 004c 9B68     		ldr	r3, [r3, #8]
+ 1397 004e 022B     		cmp	r3, #2
+ 1398 0050 18D0     		beq	.L78
+ 1399              		.loc 1 627 3 discriminator 3
+ 1400 0052 3B68     		ldr	r3, [r7]
+ 1401 0054 9B68     		ldr	r3, [r3, #8]
+ 1402 0056 032B     		cmp	r3, #3
+ 1403 0058 14D0     		beq	.L78
+ 1404              		.loc 1 627 3 discriminator 4
+ 1405 005a 3B68     		ldr	r3, [r7]
+ 1406 005c 9B68     		ldr	r3, [r3, #8]
+ 1407 005e 042B     		cmp	r3, #4
+ 1408 0060 10D0     		beq	.L78
+ 1409              		.loc 1 627 3 discriminator 5
+ 1410 0062 3B68     		ldr	r3, [r7]
+ 1411 0064 9B68     		ldr	r3, [r3, #8]
+ 1412 0066 052B     		cmp	r3, #5
+ 1413 0068 0CD0     		beq	.L78
+ 1414              		.loc 1 627 3 discriminator 6
+ 1415 006a 3B68     		ldr	r3, [r7]
+ 1416 006c 9B68     		ldr	r3, [r3, #8]
+ 1417 006e 062B     		cmp	r3, #6
+ 1418 0070 08D0     		beq	.L78
+ 1419              		.loc 1 627 3 discriminator 7
+ 1420 0072 3B68     		ldr	r3, [r7]
+ 1421 0074 9B68     		ldr	r3, [r3, #8]
+ 1422 0076 072B     		cmp	r3, #7
+ 1423 0078 04D0     		beq	.L78
+ 1424              		.loc 1 627 3 discriminator 8
+ 1425 007a 40F27321 		movw	r1, #627
+ 1426 007e 6948     		ldr	r0, .L108
+ 1427 0080 FFF7FEFF 		bl	assert_failed
+ 1428              	.L78:
+ 628:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_EXT_INJEC_TRIG(sConfigInjected->ExternalTrigInjecConv));
+ 1429              		.loc 1 628 3 is_stmt 1
+ 1430 0084 3B68     		ldr	r3, [r7]
+ 1431 0086 1B6A     		ldr	r3, [r3, #32]
+ 1432 0088 002B     		cmp	r3, #0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 37
+
+
+ 1433 008a 54D0     		beq	.L79
+ 1434              		.loc 1 628 3 is_stmt 0 discriminator 1
+ 1435 008c 3B68     		ldr	r3, [r7]
+ 1436 008e 1B6A     		ldr	r3, [r3, #32]
+ 1437 0090 B3F5803F 		cmp	r3, #65536
+ 1438 0094 4FD0     		beq	.L79
+ 1439              		.loc 1 628 3 discriminator 2
+ 1440 0096 3B68     		ldr	r3, [r7]
+ 1441 0098 1B6A     		ldr	r3, [r3, #32]
+ 1442 009a B3F5003F 		cmp	r3, #131072
+ 1443 009e 4AD0     		beq	.L79
+ 1444              		.loc 1 628 3 discriminator 3
+ 1445 00a0 3B68     		ldr	r3, [r7]
+ 1446 00a2 1B6A     		ldr	r3, [r3, #32]
+ 1447 00a4 B3F5403F 		cmp	r3, #196608
+ 1448 00a8 45D0     		beq	.L79
+ 1449              		.loc 1 628 3 discriminator 4
+ 1450 00aa 3B68     		ldr	r3, [r7]
+ 1451 00ac 1B6A     		ldr	r3, [r3, #32]
+ 1452 00ae B3F5802F 		cmp	r3, #262144
+ 1453 00b2 40D0     		beq	.L79
+ 1454              		.loc 1 628 3 discriminator 5
+ 1455 00b4 3B68     		ldr	r3, [r7]
+ 1456 00b6 1B6A     		ldr	r3, [r3, #32]
+ 1457 00b8 B3F5A02F 		cmp	r3, #327680
+ 1458 00bc 3BD0     		beq	.L79
+ 1459              		.loc 1 628 3 discriminator 6
+ 1460 00be 3B68     		ldr	r3, [r7]
+ 1461 00c0 1B6A     		ldr	r3, [r3, #32]
+ 1462 00c2 B3F5C02F 		cmp	r3, #393216
+ 1463 00c6 36D0     		beq	.L79
+ 1464              		.loc 1 628 3 discriminator 7
+ 1465 00c8 3B68     		ldr	r3, [r7]
+ 1466 00ca 1B6A     		ldr	r3, [r3, #32]
+ 1467 00cc B3F5E02F 		cmp	r3, #458752
+ 1468 00d0 31D0     		beq	.L79
+ 1469              		.loc 1 628 3 discriminator 8
+ 1470 00d2 3B68     		ldr	r3, [r7]
+ 1471 00d4 1B6A     		ldr	r3, [r3, #32]
+ 1472 00d6 B3F5002F 		cmp	r3, #524288
+ 1473 00da 2CD0     		beq	.L79
+ 1474              		.loc 1 628 3 discriminator 9
+ 1475 00dc 3B68     		ldr	r3, [r7]
+ 1476 00de 1B6A     		ldr	r3, [r3, #32]
+ 1477 00e0 B3F5102F 		cmp	r3, #589824
+ 1478 00e4 27D0     		beq	.L79
+ 1479              		.loc 1 628 3 discriminator 10
+ 1480 00e6 3B68     		ldr	r3, [r7]
+ 1481 00e8 1B6A     		ldr	r3, [r3, #32]
+ 1482 00ea B3F5202F 		cmp	r3, #655360
+ 1483 00ee 22D0     		beq	.L79
+ 1484              		.loc 1 628 3 discriminator 11
+ 1485 00f0 3B68     		ldr	r3, [r7]
+ 1486 00f2 1B6A     		ldr	r3, [r3, #32]
+ 1487 00f4 B3F5302F 		cmp	r3, #720896
+ 1488 00f8 1DD0     		beq	.L79
+ 1489              		.loc 1 628 3 discriminator 12
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 38
+
+
+ 1490 00fa 3B68     		ldr	r3, [r7]
+ 1491 00fc 1B6A     		ldr	r3, [r3, #32]
+ 1492 00fe B3F5402F 		cmp	r3, #786432
+ 1493 0102 18D0     		beq	.L79
+ 1494              		.loc 1 628 3 discriminator 13
+ 1495 0104 3B68     		ldr	r3, [r7]
+ 1496 0106 1B6A     		ldr	r3, [r3, #32]
+ 1497 0108 B3F5502F 		cmp	r3, #851968
+ 1498 010c 13D0     		beq	.L79
+ 1499              		.loc 1 628 3 discriminator 14
+ 1500 010e 3B68     		ldr	r3, [r7]
+ 1501 0110 1B6A     		ldr	r3, [r3, #32]
+ 1502 0112 B3F5602F 		cmp	r3, #917504
+ 1503 0116 0ED0     		beq	.L79
+ 1504              		.loc 1 628 3 discriminator 15
+ 1505 0118 3B68     		ldr	r3, [r7]
+ 1506 011a 1B6A     		ldr	r3, [r3, #32]
+ 1507 011c B3F5702F 		cmp	r3, #983040
+ 1508 0120 09D0     		beq	.L79
+ 1509              		.loc 1 628 3 discriminator 16
+ 1510 0122 3B68     		ldr	r3, [r7]
+ 1511 0124 1B6A     		ldr	r3, [r3, #32]
+ 1512 0126 404A     		ldr	r2, .L108+4
+ 1513 0128 9342     		cmp	r3, r2
+ 1514 012a 04D0     		beq	.L79
+ 1515              		.loc 1 628 3 discriminator 17
+ 1516 012c 4FF41D71 		mov	r1, #628
+ 1517 0130 3C48     		ldr	r0, .L108
+ 1518 0132 FFF7FEFF 		bl	assert_failed
+ 1519              	.L79:
+ 629:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_INJECTED_LENGTH(sConfigInjected->InjectedNbrOfConversion));
+ 1520              		.loc 1 629 3 is_stmt 1
+ 1521 0136 3B68     		ldr	r3, [r7]
+ 1522 0138 1B69     		ldr	r3, [r3, #16]
+ 1523 013a 002B     		cmp	r3, #0
+ 1524 013c 03D0     		beq	.L80
+ 1525              		.loc 1 629 3 is_stmt 0 discriminator 2
+ 1526 013e 3B68     		ldr	r3, [r7]
+ 1527 0140 1B69     		ldr	r3, [r3, #16]
+ 1528 0142 042B     		cmp	r3, #4
+ 1529 0144 04D9     		bls	.L81
+ 1530              	.L80:
+ 1531              		.loc 1 629 3 discriminator 3
+ 1532 0146 40F27521 		movw	r1, #629
+ 1533 014a 3648     		ldr	r0, .L108
+ 1534 014c FFF7FEFF 		bl	assert_failed
+ 1535              	.L81:
+ 630:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(sConfigInjected->AutoInjectedConv));
+ 1536              		.loc 1 630 3 is_stmt 1
+ 1537 0150 3B68     		ldr	r3, [r7]
+ 1538 0152 5B69     		ldr	r3, [r3, #20]
+ 1539 0154 002B     		cmp	r3, #0
+ 1540 0156 08D0     		beq	.L82
+ 1541              		.loc 1 630 3 is_stmt 0 discriminator 1
+ 1542 0158 3B68     		ldr	r3, [r7]
+ 1543 015a 5B69     		ldr	r3, [r3, #20]
+ 1544 015c 012B     		cmp	r3, #1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 39
+
+
+ 1545 015e 04D0     		beq	.L82
+ 1546              		.loc 1 630 3 discriminator 2
+ 1547 0160 40F27621 		movw	r1, #630
+ 1548 0164 2F48     		ldr	r0, .L108
+ 1549 0166 FFF7FEFF 		bl	assert_failed
+ 1550              	.L82:
+ 631:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(sConfigInjected->InjectedDiscontinuousConvMode));
+ 1551              		.loc 1 631 3 is_stmt 1
+ 1552 016a 3B68     		ldr	r3, [r7]
+ 1553 016c 9B69     		ldr	r3, [r3, #24]
+ 1554 016e 002B     		cmp	r3, #0
+ 1555 0170 08D0     		beq	.L83
+ 1556              		.loc 1 631 3 is_stmt 0 discriminator 1
+ 1557 0172 3B68     		ldr	r3, [r7]
+ 1558 0174 9B69     		ldr	r3, [r3, #24]
+ 1559 0176 012B     		cmp	r3, #1
+ 1560 0178 04D0     		beq	.L83
+ 1561              		.loc 1 631 3 discriminator 2
+ 1562 017a 40F27721 		movw	r1, #631
+ 1563 017e 2948     		ldr	r0, .L108
+ 1564 0180 FFF7FEFF 		bl	assert_failed
+ 1565              	.L83:
+ 632:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 633:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #ifdef USE_FULL_ASSERT
+ 634:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   tmp = ADC_GET_RESOLUTION(hadc);
+ 1566              		.loc 1 634 9 is_stmt 1
+ 1567 0184 7B68     		ldr	r3, [r7, #4]
+ 1568 0186 1B68     		ldr	r3, [r3]
+ 1569 0188 5B68     		ldr	r3, [r3, #4]
+ 1570              		.loc 1 634 7
+ 1571 018a 03F04073 		and	r3, r3, #50331648
+ 1572 018e FB60     		str	r3, [r7, #12]
+ 635:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_RANGE(tmp, sConfigInjected->InjectedOffset));
+ 1573              		.loc 1 635 3
+ 1574 0190 FB68     		ldr	r3, [r7, #12]
+ 1575 0192 002B     		cmp	r3, #0
+ 1576 0194 04D1     		bne	.L84
+ 1577              		.loc 1 635 3 is_stmt 0 discriminator 2
+ 1578 0196 3B68     		ldr	r3, [r7]
+ 1579 0198 DB68     		ldr	r3, [r3, #12]
+ 1580 019a B3F5805F 		cmp	r3, #4096
+ 1581 019e 1DD3     		bcc	.L85
+ 1582              	.L84:
+ 1583              		.loc 1 635 3 discriminator 3
+ 1584 01a0 FB68     		ldr	r3, [r7, #12]
+ 1585 01a2 B3F1807F 		cmp	r3, #16777216
+ 1586 01a6 04D1     		bne	.L86
+ 1587              		.loc 1 635 3 discriminator 5
+ 1588 01a8 3B68     		ldr	r3, [r7]
+ 1589 01aa DB68     		ldr	r3, [r3, #12]
+ 1590 01ac B3F5806F 		cmp	r3, #1024
+ 1591 01b0 14D3     		bcc	.L85
+ 1592              	.L86:
+ 1593              		.loc 1 635 3 discriminator 6
+ 1594 01b2 FB68     		ldr	r3, [r7, #12]
+ 1595 01b4 B3F1007F 		cmp	r3, #33554432
+ 1596 01b8 03D1     		bne	.L87
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 40
+
+
+ 1597              		.loc 1 635 3 discriminator 8
+ 1598 01ba 3B68     		ldr	r3, [r7]
+ 1599 01bc DB68     		ldr	r3, [r3, #12]
+ 1600 01be FF2B     		cmp	r3, #255
+ 1601 01c0 0CD9     		bls	.L85
+ 1602              	.L87:
+ 1603              		.loc 1 635 3 discriminator 9
+ 1604 01c2 FB68     		ldr	r3, [r7, #12]
+ 1605 01c4 B3F1407F 		cmp	r3, #50331648
+ 1606 01c8 03D1     		bne	.L88
+ 1607              		.loc 1 635 3 discriminator 11
+ 1608 01ca 3B68     		ldr	r3, [r7]
+ 1609 01cc DB68     		ldr	r3, [r3, #12]
+ 1610 01ce 3F2B     		cmp	r3, #63
+ 1611 01d0 04D9     		bls	.L85
+ 1612              	.L88:
+ 1613              		.loc 1 635 3 discriminator 12
+ 1614 01d2 40F27B21 		movw	r1, #635
+ 1615 01d6 1348     		ldr	r0, .L108
+ 1616 01d8 FFF7FEFF 		bl	assert_failed
+ 1617              	.L85:
+ 636:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** #endif /* USE_FULL_ASSERT  */
+ 637:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 638:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(sConfigInjected->ExternalTrigInjecConvEdge != ADC_INJECTED_SOFTWARE_START)
+ 1618              		.loc 1 638 21 is_stmt 1
+ 1619 01dc 3B68     		ldr	r3, [r7]
+ 1620 01de DB69     		ldr	r3, [r3, #28]
+ 1621              		.loc 1 638 5
+ 1622 01e0 114A     		ldr	r2, .L108+4
+ 1623 01e2 9342     		cmp	r3, r2
+ 1624 01e4 17D0     		beq	.L89
+ 639:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 640:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     assert_param(IS_ADC_EXT_INJEC_TRIG_EDGE(sConfigInjected->ExternalTrigInjecConvEdge));
+ 1625              		.loc 1 640 5
+ 1626 01e6 3B68     		ldr	r3, [r7]
+ 1627 01e8 DB69     		ldr	r3, [r3, #28]
+ 1628 01ea 002B     		cmp	r3, #0
+ 1629 01ec 13D0     		beq	.L89
+ 1630              		.loc 1 640 5 is_stmt 0 discriminator 1
+ 1631 01ee 3B68     		ldr	r3, [r7]
+ 1632 01f0 DB69     		ldr	r3, [r3, #28]
+ 1633 01f2 B3F5801F 		cmp	r3, #1048576
+ 1634 01f6 0ED0     		beq	.L89
+ 1635              		.loc 1 640 5 discriminator 2
+ 1636 01f8 3B68     		ldr	r3, [r7]
+ 1637 01fa DB69     		ldr	r3, [r3, #28]
+ 1638 01fc B3F5001F 		cmp	r3, #2097152
+ 1639 0200 09D0     		beq	.L89
+ 1640              		.loc 1 640 5 discriminator 3
+ 1641 0202 3B68     		ldr	r3, [r7]
+ 1642 0204 DB69     		ldr	r3, [r3, #28]
+ 1643 0206 B3F5401F 		cmp	r3, #3145728
+ 1644 020a 04D0     		beq	.L89
+ 1645              		.loc 1 640 5 discriminator 4
+ 1646 020c 4FF42071 		mov	r1, #640
+ 1647 0210 0448     		ldr	r0, .L108
+ 1648 0212 FFF7FEFF 		bl	assert_failed
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 41
+
+
+ 1649              	.L89:
+ 641:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 642:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 643:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 644:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+ 1650              		.loc 1 644 3 is_stmt 1
+ 1651 0216 7B68     		ldr	r3, [r7, #4]
+ 1652 0218 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+ 1653 021c 012B     		cmp	r3, #1
+ 1654 021e 05D1     		bne	.L90
+ 1655              		.loc 1 644 3 is_stmt 0 discriminator 1
+ 1656 0220 0223     		movs	r3, #2
+ 1657 0222 7FE1     		b	.L91
+ 1658              	.L109:
+ 1659              		.align	2
+ 1660              	.L108:
+ 1661 0224 00000000 		.word	.LC0
+ 1662 0228 01000F00 		.word	983041
+ 1663              	.L90:
+ 1664              		.loc 1 644 3 discriminator 2
+ 1665 022c 7B68     		ldr	r3, [r7, #4]
+ 1666 022e 0122     		movs	r2, #1
+ 1667 0230 83F83C20 		strb	r2, [r3, #60]
+ 645:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 646:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* if ADC_Channel_10 ... ADC_Channel_18 is selected */
+ 647:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if (sConfigInjected->InjectedChannel > ADC_CHANNEL_9)
+ 1668              		.loc 1 647 22 is_stmt 1 discriminator 2
+ 1669 0234 3B68     		ldr	r3, [r7]
+ 1670 0236 1B68     		ldr	r3, [r3]
+ 1671              		.loc 1 647 6 discriminator 2
+ 1672 0238 092B     		cmp	r3, #9
+ 1673 023a 25D9     		bls	.L92
+ 648:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 649:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Clear the old sample time */
+ 650:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->SMPR1 &= ~ADC_SMPR1(ADC_SMPR1_SMP10, sConfigInjected->InjectedChannel);
+ 1674              		.loc 1 650 9
+ 1675 023c 7B68     		ldr	r3, [r7, #4]
+ 1676 023e 1B68     		ldr	r3, [r3]
+ 1677              		.loc 1 650 27
+ 1678 0240 D968     		ldr	r1, [r3, #12]
+ 1679              		.loc 1 650 31
+ 1680 0242 3B68     		ldr	r3, [r7]
+ 1681 0244 1B68     		ldr	r3, [r3]
+ 1682 0246 9BB2     		uxth	r3, r3
+ 1683 0248 1A46     		mov	r2, r3
+ 1684 024a 1346     		mov	r3, r2
+ 1685 024c 5B00     		lsls	r3, r3, #1
+ 1686 024e 1344     		add	r3, r3, r2
+ 1687 0250 1E3B     		subs	r3, r3, #30
+ 1688 0252 0722     		movs	r2, #7
+ 1689 0254 02FA03F3 		lsl	r3, r2, r3
+ 1690              		.loc 1 650 30
+ 1691 0258 DA43     		mvns	r2, r3
+ 1692              		.loc 1 650 9
+ 1693 025a 7B68     		ldr	r3, [r7, #4]
+ 1694 025c 1B68     		ldr	r3, [r3]
+ 1695              		.loc 1 650 27
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 42
+
+
+ 1696 025e 0A40     		ands	r2, r2, r1
+ 1697 0260 DA60     		str	r2, [r3, #12]
+ 651:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 652:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Set the new sample time */
+ 653:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->SMPR1 |= ADC_SMPR1(sConfigInjected->InjectedSamplingTime, sConfigInjected->Inje
+ 1698              		.loc 1 653 9
+ 1699 0262 7B68     		ldr	r3, [r7, #4]
+ 1700 0264 1B68     		ldr	r3, [r3]
+ 1701              		.loc 1 653 27
+ 1702 0266 D968     		ldr	r1, [r3, #12]
+ 1703              		.loc 1 653 30
+ 1704 0268 3B68     		ldr	r3, [r7]
+ 1705 026a 9A68     		ldr	r2, [r3, #8]
+ 1706 026c 3B68     		ldr	r3, [r7]
+ 1707 026e 1B68     		ldr	r3, [r3]
+ 1708 0270 9BB2     		uxth	r3, r3
+ 1709 0272 1846     		mov	r0, r3
+ 1710 0274 0346     		mov	r3, r0
+ 1711 0276 5B00     		lsls	r3, r3, #1
+ 1712 0278 0344     		add	r3, r3, r0
+ 1713 027a 1E3B     		subs	r3, r3, #30
+ 1714 027c 9A40     		lsls	r2, r2, r3
+ 1715              		.loc 1 653 9
+ 1716 027e 7B68     		ldr	r3, [r7, #4]
+ 1717 0280 1B68     		ldr	r3, [r3]
+ 1718              		.loc 1 653 27
+ 1719 0282 0A43     		orrs	r2, r2, r1
+ 1720 0284 DA60     		str	r2, [r3, #12]
+ 1721 0286 22E0     		b	.L93
+ 1722              	.L92:
+ 654:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else /* ADC_Channel include in ADC_Channel_[0..9] */
+ 656:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 657:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Clear the old sample time */
+ 658:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->SMPR2 &= ~ADC_SMPR2(ADC_SMPR2_SMP0, sConfigInjected->InjectedChannel);
+ 1723              		.loc 1 658 9
+ 1724 0288 7B68     		ldr	r3, [r7, #4]
+ 1725 028a 1B68     		ldr	r3, [r3]
+ 1726              		.loc 1 658 27
+ 1727 028c 1969     		ldr	r1, [r3, #16]
+ 1728              		.loc 1 658 31
+ 1729 028e 3B68     		ldr	r3, [r7]
+ 1730 0290 1B68     		ldr	r3, [r3]
+ 1731 0292 9BB2     		uxth	r3, r3
+ 1732 0294 1A46     		mov	r2, r3
+ 1733 0296 1346     		mov	r3, r2
+ 1734 0298 5B00     		lsls	r3, r3, #1
+ 1735 029a 1344     		add	r3, r3, r2
+ 1736 029c 0722     		movs	r2, #7
+ 1737 029e 02FA03F3 		lsl	r3, r2, r3
+ 1738              		.loc 1 658 30
+ 1739 02a2 DA43     		mvns	r2, r3
+ 1740              		.loc 1 658 9
+ 1741 02a4 7B68     		ldr	r3, [r7, #4]
+ 1742 02a6 1B68     		ldr	r3, [r3]
+ 1743              		.loc 1 658 27
+ 1744 02a8 0A40     		ands	r2, r2, r1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 43
+
+
+ 1745 02aa 1A61     		str	r2, [r3, #16]
+ 659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 660:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Set the new sample time */
+ 661:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->SMPR2 |= ADC_SMPR2(sConfigInjected->InjectedSamplingTime, sConfigInjected->Inje
+ 1746              		.loc 1 661 9
+ 1747 02ac 7B68     		ldr	r3, [r7, #4]
+ 1748 02ae 1B68     		ldr	r3, [r3]
+ 1749              		.loc 1 661 27
+ 1750 02b0 1969     		ldr	r1, [r3, #16]
+ 1751              		.loc 1 661 30
+ 1752 02b2 3B68     		ldr	r3, [r7]
+ 1753 02b4 9A68     		ldr	r2, [r3, #8]
+ 1754 02b6 3B68     		ldr	r3, [r7]
+ 1755 02b8 1B68     		ldr	r3, [r3]
+ 1756 02ba 9BB2     		uxth	r3, r3
+ 1757 02bc 1846     		mov	r0, r3
+ 1758 02be 0346     		mov	r3, r0
+ 1759 02c0 5B00     		lsls	r3, r3, #1
+ 1760 02c2 0344     		add	r3, r3, r0
+ 1761 02c4 9A40     		lsls	r2, r2, r3
+ 1762              		.loc 1 661 9
+ 1763 02c6 7B68     		ldr	r3, [r7, #4]
+ 1764 02c8 1B68     		ldr	r3, [r3]
+ 1765              		.loc 1 661 27
+ 1766 02ca 0A43     		orrs	r2, r2, r1
+ 1767 02cc 1A61     		str	r2, [r3, #16]
+ 1768              	.L93:
+ 662:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 663:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 664:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /*---------------------------- ADCx JSQR Configuration -----------------*/
+ 665:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->Instance->JSQR &= ~(ADC_JSQR_JL);
+ 1769              		.loc 1 665 7
+ 1770 02ce 7B68     		ldr	r3, [r7, #4]
+ 1771 02d0 1B68     		ldr	r3, [r3]
+ 1772              		.loc 1 665 24
+ 1773 02d2 9A6B     		ldr	r2, [r3, #56]
+ 1774              		.loc 1 665 7
+ 1775 02d4 7B68     		ldr	r3, [r7, #4]
+ 1776 02d6 1B68     		ldr	r3, [r3]
+ 1777              		.loc 1 665 24
+ 1778 02d8 22F44012 		bic	r2, r2, #3145728
+ 1779 02dc 9A63     		str	r2, [r3, #56]
+ 666:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->Instance->JSQR |=  ADC_SQR1(sConfigInjected->InjectedNbrOfConversion);
+ 1780              		.loc 1 666 7
+ 1781 02de 7B68     		ldr	r3, [r7, #4]
+ 1782 02e0 1B68     		ldr	r3, [r3]
+ 1783              		.loc 1 666 24
+ 1784 02e2 996B     		ldr	r1, [r3, #56]
+ 1785              		.loc 1 666 28
+ 1786 02e4 3B68     		ldr	r3, [r7]
+ 1787 02e6 1B69     		ldr	r3, [r3, #16]
+ 1788 02e8 013B     		subs	r3, r3, #1
+ 1789 02ea 1A05     		lsls	r2, r3, #20
+ 1790              		.loc 1 666 7
+ 1791 02ec 7B68     		ldr	r3, [r7, #4]
+ 1792 02ee 1B68     		ldr	r3, [r3]
+ 1793              		.loc 1 666 24
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 44
+
+
+ 1794 02f0 0A43     		orrs	r2, r2, r1
+ 1795 02f2 9A63     		str	r2, [r3, #56]
+ 667:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 668:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Rank configuration */
+ 669:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 670:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Clear the old SQx bits for the selected rank */
+ 671:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->Instance->JSQR &= ~ADC_JSQR(ADC_JSQR_JSQ1, sConfigInjected->InjectedRank,sConfigInjected->I
+ 1796              		.loc 1 671 7
+ 1797 02f4 7B68     		ldr	r3, [r7, #4]
+ 1798 02f6 1B68     		ldr	r3, [r3]
+ 1799              		.loc 1 671 24
+ 1800 02f8 996B     		ldr	r1, [r3, #56]
+ 1801              		.loc 1 671 28
+ 1802 02fa 3B68     		ldr	r3, [r7]
+ 1803 02fc 5B68     		ldr	r3, [r3, #4]
+ 1804 02fe DAB2     		uxtb	r2, r3
+ 1805 0300 3B68     		ldr	r3, [r7]
+ 1806 0302 1B69     		ldr	r3, [r3, #16]
+ 1807 0304 DBB2     		uxtb	r3, r3
+ 1808 0306 D31A     		subs	r3, r2, r3
+ 1809 0308 DBB2     		uxtb	r3, r3
+ 1810 030a 0333     		adds	r3, r3, #3
+ 1811 030c DBB2     		uxtb	r3, r3
+ 1812 030e 1A46     		mov	r2, r3
+ 1813 0310 1346     		mov	r3, r2
+ 1814 0312 9B00     		lsls	r3, r3, #2
+ 1815 0314 1344     		add	r3, r3, r2
+ 1816 0316 1F22     		movs	r2, #31
+ 1817 0318 02FA03F3 		lsl	r3, r2, r3
+ 1818              		.loc 1 671 27
+ 1819 031c DA43     		mvns	r2, r3
+ 1820              		.loc 1 671 7
+ 1821 031e 7B68     		ldr	r3, [r7, #4]
+ 1822 0320 1B68     		ldr	r3, [r3]
+ 1823              		.loc 1 671 24
+ 1824 0322 0A40     		ands	r2, r2, r1
+ 1825 0324 9A63     		str	r2, [r3, #56]
+ 672:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****    
+ 673:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set the SQx bits for the selected rank */
+ 674:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   hadc->Instance->JSQR |= ADC_JSQR(sConfigInjected->InjectedChannel, sConfigInjected->InjectedRank,
+ 1826              		.loc 1 674 7
+ 1827 0326 7B68     		ldr	r3, [r7, #4]
+ 1828 0328 1B68     		ldr	r3, [r3]
+ 1829              		.loc 1 674 24
+ 1830 032a 996B     		ldr	r1, [r3, #56]
+ 1831              		.loc 1 674 27
+ 1832 032c 3B68     		ldr	r3, [r7]
+ 1833 032e 1B68     		ldr	r3, [r3]
+ 1834 0330 9BB2     		uxth	r3, r3
+ 1835 0332 1846     		mov	r0, r3
+ 1836 0334 3B68     		ldr	r3, [r7]
+ 1837 0336 5B68     		ldr	r3, [r3, #4]
+ 1838 0338 DAB2     		uxtb	r2, r3
+ 1839 033a 3B68     		ldr	r3, [r7]
+ 1840 033c 1B69     		ldr	r3, [r3, #16]
+ 1841 033e DBB2     		uxtb	r3, r3
+ 1842 0340 D31A     		subs	r3, r2, r3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 45
+
+
+ 1843 0342 DBB2     		uxtb	r3, r3
+ 1844 0344 0333     		adds	r3, r3, #3
+ 1845 0346 DBB2     		uxtb	r3, r3
+ 1846 0348 1A46     		mov	r2, r3
+ 1847 034a 1346     		mov	r3, r2
+ 1848 034c 9B00     		lsls	r3, r3, #2
+ 1849 034e 1344     		add	r3, r3, r2
+ 1850 0350 00FA03F2 		lsl	r2, r0, r3
+ 1851              		.loc 1 674 7
+ 1852 0354 7B68     		ldr	r3, [r7, #4]
+ 1853 0356 1B68     		ldr	r3, [r3]
+ 1854              		.loc 1 674 24
+ 1855 0358 0A43     		orrs	r2, r2, r1
+ 1856 035a 9A63     		str	r2, [r3, #56]
+ 675:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 676:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Enable external trigger if trigger selection is different of software  */
+ 677:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* start.                                                                 */
+ 678:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Note: This configuration keeps the hardware feature of parameter       */
+ 679:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /*       ExternalTrigConvEdge "trigger edge none" equivalent to           */
+ 680:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /*       software start.                                                  */ 
+ 681:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(sConfigInjected->ExternalTrigInjecConv != ADC_INJECTED_SOFTWARE_START)
+ 1857              		.loc 1 681 21
+ 1858 035c 3B68     		ldr	r3, [r7]
+ 1859 035e 1B6A     		ldr	r3, [r3, #32]
+ 1860              		.loc 1 681 5
+ 1861 0360 724A     		ldr	r2, .L110
+ 1862 0362 9342     		cmp	r3, r2
+ 1863 0364 22D0     		beq	.L94
+ 682:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
+ 683:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Select external trigger to start conversion */
+ 684:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTSEL);
+ 1864              		.loc 1 684 9
+ 1865 0366 7B68     		ldr	r3, [r7, #4]
+ 1866 0368 1B68     		ldr	r3, [r3]
+ 1867              		.loc 1 684 25
+ 1868 036a 9A68     		ldr	r2, [r3, #8]
+ 1869              		.loc 1 684 9
+ 1870 036c 7B68     		ldr	r3, [r7, #4]
+ 1871 036e 1B68     		ldr	r3, [r3]
+ 1872              		.loc 1 684 25
+ 1873 0370 22F47022 		bic	r2, r2, #983040
+ 1874 0374 9A60     		str	r2, [r3, #8]
+ 685:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 |=  sConfigInjected->ExternalTrigInjecConv;
+ 1875              		.loc 1 685 9
+ 1876 0376 7B68     		ldr	r3, [r7, #4]
+ 1877 0378 1B68     		ldr	r3, [r3]
+ 1878              		.loc 1 685 25
+ 1879 037a 9968     		ldr	r1, [r3, #8]
+ 1880              		.loc 1 685 44
+ 1881 037c 3B68     		ldr	r3, [r7]
+ 1882 037e 1A6A     		ldr	r2, [r3, #32]
+ 1883              		.loc 1 685 9
+ 1884 0380 7B68     		ldr	r3, [r7, #4]
+ 1885 0382 1B68     		ldr	r3, [r3]
+ 1886              		.loc 1 685 25
+ 1887 0384 0A43     		orrs	r2, r2, r1
+ 1888 0386 9A60     		str	r2, [r3, #8]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 46
+
+
+ 686:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 687:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Select external trigger polarity */
+ 688:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTEN);
+ 1889              		.loc 1 688 9
+ 1890 0388 7B68     		ldr	r3, [r7, #4]
+ 1891 038a 1B68     		ldr	r3, [r3]
+ 1892              		.loc 1 688 25
+ 1893 038c 9A68     		ldr	r2, [r3, #8]
+ 1894              		.loc 1 688 9
+ 1895 038e 7B68     		ldr	r3, [r7, #4]
+ 1896 0390 1B68     		ldr	r3, [r3]
+ 1897              		.loc 1 688 25
+ 1898 0392 22F44012 		bic	r2, r2, #3145728
+ 1899 0396 9A60     		str	r2, [r3, #8]
+ 689:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 |= sConfigInjected->ExternalTrigInjecConvEdge;
+ 1900              		.loc 1 689 9
+ 1901 0398 7B68     		ldr	r3, [r7, #4]
+ 1902 039a 1B68     		ldr	r3, [r3]
+ 1903              		.loc 1 689 25
+ 1904 039c 9968     		ldr	r1, [r3, #8]
+ 1905              		.loc 1 689 43
+ 1906 039e 3B68     		ldr	r3, [r7]
+ 1907 03a0 DA69     		ldr	r2, [r3, #28]
+ 1908              		.loc 1 689 9
+ 1909 03a2 7B68     		ldr	r3, [r7, #4]
+ 1910 03a4 1B68     		ldr	r3, [r3]
+ 1911              		.loc 1 689 25
+ 1912 03a6 0A43     		orrs	r2, r2, r1
+ 1913 03a8 9A60     		str	r2, [r3, #8]
+ 1914 03aa 0FE0     		b	.L95
+ 1915              	.L94:
+ 690:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 691:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 692:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 693:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Reset the external trigger */
+ 694:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTSEL);
+ 1916              		.loc 1 694 9
+ 1917 03ac 7B68     		ldr	r3, [r7, #4]
+ 1918 03ae 1B68     		ldr	r3, [r3]
+ 1919              		.loc 1 694 25
+ 1920 03b0 9A68     		ldr	r2, [r3, #8]
+ 1921              		.loc 1 694 9
+ 1922 03b2 7B68     		ldr	r3, [r7, #4]
+ 1923 03b4 1B68     		ldr	r3, [r3]
+ 1924              		.loc 1 694 25
+ 1925 03b6 22F47022 		bic	r2, r2, #983040
+ 1926 03ba 9A60     		str	r2, [r3, #8]
+ 695:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTEN);  
+ 1927              		.loc 1 695 9
+ 1928 03bc 7B68     		ldr	r3, [r7, #4]
+ 1929 03be 1B68     		ldr	r3, [r3]
+ 1930              		.loc 1 695 25
+ 1931 03c0 9A68     		ldr	r2, [r3, #8]
+ 1932              		.loc 1 695 9
+ 1933 03c2 7B68     		ldr	r3, [r7, #4]
+ 1934 03c4 1B68     		ldr	r3, [r3]
+ 1935              		.loc 1 695 25
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 47
+
+
+ 1936 03c6 22F44012 		bic	r2, r2, #3145728
+ 1937 03ca 9A60     		str	r2, [r3, #8]
+ 1938              	.L95:
+ 696:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 697:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 698:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if (sConfigInjected->AutoInjectedConv != DISABLE)
+ 1939              		.loc 1 698 22
+ 1940 03cc 3B68     		ldr	r3, [r7]
+ 1941 03ce 5B69     		ldr	r3, [r3, #20]
+ 1942              		.loc 1 698 6
+ 1943 03d0 002B     		cmp	r3, #0
+ 1944 03d2 08D0     		beq	.L96
+ 699:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 700:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the selected ADC automatic injected group conversion */
+ 701:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR1 |= ADC_CR1_JAUTO;
+ 1945              		.loc 1 701 9
+ 1946 03d4 7B68     		ldr	r3, [r7, #4]
+ 1947 03d6 1B68     		ldr	r3, [r3]
+ 1948              		.loc 1 701 25
+ 1949 03d8 5A68     		ldr	r2, [r3, #4]
+ 1950              		.loc 1 701 9
+ 1951 03da 7B68     		ldr	r3, [r7, #4]
+ 1952 03dc 1B68     		ldr	r3, [r3]
+ 1953              		.loc 1 701 25
+ 1954 03de 42F48062 		orr	r2, r2, #1024
+ 1955 03e2 5A60     		str	r2, [r3, #4]
+ 1956 03e4 07E0     		b	.L97
+ 1957              	.L96:
+ 702:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 703:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 704:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 705:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Disable the selected ADC automatic injected group conversion */
+ 706:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR1 &= ~(ADC_CR1_JAUTO);
+ 1958              		.loc 1 706 9
+ 1959 03e6 7B68     		ldr	r3, [r7, #4]
+ 1960 03e8 1B68     		ldr	r3, [r3]
+ 1961              		.loc 1 706 25
+ 1962 03ea 5A68     		ldr	r2, [r3, #4]
+ 1963              		.loc 1 706 9
+ 1964 03ec 7B68     		ldr	r3, [r7, #4]
+ 1965 03ee 1B68     		ldr	r3, [r3]
+ 1966              		.loc 1 706 25
+ 1967 03f0 22F48062 		bic	r2, r2, #1024
+ 1968 03f4 5A60     		str	r2, [r3, #4]
+ 1969              	.L97:
+ 707:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 708:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 709:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if (sConfigInjected->InjectedDiscontinuousConvMode != DISABLE)
+ 1970              		.loc 1 709 22
+ 1971 03f6 3B68     		ldr	r3, [r7]
+ 1972 03f8 9B69     		ldr	r3, [r3, #24]
+ 1973              		.loc 1 709 6
+ 1974 03fa 002B     		cmp	r3, #0
+ 1975 03fc 08D0     		beq	.L98
+ 710:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 711:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the selected ADC injected discontinuous mode */
+ 712:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR1 |= ADC_CR1_JDISCEN;
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 48
+
+
+ 1976              		.loc 1 712 9
+ 1977 03fe 7B68     		ldr	r3, [r7, #4]
+ 1978 0400 1B68     		ldr	r3, [r3]
+ 1979              		.loc 1 712 25
+ 1980 0402 5A68     		ldr	r2, [r3, #4]
+ 1981              		.loc 1 712 9
+ 1982 0404 7B68     		ldr	r3, [r7, #4]
+ 1983 0406 1B68     		ldr	r3, [r3]
+ 1984              		.loc 1 712 25
+ 1985 0408 42F48052 		orr	r2, r2, #4096
+ 1986 040c 5A60     		str	r2, [r3, #4]
+ 1987 040e 07E0     		b	.L99
+ 1988              	.L98:
+ 713:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 715:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 716:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Disable the selected ADC injected discontinuous mode */
+ 717:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR1 &= ~(ADC_CR1_JDISCEN);
+ 1989              		.loc 1 717 9
+ 1990 0410 7B68     		ldr	r3, [r7, #4]
+ 1991 0412 1B68     		ldr	r3, [r3]
+ 1992              		.loc 1 717 25
+ 1993 0414 5A68     		ldr	r2, [r3, #4]
+ 1994              		.loc 1 717 9
+ 1995 0416 7B68     		ldr	r3, [r7, #4]
+ 1996 0418 1B68     		ldr	r3, [r3]
+ 1997              		.loc 1 717 25
+ 1998 041a 22F48052 		bic	r2, r2, #4096
+ 1999 041e 5A60     		str	r2, [r3, #4]
+ 2000              	.L99:
+ 718:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 719:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 720:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   switch(sConfigInjected->InjectedRank)
+ 2001              		.loc 1 720 25
+ 2002 0420 3B68     		ldr	r3, [r7]
+ 2003 0422 5B68     		ldr	r3, [r3, #4]
+ 2004              		.loc 1 720 3
+ 2005 0424 032B     		cmp	r3, #3
+ 2006 0426 2ED0     		beq	.L100
+ 2007 0428 032B     		cmp	r3, #3
+ 2008 042a 40D8     		bhi	.L101
+ 2009 042c 012B     		cmp	r3, #1
+ 2010 042e 02D0     		beq	.L102
+ 2011 0430 022B     		cmp	r3, #2
+ 2012 0432 14D0     		beq	.L103
+ 2013 0434 3BE0     		b	.L101
+ 2014              	.L102:
+ 721:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 722:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case 1:
+ 723:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Set injected channel 1 offset */
+ 724:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR1 &= ~(ADC_JOFR1_JOFFSET1);
+ 2015              		.loc 1 724 11
+ 2016 0436 7B68     		ldr	r3, [r7, #4]
+ 2017 0438 1B68     		ldr	r3, [r3]
+ 2018              		.loc 1 724 29
+ 2019 043a 5B69     		ldr	r3, [r3, #20]
+ 2020              		.loc 1 724 11
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 49
+
+
+ 2021 043c 7A68     		ldr	r2, [r7, #4]
+ 2022 043e 1268     		ldr	r2, [r2]
+ 2023              		.loc 1 724 29
+ 2024 0440 23F47F63 		bic	r3, r3, #4080
+ 2025 0444 23F00F03 		bic	r3, r3, #15
+ 2026 0448 5361     		str	r3, [r2, #20]
+ 725:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR1 |= sConfigInjected->InjectedOffset;
+ 2027              		.loc 1 725 11
+ 2028 044a 7B68     		ldr	r3, [r7, #4]
+ 2029 044c 1B68     		ldr	r3, [r3]
+ 2030              		.loc 1 725 29
+ 2031 044e 5969     		ldr	r1, [r3, #20]
+ 2032              		.loc 1 725 47
+ 2033 0450 3B68     		ldr	r3, [r7]
+ 2034 0452 DA68     		ldr	r2, [r3, #12]
+ 2035              		.loc 1 725 11
+ 2036 0454 7B68     		ldr	r3, [r7, #4]
+ 2037 0456 1B68     		ldr	r3, [r3]
+ 2038              		.loc 1 725 29
+ 2039 0458 0A43     		orrs	r2, r2, r1
+ 2040 045a 5A61     		str	r2, [r3, #20]
+ 726:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       break;
+ 2041              		.loc 1 726 7
+ 2042 045c 3BE0     		b	.L104
+ 2043              	.L103:
+ 727:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case 2:
+ 728:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Set injected channel 2 offset */
+ 729:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR2 &= ~(ADC_JOFR2_JOFFSET2);
+ 2044              		.loc 1 729 11
+ 2045 045e 7B68     		ldr	r3, [r7, #4]
+ 2046 0460 1B68     		ldr	r3, [r3]
+ 2047              		.loc 1 729 29
+ 2048 0462 9B69     		ldr	r3, [r3, #24]
+ 2049              		.loc 1 729 11
+ 2050 0464 7A68     		ldr	r2, [r7, #4]
+ 2051 0466 1268     		ldr	r2, [r2]
+ 2052              		.loc 1 729 29
+ 2053 0468 23F47F63 		bic	r3, r3, #4080
+ 2054 046c 23F00F03 		bic	r3, r3, #15
+ 2055 0470 9361     		str	r3, [r2, #24]
+ 730:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR2 |= sConfigInjected->InjectedOffset;
+ 2056              		.loc 1 730 11
+ 2057 0472 7B68     		ldr	r3, [r7, #4]
+ 2058 0474 1B68     		ldr	r3, [r3]
+ 2059              		.loc 1 730 29
+ 2060 0476 9969     		ldr	r1, [r3, #24]
+ 2061              		.loc 1 730 47
+ 2062 0478 3B68     		ldr	r3, [r7]
+ 2063 047a DA68     		ldr	r2, [r3, #12]
+ 2064              		.loc 1 730 11
+ 2065 047c 7B68     		ldr	r3, [r7, #4]
+ 2066 047e 1B68     		ldr	r3, [r3]
+ 2067              		.loc 1 730 29
+ 2068 0480 0A43     		orrs	r2, r2, r1
+ 2069 0482 9A61     		str	r2, [r3, #24]
+ 731:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       break;
+ 2070              		.loc 1 731 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 50
+
+
+ 2071 0484 27E0     		b	.L104
+ 2072              	.L100:
+ 732:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     case 3:
+ 733:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Set injected channel 3 offset */
+ 734:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR3 &= ~(ADC_JOFR3_JOFFSET3);
+ 2073              		.loc 1 734 11
+ 2074 0486 7B68     		ldr	r3, [r7, #4]
+ 2075 0488 1B68     		ldr	r3, [r3]
+ 2076              		.loc 1 734 29
+ 2077 048a DB69     		ldr	r3, [r3, #28]
+ 2078              		.loc 1 734 11
+ 2079 048c 7A68     		ldr	r2, [r7, #4]
+ 2080 048e 1268     		ldr	r2, [r2]
+ 2081              		.loc 1 734 29
+ 2082 0490 23F47F63 		bic	r3, r3, #4080
+ 2083 0494 23F00F03 		bic	r3, r3, #15
+ 2084 0498 D361     		str	r3, [r2, #28]
+ 735:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR3 |= sConfigInjected->InjectedOffset;
+ 2085              		.loc 1 735 11
+ 2086 049a 7B68     		ldr	r3, [r7, #4]
+ 2087 049c 1B68     		ldr	r3, [r3]
+ 2088              		.loc 1 735 29
+ 2089 049e D969     		ldr	r1, [r3, #28]
+ 2090              		.loc 1 735 47
+ 2091 04a0 3B68     		ldr	r3, [r7]
+ 2092 04a2 DA68     		ldr	r2, [r3, #12]
+ 2093              		.loc 1 735 11
+ 2094 04a4 7B68     		ldr	r3, [r7, #4]
+ 2095 04a6 1B68     		ldr	r3, [r3]
+ 2096              		.loc 1 735 29
+ 2097 04a8 0A43     		orrs	r2, r2, r1
+ 2098 04aa DA61     		str	r2, [r3, #28]
+ 736:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       break;
+ 2099              		.loc 1 736 7
+ 2100 04ac 13E0     		b	.L104
+ 2101              	.L101:
+ 737:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     default:
+ 738:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Set injected channel 4 offset */
+ 739:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR4 &= ~(ADC_JOFR4_JOFFSET4);
+ 2102              		.loc 1 739 11
+ 2103 04ae 7B68     		ldr	r3, [r7, #4]
+ 2104 04b0 1B68     		ldr	r3, [r3]
+ 2105              		.loc 1 739 29
+ 2106 04b2 1B6A     		ldr	r3, [r3, #32]
+ 2107              		.loc 1 739 11
+ 2108 04b4 7A68     		ldr	r2, [r7, #4]
+ 2109 04b6 1268     		ldr	r2, [r2]
+ 2110              		.loc 1 739 29
+ 2111 04b8 23F47F63 		bic	r3, r3, #4080
+ 2112 04bc 23F00F03 		bic	r3, r3, #15
+ 2113 04c0 1362     		str	r3, [r2, #32]
+ 740:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR4 |= sConfigInjected->InjectedOffset;
+ 2114              		.loc 1 740 11
+ 2115 04c2 7B68     		ldr	r3, [r7, #4]
+ 2116 04c4 1B68     		ldr	r3, [r3]
+ 2117              		.loc 1 740 29
+ 2118 04c6 196A     		ldr	r1, [r3, #32]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 51
+
+
+ 2119              		.loc 1 740 47
+ 2120 04c8 3B68     		ldr	r3, [r7]
+ 2121 04ca DA68     		ldr	r2, [r3, #12]
+ 2122              		.loc 1 740 11
+ 2123 04cc 7B68     		ldr	r3, [r7, #4]
+ 2124 04ce 1B68     		ldr	r3, [r3]
+ 2125              		.loc 1 740 29
+ 2126 04d0 0A43     		orrs	r2, r2, r1
+ 2127 04d2 1A62     		str	r2, [r3, #32]
+ 741:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       break;
+ 2128              		.loc 1 741 7
+ 2129 04d4 00BF     		nop
+ 2130              	.L104:
+ 742:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 743:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 744:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* if ADC1 Channel_18 is selected enable VBAT Channel */
+ 745:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if ((hadc->Instance == ADC1) && (sConfigInjected->InjectedChannel == ADC_CHANNEL_VBAT))
+ 2131              		.loc 1 745 12
+ 2132 04d6 7B68     		ldr	r3, [r7, #4]
+ 2133 04d8 1B68     		ldr	r3, [r3]
+ 2134              		.loc 1 745 6
+ 2135 04da 154A     		ldr	r2, .L110+4
+ 2136 04dc 9342     		cmp	r3, r2
+ 2137 04de 09D1     		bne	.L105
+ 2138              		.loc 1 745 51 discriminator 1
+ 2139 04e0 3B68     		ldr	r3, [r7]
+ 2140 04e2 1B68     		ldr	r3, [r3]
+ 2141              		.loc 1 745 32 discriminator 1
+ 2142 04e4 122B     		cmp	r3, #18
+ 2143 04e6 05D1     		bne	.L105
+ 746:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 747:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the VBAT channel*/
+ 748:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC->CCR |= ADC_CCR_VBATE;
+ 2144              		.loc 1 748 14
+ 2145 04e8 124B     		ldr	r3, .L110+8
+ 2146 04ea 5B68     		ldr	r3, [r3, #4]
+ 2147 04ec 114A     		ldr	r2, .L110+8
+ 2148 04ee 43F48003 		orr	r3, r3, #4194304
+ 2149 04f2 5360     		str	r3, [r2, #4]
+ 2150              	.L105:
+ 749:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 750:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 751:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* if ADC1 Channel_16 or Channel_17 is selected enable TSVREFE Channel(Temperature sensor and VRE
+ 752:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if ((hadc->Instance == ADC1) && ((sConfigInjected->InjectedChannel == ADC_CHANNEL_TEMPSENSOR) || 
+ 2151              		.loc 1 752 12
+ 2152 04f4 7B68     		ldr	r3, [r7, #4]
+ 2153 04f6 1B68     		ldr	r3, [r3]
+ 2154              		.loc 1 752 6
+ 2155 04f8 0D4A     		ldr	r2, .L110+4
+ 2156 04fa 9342     		cmp	r3, r2
+ 2157 04fc 0DD1     		bne	.L106
+ 2158              		.loc 1 752 52 discriminator 1
+ 2159 04fe 3B68     		ldr	r3, [r7]
+ 2160 0500 1B68     		ldr	r3, [r3]
+ 2161              		.loc 1 752 32 discriminator 1
+ 2162 0502 102B     		cmp	r3, #16
+ 2163 0504 03D0     		beq	.L107
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 52
+
+
+ 2164              		.loc 1 752 116 discriminator 2
+ 2165 0506 3B68     		ldr	r3, [r7]
+ 2166 0508 1B68     		ldr	r3, [r3]
+ 2167              		.loc 1 752 97 discriminator 2
+ 2168 050a 112B     		cmp	r3, #17
+ 2169 050c 05D1     		bne	.L106
+ 2170              	.L107:
+ 753:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 754:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Enable the TSVREFE channel*/
+ 755:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC->CCR |= ADC_CCR_TSVREFE;
+ 2171              		.loc 1 755 14
+ 2172 050e 094B     		ldr	r3, .L110+8
+ 2173 0510 5B68     		ldr	r3, [r3, #4]
+ 2174 0512 084A     		ldr	r2, .L110+8
+ 2175 0514 43F40003 		orr	r3, r3, #8388608
+ 2176 0518 5360     		str	r3, [r2, #4]
+ 2177              	.L106:
+ 756:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 757:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 758:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 759:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 2178              		.loc 1 759 3
+ 2179 051a 7B68     		ldr	r3, [r7, #4]
+ 2180 051c 0022     		movs	r2, #0
+ 2181 051e 83F83C20 		strb	r2, [r3, #60]
+ 760:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 761:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 762:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 2182              		.loc 1 762 10
+ 2183 0522 0023     		movs	r3, #0
+ 2184              	.L91:
+ 763:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 2185              		.loc 1 763 1
+ 2186 0524 1846     		mov	r0, r3
+ 2187 0526 1037     		adds	r7, r7, #16
+ 2188              	.LCFI59:
+ 2189              		.cfi_def_cfa_offset 8
+ 2190 0528 BD46     		mov	sp, r7
+ 2191              	.LCFI60:
+ 2192              		.cfi_def_cfa_register 13
+ 2193              		@ sp needed
+ 2194 052a 80BD     		pop	{r7, pc}
+ 2195              	.L111:
+ 2196              		.align	2
+ 2197              	.L110:
+ 2198 052c 01000F00 		.word	983041
+ 2199 0530 00200140 		.word	1073815552
+ 2200 0534 00230140 		.word	1073816320
+ 2201              		.cfi_endproc
+ 2202              	.LFE138:
+ 2204              		.section	.text.HAL_ADCEx_MultiModeConfigChannel,"ax",%progbits
+ 2205              		.align	1
+ 2206              		.global	HAL_ADCEx_MultiModeConfigChannel
+ 2207              		.syntax unified
+ 2208              		.thumb
+ 2209              		.thumb_func
+ 2211              	HAL_ADCEx_MultiModeConfigChannel:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 53
+
+
+ 2212              	.LFB139:
+ 764:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 765:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 766:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  Configures the ADC multi-mode 
+ 767:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc      : pointer to a ADC_HandleTypeDef structure that contains
+ 768:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *                     the configuration information for the specified ADC.  
+ 769:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  multimode : pointer to an ADC_MultiModeTypeDef structure that contains 
+ 770:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *                     the configuration information for  multimode.
+ 771:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval HAL status
+ 772:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 773:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_MultiModeConfigChannel(ADC_HandleTypeDef* hadc, ADC_MultiModeTypeDef* m
+ 774:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 2213              		.loc 1 774 1
+ 2214              		.cfi_startproc
+ 2215              		@ args = 0, pretend = 0, frame = 8
+ 2216              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2217 0000 80B5     		push	{r7, lr}
+ 2218              	.LCFI61:
+ 2219              		.cfi_def_cfa_offset 8
+ 2220              		.cfi_offset 7, -8
+ 2221              		.cfi_offset 14, -4
+ 2222 0002 82B0     		sub	sp, sp, #8
+ 2223              	.LCFI62:
+ 2224              		.cfi_def_cfa_offset 16
+ 2225 0004 00AF     		add	r7, sp, #0
+ 2226              	.LCFI63:
+ 2227              		.cfi_def_cfa_register 7
+ 2228 0006 7860     		str	r0, [r7, #4]
+ 2229 0008 3960     		str	r1, [r7]
+ 775:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check the parameters */
+ 776:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_MODE(multimode->Mode));
+ 2230              		.loc 1 776 3
+ 2231 000a 3B68     		ldr	r3, [r7]
+ 2232 000c 1B68     		ldr	r3, [r3]
+ 2233 000e 002B     		cmp	r3, #0
+ 2234 0010 34D0     		beq	.L113
+ 2235              		.loc 1 776 3 is_stmt 0 discriminator 1
+ 2236 0012 3B68     		ldr	r3, [r7]
+ 2237 0014 1B68     		ldr	r3, [r3]
+ 2238 0016 012B     		cmp	r3, #1
+ 2239 0018 30D0     		beq	.L113
+ 2240              		.loc 1 776 3 discriminator 2
+ 2241 001a 3B68     		ldr	r3, [r7]
+ 2242 001c 1B68     		ldr	r3, [r3]
+ 2243 001e 022B     		cmp	r3, #2
+ 2244 0020 2CD0     		beq	.L113
+ 2245              		.loc 1 776 3 discriminator 3
+ 2246 0022 3B68     		ldr	r3, [r7]
+ 2247 0024 1B68     		ldr	r3, [r3]
+ 2248 0026 052B     		cmp	r3, #5
+ 2249 0028 28D0     		beq	.L113
+ 2250              		.loc 1 776 3 discriminator 4
+ 2251 002a 3B68     		ldr	r3, [r7]
+ 2252 002c 1B68     		ldr	r3, [r3]
+ 2253 002e 062B     		cmp	r3, #6
+ 2254 0030 24D0     		beq	.L113
+ 2255              		.loc 1 776 3 discriminator 5
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 54
+
+
+ 2256 0032 3B68     		ldr	r3, [r7]
+ 2257 0034 1B68     		ldr	r3, [r3]
+ 2258 0036 072B     		cmp	r3, #7
+ 2259 0038 20D0     		beq	.L113
+ 2260              		.loc 1 776 3 discriminator 6
+ 2261 003a 3B68     		ldr	r3, [r7]
+ 2262 003c 1B68     		ldr	r3, [r3]
+ 2263 003e 092B     		cmp	r3, #9
+ 2264 0040 1CD0     		beq	.L113
+ 2265              		.loc 1 776 3 discriminator 7
+ 2266 0042 3B68     		ldr	r3, [r7]
+ 2267 0044 1B68     		ldr	r3, [r3]
+ 2268 0046 112B     		cmp	r3, #17
+ 2269 0048 18D0     		beq	.L113
+ 2270              		.loc 1 776 3 discriminator 8
+ 2271 004a 3B68     		ldr	r3, [r7]
+ 2272 004c 1B68     		ldr	r3, [r3]
+ 2273 004e 122B     		cmp	r3, #18
+ 2274 0050 14D0     		beq	.L113
+ 2275              		.loc 1 776 3 discriminator 9
+ 2276 0052 3B68     		ldr	r3, [r7]
+ 2277 0054 1B68     		ldr	r3, [r3]
+ 2278 0056 152B     		cmp	r3, #21
+ 2279 0058 10D0     		beq	.L113
+ 2280              		.loc 1 776 3 discriminator 10
+ 2281 005a 3B68     		ldr	r3, [r7]
+ 2282 005c 1B68     		ldr	r3, [r3]
+ 2283 005e 162B     		cmp	r3, #22
+ 2284 0060 0CD0     		beq	.L113
+ 2285              		.loc 1 776 3 discriminator 11
+ 2286 0062 3B68     		ldr	r3, [r7]
+ 2287 0064 1B68     		ldr	r3, [r3]
+ 2288 0066 172B     		cmp	r3, #23
+ 2289 0068 08D0     		beq	.L113
+ 2290              		.loc 1 776 3 discriminator 12
+ 2291 006a 3B68     		ldr	r3, [r7]
+ 2292 006c 1B68     		ldr	r3, [r3]
+ 2293 006e 192B     		cmp	r3, #25
+ 2294 0070 04D0     		beq	.L113
+ 2295              		.loc 1 776 3 discriminator 13
+ 2296 0072 4FF44271 		mov	r1, #776
+ 2297 0076 5548     		ldr	r0, .L118
+ 2298 0078 FFF7FEFF 		bl	assert_failed
+ 2299              	.L113:
+ 777:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_DMA_ACCESS_MODE(multimode->DMAAccessMode));
+ 2300              		.loc 1 777 3 is_stmt 1
+ 2301 007c 3B68     		ldr	r3, [r7]
+ 2302 007e 5B68     		ldr	r3, [r3, #4]
+ 2303 0080 002B     		cmp	r3, #0
+ 2304 0082 13D0     		beq	.L114
+ 2305              		.loc 1 777 3 is_stmt 0 discriminator 1
+ 2306 0084 3B68     		ldr	r3, [r7]
+ 2307 0086 5B68     		ldr	r3, [r3, #4]
+ 2308 0088 B3F5804F 		cmp	r3, #16384
+ 2309 008c 0ED0     		beq	.L114
+ 2310              		.loc 1 777 3 discriminator 2
+ 2311 008e 3B68     		ldr	r3, [r7]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 55
+
+
+ 2312 0090 5B68     		ldr	r3, [r3, #4]
+ 2313 0092 B3F5004F 		cmp	r3, #32768
+ 2314 0096 09D0     		beq	.L114
+ 2315              		.loc 1 777 3 discriminator 3
+ 2316 0098 3B68     		ldr	r3, [r7]
+ 2317 009a 5B68     		ldr	r3, [r3, #4]
+ 2318 009c B3F5404F 		cmp	r3, #49152
+ 2319 00a0 04D0     		beq	.L114
+ 2320              		.loc 1 777 3 discriminator 4
+ 2321 00a2 40F20931 		movw	r1, #777
+ 2322 00a6 4948     		ldr	r0, .L118
+ 2323 00a8 FFF7FEFF 		bl	assert_failed
+ 2324              	.L114:
+ 778:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_SAMPLING_DELAY(multimode->TwoSamplingDelay));
+ 2325              		.loc 1 778 3 is_stmt 1
+ 2326 00ac 3B68     		ldr	r3, [r7]
+ 2327 00ae 9B68     		ldr	r3, [r3, #8]
+ 2328 00b0 002B     		cmp	r3, #0
+ 2329 00b2 4FD0     		beq	.L115
+ 2330              		.loc 1 778 3 is_stmt 0 discriminator 1
+ 2331 00b4 3B68     		ldr	r3, [r7]
+ 2332 00b6 9B68     		ldr	r3, [r3, #8]
+ 2333 00b8 B3F5807F 		cmp	r3, #256
+ 2334 00bc 4AD0     		beq	.L115
+ 2335              		.loc 1 778 3 discriminator 2
+ 2336 00be 3B68     		ldr	r3, [r7]
+ 2337 00c0 9B68     		ldr	r3, [r3, #8]
+ 2338 00c2 B3F5007F 		cmp	r3, #512
+ 2339 00c6 45D0     		beq	.L115
+ 2340              		.loc 1 778 3 discriminator 3
+ 2341 00c8 3B68     		ldr	r3, [r7]
+ 2342 00ca 9B68     		ldr	r3, [r3, #8]
+ 2343 00cc B3F5407F 		cmp	r3, #768
+ 2344 00d0 40D0     		beq	.L115
+ 2345              		.loc 1 778 3 discriminator 4
+ 2346 00d2 3B68     		ldr	r3, [r7]
+ 2347 00d4 9B68     		ldr	r3, [r3, #8]
+ 2348 00d6 B3F5806F 		cmp	r3, #1024
+ 2349 00da 3BD0     		beq	.L115
+ 2350              		.loc 1 778 3 discriminator 5
+ 2351 00dc 3B68     		ldr	r3, [r7]
+ 2352 00de 9B68     		ldr	r3, [r3, #8]
+ 2353 00e0 B3F5A06F 		cmp	r3, #1280
+ 2354 00e4 36D0     		beq	.L115
+ 2355              		.loc 1 778 3 discriminator 6
+ 2356 00e6 3B68     		ldr	r3, [r7]
+ 2357 00e8 9B68     		ldr	r3, [r3, #8]
+ 2358 00ea B3F5C06F 		cmp	r3, #1536
+ 2359 00ee 31D0     		beq	.L115
+ 2360              		.loc 1 778 3 discriminator 7
+ 2361 00f0 3B68     		ldr	r3, [r7]
+ 2362 00f2 9B68     		ldr	r3, [r3, #8]
+ 2363 00f4 B3F5E06F 		cmp	r3, #1792
+ 2364 00f8 2CD0     		beq	.L115
+ 2365              		.loc 1 778 3 discriminator 8
+ 2366 00fa 3B68     		ldr	r3, [r7]
+ 2367 00fc 9B68     		ldr	r3, [r3, #8]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 56
+
+
+ 2368 00fe B3F5006F 		cmp	r3, #2048
+ 2369 0102 27D0     		beq	.L115
+ 2370              		.loc 1 778 3 discriminator 9
+ 2371 0104 3B68     		ldr	r3, [r7]
+ 2372 0106 9B68     		ldr	r3, [r3, #8]
+ 2373 0108 B3F5106F 		cmp	r3, #2304
+ 2374 010c 22D0     		beq	.L115
+ 2375              		.loc 1 778 3 discriminator 10
+ 2376 010e 3B68     		ldr	r3, [r7]
+ 2377 0110 9B68     		ldr	r3, [r3, #8]
+ 2378 0112 B3F5206F 		cmp	r3, #2560
+ 2379 0116 1DD0     		beq	.L115
+ 2380              		.loc 1 778 3 discriminator 11
+ 2381 0118 3B68     		ldr	r3, [r7]
+ 2382 011a 9B68     		ldr	r3, [r3, #8]
+ 2383 011c B3F5306F 		cmp	r3, #2816
+ 2384 0120 18D0     		beq	.L115
+ 2385              		.loc 1 778 3 discriminator 12
+ 2386 0122 3B68     		ldr	r3, [r7]
+ 2387 0124 9B68     		ldr	r3, [r3, #8]
+ 2388 0126 B3F5406F 		cmp	r3, #3072
+ 2389 012a 13D0     		beq	.L115
+ 2390              		.loc 1 778 3 discriminator 13
+ 2391 012c 3B68     		ldr	r3, [r7]
+ 2392 012e 9B68     		ldr	r3, [r3, #8]
+ 2393 0130 B3F5506F 		cmp	r3, #3328
+ 2394 0134 0ED0     		beq	.L115
+ 2395              		.loc 1 778 3 discriminator 14
+ 2396 0136 3B68     		ldr	r3, [r7]
+ 2397 0138 9B68     		ldr	r3, [r3, #8]
+ 2398 013a B3F5606F 		cmp	r3, #3584
+ 2399 013e 09D0     		beq	.L115
+ 2400              		.loc 1 778 3 discriminator 15
+ 2401 0140 3B68     		ldr	r3, [r7]
+ 2402 0142 9B68     		ldr	r3, [r3, #8]
+ 2403 0144 B3F5706F 		cmp	r3, #3840
+ 2404 0148 04D0     		beq	.L115
+ 2405              		.loc 1 778 3 discriminator 16
+ 2406 014a 40F20A31 		movw	r1, #778
+ 2407 014e 1F48     		ldr	r0, .L118
+ 2408 0150 FFF7FEFF 		bl	assert_failed
+ 2409              	.L115:
+ 779:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 780:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process locked */
+ 781:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
+ 2410              		.loc 1 781 3 is_stmt 1
+ 2411 0154 7B68     		ldr	r3, [r7, #4]
+ 2412 0156 93F83C30 		ldrb	r3, [r3, #60]	@ zero_extendqisi2
+ 2413 015a 012B     		cmp	r3, #1
+ 2414 015c 01D1     		bne	.L116
+ 2415              		.loc 1 781 3 is_stmt 0 discriminator 1
+ 2416 015e 0223     		movs	r3, #2
+ 2417 0160 2FE0     		b	.L117
+ 2418              	.L116:
+ 2419              		.loc 1 781 3 discriminator 2
+ 2420 0162 7B68     		ldr	r3, [r7, #4]
+ 2421 0164 0122     		movs	r2, #1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 57
+
+
+ 2422 0166 83F83C20 		strb	r2, [r3, #60]
+ 782:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 783:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set ADC mode */
+ 784:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR &= ~(ADC_CCR_MULTI);
+ 2423              		.loc 1 784 12 is_stmt 1 discriminator 2
+ 2424 016a 194B     		ldr	r3, .L118+4
+ 2425 016c 5B68     		ldr	r3, [r3, #4]
+ 2426 016e 184A     		ldr	r2, .L118+4
+ 2427 0170 23F01F03 		bic	r3, r3, #31
+ 2428 0174 5360     		str	r3, [r2, #4]
+ 785:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR |= multimode->Mode;
+ 2429              		.loc 1 785 12 discriminator 2
+ 2430 0176 164B     		ldr	r3, .L118+4
+ 2431 0178 5A68     		ldr	r2, [r3, #4]
+ 2432              		.loc 1 785 24 discriminator 2
+ 2433 017a 3B68     		ldr	r3, [r7]
+ 2434 017c 1B68     		ldr	r3, [r3]
+ 2435              		.loc 1 785 12 discriminator 2
+ 2436 017e 1449     		ldr	r1, .L118+4
+ 2437 0180 1343     		orrs	r3, r3, r2
+ 2438 0182 4B60     		str	r3, [r1, #4]
+ 786:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 787:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set the ADC DMA access mode */
+ 788:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR &= ~(ADC_CCR_DMA);
+ 2439              		.loc 1 788 12 discriminator 2
+ 2440 0184 124B     		ldr	r3, .L118+4
+ 2441 0186 5B68     		ldr	r3, [r3, #4]
+ 2442 0188 114A     		ldr	r2, .L118+4
+ 2443 018a 23F44043 		bic	r3, r3, #49152
+ 2444 018e 5360     		str	r3, [r2, #4]
+ 789:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR |= multimode->DMAAccessMode;
+ 2445              		.loc 1 789 12 discriminator 2
+ 2446 0190 0F4B     		ldr	r3, .L118+4
+ 2447 0192 5A68     		ldr	r2, [r3, #4]
+ 2448              		.loc 1 789 24 discriminator 2
+ 2449 0194 3B68     		ldr	r3, [r7]
+ 2450 0196 5B68     		ldr	r3, [r3, #4]
+ 2451              		.loc 1 789 12 discriminator 2
+ 2452 0198 0D49     		ldr	r1, .L118+4
+ 2453 019a 1343     		orrs	r3, r3, r2
+ 2454 019c 4B60     		str	r3, [r1, #4]
+ 790:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 791:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set delay between two sampling phases */
+ 792:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR &= ~(ADC_CCR_DELAY);
+ 2455              		.loc 1 792 12 discriminator 2
+ 2456 019e 0C4B     		ldr	r3, .L118+4
+ 2457 01a0 5B68     		ldr	r3, [r3, #4]
+ 2458 01a2 0B4A     		ldr	r2, .L118+4
+ 2459 01a4 23F47063 		bic	r3, r3, #3840
+ 2460 01a8 5360     		str	r3, [r2, #4]
+ 793:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC->CCR |= multimode->TwoSamplingDelay;
+ 2461              		.loc 1 793 12 discriminator 2
+ 2462 01aa 094B     		ldr	r3, .L118+4
+ 2463 01ac 5A68     		ldr	r2, [r3, #4]
+ 2464              		.loc 1 793 24 discriminator 2
+ 2465 01ae 3B68     		ldr	r3, [r7]
+ 2466 01b0 9B68     		ldr	r3, [r3, #8]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 58
+
+
+ 2467              		.loc 1 793 12 discriminator 2
+ 2468 01b2 0749     		ldr	r1, .L118+4
+ 2469 01b4 1343     		orrs	r3, r3, r2
+ 2470 01b6 4B60     		str	r3, [r1, #4]
+ 794:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 795:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Process unlocked */
+ 796:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
+ 2471              		.loc 1 796 3 discriminator 2
+ 2472 01b8 7B68     		ldr	r3, [r7, #4]
+ 2473 01ba 0022     		movs	r2, #0
+ 2474 01bc 83F83C20 		strb	r2, [r3, #60]
+ 797:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
+ 798:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
+ 799:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return HAL_OK;
+ 2475              		.loc 1 799 10 discriminator 2
+ 2476 01c0 0023     		movs	r3, #0
+ 2477              	.L117:
+ 800:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 2478              		.loc 1 800 1
+ 2479 01c2 1846     		mov	r0, r3
+ 2480 01c4 0837     		adds	r7, r7, #8
+ 2481              	.LCFI64:
+ 2482              		.cfi_def_cfa_offset 8
+ 2483 01c6 BD46     		mov	sp, r7
+ 2484              	.LCFI65:
+ 2485              		.cfi_def_cfa_register 13
+ 2486              		@ sp needed
+ 2487 01c8 80BD     		pop	{r7, pc}
+ 2488              	.L119:
+ 2489 01ca 00BF     		.align	2
+ 2490              	.L118:
+ 2491 01cc 00000000 		.word	.LC0
+ 2492 01d0 00230140 		.word	1073816320
+ 2493              		.cfi_endproc
+ 2494              	.LFE139:
+ 2496              		.section	.text.ADC_MultiModeDMAConvCplt,"ax",%progbits
+ 2497              		.align	1
+ 2498              		.syntax unified
+ 2499              		.thumb
+ 2500              		.thumb_func
+ 2502              	ADC_MultiModeDMAConvCplt:
+ 2503              	.LFB140:
+ 801:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 802:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 803:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @}
+ 804:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 805:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 806:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /**
+ 807:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  DMA transfer complete callback. 
+ 808:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hdma: pointer to a DMA_HandleTypeDef structure that contains
+ 809:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *                the configuration information for the specified DMA module.
+ 810:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 811:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 812:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAConvCplt(DMA_HandleTypeDef *hdma)   
+ 813:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 2504              		.loc 1 813 1
+ 2505              		.cfi_startproc
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 59
+
+
+ 2506              		@ args = 0, pretend = 0, frame = 16
+ 2507              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2508 0000 80B5     		push	{r7, lr}
+ 2509              	.LCFI66:
+ 2510              		.cfi_def_cfa_offset 8
+ 2511              		.cfi_offset 7, -8
+ 2512              		.cfi_offset 14, -4
+ 2513 0002 84B0     		sub	sp, sp, #16
+ 2514              	.LCFI67:
+ 2515              		.cfi_def_cfa_offset 24
+ 2516 0004 00AF     		add	r7, sp, #0
+ 2517              	.LCFI68:
+ 2518              		.cfi_def_cfa_register 7
+ 2519 0006 7860     		str	r0, [r7, #4]
+ 814:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC_HandleTypeDef* hadc = ( ADC_HandleTypeDef* )((DMA_HandleTypeDef* )hdma)->Parent;
+ 2520              		.loc 1 814 24
+ 2521 0008 7B68     		ldr	r3, [r7, #4]
+ 2522 000a 9B6B     		ldr	r3, [r3, #56]
+ 2523 000c FB60     		str	r3, [r7, #12]
+ 815:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 816:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Check if an injected conversion is ready */
+ 817:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   if(hadc->State == HAL_ADC_STATE_EOC_INJ)
+ 2524              		.loc 1 817 10
+ 2525 000e FB68     		ldr	r3, [r7, #12]
+ 2526 0010 93F83D30 		ldrb	r3, [r3, #61]
+ 2527 0014 DBB2     		uxtb	r3, r3
+ 2528              		.loc 1 817 5
+ 2529 0016 252B     		cmp	r3, #37
+ 2530 0018 04D1     		bne	.L121
+ 818:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 819:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 820:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_EOC_INJ_REG;  
+ 2531              		.loc 1 820 17
+ 2532 001a FB68     		ldr	r3, [r7, #12]
+ 2533 001c 3522     		movs	r2, #53
+ 2534 001e 83F83D20 		strb	r2, [r3, #61]
+ 2535 0022 03E0     		b	.L122
+ 2536              	.L121:
+ 821:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 822:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   else
+ 823:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {
+ 824:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Change ADC state */
+ 825:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State = HAL_ADC_STATE_EOC_REG;
+ 2537              		.loc 1 825 17
+ 2538 0024 FB68     		ldr	r3, [r7, #12]
+ 2539 0026 1522     		movs	r2, #21
+ 2540 0028 83F83D20 		strb	r2, [r3, #61]
+ 2541              	.L122:
+ 826:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
+ 827:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
+ 828:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     HAL_ADC_ConvCpltCallback(hadc); 
+ 2542              		.loc 1 828 5
+ 2543 002c F868     		ldr	r0, [r7, #12]
+ 2544 002e FFF7FEFF 		bl	HAL_ADC_ConvCpltCallback
+ 829:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 2545              		.loc 1 829 1
+ 2546 0032 00BF     		nop
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 60
+
+
+ 2547 0034 1037     		adds	r7, r7, #16
+ 2548              	.LCFI69:
+ 2549              		.cfi_def_cfa_offset 8
+ 2550 0036 BD46     		mov	sp, r7
+ 2551              	.LCFI70:
+ 2552              		.cfi_def_cfa_register 13
+ 2553              		@ sp needed
+ 2554 0038 80BD     		pop	{r7, pc}
+ 2555              		.cfi_endproc
+ 2556              	.LFE140:
+ 2558              		.section	.text.ADC_MultiModeDMAHalfConvCplt,"ax",%progbits
+ 2559              		.align	1
+ 2560              		.syntax unified
+ 2561              		.thumb
+ 2562              		.thumb_func
+ 2564              	ADC_MultiModeDMAHalfConvCplt:
+ 2565              	.LFB141:
+ 830:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 831:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 832:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  DMA half transfer complete callback. 
+ 833:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hdma: pointer to a DMA_HandleTypeDef structure that contains
+ 834:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *                the configuration information for the specified DMA module.
+ 835:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 836:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 837:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAHalfConvCplt(DMA_HandleTypeDef *hdma)   
+ 838:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 2566              		.loc 1 838 1
+ 2567              		.cfi_startproc
+ 2568              		@ args = 0, pretend = 0, frame = 16
+ 2569              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2570 0000 80B5     		push	{r7, lr}
+ 2571              	.LCFI71:
+ 2572              		.cfi_def_cfa_offset 8
+ 2573              		.cfi_offset 7, -8
+ 2574              		.cfi_offset 14, -4
+ 2575 0002 84B0     		sub	sp, sp, #16
+ 2576              	.LCFI72:
+ 2577              		.cfi_def_cfa_offset 24
+ 2578 0004 00AF     		add	r7, sp, #0
+ 2579              	.LCFI73:
+ 2580              		.cfi_def_cfa_register 7
+ 2581 0006 7860     		str	r0, [r7, #4]
+ 839:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC_HandleTypeDef* hadc = ( ADC_HandleTypeDef* )((DMA_HandleTypeDef* )hdma)->Parent;
+ 2582              		.loc 1 839 24
+ 2583 0008 7B68     		ldr	r3, [r7, #4]
+ 2584 000a 9B6B     		ldr	r3, [r3, #56]
+ 2585 000c FB60     		str	r3, [r7, #12]
+ 840:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Conversion complete callback */
+ 841:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     HAL_ADC_ConvHalfCpltCallback(hadc); 
+ 2586              		.loc 1 841 5
+ 2587 000e F868     		ldr	r0, [r7, #12]
+ 2588 0010 FFF7FEFF 		bl	HAL_ADC_ConvHalfCpltCallback
+ 842:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 2589              		.loc 1 842 1
+ 2590 0014 00BF     		nop
+ 2591 0016 1037     		adds	r7, r7, #16
+ 2592              	.LCFI74:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 61
+
+
+ 2593              		.cfi_def_cfa_offset 8
+ 2594 0018 BD46     		mov	sp, r7
+ 2595              	.LCFI75:
+ 2596              		.cfi_def_cfa_register 13
+ 2597              		@ sp needed
+ 2598 001a 80BD     		pop	{r7, pc}
+ 2599              		.cfi_endproc
+ 2600              	.LFE141:
+ 2602              		.section	.text.ADC_MultiModeDMAError,"ax",%progbits
+ 2603              		.align	1
+ 2604              		.syntax unified
+ 2605              		.thumb
+ 2606              		.thumb_func
+ 2608              	ADC_MultiModeDMAError:
+ 2609              	.LFB142:
+ 843:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
+ 844:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
+ 845:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @brief  DMA error callback 
+ 846:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hdma: pointer to a DMA_HandleTypeDef structure that contains
+ 847:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *                the configuration information for the specified DMA module.
+ 848:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
+ 849:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
+ 850:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** static void ADC_MultiModeDMAError(DMA_HandleTypeDef *hdma)   
+ 851:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
+ 2610              		.loc 1 851 1
+ 2611              		.cfi_startproc
+ 2612              		@ args = 0, pretend = 0, frame = 16
+ 2613              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2614 0000 80B5     		push	{r7, lr}
+ 2615              	.LCFI76:
+ 2616              		.cfi_def_cfa_offset 8
+ 2617              		.cfi_offset 7, -8
+ 2618              		.cfi_offset 14, -4
+ 2619 0002 84B0     		sub	sp, sp, #16
+ 2620              	.LCFI77:
+ 2621              		.cfi_def_cfa_offset 24
+ 2622 0004 00AF     		add	r7, sp, #0
+ 2623              	.LCFI78:
+ 2624              		.cfi_def_cfa_register 7
+ 2625 0006 7860     		str	r0, [r7, #4]
+ 852:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     ADC_HandleTypeDef* hadc = ( ADC_HandleTypeDef* )((DMA_HandleTypeDef* )hdma)->Parent;
+ 2626              		.loc 1 852 24
+ 2627 0008 7B68     		ldr	r3, [r7, #4]
+ 2628 000a 9B6B     		ldr	r3, [r3, #56]
+ 2629 000c FB60     		str	r3, [r7, #12]
+ 853:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->State= HAL_ADC_STATE_ERROR;
+ 2630              		.loc 1 853 16
+ 2631 000e FB68     		ldr	r3, [r7, #12]
+ 2632 0010 0422     		movs	r2, #4
+ 2633 0012 83F83D20 		strb	r2, [r3, #61]
+ 854:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Set ADC error code to DMA error */
+ 855:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->ErrorCode |= HAL_ADC_ERROR_DMA;
+ 2634              		.loc 1 855 21
+ 2635 0016 FB68     		ldr	r3, [r7, #12]
+ 2636 0018 1B6C     		ldr	r3, [r3, #64]
+ 2637 001a 43F00202 		orr	r2, r3, #2
+ 2638 001e FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 62
+
+
+ 2639 0020 1A64     		str	r2, [r3, #64]
+ 856:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     HAL_ADC_ErrorCallback(hadc); 
+ 2640              		.loc 1 856 5
+ 2641 0022 F868     		ldr	r0, [r7, #12]
+ 2642 0024 FFF7FEFF 		bl	HAL_ADC_ErrorCallback
+ 857:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
+ 2643              		.loc 1 857 1
+ 2644 0028 00BF     		nop
+ 2645 002a 1037     		adds	r7, r7, #16
+ 2646              	.LCFI79:
+ 2647              		.cfi_def_cfa_offset 8
+ 2648 002c BD46     		mov	sp, r7
+ 2649              	.LCFI80:
+ 2650              		.cfi_def_cfa_register 13
+ 2651              		@ sp needed
+ 2652 002e 80BD     		pop	{r7, pc}
+ 2653              		.cfi_endproc
+ 2654              	.LFE142:
+ 2656              		.text
+ 2657              	.Letext0:
+ 2658              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 2659              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 2660              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 2661              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 2662              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 2663              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 2664              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
+ 2665              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h"
+ 2666              		.file 10 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s 			page 63
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_hal_adc_ex.c
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:20     .text.HAL_ADCEx_InjectedStart:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:26     .text.HAL_ADCEx_InjectedStart:00000000 HAL_ADCEx_InjectedStart
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:256    .text.HAL_ADCEx_InjectedStart:00000148 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:264    .text.HAL_ADCEx_InjectedStart_IT:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:270    .text.HAL_ADCEx_InjectedStart_IT:00000000 HAL_ADCEx_InjectedStart_IT
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:519    .text.HAL_ADCEx_InjectedStart_IT:0000016c $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:527    .text.HAL_ADCEx_InjectedStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:533    .text.HAL_ADCEx_InjectedStop:00000000 HAL_ADCEx_InjectedStop
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:583    .text.HAL_ADCEx_InjectedPollForConversion:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:589    .text.HAL_ADCEx_InjectedPollForConversion:00000000 HAL_ADCEx_InjectedPollForConversion
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:691    .text.HAL_ADCEx_InjectedStop_IT:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:697    .text.HAL_ADCEx_InjectedStop_IT:00000000 HAL_ADCEx_InjectedStop_IT
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:763    .rodata:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:768    .text.HAL_ADCEx_InjectedGetValue:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:774    .text.HAL_ADCEx_InjectedGetValue:00000000 HAL_ADCEx_InjectedGetValue
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:824    .text.HAL_ADCEx_InjectedGetValue:0000003c $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:828    .text.HAL_ADCEx_InjectedGetValue:0000004c $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:888    .text.HAL_ADCEx_InjectedGetValue:00000080 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:893    .text.HAL_ADCEx_MultiModeStart_DMA:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:899    .text.HAL_ADCEx_MultiModeStart_DMA:00000000 HAL_ADCEx_MultiModeStart_DMA
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1134   .text.HAL_ADCEx_MultiModeStart_DMA:0000015c $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2502   .text.ADC_MultiModeDMAConvCplt:00000000 ADC_MultiModeDMAConvCplt
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2564   .text.ADC_MultiModeDMAHalfConvCplt:00000000 ADC_MultiModeDMAHalfConvCplt
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2608   .text.ADC_MultiModeDMAError:00000000 ADC_MultiModeDMAError
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1146   .text.HAL_ADCEx_MultiModeStop_DMA:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1152   .text.HAL_ADCEx_MultiModeStop_DMA:00000000 HAL_ADCEx_MultiModeStop_DMA
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1234   .text.HAL_ADCEx_MultiModeStop_DMA:00000070 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1239   .text.HAL_ADCEx_MultiModeGetValue:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1245   .text.HAL_ADCEx_MultiModeGetValue:00000000 HAL_ADCEx_MultiModeGetValue
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1283   .text.HAL_ADCEx_MultiModeGetValue:00000018 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1288   .text.HAL_ADCEx_InjectedConvCpltCallback:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1294   .text.HAL_ADCEx_InjectedConvCpltCallback:00000000 HAL_ADCEx_InjectedConvCpltCallback
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1330   .text.HAL_ADCEx_InjectedConfigChannel:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1336   .text.HAL_ADCEx_InjectedConfigChannel:00000000 HAL_ADCEx_InjectedConfigChannel
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1661   .text.HAL_ADCEx_InjectedConfigChannel:00000224 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:1665   .text.HAL_ADCEx_InjectedConfigChannel:0000022c $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2198   .text.HAL_ADCEx_InjectedConfigChannel:0000052c $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2205   .text.HAL_ADCEx_MultiModeConfigChannel:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2211   .text.HAL_ADCEx_MultiModeConfigChannel:00000000 HAL_ADCEx_MultiModeConfigChannel
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2491   .text.HAL_ADCEx_MultiModeConfigChannel:000001cc $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2497   .text.ADC_MultiModeDMAConvCplt:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2559   .text.ADC_MultiModeDMAHalfConvCplt:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccodvxml.s:2603   .text.ADC_MultiModeDMAError:00000000 $t
+
+UNDEFINED SYMBOLS
+SystemCoreClock
+HAL_GetTick
+assert_failed
+HAL_DMA_Start_IT
+HAL_DMA_Abort
+HAL_ADC_ConvCpltCallback
+HAL_ADC_ConvHalfCpltCallback
+HAL_ADC_ErrorCallback

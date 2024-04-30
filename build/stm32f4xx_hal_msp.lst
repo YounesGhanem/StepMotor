@@ -1,0 +1,985 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32f4xx_hal_msp.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HAL_MspInit,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_MspInit
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_MspInit:
+  27              	.LFB128:
+  28              		.file 1 "Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_m
+   1:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** /**
+   2:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   ******************************************************************************
+   3:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * File Name          : stm32f4xx_hal_msp.c
+   4:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * Date               : 13/05/2015 09:14:38
+   5:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * Description        : This file provides code for the MSP Initialization 
+   6:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *                      and de-Initialization codes.
+   7:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   ******************************************************************************
+   8:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *
+   9:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * COPYRIGHT(c) 2015 STMicroelectronics
+  10:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *
+  11:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  12:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * are permitted provided that the following conditions are met:
+  13:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  14:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *      this list of conditions and the following disclaimer.
+  15:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  16:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *      this list of conditions and the following disclaimer in the documentation
+  17:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *      and/or other materials provided with the distribution.
+  18:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  19:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *      may be used to endorse or promote products derived from this software
+  20:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *      without specific prior written permission.
+  21:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *
+  22:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  23:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  24:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  25:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  26:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  27:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  28:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  29:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  30:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 2
+
+
+  31:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  32:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   *
+  33:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   ******************************************************************************
+  34:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   */
+  35:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** /* Includes ------------------------------------------------------------------*/
+  36:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #include "xnucleoihm02a1_interface.h"
+  37:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  38:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** /**
+  39:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * @addtogroup MicrosteppingMotor_Example
+  40:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * @{
+  41:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   */
+  42:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  43:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** /**
+  44:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * @defgroup STM32F4XX_HAL_MSP
+  45:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * @{
+  46:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   */
+  47:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  48:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** /**
+  49:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   * Initializes the Global MSP.
+  50:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   */
+  51:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_MspInit(void)
+  52:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+  29              		.loc 1 52 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 7, -8
+  37              		.cfi_offset 14, -4
+  38 0002 00AF     		add	r7, sp, #0
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_register 7
+  53:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   HAL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_0);
+  41              		.loc 1 53 3
+  42 0004 0720     		movs	r0, #7
+  43 0006 FFF7FEFF 		bl	HAL_NVIC_SetPriorityGrouping
+  54:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  55:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   /* System interrupt init*/
+  56:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   /* SysTick_IRQn interrupt configuration */
+  57:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+  44              		.loc 1 57 3
+  45 000a 0022     		movs	r2, #0
+  46 000c 0021     		movs	r1, #0
+  47 000e 4FF0FF30 		mov	r0, #-1
+  48 0012 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  58:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+  49              		.loc 1 58 1
+  50 0016 00BF     		nop
+  51 0018 80BD     		pop	{r7, pc}
+  52              		.cfi_endproc
+  53              	.LFE128:
+  55              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
+  56              		.align	1
+  57              		.global	HAL_ADC_MspInit
+  58              		.syntax unified
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 3
+
+
+  59              		.thumb
+  60              		.thumb_func
+  62              	HAL_ADC_MspInit:
+  63              	.LFB129:
+  59:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  60:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
+  61:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+  64              		.loc 1 61 1
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 40
+  67              		@ frame_needed = 1, uses_anonymous_args = 0
+  68 0000 80B5     		push	{r7, lr}
+  69              	.LCFI2:
+  70              		.cfi_def_cfa_offset 8
+  71              		.cfi_offset 7, -8
+  72              		.cfi_offset 14, -4
+  73 0002 8AB0     		sub	sp, sp, #40
+  74              	.LCFI3:
+  75              		.cfi_def_cfa_offset 48
+  76 0004 00AF     		add	r7, sp, #0
+  77              	.LCFI4:
+  78              		.cfi_def_cfa_register 7
+  79 0006 7860     		str	r0, [r7, #4]
+  62:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct;
+  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(hadc->Instance==ADC1)
+  80              		.loc 1 63 10
+  81 0008 7B68     		ldr	r3, [r7, #4]
+  82 000a 1B68     		ldr	r3, [r3]
+  83              		.loc 1 63 5
+  84 000c 154A     		ldr	r2, .L5
+  85 000e 9342     		cmp	r3, r2
+  86 0010 23D1     		bne	.L4
+  87              	.LBB2:
+  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* GPIO clocks enable */
+  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __GPIOB_CLK_ENABLE();
+  88              		.loc 1 66 5
+  89 0012 154B     		ldr	r3, .L5+4
+  90 0014 1B6B     		ldr	r3, [r3, #48]
+  91 0016 144A     		ldr	r2, .L5+4
+  92 0018 43F00203 		orr	r3, r3, #2
+  93 001c 1363     		str	r3, [r2, #48]
+  94 001e 124B     		ldr	r3, .L5+4
+  95 0020 1B6B     		ldr	r3, [r3, #48]
+  96 0022 03F00203 		and	r3, r3, #2
+  97 0026 3B61     		str	r3, [r7, #16]
+  98 0028 3B69     		ldr	r3, [r7, #16]
+  99              	.LBE2:
+ 100              	.LBB3:
+  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     
+  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock enable */
+  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __ADC1_CLK_ENABLE();
+ 101              		.loc 1 69 5
+ 102 002a 0F4B     		ldr	r3, .L5+4
+ 103 002c 5B6C     		ldr	r3, [r3, #68]
+ 104 002e 0E4A     		ldr	r2, .L5+4
+ 105 0030 43F48073 		orr	r3, r3, #256
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 4
+
+
+ 106 0034 5364     		str	r3, [r2, #68]
+ 107 0036 0C4B     		ldr	r3, .L5+4
+ 108 0038 5B6C     		ldr	r3, [r3, #68]
+ 109 003a 03F48073 		and	r3, r3, #256
+ 110 003e FB60     		str	r3, [r7, #12]
+ 111 0040 FB68     		ldr	r3, [r7, #12]
+ 112              	.LBE3:
+  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**ADC1 GPIO Configuration    
+  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB0     ------> ADC1_IN8 
+  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0;
+ 113              		.loc 1 74 25
+ 114 0042 0123     		movs	r3, #1
+ 115 0044 7B61     		str	r3, [r7, #20]
+  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 116              		.loc 1 75 26
+ 117 0046 0323     		movs	r3, #3
+ 118 0048 BB61     		str	r3, [r7, #24]
+  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 119              		.loc 1 76 26
+ 120 004a 0023     		movs	r3, #0
+ 121 004c FB61     		str	r3, [r7, #28]
+  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 122              		.loc 1 77 5
+ 123 004e 07F11403 		add	r3, r7, #20
+ 124 0052 1946     		mov	r1, r3
+ 125 0054 0548     		ldr	r0, .L5+8
+ 126 0056 FFF7FEFF 		bl	HAL_GPIO_Init
+ 127              	.L4:
+  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 128              		.loc 1 79 1
+ 129 005a 00BF     		nop
+ 130 005c 2837     		adds	r7, r7, #40
+ 131              	.LCFI5:
+ 132              		.cfi_def_cfa_offset 8
+ 133 005e BD46     		mov	sp, r7
+ 134              	.LCFI6:
+ 135              		.cfi_def_cfa_register 13
+ 136              		@ sp needed
+ 137 0060 80BD     		pop	{r7, pc}
+ 138              	.L6:
+ 139 0062 00BF     		.align	2
+ 140              	.L5:
+ 141 0064 00200140 		.word	1073815552
+ 142 0068 00380240 		.word	1073887232
+ 143 006c 00040240 		.word	1073873920
+ 144              		.cfi_endproc
+ 145              	.LFE129:
+ 147              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	HAL_ADC_MspDeInit
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 154              	HAL_ADC_MspDeInit:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 5
+
+
+ 155              	.LFB130:
+  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
+  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+ 156              		.loc 1 82 1
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 8
+ 159              		@ frame_needed = 1, uses_anonymous_args = 0
+ 160 0000 80B5     		push	{r7, lr}
+ 161              	.LCFI7:
+ 162              		.cfi_def_cfa_offset 8
+ 163              		.cfi_offset 7, -8
+ 164              		.cfi_offset 14, -4
+ 165 0002 82B0     		sub	sp, sp, #8
+ 166              	.LCFI8:
+ 167              		.cfi_def_cfa_offset 16
+ 168 0004 00AF     		add	r7, sp, #0
+ 169              	.LCFI9:
+ 170              		.cfi_def_cfa_register 7
+ 171 0006 7860     		str	r0, [r7, #4]
+  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(hadc->Instance==ADC1)
+ 172              		.loc 1 83 10
+ 173 0008 7B68     		ldr	r3, [r7, #4]
+ 174 000a 1B68     		ldr	r3, [r3]
+ 175              		.loc 1 83 5
+ 176 000c 084A     		ldr	r2, .L10
+ 177 000e 9342     		cmp	r3, r2
+ 178 0010 09D1     		bne	.L9
+  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock disable */
+  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __ADC1_CLK_DISABLE();
+ 179              		.loc 1 86 5
+ 180 0012 084B     		ldr	r3, .L10+4
+ 181 0014 5B6C     		ldr	r3, [r3, #68]
+ 182 0016 074A     		ldr	r2, .L10+4
+ 183 0018 23F48073 		bic	r3, r3, #256
+ 184 001c 5364     		str	r3, [r2, #68]
+  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**ADC1 GPIO Configuration    
+  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB0     ------> ADC1_IN8 
+  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_0);
+ 185              		.loc 1 91 5
+ 186 001e 0121     		movs	r1, #1
+ 187 0020 0548     		ldr	r0, .L10+8
+ 188 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 189              	.L9:
+  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 190              		.loc 1 93 1
+ 191 0026 00BF     		nop
+ 192 0028 0837     		adds	r7, r7, #8
+ 193              	.LCFI10:
+ 194              		.cfi_def_cfa_offset 8
+ 195 002a BD46     		mov	sp, r7
+ 196              	.LCFI11:
+ 197              		.cfi_def_cfa_register 13
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 6
+
+
+ 198              		@ sp needed
+ 199 002c 80BD     		pop	{r7, pc}
+ 200              	.L11:
+ 201 002e 00BF     		.align	2
+ 202              	.L10:
+ 203 0030 00200140 		.word	1073815552
+ 204 0034 00380240 		.word	1073887232
+ 205 0038 00040240 		.word	1073873920
+ 206              		.cfi_endproc
+ 207              	.LFE130:
+ 209              		.section	.text.HAL_SPI_MspInit,"ax",%progbits
+ 210              		.align	1
+ 211              		.global	HAL_SPI_MspInit
+ 212              		.syntax unified
+ 213              		.thumb
+ 214              		.thumb_func
+ 216              	HAL_SPI_MspInit:
+ 217              	.LFB131:
+  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
+  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+ 218              		.loc 1 96 1
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 48
+ 221              		@ frame_needed = 1, uses_anonymous_args = 0
+ 222 0000 80B5     		push	{r7, lr}
+ 223              	.LCFI12:
+ 224              		.cfi_def_cfa_offset 8
+ 225              		.cfi_offset 7, -8
+ 226              		.cfi_offset 14, -4
+ 227 0002 8CB0     		sub	sp, sp, #48
+ 228              	.LCFI13:
+ 229              		.cfi_def_cfa_offset 56
+ 230 0004 00AF     		add	r7, sp, #0
+ 231              	.LCFI14:
+ 232              		.cfi_def_cfa_register 7
+ 233 0006 7860     		str	r0, [r7, #4]
+  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct;
+  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(hspi->Instance==SPI1)
+ 234              		.loc 1 99 10
+ 235 0008 7B68     		ldr	r3, [r7, #4]
+ 236 000a 1B68     		ldr	r3, [r3]
+ 237              		.loc 1 99 5
+ 238 000c 3C4A     		ldr	r2, .L16
+ 239 000e 9342     		cmp	r3, r2
+ 240 0010 44D1     		bne	.L13
+ 241              	.LBB4:
+ 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* GPIO clocks enable */
+ 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __GPIOA_CLK_ENABLE();
+ 242              		.loc 1 102 5
+ 243 0012 3C4B     		ldr	r3, .L16+4
+ 244 0014 1B6B     		ldr	r3, [r3, #48]
+ 245 0016 3B4A     		ldr	r2, .L16+4
+ 246 0018 43F00103 		orr	r3, r3, #1
+ 247 001c 1363     		str	r3, [r2, #48]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 7
+
+
+ 248 001e 394B     		ldr	r3, .L16+4
+ 249 0020 1B6B     		ldr	r3, [r3, #48]
+ 250 0022 03F00103 		and	r3, r3, #1
+ 251 0026 BB61     		str	r3, [r7, #24]
+ 252 0028 BB69     		ldr	r3, [r7, #24]
+ 253              	.LBE4:
+ 254              	.LBB5:
+ 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #ifdef USE_PB3_AS_SCK
+ 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __GPIOB_CLK_ENABLE();
+ 255              		.loc 1 104 5
+ 256 002a 364B     		ldr	r3, .L16+4
+ 257 002c 1B6B     		ldr	r3, [r3, #48]
+ 258 002e 354A     		ldr	r2, .L16+4
+ 259 0030 43F00203 		orr	r3, r3, #2
+ 260 0034 1363     		str	r3, [r2, #48]
+ 261 0036 334B     		ldr	r3, .L16+4
+ 262 0038 1B6B     		ldr	r3, [r3, #48]
+ 263 003a 03F00203 		and	r3, r3, #2
+ 264 003e 7B61     		str	r3, [r7, #20]
+ 265 0040 7B69     		ldr	r3, [r7, #20]
+ 266              	.LBE5:
+ 267              	.LBB6:
+ 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #endif
+ 106:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     
+ 107:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 108:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __SPI1_CLK_ENABLE();
+ 268              		.loc 1 108 5
+ 269 0042 304B     		ldr	r3, .L16+4
+ 270 0044 5B6C     		ldr	r3, [r3, #68]
+ 271 0046 2F4A     		ldr	r2, .L16+4
+ 272 0048 43F48053 		orr	r3, r3, #4096
+ 273 004c 5364     		str	r3, [r2, #68]
+ 274 004e 2D4B     		ldr	r3, .L16+4
+ 275 0050 5B6C     		ldr	r3, [r3, #68]
+ 276 0052 03F48053 		and	r3, r3, #4096
+ 277 0056 3B61     		str	r3, [r7, #16]
+ 278 0058 3B69     		ldr	r3, [r7, #16]
+ 279              	.LBE6:
+ 109:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 110:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**SPI1 GPIO Configuration    
+ 111:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA6     ------> SPI1_MISO
+ 112:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA7     ------> SPI1_MOSI
+ 113:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA5/PB3 ------> SPI1_SCK 
+ 114:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 115:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+ 280              		.loc 1 115 25
+ 281 005a C023     		movs	r3, #192
+ 282 005c FB61     		str	r3, [r7, #28]
+ 116:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 283              		.loc 1 116 26
+ 284 005e 0223     		movs	r3, #2
+ 285 0060 3B62     		str	r3, [r7, #32]
+ 117:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 286              		.loc 1 117 26
+ 287 0062 0023     		movs	r3, #0
+ 288 0064 7B62     		str	r3, [r7, #36]
+ 118:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 8
+
+
+ 289              		.loc 1 118 27
+ 290 0066 0323     		movs	r3, #3
+ 291 0068 BB62     		str	r3, [r7, #40]
+ 119:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ 292              		.loc 1 119 31
+ 293 006a 0523     		movs	r3, #5
+ 294 006c FB62     		str	r3, [r7, #44]
+ 120:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 295              		.loc 1 120 5
+ 296 006e 07F11C03 		add	r3, r7, #28
+ 297 0072 1946     		mov	r1, r3
+ 298 0074 2448     		ldr	r0, .L16+8
+ 299 0076 FFF7FEFF 		bl	HAL_GPIO_Init
+ 121:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #ifdef USE_PB3_AS_SCK
+ 123:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_3;
+ 300              		.loc 1 123 25
+ 301 007a 0823     		movs	r3, #8
+ 302 007c FB61     		str	r3, [r7, #28]
+ 124:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #elif defined (USE_PA5_AS_SCK)
+ 125:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_5;
+ 126:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #endif
+ 127:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 303              		.loc 1 127 26
+ 304 007e 0223     		movs	r3, #2
+ 305 0080 3B62     		str	r3, [r7, #32]
+ 128:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 306              		.loc 1 128 26
+ 307 0082 0023     		movs	r3, #0
+ 308 0084 7B62     		str	r3, [r7, #36]
+ 129:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+ 309              		.loc 1 129 27
+ 310 0086 0323     		movs	r3, #3
+ 311 0088 BB62     		str	r3, [r7, #40]
+ 130:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ 312              		.loc 1 130 31
+ 313 008a 0523     		movs	r3, #5
+ 314 008c FB62     		str	r3, [r7, #44]
+ 131:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #ifdef USE_PB3_AS_SCK
+ 132:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 315              		.loc 1 132 5
+ 316 008e 07F11C03 		add	r3, r7, #28
+ 317 0092 1946     		mov	r1, r3
+ 318 0094 1D48     		ldr	r0, .L16+12
+ 319 0096 FFF7FEFF 		bl	HAL_GPIO_Init
+ 133:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #elif defined (USE_PA5_AS_SCK)
+ 134:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 135:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #endif
+ 136:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   else if(hspi->Instance==SPI2)
+ 138:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 139:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* GPIO clocks enable */
+ 140:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __GPIOB_CLK_ENABLE();
+ 141:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 142:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****       /* Peripheral clock enable */
+ 143:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __SPI2_CLK_ENABLE();
+ 144:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 9
+
+
+ 145:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**SPI2 GPIO Configuration    
+ 146:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB13     ------> SPI2_SCK
+ 147:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB14     ------> SPI2_MISO
+ 148:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB15     ------> SPI2_MOSI 
+ 149:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 150:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+ 151:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 152:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 153:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+ 154:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 155:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 156:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 157:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 320              		.loc 1 157 1
+ 321 009a 2DE0     		b	.L15
+ 322              	.L13:
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 323              		.loc 1 137 15
+ 324 009c 7B68     		ldr	r3, [r7, #4]
+ 325 009e 1B68     		ldr	r3, [r3]
+ 137:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 326              		.loc 1 137 10
+ 327 00a0 1B4A     		ldr	r2, .L16+16
+ 328 00a2 9342     		cmp	r3, r2
+ 329 00a4 28D1     		bne	.L15
+ 330              	.LBB7:
+ 140:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 331              		.loc 1 140 5
+ 332 00a6 174B     		ldr	r3, .L16+4
+ 333 00a8 1B6B     		ldr	r3, [r3, #48]
+ 334 00aa 164A     		ldr	r2, .L16+4
+ 335 00ac 43F00203 		orr	r3, r3, #2
+ 336 00b0 1363     		str	r3, [r2, #48]
+ 337 00b2 144B     		ldr	r3, .L16+4
+ 338 00b4 1B6B     		ldr	r3, [r3, #48]
+ 339 00b6 03F00203 		and	r3, r3, #2
+ 340 00ba FB60     		str	r3, [r7, #12]
+ 341 00bc FB68     		ldr	r3, [r7, #12]
+ 342              	.LBE7:
+ 343              	.LBB8:
+ 143:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 344              		.loc 1 143 5
+ 345 00be 114B     		ldr	r3, .L16+4
+ 346 00c0 1B6C     		ldr	r3, [r3, #64]
+ 347 00c2 104A     		ldr	r2, .L16+4
+ 348 00c4 43F48043 		orr	r3, r3, #16384
+ 349 00c8 1364     		str	r3, [r2, #64]
+ 350 00ca 0E4B     		ldr	r3, .L16+4
+ 351 00cc 1B6C     		ldr	r3, [r3, #64]
+ 352 00ce 03F48043 		and	r3, r3, #16384
+ 353 00d2 BB60     		str	r3, [r7, #8]
+ 354 00d4 BB68     		ldr	r3, [r7, #8]
+ 355              	.LBE8:
+ 150:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 356              		.loc 1 150 25
+ 357 00d6 4FF46043 		mov	r3, #57344
+ 358 00da FB61     		str	r3, [r7, #28]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 10
+
+
+ 151:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 359              		.loc 1 151 26
+ 360 00dc 0223     		movs	r3, #2
+ 361 00de 3B62     		str	r3, [r7, #32]
+ 152:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+ 362              		.loc 1 152 26
+ 363 00e0 0023     		movs	r3, #0
+ 364 00e2 7B62     		str	r3, [r7, #36]
+ 153:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 365              		.loc 1 153 27
+ 366 00e4 0323     		movs	r3, #3
+ 367 00e6 BB62     		str	r3, [r7, #40]
+ 154:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 368              		.loc 1 154 31
+ 369 00e8 0523     		movs	r3, #5
+ 370 00ea FB62     		str	r3, [r7, #44]
+ 155:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 371              		.loc 1 155 5
+ 372 00ec 07F11C03 		add	r3, r7, #28
+ 373 00f0 1946     		mov	r1, r3
+ 374 00f2 0648     		ldr	r0, .L16+12
+ 375 00f4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 376              	.L15:
+ 377              		.loc 1 157 1
+ 378 00f8 00BF     		nop
+ 379 00fa 3037     		adds	r7, r7, #48
+ 380              	.LCFI15:
+ 381              		.cfi_def_cfa_offset 8
+ 382 00fc BD46     		mov	sp, r7
+ 383              	.LCFI16:
+ 384              		.cfi_def_cfa_register 13
+ 385              		@ sp needed
+ 386 00fe 80BD     		pop	{r7, pc}
+ 387              	.L17:
+ 388              		.align	2
+ 389              	.L16:
+ 390 0100 00300140 		.word	1073819648
+ 391 0104 00380240 		.word	1073887232
+ 392 0108 00000240 		.word	1073872896
+ 393 010c 00040240 		.word	1073873920
+ 394 0110 00380040 		.word	1073756160
+ 395              		.cfi_endproc
+ 396              	.LFE131:
+ 398              		.section	.text.HAL_SPI_MspDeInit,"ax",%progbits
+ 399              		.align	1
+ 400              		.global	HAL_SPI_MspDeInit
+ 401              		.syntax unified
+ 402              		.thumb
+ 403              		.thumb_func
+ 405              	HAL_SPI_MspDeInit:
+ 406              	.LFB132:
+ 158:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 159:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
+ 160:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+ 407              		.loc 1 160 1
+ 408              		.cfi_startproc
+ 409              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 11
+
+
+ 410              		@ frame_needed = 1, uses_anonymous_args = 0
+ 411 0000 80B5     		push	{r7, lr}
+ 412              	.LCFI17:
+ 413              		.cfi_def_cfa_offset 8
+ 414              		.cfi_offset 7, -8
+ 415              		.cfi_offset 14, -4
+ 416 0002 82B0     		sub	sp, sp, #8
+ 417              	.LCFI18:
+ 418              		.cfi_def_cfa_offset 16
+ 419 0004 00AF     		add	r7, sp, #0
+ 420              	.LCFI19:
+ 421              		.cfi_def_cfa_register 7
+ 422 0006 7860     		str	r0, [r7, #4]
+ 161:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 162:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(hspi->Instance==SPI1)
+ 423              		.loc 1 162 10
+ 424 0008 7B68     		ldr	r3, [r7, #4]
+ 425 000a 1B68     		ldr	r3, [r3]
+ 426              		.loc 1 162 5
+ 427 000c 124A     		ldr	r2, .L22
+ 428 000e 9342     		cmp	r3, r2
+ 429 0010 0ED1     		bne	.L19
+ 163:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 164:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 165:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __SPI1_CLK_DISABLE();
+ 430              		.loc 1 165 5
+ 431 0012 124B     		ldr	r3, .L22+4
+ 432 0014 5B6C     		ldr	r3, [r3, #68]
+ 433 0016 114A     		ldr	r2, .L22+4
+ 434 0018 23F48053 		bic	r3, r3, #4096
+ 435 001c 5364     		str	r3, [r2, #68]
+ 166:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 167:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**SPI1 GPIO Configuration    
+ 168:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA6     ------> SPI1_MISO
+ 169:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA7     ------> SPI1_MOSI
+ 170:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA5 or PB3 ---> SPI1_SCK 
+ 171:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 172:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_6|GPIO_PIN_7);
+ 436              		.loc 1 172 5
+ 437 001e C021     		movs	r1, #192
+ 438 0020 0F48     		ldr	r0, .L22+8
+ 439 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 173:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #ifdef USE_PB3_AS_SCK
+ 174:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_3);
+ 440              		.loc 1 174 5
+ 441 0026 0821     		movs	r1, #8
+ 442 0028 0E48     		ldr	r0, .L22+12
+ 443 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 175:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #elif defined (USE_PA5_AS_SCK)
+ 176:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5);
+ 177:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** #endif
+ 178:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 179:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   else if(hspi->Instance==SPI2)
+ 180:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 181:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 182:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __SPI2_CLK_DISABLE();
+ 183:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 12
+
+
+ 184:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**SPI2 GPIO Configuration    
+ 185:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB13     ------> SPI2_SCK
+ 186:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB14     ------> SPI2_MISO
+ 187:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PB15     ------> SPI2_MOSI 
+ 188:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 189:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15);
+ 190:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 191:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 444              		.loc 1 191 1
+ 445 002e 0FE0     		b	.L21
+ 446              	.L19:
+ 179:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 447              		.loc 1 179 15
+ 448 0030 7B68     		ldr	r3, [r7, #4]
+ 449 0032 1B68     		ldr	r3, [r3]
+ 179:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 450              		.loc 1 179 10
+ 451 0034 0C4A     		ldr	r2, .L22+16
+ 452 0036 9342     		cmp	r3, r2
+ 453 0038 0AD1     		bne	.L21
+ 182:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 454              		.loc 1 182 5
+ 455 003a 084B     		ldr	r3, .L22+4
+ 456 003c 1B6C     		ldr	r3, [r3, #64]
+ 457 003e 074A     		ldr	r2, .L22+4
+ 458 0040 23F48043 		bic	r3, r3, #16384
+ 459 0044 1364     		str	r3, [r2, #64]
+ 189:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 460              		.loc 1 189 5
+ 461 0046 4FF46041 		mov	r1, #57344
+ 462 004a 0648     		ldr	r0, .L22+12
+ 463 004c FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 464              	.L21:
+ 465              		.loc 1 191 1
+ 466 0050 00BF     		nop
+ 467 0052 0837     		adds	r7, r7, #8
+ 468              	.LCFI20:
+ 469              		.cfi_def_cfa_offset 8
+ 470 0054 BD46     		mov	sp, r7
+ 471              	.LCFI21:
+ 472              		.cfi_def_cfa_register 13
+ 473              		@ sp needed
+ 474 0056 80BD     		pop	{r7, pc}
+ 475              	.L23:
+ 476              		.align	2
+ 477              	.L22:
+ 478 0058 00300140 		.word	1073819648
+ 479 005c 00380240 		.word	1073887232
+ 480 0060 00000240 		.word	1073872896
+ 481 0064 00040240 		.word	1073873920
+ 482 0068 00380040 		.word	1073756160
+ 483              		.cfi_endproc
+ 484              	.LFE132:
+ 486              		.section	.text.HAL_UART_MspInit,"ax",%progbits
+ 487              		.align	1
+ 488              		.global	HAL_UART_MspInit
+ 489              		.syntax unified
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 13
+
+
+ 490              		.thumb
+ 491              		.thumb_func
+ 493              	HAL_UART_MspInit:
+ 494              	.LFB133:
+ 192:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 193:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_UART_MspInit(UART_HandleTypeDef* huart)
+ 194:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+ 495              		.loc 1 194 1
+ 496              		.cfi_startproc
+ 497              		@ args = 0, pretend = 0, frame = 40
+ 498              		@ frame_needed = 1, uses_anonymous_args = 0
+ 499 0000 80B5     		push	{r7, lr}
+ 500              	.LCFI22:
+ 501              		.cfi_def_cfa_offset 8
+ 502              		.cfi_offset 7, -8
+ 503              		.cfi_offset 14, -4
+ 504 0002 8AB0     		sub	sp, sp, #40
+ 505              	.LCFI23:
+ 506              		.cfi_def_cfa_offset 48
+ 507 0004 00AF     		add	r7, sp, #0
+ 508              	.LCFI24:
+ 509              		.cfi_def_cfa_register 7
+ 510 0006 7860     		str	r0, [r7, #4]
+ 195:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct;
+ 196:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(huart->Instance==USART2)
+ 511              		.loc 1 196 11
+ 512 0008 7B68     		ldr	r3, [r7, #4]
+ 513 000a 1B68     		ldr	r3, [r3]
+ 514              		.loc 1 196 5
+ 515 000c 1B4A     		ldr	r2, .L27
+ 516 000e 9342     		cmp	r3, r2
+ 517 0010 2FD1     		bne	.L26
+ 518              	.LBB9:
+ 197:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 198:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* GPIO clocks enable */
+ 199:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __GPIOA_CLK_ENABLE();
+ 519              		.loc 1 199 5
+ 520 0012 1B4B     		ldr	r3, .L27+4
+ 521 0014 1B6B     		ldr	r3, [r3, #48]
+ 522 0016 1A4A     		ldr	r2, .L27+4
+ 523 0018 43F00103 		orr	r3, r3, #1
+ 524 001c 1363     		str	r3, [r2, #48]
+ 525 001e 184B     		ldr	r3, .L27+4
+ 526 0020 1B6B     		ldr	r3, [r3, #48]
+ 527 0022 03F00103 		and	r3, r3, #1
+ 528 0026 3B61     		str	r3, [r7, #16]
+ 529 0028 3B69     		ldr	r3, [r7, #16]
+ 530              	.LBE9:
+ 531              	.LBB10:
+ 200:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     
+ 201:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 202:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __USART2_CLK_ENABLE();
+ 532              		.loc 1 202 5
+ 533 002a 154B     		ldr	r3, .L27+4
+ 534 002c 1B6C     		ldr	r3, [r3, #64]
+ 535 002e 144A     		ldr	r2, .L27+4
+ 536 0030 43F40033 		orr	r3, r3, #131072
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 14
+
+
+ 537 0034 1364     		str	r3, [r2, #64]
+ 538 0036 124B     		ldr	r3, .L27+4
+ 539 0038 1B6C     		ldr	r3, [r3, #64]
+ 540 003a 03F40033 		and	r3, r3, #131072
+ 541 003e FB60     		str	r3, [r7, #12]
+ 542 0040 FB68     		ldr	r3, [r7, #12]
+ 543              	.LBE10:
+ 203:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 204:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**USART2 GPIO Configuration    
+ 205:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA2     ------> USART2_TX
+ 206:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA3     ------> USART2_RX 
+ 207:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 208:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+ 544              		.loc 1 208 25
+ 545 0042 0C23     		movs	r3, #12
+ 546 0044 7B61     		str	r3, [r7, #20]
+ 209:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 547              		.loc 1 209 26
+ 548 0046 0223     		movs	r3, #2
+ 549 0048 BB61     		str	r3, [r7, #24]
+ 210:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 550              		.loc 1 210 26
+ 551 004a 0023     		movs	r3, #0
+ 552 004c FB61     		str	r3, [r7, #28]
+ 211:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+ 553              		.loc 1 211 27
+ 554 004e 0323     		movs	r3, #3
+ 555 0050 3B62     		str	r3, [r7, #32]
+ 212:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
+ 556              		.loc 1 212 31
+ 557 0052 0723     		movs	r3, #7
+ 558 0054 7B62     		str	r3, [r7, #36]
+ 213:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 559              		.loc 1 213 5
+ 560 0056 07F11403 		add	r3, r7, #20
+ 561 005a 1946     		mov	r1, r3
+ 562 005c 0948     		ldr	r0, .L27+8
+ 563 005e FFF7FEFF 		bl	HAL_GPIO_Init
+ 214:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 215:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   /* System interrupt init*/
+ 216:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_NVIC_SetPriority(USART2_IRQn, 0, 0);
+ 564              		.loc 1 216 5
+ 565 0062 0022     		movs	r2, #0
+ 566 0064 0021     		movs	r1, #0
+ 567 0066 2620     		movs	r0, #38
+ 568 0068 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 217:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_NVIC_EnableIRQ(USART2_IRQn);
+ 569              		.loc 1 217 5
+ 570 006c 2620     		movs	r0, #38
+ 571 006e FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 572              	.L26:
+ 218:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 219:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 573              		.loc 1 219 1
+ 574 0072 00BF     		nop
+ 575 0074 2837     		adds	r7, r7, #40
+ 576              	.LCFI25:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 15
+
+
+ 577              		.cfi_def_cfa_offset 8
+ 578 0076 BD46     		mov	sp, r7
+ 579              	.LCFI26:
+ 580              		.cfi_def_cfa_register 13
+ 581              		@ sp needed
+ 582 0078 80BD     		pop	{r7, pc}
+ 583              	.L28:
+ 584 007a 00BF     		.align	2
+ 585              	.L27:
+ 586 007c 00440040 		.word	1073759232
+ 587 0080 00380240 		.word	1073887232
+ 588 0084 00000240 		.word	1073872896
+ 589              		.cfi_endproc
+ 590              	.LFE133:
+ 592              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
+ 593              		.align	1
+ 594              		.global	HAL_UART_MspDeInit
+ 595              		.syntax unified
+ 596              		.thumb
+ 597              		.thumb_func
+ 599              	HAL_UART_MspDeInit:
+ 600              	.LFB134:
+ 220:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 221:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+ 222:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** {
+ 601              		.loc 1 222 1
+ 602              		.cfi_startproc
+ 603              		@ args = 0, pretend = 0, frame = 8
+ 604              		@ frame_needed = 1, uses_anonymous_args = 0
+ 605 0000 80B5     		push	{r7, lr}
+ 606              	.LCFI27:
+ 607              		.cfi_def_cfa_offset 8
+ 608              		.cfi_offset 7, -8
+ 609              		.cfi_offset 14, -4
+ 610 0002 82B0     		sub	sp, sp, #8
+ 611              	.LCFI28:
+ 612              		.cfi_def_cfa_offset 16
+ 613 0004 00AF     		add	r7, sp, #0
+ 614              	.LCFI29:
+ 615              		.cfi_def_cfa_register 7
+ 616 0006 7860     		str	r0, [r7, #4]
+ 223:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   if(huart->Instance==USART2)
+ 617              		.loc 1 223 11
+ 618 0008 7B68     		ldr	r3, [r7, #4]
+ 619 000a 1B68     		ldr	r3, [r3]
+ 620              		.loc 1 223 5
+ 621 000c 094A     		ldr	r2, .L32
+ 622 000e 9342     		cmp	r3, r2
+ 623 0010 0CD1     		bne	.L31
+ 224:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   {
+ 225:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 226:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     __USART2_CLK_DISABLE();
+ 624              		.loc 1 226 5
+ 625 0012 094B     		ldr	r3, .L32+4
+ 626 0014 1B6C     		ldr	r3, [r3, #64]
+ 627 0016 084A     		ldr	r2, .L32+4
+ 628 0018 23F40033 		bic	r3, r3, #131072
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 16
+
+
+ 629 001c 1364     		str	r3, [r2, #64]
+ 227:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   
+ 228:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /**USART2 GPIO Configuration    
+ 229:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA2     ------> USART2_TX
+ 230:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     PA3     ------> USART2_RX 
+ 231:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     */
+ 232:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2|GPIO_PIN_3);
+ 630              		.loc 1 232 5
+ 631 001e 0C21     		movs	r1, #12
+ 632 0020 0648     		ldr	r0, .L32+8
+ 633 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 233:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** 
+ 234:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     /* Peripheral interrupt DeInit*/
+ 235:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****     HAL_NVIC_DisableIRQ(USART2_IRQn);
+ 634              		.loc 1 235 5
+ 635 0026 2620     		movs	r0, #38
+ 636 0028 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 637              	.L31:
+ 236:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c ****   }
+ 237:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/stm32f4xx_hal_msp.c **** }
+ 638              		.loc 1 237 1
+ 639 002c 00BF     		nop
+ 640 002e 0837     		adds	r7, r7, #8
+ 641              	.LCFI30:
+ 642              		.cfi_def_cfa_offset 8
+ 643 0030 BD46     		mov	sp, r7
+ 644              	.LCFI31:
+ 645              		.cfi_def_cfa_register 13
+ 646              		@ sp needed
+ 647 0032 80BD     		pop	{r7, pc}
+ 648              	.L33:
+ 649              		.align	2
+ 650              	.L32:
+ 651 0034 00440040 		.word	1073759232
+ 652 0038 00380240 		.word	1073887232
+ 653 003c 00000240 		.word	1073872896
+ 654              		.cfi_endproc
+ 655              	.LFE134:
+ 657              		.text
+ 658              	.Letext0:
+ 659              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 660              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 661              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 662              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 663              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 664              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 665              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
+ 666              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
+ 667              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f4xx_hal_msp.c
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:20     .text.HAL_MspInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:26     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:56     .text.HAL_ADC_MspInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:62     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:141    .text.HAL_ADC_MspInit:00000064 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:148    .text.HAL_ADC_MspDeInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:154    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:203    .text.HAL_ADC_MspDeInit:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:210    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:216    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:390    .text.HAL_SPI_MspInit:00000100 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:399    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:405    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:478    .text.HAL_SPI_MspDeInit:00000058 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:487    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:493    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:586    .text.HAL_UART_MspInit:0000007c $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:593    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:599    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\ep_ygh\AppData\Local\Temp\ccr4qEK2.s:651    .text.HAL_UART_MspDeInit:00000034 $d
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriorityGrouping
+HAL_NVIC_SetPriority
+HAL_GPIO_Init
+HAL_GPIO_DeInit
+HAL_NVIC_EnableIRQ
+HAL_NVIC_DisableIRQ

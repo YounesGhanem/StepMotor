@@ -1,0 +1,1496 @@
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"xnucleoihm02a1_interface.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	hadc1
+  20              		.section	.bss.hadc1,"aw",%nobits
+  21              		.align	2
+  24              	hadc1:
+  25 0000 00000000 		.space	68
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  26              		.global	hspi1
+  27              		.section	.bss.hspi1,"aw",%nobits
+  28              		.align	2
+  31              	hspi1:
+  32 0000 00000000 		.space	88
+  32      00000000 
+  32      00000000 
+  32      00000000 
+  32      00000000 
+  33              		.global	hspi2
+  34              		.section	.bss.hspi2,"aw",%nobits
+  35              		.align	2
+  38              	hspi2:
+  39 0000 00000000 		.space	88
+  39      00000000 
+  39      00000000 
+  39      00000000 
+  39      00000000 
+  40              		.section	.text.SystemClock_Config,"ax",%progbits
+  41              		.align	1
+  42              		.global	SystemClock_Config
+  43              		.syntax unified
+  44              		.thumb
+  45              		.thumb_func
+  47              	SystemClock_Config:
+  48              	.LFB128:
+  49              		.file 1 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c"
+   1:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+   2:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   ******************************************************************************
+   3:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @file    xnucleoihm02a1_interface.c
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 2
+
+
+   4:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief   This file is used as interface between the 
+   5:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *          X-NUCLEO-IHM02A1 and the NUCLEO-F4xx board.
+   6:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   ******************************************************************************
+   7:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+   8:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * COPYRIGHT(c) 2014 STMicroelectronics
+   9:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+  10:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  11:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * are permitted provided that the following conditions are met:
+  12:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  13:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *      this list of conditions and the following disclaimer.
+  14:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  15:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *      this list of conditions and the following disclaimer in the documentation
+  16:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *      and/or other materials provided with the distribution.
+  17:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  18:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *      may be used to endorse or promote products derived from this software
+  19:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *      without specific prior written permission.
+  20:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+  21:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  24:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  25:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  26:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  27:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  28:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  29:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  30:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  31:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+  32:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   ******************************************************************************
+  33:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  34:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  35:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /* Includes ------------------------------------------------------------------*/
+  36:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #include "xnucleoihm02a1_interface.h"
+  37:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  38:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  39:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup BSP
+  40:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  41:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  42:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  43:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  44:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup X-NUCLEO-IHM02A1
+  45:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  46:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  47:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  48:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  49:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup NUCLEO_Interface
+  50:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  51:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  52:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  53:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  54:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup NUCLEO_Exported_Variables
+  55:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  56:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  57:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  58:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  59:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  The data structure for all further instances to ADC.
+  60:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 3
+
+
+  61:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** ADC_HandleTypeDef hadc1;
+  62:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  63:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  The data structure for all further instances to SPI1.
+  64:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  65:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** SPI_HandleTypeDef hspi1;
+  66:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  67:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  The data structure for all further instances to SPI2.
+  68:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  69:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** SPI_HandleTypeDef hspi2;
+  70:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  71:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  72:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @}
+  73:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */ /* End of NUCLEO_Exported_Variables */
+  74:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  75:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  76:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @defgroup   NUCLEO_Private_Functions
+  77:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief      NUCLEO Private Functions.
+  78:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  79:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  80:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  81:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void SystemClock_Config(void);
+  82:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_GPIO_Init(void);
+  83:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_ADC1_Init(void);
+  84:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI_Init(void);
+  85:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI1_Init(void);
+  86:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI2_Init(void);
+  87:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_USART2_Init(void);
+  88:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  89:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  90:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @}
+  91:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */ /* End of NUCLEO_Private_Functions */
+  92:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  93:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  94:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup NUCLEO_Private_Functions
+  95:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+  96:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+  97:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+  98:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+  99:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function configures the System Clock
+ 100:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * 
+ 101:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   The System Clock will be configured as following:
+ 102:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - PLL Source: HSI
+ 103:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - SYSCLK: 84 MHz
+ 104:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - HCLK: 84 MHz
+ 105:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - APB1 Peripheral Clocks: 42 MHz
+ 106:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - APB1 Timer Clocks: 84 MHz
+ 107:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - APB2 Peripheral Clocks: 84 MHz
+ 108:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - APB2 Timer Clocks: 84 MHz
+ 109:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 110:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void SystemClock_Config(void)
+ 111:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+  50              		.loc 1 111 1
+  51              		.cfi_startproc
+  52              		@ args = 0, pretend = 0, frame = 80
+  53              		@ frame_needed = 1, uses_anonymous_args = 0
+  54 0000 80B5     		push	{r7, lr}
+  55              	.LCFI0:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 4
+
+
+  56              		.cfi_def_cfa_offset 8
+  57              		.cfi_offset 7, -8
+  58              		.cfi_offset 14, -4
+  59 0002 94B0     		sub	sp, sp, #80
+  60              	.LCFI1:
+  61              		.cfi_def_cfa_offset 88
+  62 0004 00AF     		add	r7, sp, #0
+  63              	.LCFI2:
+  64              		.cfi_def_cfa_register 7
+  65              	.LBB2:
+ 112:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 113:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitTypeDef RCC_OscInitStruct;
+ 114:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct;
+ 115:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 116:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   __PWR_CLK_ENABLE();
+  66              		.loc 1 116 3
+  67 0006 234B     		ldr	r3, .L2
+  68 0008 1B6C     		ldr	r3, [r3, #64]
+  69 000a 224A     		ldr	r2, .L2
+  70 000c 43F08053 		orr	r3, r3, #268435456
+  71 0010 1364     		str	r3, [r2, #64]
+  72 0012 204B     		ldr	r3, .L2
+  73 0014 1B6C     		ldr	r3, [r3, #64]
+  74 0016 03F08053 		and	r3, r3, #268435456
+  75 001a BB60     		str	r3, [r7, #8]
+  76 001c BB68     		ldr	r3, [r7, #8]
+  77              	.LBE2:
+  78              	.LBB3:
+ 117:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 118:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+  79              		.loc 1 118 3
+  80 001e 1E4B     		ldr	r3, .L2+4
+  81 0020 1B68     		ldr	r3, [r3]
+  82 0022 23F44043 		bic	r3, r3, #49152
+  83 0026 1C4A     		ldr	r2, .L2+4
+  84 0028 43F40043 		orr	r3, r3, #32768
+  85 002c 1360     		str	r3, [r2]
+  86 002e 1A4B     		ldr	r3, .L2+4
+  87 0030 1B68     		ldr	r3, [r3]
+  88 0032 03F44043 		and	r3, r3, #49152
+  89 0036 7B60     		str	r3, [r7, #4]
+  90 0038 7B68     		ldr	r3, [r7, #4]
+  91              	.LBE3:
+ 119:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 120:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  92              		.loc 1 120 36
+  93 003a 0223     		movs	r3, #2
+  94 003c 3B62     		str	r3, [r7, #32]
+ 121:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  95              		.loc 1 121 30
+  96 003e 0123     		movs	r3, #1
+  97 0040 FB62     		str	r3, [r7, #44]
+ 122:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.HSICalibrationValue = 16;
+  98              		.loc 1 122 41
+  99 0042 1023     		movs	r3, #16
+ 100 0044 3B63     		str	r3, [r7, #48]
+ 123:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 5
+
+
+ 101              		.loc 1 123 34
+ 102 0046 0223     		movs	r3, #2
+ 103 0048 BB63     		str	r3, [r7, #56]
+ 124:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+ 104              		.loc 1 124 35
+ 105 004a 0023     		movs	r3, #0
+ 106 004c FB63     		str	r3, [r7, #60]
+ 125:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLM = 16;
+ 107              		.loc 1 125 30
+ 108 004e 1023     		movs	r3, #16
+ 109 0050 3B64     		str	r3, [r7, #64]
+ 126:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLN = 336;
+ 110              		.loc 1 126 30
+ 111 0052 4FF4A873 		mov	r3, #336
+ 112 0056 7B64     		str	r3, [r7, #68]
+ 127:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+ 113              		.loc 1 127 30
+ 114 0058 0423     		movs	r3, #4
+ 115 005a BB64     		str	r3, [r7, #72]
+ 128:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLQ = 7;
+ 116              		.loc 1 128 30
+ 117 005c 0723     		movs	r3, #7
+ 118 005e FB64     		str	r3, [r7, #76]
+ 129:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_RCC_OscConfig(&RCC_OscInitStruct);
+ 119              		.loc 1 129 3
+ 120 0060 07F12003 		add	r3, r7, #32
+ 121 0064 1846     		mov	r0, r3
+ 122 0066 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 130:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 131:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_SYSCLK|RCC_CLOCKTYPE_PCLK1;
+ 123              		.loc 1 131 31
+ 124 006a 0523     		movs	r3, #5
+ 125 006c FB60     		str	r3, [r7, #12]
+ 132:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 126              		.loc 1 132 34
+ 127 006e 0223     		movs	r3, #2
+ 128 0070 3B61     		str	r3, [r7, #16]
+ 133:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 129              		.loc 1 133 35
+ 130 0072 0023     		movs	r3, #0
+ 131 0074 7B61     		str	r3, [r7, #20]
+ 134:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 132              		.loc 1 134 36
+ 133 0076 4FF48053 		mov	r3, #4096
+ 134 007a BB61     		str	r3, [r7, #24]
+ 135:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 135              		.loc 1 135 36
+ 136 007c 0023     		movs	r3, #0
+ 137 007e FB61     		str	r3, [r7, #28]
+ 136:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2);
+ 138              		.loc 1 136 3
+ 139 0080 07F10C03 		add	r3, r7, #12
+ 140 0084 0221     		movs	r1, #2
+ 141 0086 1846     		mov	r0, r3
+ 142 0088 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 137:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 138:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 6
+
+
+ 143              		.loc 1 138 1
+ 144 008c 00BF     		nop
+ 145 008e 5037     		adds	r7, r7, #80
+ 146              	.LCFI3:
+ 147              		.cfi_def_cfa_offset 8
+ 148 0090 BD46     		mov	sp, r7
+ 149              	.LCFI4:
+ 150              		.cfi_def_cfa_register 13
+ 151              		@ sp needed
+ 152 0092 80BD     		pop	{r7, pc}
+ 153              	.L3:
+ 154              		.align	2
+ 155              	.L2:
+ 156 0094 00380240 		.word	1073887232
+ 157 0098 00700040 		.word	1073770496
+ 158              		.cfi_endproc
+ 159              	.LFE128:
+ 161              		.section	.text.MX_GPIO_Init,"ax",%progbits
+ 162              		.align	1
+ 163              		.global	MX_GPIO_Init
+ 164              		.syntax unified
+ 165              		.thumb
+ 166              		.thumb_func
+ 168              	MX_GPIO_Init:
+ 169              	.LFB129:
+ 139:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 140:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 141:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes the GPIO MX.
+ 142:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 143:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_GPIO_Init(void)
+ 144:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 170              		.loc 1 144 1
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 1, uses_anonymous_args = 0
+ 174 0000 80B5     		push	{r7, lr}
+ 175              	.LCFI5:
+ 176              		.cfi_def_cfa_offset 8
+ 177              		.cfi_offset 7, -8
+ 178              		.cfi_offset 14, -4
+ 179 0002 00AF     		add	r7, sp, #0
+ 180              	.LCFI6:
+ 181              		.cfi_def_cfa_register 7
+ 145:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_USER_BUTTON
+ 146:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Configures Button GPIO and EXTI Line */
+ 147:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   //BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
+ 148:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_GPIO);
+ 182              		.loc 1 148 3
+ 183 0004 0021     		movs	r1, #0
+ 184 0006 0020     		movs	r0, #0
+ 185 0008 FFF7FEFF 		bl	BSP_PB_Init
+ 149:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif
+ 150:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 151:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_USER_LED
+ 152:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Configures LED GPIO */
+ 153:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   BSP_LED_Init(LED2);
+ 186              		.loc 1 153 3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 7
+
+
+ 187 000c 0020     		movs	r0, #0
+ 188 000e FFF7FEFF 		bl	BSP_LED_Init
+ 154:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif
+ 155:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 189              		.loc 1 155 1
+ 190 0012 00BF     		nop
+ 191 0014 80BD     		pop	{r7, pc}
+ 192              		.cfi_endproc
+ 193              	.LFE129:
+ 195              		.section	.text.MX_SPI_Init,"ax",%progbits
+ 196              		.align	1
+ 197              		.global	MX_SPI_Init
+ 198              		.syntax unified
+ 199              		.thumb
+ 200              		.thumb_func
+ 202              	MX_SPI_Init:
+ 203              	.LFB130:
+ 156:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 157:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 158:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  Initialize the SPI used by the NUCLEO board.
+ 159:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 160:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   It selects the @ref MX_SPI1_Init or @ref MX_SPI2_Init
+ 161:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         related to the defined macro @ref NUCLEO_USE_SPI_1 or @ref NUCLEO_USE_SPI_2.
+ 162:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 163:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI_Init(void)
+ 164:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 204              		.loc 1 164 1
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 1, uses_anonymous_args = 0
+ 208 0000 80B5     		push	{r7, lr}
+ 209              	.LCFI7:
+ 210              		.cfi_def_cfa_offset 8
+ 211              		.cfi_offset 7, -8
+ 212              		.cfi_offset 14, -4
+ 213 0002 00AF     		add	r7, sp, #0
+ 214              	.LCFI8:
+ 215              		.cfi_def_cfa_register 7
+ 165:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_SPI_1
+ 166:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   MX_SPI1_Init();
+ 216              		.loc 1 166 3
+ 217 0004 FFF7FEFF 		bl	MX_SPI1_Init
+ 167:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif
+ 168:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_SPI_2
+ 169:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   MX_SPI2_Init();
+ 170:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif
+ 171:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 218              		.loc 1 171 1
+ 219 0008 00BF     		nop
+ 220 000a 80BD     		pop	{r7, pc}
+ 221              		.cfi_endproc
+ 222              	.LFE130:
+ 224              		.section	.text.MX_SPI1_Init,"ax",%progbits
+ 225              		.align	1
+ 226              		.global	MX_SPI1_Init
+ 227              		.syntax unified
+ 228              		.thumb
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 8
+
+
+ 229              		.thumb_func
+ 231              	MX_SPI1_Init:
+ 232              	.LFB131:
+ 172:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 173:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 174:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes the SPI1 MX
+ 175:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 176:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   It sets the <i>hspi1</i> data structure for all further instances to
+ 177:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         SPI1
+ 178:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 179:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   The SPI1 peripheral is configured as following:
+ 180:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Full-Duplex Master
+ 181:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - 8-Bits
+ 182:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPOL High
+ 183:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPHA 2nd Edge
+ 184:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Baud Rate lower than 5 MBits/s
+ 185:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 186:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI1_Init(void)
+ 187:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 233              		.loc 1 187 1
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 16
+ 236              		@ frame_needed = 1, uses_anonymous_args = 0
+ 237 0000 80B5     		push	{r7, lr}
+ 238              	.LCFI9:
+ 239              		.cfi_def_cfa_offset 8
+ 240              		.cfi_offset 7, -8
+ 241              		.cfi_offset 14, -4
+ 242 0002 84B0     		sub	sp, sp, #16
+ 243              	.LCFI10:
+ 244              		.cfi_def_cfa_offset 24
+ 245 0004 00AF     		add	r7, sp, #0
+ 246              	.LCFI11:
+ 247              		.cfi_def_cfa_register 7
+ 188:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   #define MAX_BAUDRATE  5000000
+ 189:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint32_t freq;
+ 190:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint16_t freq_div;
+ 191:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint32_t spi_baudrateprescaler;
+ 192:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 193:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Instance = SPI1;
+ 248              		.loc 1 193 18
+ 249 0006 324B     		ldr	r3, .L16
+ 250 0008 324A     		ldr	r2, .L16+4
+ 251 000a 1A60     		str	r2, [r3]
+ 194:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.Mode = SPI_MODE_MASTER;
+ 252              		.loc 1 194 19
+ 253 000c 304B     		ldr	r3, .L16
+ 254 000e 4FF48272 		mov	r2, #260
+ 255 0012 5A60     		str	r2, [r3, #4]
+ 195:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+ 256              		.loc 1 195 24
+ 257 0014 2E4B     		ldr	r3, .L16
+ 258 0016 0022     		movs	r2, #0
+ 259 0018 9A60     		str	r2, [r3, #8]
+ 196:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+ 260              		.loc 1 196 23
+ 261 001a 2D4B     		ldr	r3, .L16
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 9
+
+
+ 262 001c 0022     		movs	r2, #0
+ 263 001e DA60     		str	r2, [r3, #12]
+ 197:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
+ 264              		.loc 1 197 26
+ 265 0020 2B4B     		ldr	r3, .L16
+ 266 0022 0222     		movs	r2, #2
+ 267 0024 1A61     		str	r2, [r3, #16]
+ 198:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
+ 268              		.loc 1 198 23
+ 269 0026 2A4B     		ldr	r3, .L16
+ 270 0028 0122     		movs	r2, #1
+ 271 002a 5A61     		str	r2, [r3, #20]
+ 199:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.NSS = SPI_NSS_SOFT;
+ 272              		.loc 1 199 18
+ 273 002c 284B     		ldr	r3, .L16
+ 274 002e 4FF40072 		mov	r2, #512
+ 275 0032 9A61     		str	r2, [r3, #24]
+ 200:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+ 276              		.loc 1 200 23
+ 277 0034 264B     		ldr	r3, .L16
+ 278 0036 0022     		movs	r2, #0
+ 279 0038 1A62     		str	r2, [r3, #32]
+ 201:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.TIMode = SPI_TIMODE_DISABLED;
+ 280              		.loc 1 201 21
+ 281 003a 254B     		ldr	r3, .L16
+ 282 003c 0022     		movs	r2, #0
+ 283 003e 5A62     		str	r2, [r3, #36]
+ 202:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLED;
+ 284              		.loc 1 202 29
+ 285 0040 234B     		ldr	r3, .L16
+ 286 0042 0022     		movs	r2, #0
+ 287 0044 9A62     		str	r2, [r3, #40]
+ 203:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 204:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   freq = HAL_RCC_GetPCLK2Freq();
+ 288              		.loc 1 204 10
+ 289 0046 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
+ 290 004a B860     		str	r0, [r7, #8]
+ 205:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   freq_div = (freq / MAX_BAUDRATE);
+ 291              		.loc 1 205 20
+ 292 004c BB68     		ldr	r3, [r7, #8]
+ 293 004e 224A     		ldr	r2, .L16+8
+ 294 0050 A2FB0323 		umull	r2, r3, r2, r3
+ 295 0054 5B0D     		lsrs	r3, r3, #21
+ 296              		.loc 1 205 12
+ 297 0056 FB80     		strh	r3, [r7, #6]	@ movhi
+ 206:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 207:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   if (freq_div < 2)
+ 298              		.loc 1 207 6
+ 299 0058 FB88     		ldrh	r3, [r7, #6]
+ 300 005a 012B     		cmp	r3, #1
+ 301 005c 02D8     		bhi	.L7
+ 208:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 209:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_2;
+ 302              		.loc 1 209 27
+ 303 005e 0023     		movs	r3, #0
+ 304 0060 FB60     		str	r3, [r7, #12]
+ 305 0062 2AE0     		b	.L8
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 10
+
+
+ 306              	.L7:
+ 210:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   }
+ 211:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   else
+ 212:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 213:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     if (freq_div < 4)
+ 307              		.loc 1 213 8
+ 308 0064 FB88     		ldrh	r3, [r7, #6]
+ 309 0066 032B     		cmp	r3, #3
+ 310 0068 02D8     		bhi	.L9
+ 214:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     {
+ 215:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_4;
+ 311              		.loc 1 215 29
+ 312 006a 0823     		movs	r3, #8
+ 313 006c FB60     		str	r3, [r7, #12]
+ 314 006e 24E0     		b	.L8
+ 315              	.L9:
+ 216:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     }
+ 217:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     else
+ 218:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     {
+ 219:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       if (freq_div < 8)
+ 316              		.loc 1 219 10
+ 317 0070 FB88     		ldrh	r3, [r7, #6]
+ 318 0072 072B     		cmp	r3, #7
+ 319 0074 02D8     		bhi	.L10
+ 220:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       {
+ 221:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_8;
+ 320              		.loc 1 221 31
+ 321 0076 1023     		movs	r3, #16
+ 322 0078 FB60     		str	r3, [r7, #12]
+ 323 007a 1EE0     		b	.L8
+ 324              	.L10:
+ 222:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       }
+ 223:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       else
+ 224:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       {
+ 225:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         if (freq_div < 16)
+ 325              		.loc 1 225 12
+ 326 007c FB88     		ldrh	r3, [r7, #6]
+ 327 007e 0F2B     		cmp	r3, #15
+ 328 0080 02D8     		bhi	.L11
+ 226:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         {
+ 227:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_16;
+ 329              		.loc 1 227 33
+ 330 0082 1823     		movs	r3, #24
+ 331 0084 FB60     		str	r3, [r7, #12]
+ 332 0086 18E0     		b	.L8
+ 333              	.L11:
+ 228:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         }
+ 229:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         else
+ 230:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         {
+ 231:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           if (freq_div < 32)
+ 334              		.loc 1 231 14
+ 335 0088 FB88     		ldrh	r3, [r7, #6]
+ 336 008a 1F2B     		cmp	r3, #31
+ 337 008c 02D8     		bhi	.L12
+ 232:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           {
+ 233:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_32;
+ 338              		.loc 1 233 35
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 11
+
+
+ 339 008e 2023     		movs	r3, #32
+ 340 0090 FB60     		str	r3, [r7, #12]
+ 341 0092 12E0     		b	.L8
+ 342              	.L12:
+ 234:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           }
+ 235:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           else
+ 236:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           {
+ 237:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             if (freq_div < 64)
+ 343              		.loc 1 237 16
+ 344 0094 FB88     		ldrh	r3, [r7, #6]
+ 345 0096 3F2B     		cmp	r3, #63
+ 346 0098 02D8     		bhi	.L13
+ 238:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             {
+ 239:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_64;
+ 347              		.loc 1 239 37
+ 348 009a 2823     		movs	r3, #40
+ 349 009c FB60     		str	r3, [r7, #12]
+ 350 009e 0CE0     		b	.L8
+ 351              	.L13:
+ 240:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             }
+ 241:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             else
+ 242:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             {
+ 243:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               if (freq_div < 128)
+ 352              		.loc 1 243 18
+ 353 00a0 FB88     		ldrh	r3, [r7, #6]
+ 354 00a2 7F2B     		cmp	r3, #127
+ 355 00a4 02D8     		bhi	.L14
+ 244:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               {
+ 245:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_128;
+ 356              		.loc 1 245 39
+ 357 00a6 3023     		movs	r3, #48
+ 358 00a8 FB60     		str	r3, [r7, #12]
+ 359 00aa 06E0     		b	.L8
+ 360              	.L14:
+ 246:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               }
+ 247:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               else
+ 248:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               {
+ 249:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 if (freq_div < 256)
+ 361              		.loc 1 249 20
+ 362 00ac FB88     		ldrh	r3, [r7, #6]
+ 363 00ae FF2B     		cmp	r3, #255
+ 364 00b0 02D8     		bhi	.L15
+ 250:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 {
+ 251:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_256;
+ 365              		.loc 1 251 41
+ 366 00b2 3823     		movs	r3, #56
+ 367 00b4 FB60     		str	r3, [r7, #12]
+ 368 00b6 00E0     		b	.L8
+ 369              	.L15:
+ 252:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 }
+ 253:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 else
+ 254:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 {
+ 255:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   /* the condition is not possible, you should reduce the CPU frequency */
+ 256:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   while(1);
+ 370              		.loc 1 256 24 discriminator 1
+ 371 00b8 FEE7     		b	.L15
+ 372              	.L8:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 12
+
+
+ 257:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 }
+ 258:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               }
+ 259:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             }
+ 260:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           }
+ 261:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         }
+ 262:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       }
+ 263:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     }
+ 264:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   }
+ 265:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 266:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.BaudRatePrescaler = spi_baudrateprescaler;  // the baudrate will be lower than MAX_BAU
+ 373              		.loc 1 266 32
+ 374 00ba 054A     		ldr	r2, .L16
+ 375 00bc FB68     		ldr	r3, [r7, #12]
+ 376 00be D361     		str	r3, [r2, #28]
+ 267:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_SPI_Init(&hspi1);
+ 377              		.loc 1 267 3
+ 378 00c0 0348     		ldr	r0, .L16
+ 379 00c2 FFF7FEFF 		bl	HAL_SPI_Init
+ 268:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 380              		.loc 1 268 1
+ 381 00c6 00BF     		nop
+ 382 00c8 1037     		adds	r7, r7, #16
+ 383              	.LCFI12:
+ 384              		.cfi_def_cfa_offset 8
+ 385 00ca BD46     		mov	sp, r7
+ 386              	.LCFI13:
+ 387              		.cfi_def_cfa_register 13
+ 388              		@ sp needed
+ 389 00cc 80BD     		pop	{r7, pc}
+ 390              	.L17:
+ 391 00ce 00BF     		.align	2
+ 392              	.L16:
+ 393 00d0 00000000 		.word	hspi1
+ 394 00d4 00300140 		.word	1073819648
+ 395 00d8 6BCA5F6B 		.word	1801439851
+ 396              		.cfi_endproc
+ 397              	.LFE131:
+ 399              		.section	.text.MX_SPI2_Init,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	MX_SPI2_Init
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 406              	MX_SPI2_Init:
+ 407              	.LFB132:
+ 269:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 270:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 271:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes the SPI2 MX
+ 272:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 273:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   It sets the <i>hspi2</i> data structure for all further instances to
+ 274:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         SPI2
+ 275:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 276:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   The SPI2 peripheral is configured as following:
+ 277:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Full-Duplex Master
+ 278:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - 8-Bits
+ 279:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPOL High
+ 280:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPHA 2nd Edge
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 13
+
+
+ 281:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Baud Rate lower than 5 MBits/s
+ 282:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 283:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_SPI2_Init(void)
+ 284:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 408              		.loc 1 284 1
+ 409              		.cfi_startproc
+ 410              		@ args = 0, pretend = 0, frame = 16
+ 411              		@ frame_needed = 1, uses_anonymous_args = 0
+ 412 0000 80B5     		push	{r7, lr}
+ 413              	.LCFI14:
+ 414              		.cfi_def_cfa_offset 8
+ 415              		.cfi_offset 7, -8
+ 416              		.cfi_offset 14, -4
+ 417 0002 84B0     		sub	sp, sp, #16
+ 418              	.LCFI15:
+ 419              		.cfi_def_cfa_offset 24
+ 420 0004 00AF     		add	r7, sp, #0
+ 421              	.LCFI16:
+ 422              		.cfi_def_cfa_register 7
+ 285:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   #define MAX_BAUDRATE  5000000
+ 286:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint32_t freq;
+ 287:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint16_t freq_div;
+ 288:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint32_t spi_baudrateprescaler;
+ 289:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 290:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Instance = SPI2;
+ 423              		.loc 1 290 18
+ 424 0006 324B     		ldr	r3, .L28
+ 425 0008 324A     		ldr	r2, .L28+4
+ 426 000a 1A60     		str	r2, [r3]
+ 291:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.Mode = SPI_MODE_MASTER;
+ 427              		.loc 1 291 19
+ 428 000c 304B     		ldr	r3, .L28
+ 429 000e 4FF48272 		mov	r2, #260
+ 430 0012 5A60     		str	r2, [r3, #4]
+ 292:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
+ 431              		.loc 1 292 24
+ 432 0014 2E4B     		ldr	r3, .L28
+ 433 0016 0022     		movs	r2, #0
+ 434 0018 9A60     		str	r2, [r3, #8]
+ 293:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
+ 435              		.loc 1 293 23
+ 436 001a 2D4B     		ldr	r3, .L28
+ 437 001c 0022     		movs	r2, #0
+ 438 001e DA60     		str	r2, [r3, #12]
+ 294:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
+ 439              		.loc 1 294 26
+ 440 0020 2B4B     		ldr	r3, .L28
+ 441 0022 0222     		movs	r2, #2
+ 442 0024 1A61     		str	r2, [r3, #16]
+ 295:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.CLKPhase = SPI_PHASE_2EDGE;
+ 443              		.loc 1 295 23
+ 444 0026 2A4B     		ldr	r3, .L28
+ 445 0028 0122     		movs	r2, #1
+ 446 002a 5A61     		str	r2, [r3, #20]
+ 296:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.NSS = SPI_NSS_SOFT;
+ 447              		.loc 1 296 18
+ 448 002c 284B     		ldr	r3, .L28
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 14
+
+
+ 449 002e 4FF40072 		mov	r2, #512
+ 450 0032 9A61     		str	r2, [r3, #24]
+ 297:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
+ 451              		.loc 1 297 23
+ 452 0034 264B     		ldr	r3, .L28
+ 453 0036 0022     		movs	r2, #0
+ 454 0038 1A62     		str	r2, [r3, #32]
+ 298:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.TIMode = SPI_TIMODE_DISABLED;
+ 455              		.loc 1 298 21
+ 456 003a 254B     		ldr	r3, .L28
+ 457 003c 0022     		movs	r2, #0
+ 458 003e 5A62     		str	r2, [r3, #36]
+ 299:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLED;
+ 459              		.loc 1 299 29
+ 460 0040 234B     		ldr	r3, .L28
+ 461 0042 0022     		movs	r2, #0
+ 462 0044 9A62     		str	r2, [r3, #40]
+ 300:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 301:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   freq = HAL_RCC_GetPCLK1Freq();
+ 463              		.loc 1 301 10
+ 464 0046 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 465 004a B860     		str	r0, [r7, #8]
+ 302:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   freq_div = (freq / MAX_BAUDRATE);
+ 466              		.loc 1 302 20
+ 467 004c BB68     		ldr	r3, [r7, #8]
+ 468 004e 224A     		ldr	r2, .L28+8
+ 469 0050 A2FB0323 		umull	r2, r3, r2, r3
+ 470 0054 5B0D     		lsrs	r3, r3, #21
+ 471              		.loc 1 302 12
+ 472 0056 FB80     		strh	r3, [r7, #6]	@ movhi
+ 303:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 304:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   if (freq_div < 2)
+ 473              		.loc 1 304 6
+ 474 0058 FB88     		ldrh	r3, [r7, #6]
+ 475 005a 012B     		cmp	r3, #1
+ 476 005c 02D8     		bhi	.L19
+ 305:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 306:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_2;
+ 477              		.loc 1 306 27
+ 478 005e 0023     		movs	r3, #0
+ 479 0060 FB60     		str	r3, [r7, #12]
+ 480 0062 2AE0     		b	.L20
+ 481              	.L19:
+ 307:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   }
+ 308:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   else
+ 309:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 310:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     if (freq_div < 4)
+ 482              		.loc 1 310 8
+ 483 0064 FB88     		ldrh	r3, [r7, #6]
+ 484 0066 032B     		cmp	r3, #3
+ 485 0068 02D8     		bhi	.L21
+ 311:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     {
+ 312:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_4;
+ 486              		.loc 1 312 29
+ 487 006a 0823     		movs	r3, #8
+ 488 006c FB60     		str	r3, [r7, #12]
+ 489 006e 24E0     		b	.L20
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 15
+
+
+ 490              	.L21:
+ 313:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     }
+ 314:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     else
+ 315:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     {
+ 316:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       if (freq_div < 8)
+ 491              		.loc 1 316 10
+ 492 0070 FB88     		ldrh	r3, [r7, #6]
+ 493 0072 072B     		cmp	r3, #7
+ 494 0074 02D8     		bhi	.L22
+ 317:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       {
+ 318:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_8;
+ 495              		.loc 1 318 31
+ 496 0076 1023     		movs	r3, #16
+ 497 0078 FB60     		str	r3, [r7, #12]
+ 498 007a 1EE0     		b	.L20
+ 499              	.L22:
+ 319:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       }
+ 320:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       else
+ 321:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       {
+ 322:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         if (freq_div < 16)
+ 500              		.loc 1 322 12
+ 501 007c FB88     		ldrh	r3, [r7, #6]
+ 502 007e 0F2B     		cmp	r3, #15
+ 503 0080 02D8     		bhi	.L23
+ 323:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         {
+ 324:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_16;
+ 504              		.loc 1 324 33
+ 505 0082 1823     		movs	r3, #24
+ 506 0084 FB60     		str	r3, [r7, #12]
+ 507 0086 18E0     		b	.L20
+ 508              	.L23:
+ 325:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         }
+ 326:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         else
+ 327:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         {
+ 328:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           if (freq_div < 32)
+ 509              		.loc 1 328 14
+ 510 0088 FB88     		ldrh	r3, [r7, #6]
+ 511 008a 1F2B     		cmp	r3, #31
+ 512 008c 02D8     		bhi	.L24
+ 329:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           {
+ 330:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_32;
+ 513              		.loc 1 330 35
+ 514 008e 2023     		movs	r3, #32
+ 515 0090 FB60     		str	r3, [r7, #12]
+ 516 0092 12E0     		b	.L20
+ 517              	.L24:
+ 331:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           }
+ 332:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           else
+ 333:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           {
+ 334:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             if (freq_div < 64)
+ 518              		.loc 1 334 16
+ 519 0094 FB88     		ldrh	r3, [r7, #6]
+ 520 0096 3F2B     		cmp	r3, #63
+ 521 0098 02D8     		bhi	.L25
+ 335:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             {
+ 336:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_64;
+ 522              		.loc 1 336 37
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 16
+
+
+ 523 009a 2823     		movs	r3, #40
+ 524 009c FB60     		str	r3, [r7, #12]
+ 525 009e 0CE0     		b	.L20
+ 526              	.L25:
+ 337:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             }
+ 338:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             else
+ 339:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             {
+ 340:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               if (freq_div < 128)
+ 527              		.loc 1 340 18
+ 528 00a0 FB88     		ldrh	r3, [r7, #6]
+ 529 00a2 7F2B     		cmp	r3, #127
+ 530 00a4 02D8     		bhi	.L26
+ 341:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               {
+ 342:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_128;
+ 531              		.loc 1 342 39
+ 532 00a6 3023     		movs	r3, #48
+ 533 00a8 FB60     		str	r3, [r7, #12]
+ 534 00aa 06E0     		b	.L20
+ 535              	.L26:
+ 343:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               }
+ 344:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               else
+ 345:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               {
+ 346:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 if (freq_div < 256)
+ 536              		.loc 1 346 20
+ 537 00ac FB88     		ldrh	r3, [r7, #6]
+ 538 00ae FF2B     		cmp	r3, #255
+ 539 00b0 02D8     		bhi	.L27
+ 347:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 {
+ 348:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_256;
+ 540              		.loc 1 348 41
+ 541 00b2 3823     		movs	r3, #56
+ 542 00b4 FB60     		str	r3, [r7, #12]
+ 543 00b6 00E0     		b	.L20
+ 544              	.L27:
+ 349:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 }
+ 350:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 else
+ 351:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 {
+ 352:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   /* the condition is not possible, you should reduce the CPU frequency */
+ 353:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                   while(1);
+ 545              		.loc 1 353 24 discriminator 1
+ 546 00b8 FEE7     		b	.L27
+ 547              	.L20:
+ 354:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 }
+ 355:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               }
+ 356:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             }
+ 357:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           }
+ 358:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****         }
+ 359:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****       }
+ 360:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     }
+ 361:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   }
+ 362:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 363:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.BaudRatePrescaler = spi_baudrateprescaler; // the baudrate will be lower than MAX_BAUD
+ 548              		.loc 1 363 32
+ 549 00ba 054A     		ldr	r2, .L28
+ 550 00bc FB68     		ldr	r3, [r7, #12]
+ 551 00be D361     		str	r3, [r2, #28]
+ 364:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_SPI_Init(&hspi2);
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 17
+
+
+ 552              		.loc 1 364 3
+ 553 00c0 0348     		ldr	r0, .L28
+ 554 00c2 FFF7FEFF 		bl	HAL_SPI_Init
+ 365:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 555              		.loc 1 365 1
+ 556 00c6 00BF     		nop
+ 557 00c8 1037     		adds	r7, r7, #16
+ 558              	.LCFI17:
+ 559              		.cfi_def_cfa_offset 8
+ 560 00ca BD46     		mov	sp, r7
+ 561              	.LCFI18:
+ 562              		.cfi_def_cfa_register 13
+ 563              		@ sp needed
+ 564 00cc 80BD     		pop	{r7, pc}
+ 565              	.L29:
+ 566 00ce 00BF     		.align	2
+ 567              	.L28:
+ 568 00d0 00000000 		.word	hspi2
+ 569 00d4 00380040 		.word	1073756160
+ 570 00d8 6BCA5F6B 		.word	1801439851
+ 571              		.cfi_endproc
+ 572              	.LFE132:
+ 574              		.section	.text.MX_USART2_Init,"ax",%progbits
+ 575              		.align	1
+ 576              		.global	MX_USART2_Init
+ 577              		.syntax unified
+ 578              		.thumb
+ 579              		.thumb_func
+ 581              	MX_USART2_Init:
+ 582              	.LFB133:
+ 366:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 367:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 368:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes the USART2 MX.
+ 369:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   It sets the <i>huart2</i> data structure for all further instances
+ 370:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         to USART2.
+ 371:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   The USART2 peripheral is configured as following:
+ 372:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Baud Rate:  115200
+ 373:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Data Bits:  8
+ 374:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Stop Bit:   1
+ 375:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Parity:     None
+ 376:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Mode:       TX/RX
+ 377:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 378:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_USART2_Init(void)
+ 379:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 583              		.loc 1 379 1
+ 584              		.cfi_startproc
+ 585              		@ args = 0, pretend = 0, frame = 0
+ 586              		@ frame_needed = 1, uses_anonymous_args = 0
+ 587 0000 80B5     		push	{r7, lr}
+ 588              	.LCFI19:
+ 589              		.cfi_def_cfa_offset 8
+ 590              		.cfi_offset 7, -8
+ 591              		.cfi_offset 14, -4
+ 592 0002 00AF     		add	r7, sp, #0
+ 593              	.LCFI20:
+ 594              		.cfi_def_cfa_register 7
+ 380:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Instance = USART2;
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 18
+
+
+ 595              		.loc 1 380 19
+ 596 0004 0E4B     		ldr	r3, .L31
+ 597 0006 0F4A     		ldr	r2, .L31+4
+ 598 0008 1A60     		str	r2, [r3]
+ 381:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.BaudRate = 115200;
+ 599              		.loc 1 381 24
+ 600 000a 0D4B     		ldr	r3, .L31
+ 601 000c 4FF4E132 		mov	r2, #115200
+ 602 0010 5A60     		str	r2, [r3, #4]
+ 382:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.WordLength = UART_WORDLENGTH_8B;
+ 603              		.loc 1 382 26
+ 604 0012 0B4B     		ldr	r3, .L31
+ 605 0014 0022     		movs	r2, #0
+ 606 0016 9A60     		str	r2, [r3, #8]
+ 383:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.StopBits = UART_STOPBITS_1;
+ 607              		.loc 1 383 24
+ 608 0018 094B     		ldr	r3, .L31
+ 609 001a 0022     		movs	r2, #0
+ 610 001c DA60     		str	r2, [r3, #12]
+ 384:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.Parity = UART_PARITY_NONE;
+ 611              		.loc 1 384 22
+ 612 001e 084B     		ldr	r3, .L31
+ 613 0020 0022     		movs	r2, #0
+ 614 0022 1A61     		str	r2, [r3, #16]
+ 385:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.Mode = UART_MODE_TX_RX;
+ 615              		.loc 1 385 20
+ 616 0024 064B     		ldr	r3, .L31
+ 617 0026 0C22     		movs	r2, #12
+ 618 0028 5A61     		str	r2, [r3, #20]
+ 386:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 619              		.loc 1 386 25
+ 620 002a 054B     		ldr	r3, .L31
+ 621 002c 0022     		movs	r2, #0
+ 622 002e 9A61     		str	r2, [r3, #24]
+ 387:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+ 623              		.loc 1 387 28
+ 624 0030 034B     		ldr	r3, .L31
+ 625 0032 0022     		movs	r2, #0
+ 626 0034 DA61     		str	r2, [r3, #28]
+ 388:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_UART_Init(&huart2);
+ 627              		.loc 1 388 3
+ 628 0036 0248     		ldr	r0, .L31
+ 629 0038 FFF7FEFF 		bl	HAL_UART_Init
+ 389:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 630              		.loc 1 389 1
+ 631 003c 00BF     		nop
+ 632 003e 80BD     		pop	{r7, pc}
+ 633              	.L32:
+ 634              		.align	2
+ 635              	.L31:
+ 636 0040 00000000 		.word	huart2
+ 637 0044 00440040 		.word	1073759232
+ 638              		.cfi_endproc
+ 639              	.LFE133:
+ 641              		.section	.text.MX_ADC1_Init,"ax",%progbits
+ 642              		.align	1
+ 643              		.global	MX_ADC1_Init
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 19
+
+
+ 644              		.syntax unified
+ 645              		.thumb
+ 646              		.thumb_func
+ 648              	MX_ADC1_Init:
+ 649              	.LFB134:
+ 390:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 391:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 392:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes the ADC MX
+ 393:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *
+ 394:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @note   It sets the <i>hadc</i> data structure for all further instances to ADC
+ 395:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** */
+ 396:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void MX_ADC1_Init(void)
+ 397:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 650              		.loc 1 397 1
+ 651              		.cfi_startproc
+ 652              		@ args = 0, pretend = 0, frame = 24
+ 653              		@ frame_needed = 1, uses_anonymous_args = 0
+ 654 0000 80B5     		push	{r7, lr}
+ 655              	.LCFI21:
+ 656              		.cfi_def_cfa_offset 8
+ 657              		.cfi_offset 7, -8
+ 658              		.cfi_offset 14, -4
+ 659 0002 86B0     		sub	sp, sp, #24
+ 660              	.LCFI22:
+ 661              		.cfi_def_cfa_offset 32
+ 662 0004 00AF     		add	r7, sp, #0
+ 663              	.LCFI23:
+ 664              		.cfi_def_cfa_register 7
+ 665              	.LBB4:
+ 398:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   ADC_ChannelConfTypeDef sConfig;
+ 399:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 400:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* GPIO Ports Clock Enable */
+ 401:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   __GPIOB_CLK_ENABLE();
+ 666              		.loc 1 401 3
+ 667 0006 204B     		ldr	r3, .L34
+ 668 0008 1B6B     		ldr	r3, [r3, #48]
+ 669 000a 1F4A     		ldr	r2, .L34
+ 670 000c 43F00203 		orr	r3, r3, #2
+ 671 0010 1363     		str	r3, [r2, #48]
+ 672 0012 1D4B     		ldr	r3, .L34
+ 673 0014 1B6B     		ldr	r3, [r3, #48]
+ 674 0016 03F00203 		and	r3, r3, #2
+ 675 001a 7B60     		str	r3, [r7, #4]
+ 676 001c 7B68     		ldr	r3, [r7, #4]
+ 677              	.LBE4:
+ 402:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 403:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of co
+ 404:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     */
+ 405:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Instance = ADC1;
+ 678              		.loc 1 405 18
+ 679 001e 1B4B     		ldr	r3, .L34+4
+ 680 0020 1B4A     		ldr	r2, .L34+8
+ 681 0022 1A60     		str	r2, [r3]
+ 406:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.ClockPrescaler = ADC_CLOCKPRESCALER_PCLK_DIV2;
+ 682              		.loc 1 406 29
+ 683 0024 194B     		ldr	r3, .L34+4
+ 684 0026 0022     		movs	r2, #0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 20
+
+
+ 685 0028 5A60     		str	r2, [r3, #4]
+ 407:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.Resolution = ADC_RESOLUTION12b;
+ 686              		.loc 1 407 25
+ 687 002a 184B     		ldr	r3, .L34+4
+ 688 002c 0022     		movs	r2, #0
+ 689 002e 9A60     		str	r2, [r3, #8]
+ 408:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.ScanConvMode = DISABLE;
+ 690              		.loc 1 408 27
+ 691 0030 164B     		ldr	r3, .L34+4
+ 692 0032 0022     		movs	r2, #0
+ 693 0034 1A61     		str	r2, [r3, #16]
+ 409:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.ContinuousConvMode = DISABLE;
+ 694              		.loc 1 409 33
+ 695 0036 154B     		ldr	r3, .L34+4
+ 696 0038 0022     		movs	r2, #0
+ 697 003a 9A61     		str	r2, [r3, #24]
+ 410:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.DiscontinuousConvMode = DISABLE;
+ 698              		.loc 1 410 36
+ 699 003c 134B     		ldr	r3, .L34+4
+ 700 003e 0022     		movs	r2, #0
+ 701 0040 5A62     		str	r2, [r3, #36]
+ 411:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+ 702              		.loc 1 411 35
+ 703 0042 124B     		ldr	r3, .L34+4
+ 704 0044 0022     		movs	r2, #0
+ 705 0046 1A63     		str	r2, [r3, #48]
+ 412:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+ 706              		.loc 1 412 24
+ 707 0048 104B     		ldr	r3, .L34+4
+ 708 004a 0022     		movs	r2, #0
+ 709 004c DA60     		str	r2, [r3, #12]
+ 413:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.NbrOfConversion = 1;
+ 710              		.loc 1 413 30
+ 711 004e 0F4B     		ldr	r3, .L34+4
+ 712 0050 0122     		movs	r2, #1
+ 713 0052 1A62     		str	r2, [r3, #32]
+ 414:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.DMAContinuousRequests = DISABLE;
+ 714              		.loc 1 414 36
+ 715 0054 0D4B     		ldr	r3, .L34+4
+ 716 0056 0022     		movs	r2, #0
+ 717 0058 DA61     		str	r2, [r3, #28]
+ 415:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hadc1.Init.EOCSelection = EOC_SINGLE_CONV;
+ 718              		.loc 1 415 27
+ 719 005a 0C4B     		ldr	r3, .L34+4
+ 720 005c 0122     		movs	r2, #1
+ 721 005e 5A61     		str	r2, [r3, #20]
+ 416:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_ADC_Init(&hadc1);
+ 722              		.loc 1 416 3
+ 723 0060 0A48     		ldr	r0, .L34+4
+ 724 0062 FFF7FEFF 		bl	HAL_ADC_Init
+ 417:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 418:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and i
+ 419:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     */
+ 420:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   sConfig.Channel = ADC_CHANNEL_8;
+ 725              		.loc 1 420 19
+ 726 0066 0823     		movs	r3, #8
+ 727 0068 BB60     		str	r3, [r7, #8]
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 21
+
+
+ 421:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   sConfig.Rank = 1;
+ 728              		.loc 1 421 16
+ 729 006a 0123     		movs	r3, #1
+ 730 006c FB60     		str	r3, [r7, #12]
+ 422:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+ 731              		.loc 1 422 24
+ 732 006e 0023     		movs	r3, #0
+ 733 0070 3B61     		str	r3, [r7, #16]
+ 423:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+ 734              		.loc 1 423 3
+ 735 0072 07F10803 		add	r3, r7, #8
+ 736 0076 1946     		mov	r1, r3
+ 737 0078 0448     		ldr	r0, .L34+4
+ 738 007a FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 424:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 425:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 739              		.loc 1 425 1
+ 740 007e 00BF     		nop
+ 741 0080 1837     		adds	r7, r7, #24
+ 742              	.LCFI24:
+ 743              		.cfi_def_cfa_offset 8
+ 744 0082 BD46     		mov	sp, r7
+ 745              	.LCFI25:
+ 746              		.cfi_def_cfa_register 13
+ 747              		@ sp needed
+ 748 0084 80BD     		pop	{r7, pc}
+ 749              	.L35:
+ 750 0086 00BF     		.align	2
+ 751              	.L34:
+ 752 0088 00380240 		.word	1073887232
+ 753 008c 00000000 		.word	hadc1
+ 754 0090 00200140 		.word	1073815552
+ 755              		.cfi_endproc
+ 756              	.LFE134:
+ 758              		.section	.text.NUCLEO_Board_Init,"ax",%progbits
+ 759              		.align	1
+ 760              		.global	NUCLEO_Board_Init
+ 761              		.syntax unified
+ 762              		.thumb
+ 763              		.thumb_func
+ 765              	NUCLEO_Board_Init:
+ 766              	.LFB135:
+ 426:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 427:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 428:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @}
+ 429:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */ /* End of NUCLEO_Private_Functions */
+ 430:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 431:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 432:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @addtogroup NUCLEO_Exported_Functions
+ 433:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @{
+ 434:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 435:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 436:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 437:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  This function initializes some peripherals of the NUCELO board
+ 438:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         (HAL, Clock, NVIC, LED and user button)
+ 439:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 440:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void NUCLEO_Board_Init(void)
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 22
+
+
+ 441:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 767              		.loc 1 441 1
+ 768              		.cfi_startproc
+ 769              		@ args = 0, pretend = 0, frame = 0
+ 770              		@ frame_needed = 1, uses_anonymous_args = 0
+ 771 0000 80B5     		push	{r7, lr}
+ 772              	.LCFI26:
+ 773              		.cfi_def_cfa_offset 8
+ 774              		.cfi_offset 7, -8
+ 775              		.cfi_offset 14, -4
+ 776 0002 00AF     		add	r7, sp, #0
+ 777              	.LCFI27:
+ 778              		.cfi_def_cfa_register 7
+ 442:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* MCU Configuration----------------------------------------------------------*/
+ 443:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 444:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 445:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_Init();
+ 779              		.loc 1 445 3
+ 780 0004 FFF7FEFF 		bl	HAL_Init
+ 446:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 447:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Configure the system clock */
+ 448:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   SystemClock_Config();
+ 781              		.loc 1 448 3
+ 782 0008 FFF7FEFF 		bl	SystemClock_Config
+ 449:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 450:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Initialize all configured peripherals */
+ 451:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   MX_GPIO_Init();
+ 783              		.loc 1 451 3
+ 784 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 452:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 453:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Initialize the SPI used by the X-NUCLEO-IHM02A1 */
+ 454:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   MX_SPI_Init();
+ 785              		.loc 1 454 3
+ 786 0010 FFF7FEFF 		bl	MX_SPI_Init
+ 455:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 456:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_USART
+ 457:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Initialize the USART peripheral */
+ 458:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   MX_USART2_Init();
+ 787              		.loc 1 458 3
+ 788 0014 FFF7FEFF 		bl	MX_USART2_Init
+ 459:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif  
+ 460:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 461:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #ifdef NUCLEO_USE_USER_LED
+ 462:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Perform 3 repetition of blinking user LED at 50% duty cycle with 250 ms as period */
+ 463:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   User_LED_Blinking(3, 750);
+ 789              		.loc 1 463 3
+ 790 0018 40F2EE21 		movw	r1, #750
+ 791 001c 0320     		movs	r0, #3
+ 792 001e FFF7FEFF 		bl	User_LED_Blinking
+ 464:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** #endif
+ 465:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 793              		.loc 1 465 1
+ 794 0022 00BF     		nop
+ 795 0024 80BD     		pop	{r7, pc}
+ 796              		.cfi_endproc
+ 797              	.LFE135:
+ 799              		.section	.text.User_LED_Blinking,"ax",%progbits
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 23
+
+
+ 800              		.align	1
+ 801              		.global	User_LED_Blinking
+ 802              		.syntax unified
+ 803              		.thumb
+ 804              		.thumb_func
+ 806              	User_LED_Blinking:
+ 807              	.LFB136:
+ 466:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
+ 467:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
+ 468:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  Blinking user LED at 50% duty cycle.
+ 469:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @param  repetitions The number of  repetions.
+ 470:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @param  period_ms   The blinking period in ms.
+ 471:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
+ 472:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void User_LED_Blinking(uint8_t repetitions, uint16_t period_ms)
+ 473:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
+ 808              		.loc 1 473 1
+ 809              		.cfi_startproc
+ 810              		@ args = 0, pretend = 0, frame = 16
+ 811              		@ frame_needed = 1, uses_anonymous_args = 0
+ 812 0000 80B5     		push	{r7, lr}
+ 813              	.LCFI28:
+ 814              		.cfi_def_cfa_offset 8
+ 815              		.cfi_offset 7, -8
+ 816              		.cfi_offset 14, -4
+ 817 0002 84B0     		sub	sp, sp, #16
+ 818              	.LCFI29:
+ 819              		.cfi_def_cfa_offset 24
+ 820 0004 00AF     		add	r7, sp, #0
+ 821              	.LCFI30:
+ 822              		.cfi_def_cfa_register 7
+ 823 0006 0346     		mov	r3, r0
+ 824 0008 0A46     		mov	r2, r1
+ 825 000a FB71     		strb	r3, [r7, #7]
+ 826 000c 1346     		mov	r3, r2	@ movhi
+ 827 000e BB80     		strh	r3, [r7, #4]	@ movhi
+ 474:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint8_t r;
+ 475:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   uint16_t half_period_ms;
+ 476:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 477:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   half_period_ms = period_ms >> 1;
+ 828              		.loc 1 477 18
+ 829 0010 BB88     		ldrh	r3, [r7, #4]
+ 830 0012 5B08     		lsrs	r3, r3, #1
+ 831 0014 BB81     		strh	r3, [r7, #12]	@ movhi
+ 478:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   
+ 479:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   for (r=0; r<repetitions; r++)
+ 832              		.loc 1 479 9
+ 833 0016 0023     		movs	r3, #0
+ 834 0018 FB73     		strb	r3, [r7, #15]
+ 835              		.loc 1 479 3
+ 836 001a 10E0     		b	.L38
+ 837              	.L39:
+ 480:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 481:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /* Switch on the user LED */
+ 482:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     BSP_LED_On(LED2);
+ 838              		.loc 1 482 5 discriminator 3
+ 839 001c 0020     		movs	r0, #0
+ 840 001e FFF7FEFF 		bl	BSP_LED_On
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 24
+
+
+ 483:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /* ms delay */
+ 484:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     HAL_Delay(half_period_ms);
+ 841              		.loc 1 484 5 discriminator 3
+ 842 0022 BB89     		ldrh	r3, [r7, #12]
+ 843 0024 1846     		mov	r0, r3
+ 844 0026 FFF7FEFF 		bl	HAL_Delay
+ 485:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /* Switch off the user LED */
+ 486:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     BSP_LED_Off(LED2);
+ 845              		.loc 1 486 5 discriminator 3
+ 846 002a 0020     		movs	r0, #0
+ 847 002c FFF7FEFF 		bl	BSP_LED_Off
+ 487:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /* ms delay */
+ 488:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     HAL_Delay(half_period_ms);
+ 848              		.loc 1 488 5 discriminator 3
+ 849 0030 BB89     		ldrh	r3, [r7, #12]
+ 850 0032 1846     		mov	r0, r3
+ 851 0034 FFF7FEFF 		bl	HAL_Delay
+ 479:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 852              		.loc 1 479 29 discriminator 3
+ 853 0038 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 854 003a 0133     		adds	r3, r3, #1
+ 855 003c FB73     		strb	r3, [r7, #15]
+ 856              	.L38:
+ 479:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   {
+ 857              		.loc 1 479 3 discriminator 1
+ 858 003e FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 859 0040 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 860 0042 9A42     		cmp	r2, r3
+ 861 0044 EAD3     		bcc	.L39
+ 489:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   }
+ 490:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
+ 862              		.loc 1 490 1
+ 863 0046 00BF     		nop
+ 864 0048 00BF     		nop
+ 865 004a 1037     		adds	r7, r7, #16
+ 866              	.LCFI31:
+ 867              		.cfi_def_cfa_offset 8
+ 868 004c BD46     		mov	sp, r7
+ 869              	.LCFI32:
+ 870              		.cfi_def_cfa_register 13
+ 871              		@ sp needed
+ 872 004e 80BD     		pop	{r7, pc}
+ 873              		.cfi_endproc
+ 874              	.LFE136:
+ 876              		.text
+ 877              	.Letext0:
+ 878              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 879              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ 880              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 881              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 882              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 883              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 884              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 885              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 886              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
+ 887              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
+ 888              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 25
+
+
+ 889              		.file 13 "Drivers/BSP/STM32F4xx-Nucleo/stm32f4xx_nucleo.h"
+ 890              		.file 14 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 xnucleoihm02a1_interface.c
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:24     .bss.hadc1:00000000 hadc1
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:21     .bss.hadc1:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:31     .bss.hspi1:00000000 hspi1
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:28     .bss.hspi1:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:38     .bss.hspi2:00000000 hspi2
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:35     .bss.hspi2:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:41     .text.SystemClock_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:47     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:156    .text.SystemClock_Config:00000094 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:162    .text.MX_GPIO_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:168    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:196    .text.MX_SPI_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:202    .text.MX_SPI_Init:00000000 MX_SPI_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:231    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:225    .text.MX_SPI1_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:393    .text.MX_SPI1_Init:000000d0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:400    .text.MX_SPI2_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:406    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:568    .text.MX_SPI2_Init:000000d0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:575    .text.MX_USART2_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:581    .text.MX_USART2_Init:00000000 MX_USART2_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:636    .text.MX_USART2_Init:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:642    .text.MX_ADC1_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:648    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:752    .text.MX_ADC1_Init:00000088 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:759    .text.NUCLEO_Board_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:765    .text.NUCLEO_Board_Init:00000000 NUCLEO_Board_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:806    .text.User_LED_Blinking:00000000 User_LED_Blinking
+C:\Users\ep_ygh\AppData\Local\Temp\ccoxPNGY.s:800    .text.User_LED_Blinking:00000000 $t
+
+UNDEFINED SYMBOLS
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+BSP_PB_Init
+BSP_LED_Init
+HAL_RCC_GetPCLK2Freq
+HAL_SPI_Init
+HAL_RCC_GetPCLK1Freq
+HAL_UART_Init
+huart2
+HAL_ADC_Init
+HAL_ADC_ConfigChannel
+HAL_Init
+BSP_LED_On
+HAL_Delay
+BSP_LED_Off
