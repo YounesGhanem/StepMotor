@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
   50 004a 03       		.byte	3
   51 004b 00       		.space	1
   52 004c 00000000 		.word	0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 2
 
 
   53 0050 05       		.byte	5
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
   96      5F52554E 
   96      00
   97 00d2 000000   		.space	3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 3
 
 
   98 00d5 08       		.byte	8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  140 014d 08       		.byte	8
  141 014e 01       		.byte	1
  142 014f 00       		.space	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 4
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 4
 
 
  143 0150 29000000 		.word	41
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  187 01cd 434F4E46 		.ascii	"CONFIG\000"
  187      494700
  188 01d4 00000000 		.space	5
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 5
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 5
 
 
  188      00
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  231 0059 00000000 		.space	7
  231      000000
  232 0060 60       		.byte	96
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 6
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 6
 
 
  233 0061 01       		.byte	1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  269      48495A00 
  270 00e8 00000000 		.space	4
  271 00ec A0       		.byte	-96
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 7
 
 
  272 00ed 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  329 0050 00000000 		.word	L6470_PrepareRun
  330 0054 00000000 		.word	L6470_PrepareStepClock
  331 0058 00000000 		.word	L6470_PrepareMove
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 8
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 8
 
 
  332 005c 00000000 		.word	L6470_PrepareGoTo
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  394              		.align	1
  395              		.global	L6470_ResetAppCmdPkg
  396              		.syntax unified
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 9
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 9
 
 
  397              		.thumb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
   50:Drivers/BSP/Components/L6470/L6470.c **** /**
   51:Drivers/BSP/Components/L6470/L6470.c ****   * @addtogroup L6470
   52:Drivers/BSP/Components/L6470/L6470.c ****   * @{
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 10
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 10
 
 
   53:Drivers/BSP/Components/L6470/L6470.c ****   */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  107:Drivers/BSP/Components/L6470/L6470.c ****   {"GOTO_DIR",    0x68, 2},
  108:Drivers/BSP/Components/L6470/L6470.c ****   {"GOUNTIL",     0x82, 3},
  109:Drivers/BSP/Components/L6470/L6470.c ****   {"RELEASESW",   0x92, 2},
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 11
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 11
 
 
  110:Drivers/BSP/Components/L6470/L6470.c ****   {"GOHOME",      0x70, 0},
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  164:Drivers/BSP/Components/L6470/L6470.c ****   L6470_GetParam,
  165:Drivers/BSP/Components/L6470/L6470.c ****   L6470_Run,
  166:Drivers/BSP/Components/L6470/L6470.c ****   L6470_StepClock,
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 12
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 12
 
 
  167:Drivers/BSP/Components/L6470/L6470.c ****   L6470_Move,
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  221:Drivers/BSP/Components/L6470/L6470.c **** void L6470_ResetAppCmdPkg(sL6470_AppCmdPkg_t* pL6470_AppCmdPkg);
  222:Drivers/BSP/Components/L6470/L6470.c **** void L6470_FillAppCmdPkg(uint8_t L6470_Id, sL6470_AppCmdPkg_t* pL6470_AppCmdPkg, eL6470_AppCmdId_t 
  223:Drivers/BSP/Components/L6470/L6470.c **** void L6470_PrepareAppCmdPkg(uint8_t L6470_Id, sL6470_AppCmdPkg_t* pL6470_AppCmdPkg, eL6470_AppCmdId
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 13
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 13
 
 
  224:Drivers/BSP/Components/L6470/L6470.c **** void L6470_PrepareDaisyChainCommand(sL6470_AppCmdPkg_t* pL6470_AppCmdPkg, uint8_t* pL6470_DaisyChai
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  433              		.loc 1 247 22 discriminator 3
  434 001a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  435 001c 1B01     		lsls	r3, r3, #4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 14
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 14
 
 
  436 001e 7A68     		ldr	r2, [r7, #4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  485              		.align	1
  486              		.global	L6470_FillAppCmdPkg
  487              		.syntax unified
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 15
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 15
 
 
  488              		.thumb
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  528 0026 7A68     		ldr	r2, [r7, #4]
  529 0028 5A60     		str	r2, [r3, #4]
  267:Drivers/BSP/Components/L6470/L6470.c ****   (pL6470_AppCmdPkg+L6470_Id)->p2 = p2;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 16
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 16
 
 
  530              		.loc 1 267 20
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  282:Drivers/BSP/Components/L6470/L6470.c **** void L6470_PrepareAppCmdPkg(uint8_t L6470_Id, sL6470_AppCmdPkg_t* pL6470_AppCmdPkg, eL6470_AppCmdId
  283:Drivers/BSP/Components/L6470/L6470.c **** {
  572              		.loc 1 283 1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 17
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 17
 
 
  573              		.cfi_startproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  619 003c 1037     		adds	r7, r7, #16
  620              	.LCFI15:
  621              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 18
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 18
 
 
  622 003e BD46     		mov	sp, r7
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  661 000a 0023     		movs	r3, #0
  662 000c 7B73     		strb	r3, [r7, #13]
  309:Drivers/BSP/Components/L6470/L6470.c ****   for(spibyte=0;spibyte<L6470MAXSPICMDBYTESIZE;spibyte++)
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 19
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 19
 
 
  663              		.loc 1 309 14
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  709              	.L48:
  314:Drivers/BSP/Components/L6470/L6470.c ****   {
  315:Drivers/BSP/Components/L6470/L6470.c ****     /* Build the 1st bytes to transmit with the binary code of the command */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 20
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 20
 
 
  316:Drivers/BSP/Components/L6470/L6470.c ****     *(pL6470_DaisyChainSpiTxStruct+((0*L6470DAISYCHAINSIZE)+PkgId)) = (L6470_ApplicationCommand[(pL
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  760 00b4 31040000 		.word	.L15+1
  761 00b8 31040000 		.word	.L15+1
  762 00bc 31040000 		.word	.L15+1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 21
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 21
 
 
  763 00c0 31040000 		.word	.L15+1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  808 010e 9B00     		lsls	r3, r3, #2
  809 0110 0B44     		add	r3, r3, r1
  810 0112 0E33     		adds	r3, r3, #14
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 22
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 22
 
 
  811 0114 1B78     		ldrb	r3, [r3]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  334:Drivers/BSP/Components/L6470/L6470.c ****       }
  335:Drivers/BSP/Components/L6470/L6470.c ****       break;
  858              		.loc 1 335 7
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 23
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 23
 
 
  859 0154 6CE1     		b	.L15
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  906 019a DB00     		lsls	r3, r3, #3
  907 019c 1344     		add	r3, r3, r2
  908 019e 0344     		add	r3, r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 24
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 24
 
 
  909 01a0 0833     		adds	r3, r3, #8
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  345:Drivers/BSP/Components/L6470/L6470.c ****       {
  957              		.loc 1 345 7 discriminator 1
  958 01e4 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 25
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 25
 
 
  959 01e6 032B     		cmp	r3, #3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1004              		.loc 1 356 116
  1005 022a 5A68     		ldr	r2, [r3, #4]
  1006              		.loc 1 356 122
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 26
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 26
 
 
  1007 022c 3248     		ldr	r0, .L49+8
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1055              		.loc 1 359 45 discriminator 3
  1056 0274 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
  1057 0276 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 27
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 27
 
 
  1058 0278 BB73     		strb	r3, [r7, #14]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1103 02b2 0133     		adds	r3, r3, #1
  1104 02b4 BB73     		strb	r3, [r7, #14]
  1105              	.L42:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 28
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 28
 
 
  366:Drivers/BSP/Components/L6470/L6470.c ****       {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1151              	.L45:
  377:Drivers/BSP/Components/L6470/L6470.c ****       {
  378:Drivers/BSP/Components/L6470/L6470.c ****         *(pL6470_DaisyChainSpiTxStruct+((spibyte*L6470DAISYCHAINSIZE)+PkgId)) = (uint8_t)(((pL6470_
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 29
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 29
 
 
  1152              		.loc 1 378 109 discriminator 3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1199 033c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  1200 033e 1B01     		lsls	r3, r3, #4
  1201 0340 7A68     		ldr	r2, [r7, #4]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 30
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 30
 
 
  1202 0342 1344     		add	r3, r3, r2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1251              		.loc 1 388 19
  1252 0392 0123     		movs	r3, #1
  1253 0394 BB73     		strb	r3, [r7, #14]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 31
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 31
 
 
  1254              		.loc 1 388 7
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1299 03d0 3A68     		ldr	r2, [r7]
  1300 03d2 1344     		add	r3, r3, r2
  1301 03d4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 32
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 32
 
 
  1302 03d6 59B2     		sxtb	r1, r3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1354 042a D2B2     		uxtb	r2, r2
  1355 042c 1A70     		strb	r2, [r3]
  398:Drivers/BSP/Components/L6470/L6470.c ****       break;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 33
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 33
 
 
  1356              		.loc 1 398 7
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1387 0450 00000000 		.word	L6470_Direction
  1388              		.cfi_endproc
  1389              	.LFE131:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 34
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 34
 
 
  1391              		.section	.text.AbsPos_2_Position,"ax",%progbits
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  446:Drivers/BSP/Components/L6470/L6470.c ****     return (AbsPos - (L6470_POSITION_RANGE + 1));
  1420              		.loc 1 446 20
  1421 0010 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 35
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 35
 
 
  1422 0012 A3F58003 		sub	r3, r3, #4194304
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1466 0004 00AF     		add	r7, sp, #0
  1467              	.LCFI31:
  1468              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 36
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 36
 
 
  1469 0006 7860     		str	r0, [r7, #4]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1513              	.LFE133:
  1515              		.section	.text.Speed_2_Step_s,"ax",%progbits
  1516              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 37
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 37
 
 
  1517              		.global	Speed_2_Step_s
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1561              		.align	2
  1562              	.L62:
  1563 0028 2A24743C 		.word	1014244394
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 38
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 38
 
 
  1564              		.cfi_endproc
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1607              		.loc 1 492 12
  1608 0032 0023     		movs	r3, #0
  1609              	.L67:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 39
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 39
 
 
  493:Drivers/BSP/Components/L6470/L6470.c **** }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1656 0006 0346     		mov	r3, r0
  1657 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  503:Drivers/BSP/Components/L6470/L6470.c ****   if (Acc <= L6470_MAX_ACC)
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 40
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 40
 
 
  1658              		.loc 1 503 6
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  514:Drivers/BSP/Components/L6470/L6470.c ****   */
  515:Drivers/BSP/Components/L6470/L6470.c **** uint16_t Step_s2_2_Acc(float Step_s2)
  516:Drivers/BSP/Components/L6470/L6470.c **** {
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 41
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 41
 
 
  1704              		.loc 1 516 1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1753              	.L84:
  1754 0042 00BF     		.align	2
  1755              	.L83:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 42
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 42
 
 
  1756 0044 71C66847 		.word	1198048881
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1799              		.loc 1 534 12
  1800 0026 DFED057A 		vldr.32	s15, .L88+4
  1801              	.L87:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 43
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 43
 
 
  535:Drivers/BSP/Components/L6470/L6470.c **** }
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1848 0006 87ED010A 		vstr.32	s0, [r7, #4]
  545:Drivers/BSP/Components/L6470/L6470.c ****   if (Step_s2 <= (L6470_MAX_DEC * ((float)1.4552e1)))
  1849              		.loc 1 545 6
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 44
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 44
 
 
  1850 000a D7ED017A 		vldr.32	s15, [r7, #4]
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  553:Drivers/BSP/Components/L6470/L6470.c ****   * 
  554:Drivers/BSP/Components/L6470/L6470.c ****   * @param  MaxSpeed    The MAX_SPEED register value.
  555:Drivers/BSP/Components/L6470/L6470.c ****   * @retval step/s      The max speed as step/s.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 45
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 45
 
 
  556:Drivers/BSP/Components/L6470/L6470.c ****   */
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1945              	.L102:
  1946              		.align	2
  1947              	.L101:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 46
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 46
 
 
  1948 0038 0B247441 		.word	1098130443
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  1993              	.L108:
  575:Drivers/BSP/Components/L6470/L6470.c ****   else
  576:Drivers/BSP/Components/L6470/L6470.c ****     return 0;   // Warning
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 47
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 47
 
 
  1994              		.loc 1 576 12
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2040 0004 00AF     		add	r7, sp, #0
  2041              	.LCFI85:
  2042              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 48
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 48
 
 
  2043 0006 0346     		mov	r3, r0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  595:Drivers/BSP/Components/L6470/L6470.c ****   * 
  596:Drivers/BSP/Components/L6470/L6470.c ****   * @param  step/s      The min speed as step/s.
  597:Drivers/BSP/Components/L6470/L6470.c ****   * @retval MinSpeed    The MIN_SPEED register value.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 49
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 49
 
 
  598:Drivers/BSP/Components/L6470/L6470.c ****   */
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2137              		.cfi_restore 7
  2138              		.cfi_def_cfa_offset 0
  2139 0040 7047     		bx	lr
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 50
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 50
 
 
  2140              	.L123:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2185 0016 FFF7FEFF 		bl	__aeabi_i2d
  2186 001a 4FF00002 		mov	r2, #0
  2187 001e 0E4B     		ldr	r3, .L127
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 51
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 51
 
 
  2188 0020 FFF7FEFF 		bl	__aeabi_dadd
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  625:Drivers/BSP/Components/L6470/L6470.c ****   * @retval FsSpd       The FS_SPD register value.
  626:Drivers/BSP/Components/L6470/L6470.c ****   */
  627:Drivers/BSP/Components/L6470/L6470.c **** uint16_t Step_s_2_FsSpd(float Step_s)
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 52
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 52
 
 
  628:Drivers/BSP/Components/L6470/L6470.c **** {
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2284              	.LCFI105:
  2285              		.cfi_restore 7
  2286              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 53
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 53
 
 
  2287 0048 7047     		bx	lr
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2332 0024 01E0     		b	.L139
  2333              	.L138:
  645:Drivers/BSP/Components/L6470/L6470.c ****   else
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 54
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 54
 
 
  646:Drivers/BSP/Components/L6470/L6470.c ****     return 0;   // Warning
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2379              		.cfi_def_cfa_offset 16
  2380 0004 00AF     		add	r7, sp, #0
  2381              	.LCFI114:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 55
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 55
 
 
  2382              		.cfi_def_cfa_register 7
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2433              	.LFB148:
  662:Drivers/BSP/Components/L6470/L6470.c **** 
  663:Drivers/BSP/Components/L6470/L6470.c **** /**
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 56
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 56
 
 
  664:Drivers/BSP/Components/L6470/L6470.c ****   * @brief  Convert the ST_SLP register value into s/step.
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2476              	.LFE148:
  2478              		.section	.text.s_Step_2_StSlp,"ax",%progbits
  2479              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 57
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 57
 
 
  2480              		.global	s_Step_2_StSlp
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2522              	.L157:
  689:Drivers/BSP/Components/L6470/L6470.c **** }
  2523              		.loc 1 689 1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 58
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 58
 
 
  2524 0038 1846     		mov	r0, r3
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  699:Drivers/BSP/Components/L6470/L6470.c **** //  if (FnSlpAcc <= L6470_MAX_FN_SLP_ACC)
  700:Drivers/BSP/Components/L6470/L6470.c ****     return (FnSlpAcc * ((float)1.5686e-5));
  2571              		.loc 1 700 22
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 59
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 59
 
 
  2572 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2616 0002 83B0     		sub	sp, sp, #12
  2617              	.LCFI137:
  2618              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 60
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 60
 
 
  2619 0004 00AF     		add	r7, sp, #0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2669              		.thumb
  2670              		.thumb_func
  2672              	FnSlpDec_2_s_Step:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 61
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 61
 
 
  2673              	.LFB152:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2713              	.L176:
  2714 002c 6E958337 		.word	931370350
  2715              		.cfi_endproc
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 62
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 62
 
 
  2716              	.LFE152:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  744:Drivers/BSP/Components/L6470/L6470.c ****     return 0;   // Warning
  2760              		.loc 1 744 12
  2761 0036 0023     		movs	r3, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 63
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 63
 
 
  2762              	.L181:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2808              		.cfi_def_cfa_register 7
  2809 0006 0346     		mov	r3, r0
  2810 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 64
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 64
 
 
  755:Drivers/BSP/Components/L6470/L6470.c ****   if (OcdTh <= L6470_MAX_OCD_TH)
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  763:Drivers/BSP/Components/L6470/L6470.c ****   * 
  764:Drivers/BSP/Components/L6470/L6470.c ****   * @param  mA          The overcurrent threshold as mA.
  765:Drivers/BSP/Components/L6470/L6470.c ****   * @retval OcdTh       The OCD_TH register value.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 65
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 65
 
 
  766:Drivers/BSP/Components/L6470/L6470.c ****   */
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2902 0058 F4EEC77A 		vcmpe.f32	s15, s14
  2903 005c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  2904 0060 0AD5     		bpl	.L200
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 66
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 66
 
 
  777:Drivers/BSP/Components/L6470/L6470.c ****       return ((uint8_t)result - 1);
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2953              		.thumb
  2954              		.thumb_func
  2956              	StallTh_2_mA:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 67
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 67
 
 
  2957              	.LFB156:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  2997              		.cfi_def_cfa_offset 4
  2998 0032 BD46     		mov	sp, r7
  2999              	.LCFI170:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 68
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 68
 
 
  3000              		.cfi_def_cfa_register 13
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3044 0016 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  3045 001a 36D8     		bhi	.L216
  810:Drivers/BSP/Components/L6470/L6470.c ****   {
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 69
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 69
 
 
  811:Drivers/BSP/Components/L6470/L6470.c ****     result = (mA / ((float)31.25));
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3090 008a 0023     		movs	r3, #0
  3091              	.L213:
  821:Drivers/BSP/Components/L6470/L6470.c **** }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 70
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 70
 
 
  3092              		.loc 1 821 1
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3129              		.cfi_def_cfa_offset 8
  3130              		.cfi_offset 7, -8
  3131              		.cfi_offset 14, -4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 71
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 71
 
 
  3132 0002 84B0     		sub	sp, sp, #16
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3183              		.global	L6470_GetParam
  3184              		.syntax unified
  3185              		.thumb
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 72
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 72
 
 
  3186              		.thumb_func
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3224              		.loc 1 861 3
  3225 002c 0E49     		ldr	r1, .L225+8
  3226 002e 0D48     		ldr	r0, .L225+4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 73
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 73
 
 
  3227 0030 FFF7FEFF 		bl	L6470_DaisyChainCommand
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3276              	L6470_Run:
  3277              	.LFB160:
  869:Drivers/BSP/Components/L6470/L6470.c **** 
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 74
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 74
 
 
  870:Drivers/BSP/Components/L6470/L6470.c **** /**
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3319 0038 0837     		adds	r7, r7, #8
  3320              	.LCFI191:
  3321              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 75
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 75
 
 
  3322 003a BD46     		mov	sp, r7
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3368 0014 0022     		movs	r2, #0
  3369 0016 0192     		str	r2, [sp, #4]
  3370 0018 0022     		movs	r2, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 76
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 76
 
 
  3371 001a 0092     		str	r2, [sp]
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3414              		@ frame_needed = 1, uses_anonymous_args = 0
  3415 0000 80B5     		push	{r7, lr}
  3416              	.LCFI198:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 77
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 77
 
 
  3417              		.cfi_def_cfa_offset 8
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3467              	.LFE162:
  3469              		.section	.text.L6470_GoTo,"ax",%progbits
  3470              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 78
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 78
 
 
  3471              		.global	L6470_GoTo
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3513 002c FFF7FEFF 		bl	L6470_PrepareDaisyChainCommand
  923:Drivers/BSP/Components/L6470/L6470.c ****     L6470_DaisyChainCommand((uint8_t*)L6470_DaisyChainSpiTxStruct, (uint8_t*)L6470_DaisyChainSpiRxS
  3514              		.loc 1 923 5
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 79
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 79
 
 
  3515 0030 0549     		ldr	r1, .L239+8
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3559 0004 02AF     		add	r7, sp, #8
  3560              	.LCFI210:
  3561              		.cfi_def_cfa 7, 16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 80
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 80
 
 
  3562 0006 0346     		mov	r3, r0
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3610              		.section	.text.L6470_GoUntil,"ax",%progbits
  3611              		.align	1
  3612              		.global	L6470_GoUntil
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 81
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 81
 
 
  3613              		.syntax unified
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3654 002c 0548     		ldr	r0, .L247
  3655 002e FFF7FEFF 		bl	L6470_PrepareDaisyChainCommand
  957:Drivers/BSP/Components/L6470/L6470.c ****   L6470_DaisyChainCommand((uint8_t*)L6470_DaisyChainSpiTxStruct, (uint8_t*)L6470_DaisyChainSpiRxStr
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 82
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 82
 
 
  3656              		.loc 1 957 3
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3700 0004 02AF     		add	r7, sp, #8
  3701              	.LCFI220:
  3702              		.cfi_def_cfa 7, 16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 83
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 83
 
 
  3703 0006 0346     		mov	r3, r0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3755              	.LFB167:
  974:Drivers/BSP/Components/L6470/L6470.c **** 
  975:Drivers/BSP/Components/L6470/L6470.c **** /**
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 84
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 84
 
 
  976:Drivers/BSP/Components/L6470/L6470.c ****   * @brief  GoHome command produces a motion to the HOME position (zero position)
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3799              		@ sp needed
  3800 0034 80BD     		pop	{r7, pc}
  3801              	.L254:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 85
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 85
 
 
  3802 0036 00BF     		.align	2
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3847 001e 0749     		ldr	r1, .L256+4
  3848 0020 0548     		ldr	r0, .L256
  3849 0022 FFF7FEFF 		bl	L6470_PrepareDaisyChainCommand
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 86
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 86
 
 
  998:Drivers/BSP/Components/L6470/L6470.c ****   L6470_DaisyChainCommand((uint8_t*)L6470_DaisyChainSpiTxStruct, (uint8_t*)L6470_DaisyChainSpiRxStr
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3896              		.cfi_def_cfa 7, 16
  3897 0006 0346     		mov	r3, r0
  3898 0008 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 87
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 87
 
 
 1008:Drivers/BSP/Components/L6470/L6470.c ****   L6470_PrepareAppCmdPkg(L6470_Id, L6470_AppCmdPkg, L6470_RESETPOS_ID, 0, 0, 0);
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1018:Drivers/BSP/Components/L6470/L6470.c **** void L6470_ResetDevice(uint8_t L6470_Id)
 1019:Drivers/BSP/Components/L6470/L6470.c **** {
  3945              		.loc 1 1019 1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 88
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 88
 
 
  3946              		.cfi_startproc
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  3996              		.cfi_endproc
  3997              	.LFE170:
  3999              		.section	.text.L6470_SoftStop,"ax",%progbits
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 89
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 89
 
 
  4000              		.align	1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4042 002a FFF7FEFF 		bl	L6470_DaisyChainCommand
 1037:Drivers/BSP/Components/L6470/L6470.c **** }
  4043              		.loc 1 1037 1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 90
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 90
 
 
  4044 002e 00BF     		nop
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4091 000e 0193     		str	r3, [sp, #4]
  4092 0010 0023     		movs	r3, #0
  4093 0012 0093     		str	r3, [sp]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 91
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 91
 
 
  4094 0014 0023     		movs	r3, #0
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4137              		@ frame_needed = 1, uses_anonymous_args = 0
  4138 0000 80B5     		push	{r7, lr}
  4139              	.LCFI253:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 92
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 92
 
 
  4140              		.cfi_def_cfa_offset 8
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4191              		.syntax unified
  4192              		.thumb
  4193              		.thumb_func
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 93
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 93
 
 
  4195              	L6470_HardHiZ:
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4237 0032 BD46     		mov	sp, r7
  4238              	.LCFI262:
  4239              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 94
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 94
 
 
  4240              		@ sp needed
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4283 0014 0023     		movs	r3, #0
  4284 0016 1222     		movs	r2, #18
  4285 0018 0B49     		ldr	r1, .L278
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 95
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 95
 
 
  4286 001a FFF7FEFF 		bl	L6470_PrepareAppCmdPkg
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1097:Drivers/BSP/Components/L6470/L6470.c **** /**
 1098:Drivers/BSP/Components/L6470/L6470.c ****   * @}
 1099:Drivers/BSP/Components/L6470/L6470.c ****   */ /* End of L6470_AppCMDs */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 96
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 96
 
 
 1100:Drivers/BSP/Components/L6470/L6470.c **** 
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4368              	.LCFI271:
  4369              		.cfi_def_cfa_offset 8
  4370 002a BD46     		mov	sp, r7
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 97
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 97
 
 
  4371              	.LCFI272:
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4412 0010 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  4413 0012 F879     		ldrb	r0, [r7, #7]	@ zero_extendqisi2
  4414 0014 0022     		movs	r2, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 98
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 98
 
 
  4415 0016 0192     		str	r2, [sp, #4]
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4457              	.LCFI279:
  4458              		.cfi_def_cfa_offset 24
  4459 0004 02AF     		add	r7, sp, #8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 99
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 99
 
 
  4460              	.LCFI280:
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1161:Drivers/BSP/Components/L6470/L6470.c **** void L6470_PrepareStepClock(uint8_t L6470_Id, eL6470_DirId_t L6470_DirId)
 1162:Drivers/BSP/Components/L6470/L6470.c **** {
  4504              		.loc 1 1162 1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 100
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 100
 
 
  4505              		.cfi_startproc
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4559              	.LFB180:
 1165:Drivers/BSP/Components/L6470/L6470.c **** 
 1166:Drivers/BSP/Components/L6470/L6470.c **** /**
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 101
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 101
 
 
 1167:Drivers/BSP/Components/L6470/L6470.c ****   * @brief  Prepare to send @ref L6470_Move command.
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4601              	.L294:
  4602 002e 00BF     		.align	2
  4603              	.L293:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 102
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 102
 
 
  4604 0030 00000000 		.word	L6470_AppCmdPkg
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4646 0020 00BF     		nop
  4647 0022 0837     		adds	r7, r7, #8
  4648              	.LCFI296:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 103
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 103
 
 
  4649              		.cfi_def_cfa_offset 8
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4691              		.loc 1 1207 3
  4692 0010 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
  4693 0012 F879     		ldrb	r0, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 104
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 104
 
 
  4694 0014 0023     		movs	r3, #0
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4735              		.cfi_offset 7, -8
  4736              		.cfi_offset 14, -4
  4737 0002 84B0     		sub	sp, sp, #16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 105
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 105
 
 
  4738              	.LCFI304:
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1230:Drivers/BSP/Components/L6470/L6470.c ****   * @param  L6470_ActId   The identifier of the L6470 action about the absolute position.
 1231:Drivers/BSP/Components/L6470/L6470.c ****   * @param  L6470_DirId   The identifier of the L6470 motion direction.
 1232:Drivers/BSP/Components/L6470/L6470.c ****   *
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 106
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 106
 
 
 1233:Drivers/BSP/Components/L6470/L6470.c ****   * @note   This function will properly fill the right column of the L6470_AppCmdPkg.
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4834              	.LFE184:
  4836              		.section	.text.L6470_PrepareGoHome,"ax",%progbits
  4837              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 107
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 107
 
 
  4838              		.global	L6470_PrepareGoHome
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4880              		@ sp needed
  4881 0024 80BD     		pop	{r7, pc}
  4882              	.L309:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 108
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 108
 
 
  4883 0026 00BF     		.align	2
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4926 001e 00BF     		nop
  4927 0020 0837     		adds	r7, r7, #8
  4928              	.LCFI321:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 109
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 109
 
 
  4929              		.cfi_def_cfa_offset 8
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  4973 0012 0093     		str	r3, [sp]
  4974 0014 0023     		movs	r3, #0
  4975 0016 0C22     		movs	r2, #12
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 110
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 110
 
 
  4976 0018 0349     		ldr	r1, .L314
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5020 0008 FB71     		strb	r3, [r7, #7]
 1290:Drivers/BSP/Components/L6470/L6470.c ****   L6470_PrepareAppCmdPkg(L6470_Id, L6470_AppCmdPkg, L6470_RESETDEVICE_ID, 0, 0, 0);
  5021              		.loc 1 1290 3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 111
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 111
 
 
  5022 000a F879     		ldrb	r0, [r7, #7]	@ zero_extendqisi2
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5066 0002 84B0     		sub	sp, sp, #16
  5067              	.LCFI334:
  5068              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 112
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 112
 
 
  5069 0004 02AF     		add	r7, sp, #8
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5112              		@ args = 0, pretend = 0, frame = 8
  5113              		@ frame_needed = 1, uses_anonymous_args = 0
  5114 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 113
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 113
 
 
  5115              	.LCFI338:
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1324:Drivers/BSP/Components/L6470/L6470.c ****   * @note   This function will properly fill the right column of the L6470_AppCmdPkg.
 1325:Drivers/BSP/Components/L6470/L6470.c ****   * @note   The commad will be sent by @ref L6470_PerformPreparedApplicationCommand.
 1326:Drivers/BSP/Components/L6470/L6470.c ****   */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 114
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 114
 
 
 1327:Drivers/BSP/Components/L6470/L6470.c **** void L6470_PrepareSoftHiZ(uint8_t L6470_Id)
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5215              	.LFB192:
 1331:Drivers/BSP/Components/L6470/L6470.c **** 
 1332:Drivers/BSP/Components/L6470/L6470.c **** /**
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 115
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 115
 
 
 1333:Drivers/BSP/Components/L6470/L6470.c ****   * @brief  Prepare to send @ref L6470_HardHiZ command.
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5260              		.section	.text.L6470_PrepareGetStatus,"ax",%progbits
  5261              		.align	1
  5262              		.global	L6470_PrepareGetStatus
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 116
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 116
 
 
  5263              		.syntax unified
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5305 0024 80BD     		pop	{r7, pc}
  5306              	.L333:
  5307 0026 00BF     		.align	2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 117
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 117
 
 
  5308              	.L332:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5344              		.loc 1 1376 1
  5345 0016 1846     		mov	r0, r3
  5346 0018 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 118
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 118
 
 
  5347              	.L337:
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5389 0014 04D0     		beq	.L340
  5390              		.loc 1 1390 43 discriminator 2
  5391 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 119
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 119
 
 
  5392 0018 012B     		cmp	r3, #1
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5432 0000 80B5     		push	{r7, lr}
  5433              	.LCFI366:
  5434              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 120
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 120
 
 
  5435              		.cfi_offset 7, -8
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5477 003a 0A23     		movs	r3, #10
  5478 003c 0093     		str	r3, [sp]
  5479 003e 0223     		movs	r3, #2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 121
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 121
 
 
  5480 0040 1448     		ldr	r0, .L347+8
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
   31:Drivers/CMSIS/Include/core_cmInstr.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
   32:Drivers/CMSIS/Include/core_cmInstr.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
   33:Drivers/CMSIS/Include/core_cmInstr.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 122
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 122
 
 
   34:Drivers/CMSIS/Include/core_cmInstr.h ****    POSSIBILITY OF SUCH DAMAGE.
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
   88:Drivers/CMSIS/Include/core_cmInstr.h ****     Instruction Synchronization Barrier flushes the pipeline in the processor,
   89:Drivers/CMSIS/Include/core_cmInstr.h ****     so that all instructions following the ISB are fetched from cache or
   90:Drivers/CMSIS/Include/core_cmInstr.h ****     memory, after the instruction has been completed.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 123
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 123
 
 
   91:Drivers/CMSIS/Include/core_cmInstr.h ****  */
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  145:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  Reverse byte order in signed short value
  146:Drivers/CMSIS/Include/core_cmInstr.h **** 
  147:Drivers/CMSIS/Include/core_cmInstr.h ****     This function reverses the byte order in a signed short value with sign extension to integer.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 124
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 124
 
 
  148:Drivers/CMSIS/Include/core_cmInstr.h **** 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  202:Drivers/CMSIS/Include/core_cmInstr.h ****     result |= value & 1;
  203:Drivers/CMSIS/Include/core_cmInstr.h ****     s--;
  204:Drivers/CMSIS/Include/core_cmInstr.h ****   }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 125
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 125
 
 
  205:Drivers/CMSIS/Include/core_cmInstr.h ****   result <<= s;                       // shift when v's highest bits are zero
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  259:Drivers/CMSIS/Include/core_cmInstr.h ****     \return          0  Function succeeded
  260:Drivers/CMSIS/Include/core_cmInstr.h ****     \return          1  Function failed
  261:Drivers/CMSIS/Include/core_cmInstr.h ****  */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 126
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 126
 
 
  262:Drivers/CMSIS/Include/core_cmInstr.h **** #define __STREXB(value, ptr)              __strex(value, ptr)
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  316:Drivers/CMSIS/Include/core_cmInstr.h **** #define __USAT                            __usat
  317:Drivers/CMSIS/Include/core_cmInstr.h **** 
  318:Drivers/CMSIS/Include/core_cmInstr.h **** 
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 127
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 127
 
 
  319:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  Rotate Right with Extend (32 bit)
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  373:Drivers/CMSIS/Include/core_cmInstr.h **** #define __STRBT(value, ptr)               __strt(value, ptr)
  374:Drivers/CMSIS/Include/core_cmInstr.h **** 
  375:Drivers/CMSIS/Include/core_cmInstr.h **** 
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 128
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 128
 
 
  376:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  STRT Unprivileged (16 bit)
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5509              	.LBE4:
  5510              		.loc 1 1423 5
  5511 0062 0D4B     		ldr	r3, .L347+12
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 129
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 129
 
 
  5512 0064 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1428:Drivers/BSP/Components/L6470/L6470.c ****   * @brief    Extracts the data returned by the L6470 from the matrix that
 1429:Drivers/BSP/Components/L6470/L6470.c ****   *           contains the received SPI data.
 1430:Drivers/BSP/Components/L6470/L6470.c ****   * @param    L6470_Id  The identifier of the L6470 target inside the daisy chain.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 130
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 130
 
 
 1431:Drivers/BSP/Components/L6470/L6470.c ****   * @param    pL6470_DaisyChainSpiRxStruct  uint8_t-pointer to the matrix that
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5603              		.loc 1 1443 94 discriminator 3
  5604 002c BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
  5605 002e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 131
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 131
 
 
  5606 0030 D31A     		subs	r3, r2, r3
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1451:Drivers/BSP/Components/L6470/L6470.c ****   *
 1452:Drivers/BSP/Components/L6470/L6470.c ****   * @param  L6470_Id  The identifier of the L6470 target inside the daisy chain.
 1453:Drivers/BSP/Components/L6470/L6470.c ****   * @param  L6470_StatusRegisterFlagId  The identifier of the L6470 STATUS flag to be checked.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 132
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 132
 
 
 1454:Drivers/BSP/Components/L6470/L6470.c ****   *
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5696 0038 75000000 		.word	.L370+1
  5697 003c 85000000 		.word	.L369+1
  5698 0040 95000000 		.word	.L368+1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 133
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 133
 
 
  5699 0044 A5000000 		.word	.L367+1
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5743              		.loc 1 1474 5
  5744 00a2 5FE0     		b	.L354
  5745              	.L367:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 134
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 134
 
 
 1475:Drivers/BSP/Components/L6470/L6470.c ****   case SW_EVN_ID:
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5788 00e2 3FE0     		b	.L354
  5789              	.L363:
 1487:Drivers/BSP/Components/L6470/L6470.c ****   case WRONG_CMD_ID:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 135
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 135
 
 
 1488:Drivers/BSP/Components/L6470/L6470.c ****     state = pL6470_StatusRegister->WRONG_CMD;
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5833              	.L359:
 1499:Drivers/BSP/Components/L6470/L6470.c ****   case OCD_ID:
 1500:Drivers/BSP/Components/L6470/L6470.c ****     state = pL6470_StatusRegister->OCD;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 136
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 136
 
 
  5834              		.loc 1 1500 34
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
 1511:Drivers/BSP/Components/L6470/L6470.c ****   }
 1512:Drivers/BSP/Components/L6470/L6470.c ****   
 1513:Drivers/BSP/Components/L6470/L6470.c ****   return state;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 137
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 137
 
 
  5878              		.loc 1 1513 10
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5926 0008 FB71     		strb	r3, [r7, #7]
 1522:Drivers/BSP/Components/L6470/L6470.c ****   if (id < L6470REGIDSIZE)
  5927              		.loc 1 1522 6
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 138
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 138
 
 
  5928 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  5976              	.LFB200:
 1531:Drivers/BSP/Components/L6470/L6470.c **** 
 1532:Drivers/BSP/Components/L6470/L6470.c **** /**
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 139
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 139
 
 
 1533:Drivers/BSP/Components/L6470/L6470.c ****   * @brief  Configures the L6470 registers.
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6021              		.loc 1 1542 48
  6022 0048 FB68     		ldr	r3, [r7, #12]
  6023 004a 1A84     		strh	r2, [r3, #32]	@ movhi
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 140
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 140
 
 
 1543:Drivers/BSP/Components/L6470/L6470.c ****   StepperMotorDriverHandle->Register.MIN_SPEED = Step_s_2_MinSpeed(MotorParameterData->minspeed);
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6074              		.loc 1 1546 49
  6075 00ba FCEEE77A 		vcvt.u32.f32	s15, s15
  6076 00be C7ED017A 		vstr.32	s15, [r7, #4]	@ int
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 141
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 141
 
 
  6077 00c2 3B79     		ldrb	r3, [r7, #4]
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6128 0132 FB68     		ldr	r3, [r7, #12]
  6129 0134 5A85     		strh	r2, [r3, #42]	@ movhi
 1550:Drivers/BSP/Components/L6470/L6470.c ****   StepperMotorDriverHandle->Register.ST_SLP = s_Step_2_StSlp(MotorParameterData->stslp);
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 142
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 142
 
 
  6130              		.loc 1 1550 47
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6179 01a8 B0EE670A 		vmov.f32	s0, s15
  6180 01ac FFF7FEFF 		bl	mA_2_StallTh
  6181 01b0 0346     		mov	r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 143
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 143
 
 
  6182 01b2 1A46     		mov	r2, r3
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6229 01fa D28B     		ldrh	r2, [r2, #30]
  6230              		.loc 1 1562 3
  6231 01fc 0521     		movs	r1, #5
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 144
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 144
 
 
  6232 01fe 9847     		blx	r3
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6282              		.loc 1 1566 36
  6283 023a 1B68     		ldr	r3, [r3]
  6284              		.loc 1 1566 3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 145
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 145
 
 
  6285 023c FA68     		ldr	r2, [r7, #12]
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6336 0282 0C21     		movs	r1, #12
  6337 0284 9847     		blx	r3
  6338              	.LVL8:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 146
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 146
 
 
 1570:Drivers/BSP/Components/L6470/L6470.c ****   StepperMotorDriverHandle->Command->SetParam(StepperMotorDriverHandle->DaisyChainPosition, L6470_I
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6389              		.loc 1 1573 3
  6390 02c6 FA68     		ldr	r2, [r7, #12]
  6391 02c8 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 147
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 147
 
 
  6392              		.loc 1 1573 148
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6443              	.LVL15:
 1577:Drivers/BSP/Components/L6470/L6470.c ****   StepperMotorDriverHandle->Command->SetParam(StepperMotorDriverHandle->DaisyChainPosition, L6470_S
  6444              		.loc 1 1577 27
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 148
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 148
 
 
  6445 0310 FB68     		ldr	r3, [r7, #12]
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6496 0350 00BF     		nop
  6497 0352 1037     		adds	r7, r7, #16
  6498              	.LCFI391:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 149
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 149
 
 
  6499              		.cfi_def_cfa_offset 8
@@ -8901,268 +8901,268 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 1
  6517              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  6518              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
  6519              		.file 12 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 150
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 150
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 L6470.c
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:24     .rodata.L6470_Register:00000000 L6470_Register
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:21     .rodata.L6470_Register:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:205    .rodata.L6470_ApplicationCommand:00000000 L6470_ApplicationCommand
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:202    .rodata.L6470_ApplicationCommand:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:286    .rodata.L6470_Direction:00000000 L6470_Direction
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:283    .rodata.L6470_Direction:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:298    .rodata.L6470_ACT:00000000 L6470_ACT
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:295    .rodata.L6470_ACT:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:308    .data.L6470Command:00000000 L6470Command
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:305    .data.L6470Command:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3121   .text.L6470_SetParam:00000000 L6470_SetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3188   .text.L6470_GetParam:00000000 L6470_GetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3276   .text.L6470_Run:00000000 L6470_Run
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3343   .text.L6470_StepClock:00000000 L6470_StepClock
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3409   .text.L6470_Move:00000000 L6470_Move
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3476   .text.L6470_GoTo:00000000 L6470_GoTo
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3545   .text.L6470_GoToDir:00000000 L6470_GoToDir
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3617   .text.L6470_GoUntil:00000000 L6470_GoUntil
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3686   .text.L6470_ReleaseSW:00000000 L6470_ReleaseSW
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3754   .text.L6470_GoHome:00000000 L6470_GoHome
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3817   .text.L6470_GoMark:00000000 L6470_GoMark
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3880   .text.L6470_ResetPos:00000000 L6470_ResetPos
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3943   .text.L6470_ResetDevice:00000000 L6470_ResetDevice
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4006   .text.L6470_SoftStop:00000000 L6470_SoftStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4069   .text.L6470_HardStop:00000000 L6470_HardStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4132   .text.L6470_SoftHiZ:00000000 L6470_SoftHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4195   .text.L6470_HardHiZ:00000000 L6470_HardHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4258   .text.L6470_GetStatus:00000000 L6470_GetStatus
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4332   .text.L6470_PrepareSetParam:00000000 L6470_PrepareSetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4389   .text.L6470_PrepareGetParam:00000000 L6470_PrepareGetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4445   .text.L6470_PrepareRun:00000000 L6470_PrepareRun
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4502   .text.L6470_PrepareStepClock:00000000 L6470_PrepareStepClock
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4558   .text.L6470_PrepareMove:00000000 L6470_PrepareMove
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4615   .text.L6470_PrepareGoTo:00000000 L6470_PrepareGoTo
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4669   .text.L6470_PrepareGoToDir:00000000 L6470_PrepareGoToDir
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4726   .text.L6470_PrepareGoUntil:00000000 L6470_PrepareGoUntil
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4785   .text.L6470_PrepareReleaseSW:00000000 L6470_PrepareReleaseSW
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4843   .text.L6470_PrepareGoHome:00000000 L6470_PrepareGoHome
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4896   .text.L6470_PrepareGoMark:00000000 L6470_PrepareGoMark
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4949   .text.L6470_PrepareResetPos:00000000 L6470_PrepareResetPos
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5002   .text.L6470_PrepareResetDevice:00000000 L6470_PrepareResetDevice
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5055   .text.L6470_PrepareSoftStop:00000000 L6470_PrepareSoftStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5108   .text.L6470_PrepareHardStop:00000000 L6470_PrepareHardStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5161   .text.L6470_PrepareSoftHiZ:00000000 L6470_PrepareSoftHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5214   .text.L6470_PrepareHardHiZ:00000000 L6470_PrepareHardHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5267   .text.L6470_PrepareGetStatus:00000000 L6470_PrepareGetStatus
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5651   .text.L6470_CheckStatusRegisterFlag:00000000 L6470_CheckStatusRegisterFlag
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:351    .bss.L6470_AppCmdPkg:00000000 L6470_AppCmdPkg
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:348    .bss.L6470_AppCmdPkg:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:358    .bss.L6470_DaisyChainSpiTxStruct:00000000 L6470_DaisyChainSpiTxStruct
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:355    .bss.L6470_DaisyChainSpiTxStruct:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:365    .bss.L6470_DaisyChainSpiRxStruct:00000000 L6470_DaisyChainSpiRxStruct
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:362    .bss.L6470_DaisyChainSpiRxStruct:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:371    .bss.L6470_DaisyChain_HalfPrepared:00000000 L6470_DaisyChain_HalfPrepared
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:372    .bss.L6470_DaisyChain_HalfPrepared:00000000 $d
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 151
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:24     .rodata.L6470_Register:00000000 L6470_Register
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:21     .rodata.L6470_Register:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:205    .rodata.L6470_ApplicationCommand:00000000 L6470_ApplicationCommand
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:202    .rodata.L6470_ApplicationCommand:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:286    .rodata.L6470_Direction:00000000 L6470_Direction
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:283    .rodata.L6470_Direction:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:298    .rodata.L6470_ACT:00000000 L6470_ACT
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:295    .rodata.L6470_ACT:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:308    .data.L6470Command:00000000 L6470Command
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:305    .data.L6470Command:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3121   .text.L6470_SetParam:00000000 L6470_SetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3188   .text.L6470_GetParam:00000000 L6470_GetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3276   .text.L6470_Run:00000000 L6470_Run
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3343   .text.L6470_StepClock:00000000 L6470_StepClock
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3409   .text.L6470_Move:00000000 L6470_Move
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3476   .text.L6470_GoTo:00000000 L6470_GoTo
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3545   .text.L6470_GoToDir:00000000 L6470_GoToDir
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3617   .text.L6470_GoUntil:00000000 L6470_GoUntil
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3686   .text.L6470_ReleaseSW:00000000 L6470_ReleaseSW
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3754   .text.L6470_GoHome:00000000 L6470_GoHome
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3817   .text.L6470_GoMark:00000000 L6470_GoMark
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3880   .text.L6470_ResetPos:00000000 L6470_ResetPos
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3943   .text.L6470_ResetDevice:00000000 L6470_ResetDevice
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4006   .text.L6470_SoftStop:00000000 L6470_SoftStop
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4069   .text.L6470_HardStop:00000000 L6470_HardStop
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4132   .text.L6470_SoftHiZ:00000000 L6470_SoftHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4195   .text.L6470_HardHiZ:00000000 L6470_HardHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4258   .text.L6470_GetStatus:00000000 L6470_GetStatus
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4332   .text.L6470_PrepareSetParam:00000000 L6470_PrepareSetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4389   .text.L6470_PrepareGetParam:00000000 L6470_PrepareGetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4445   .text.L6470_PrepareRun:00000000 L6470_PrepareRun
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4502   .text.L6470_PrepareStepClock:00000000 L6470_PrepareStepClock
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4558   .text.L6470_PrepareMove:00000000 L6470_PrepareMove
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4615   .text.L6470_PrepareGoTo:00000000 L6470_PrepareGoTo
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4669   .text.L6470_PrepareGoToDir:00000000 L6470_PrepareGoToDir
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4726   .text.L6470_PrepareGoUntil:00000000 L6470_PrepareGoUntil
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4785   .text.L6470_PrepareReleaseSW:00000000 L6470_PrepareReleaseSW
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4843   .text.L6470_PrepareGoHome:00000000 L6470_PrepareGoHome
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4896   .text.L6470_PrepareGoMark:00000000 L6470_PrepareGoMark
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4949   .text.L6470_PrepareResetPos:00000000 L6470_PrepareResetPos
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5002   .text.L6470_PrepareResetDevice:00000000 L6470_PrepareResetDevice
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5055   .text.L6470_PrepareSoftStop:00000000 L6470_PrepareSoftStop
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5108   .text.L6470_PrepareHardStop:00000000 L6470_PrepareHardStop
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5161   .text.L6470_PrepareSoftHiZ:00000000 L6470_PrepareSoftHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5214   .text.L6470_PrepareHardHiZ:00000000 L6470_PrepareHardHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5267   .text.L6470_PrepareGetStatus:00000000 L6470_PrepareGetStatus
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5651   .text.L6470_CheckStatusRegisterFlag:00000000 L6470_CheckStatusRegisterFlag
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:351    .bss.L6470_AppCmdPkg:00000000 L6470_AppCmdPkg
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:348    .bss.L6470_AppCmdPkg:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:358    .bss.L6470_DaisyChainSpiTxStruct:00000000 L6470_DaisyChainSpiTxStruct
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:355    .bss.L6470_DaisyChainSpiTxStruct:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:365    .bss.L6470_DaisyChainSpiRxStruct:00000000 L6470_DaisyChainSpiRxStruct
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:362    .bss.L6470_DaisyChainSpiRxStruct:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:371    .bss.L6470_DaisyChain_HalfPrepared:00000000 L6470_DaisyChain_HalfPrepared
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:372    .bss.L6470_DaisyChain_HalfPrepared:00000000 $d
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 151
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:378    .bss.L6470_StatusRegister:00000000 L6470_StatusRegister
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:375    .bss.L6470_StatusRegister:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:385    .data.pL6470_StatusRegister:00000000 pL6470_StatusRegister
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:382    .data.pL6470_StatusRegister:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:391    .bss.delay_cnt:00000000 delay_cnt
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:392    .bss.delay_cnt:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:394    .text.L6470_ResetAppCmdPkg:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:400    .text.L6470_ResetAppCmdPkg:00000000 L6470_ResetAppCmdPkg
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:485    .text.L6470_FillAppCmdPkg:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:491    .text.L6470_FillAppCmdPkg:00000000 L6470_FillAppCmdPkg
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:564    .text.L6470_PrepareAppCmdPkg:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:570    .text.L6470_PrepareAppCmdPkg:00000000 L6470_PrepareAppCmdPkg
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:630    .text.L6470_PrepareAppCmdPkg:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:635    .text.L6470_PrepareDaisyChainCommand:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:641    .text.L6470_PrepareDaisyChainCommand:00000000 L6470_PrepareDaisyChainCommand
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:748    .text.L6470_PrepareDaisyChainCommand:00000084 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:767    .text.L6470_PrepareDaisyChainCommand:000000d0 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1148   .text.L6470_PrepareDaisyChainCommand:000002f0 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1153   .text.L6470_PrepareDaisyChainCommand:000002fc $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1386   .text.L6470_PrepareDaisyChainCommand:0000044c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1392   .text.AbsPos_2_Position:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1398   .text.AbsPos_2_Position:00000000 AbsPos_2_Position
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1446   .text.Position_2_AbsPos:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1452   .text.Position_2_AbsPos:00000000 Position_2_AbsPos
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1516   .text.Speed_2_Step_s:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1522   .text.Speed_2_Step_s:00000000 Speed_2_Step_s
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1563   .text.Speed_2_Step_s:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1568   .text.Step_s_2_Speed:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1574   .text.Step_s_2_Speed:00000000 Step_s_2_Speed
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1627   .text.Step_s_2_Speed:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1633   .text.Acc_2_Step_s2:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1639   .text.Acc_2_Step_s2:00000000 Acc_2_Step_s2
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1690   .text.Acc_2_Step_s2:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1696   .text.Step_s2_2_Acc:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1702   .text.Step_s2_2_Acc:00000000 Step_s2_2_Acc
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1756   .text.Step_s2_2_Acc:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1762   .text.Dec_2_Step_s2:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1768   .text.Dec_2_Step_s2:00000000 Dec_2_Step_s2
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1819   .text.Dec_2_Step_s2:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1825   .text.Step_s2_2_Dec:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1831   .text.Step_s2_2_Dec:00000000 Step_s2_2_Dec
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1885   .text.Step_s2_2_Dec:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1891   .text.MaxSpeed_2_Step_s:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1897   .text.MaxSpeed_2_Step_s:00000000 MaxSpeed_2_Step_s
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1948   .text.MaxSpeed_2_Step_s:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1954   .text.Step_s_2_MaxSpeed:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:1960   .text.Step_s_2_MaxSpeed:00000000 Step_s_2_MaxSpeed
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2014   .text.Step_s_2_MaxSpeed:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2020   .text.MinSpeed_2_Step_s:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2026   .text.MinSpeed_2_Step_s:00000000 MinSpeed_2_Step_s
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2077   .text.MinSpeed_2_Step_s:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2083   .text.Step_s_2_MinSpeed:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2089   .text.Step_s_2_MinSpeed:00000000 Step_s_2_MinSpeed
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2143   .text.Step_s_2_MinSpeed:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2153   .text.FsSpd_2_Step_s:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2159   .text.FsSpd_2_Step_s:00000000 FsSpd_2_Step_s
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2222   .text.FsSpd_2_Step_s:00000058 $d
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 152
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:378    .bss.L6470_StatusRegister:00000000 L6470_StatusRegister
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:375    .bss.L6470_StatusRegister:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:385    .data.pL6470_StatusRegister:00000000 pL6470_StatusRegister
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:382    .data.pL6470_StatusRegister:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:391    .bss.delay_cnt:00000000 delay_cnt
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:392    .bss.delay_cnt:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:394    .text.L6470_ResetAppCmdPkg:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:400    .text.L6470_ResetAppCmdPkg:00000000 L6470_ResetAppCmdPkg
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:485    .text.L6470_FillAppCmdPkg:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:491    .text.L6470_FillAppCmdPkg:00000000 L6470_FillAppCmdPkg
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:564    .text.L6470_PrepareAppCmdPkg:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:570    .text.L6470_PrepareAppCmdPkg:00000000 L6470_PrepareAppCmdPkg
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:630    .text.L6470_PrepareAppCmdPkg:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:635    .text.L6470_PrepareDaisyChainCommand:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:641    .text.L6470_PrepareDaisyChainCommand:00000000 L6470_PrepareDaisyChainCommand
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:748    .text.L6470_PrepareDaisyChainCommand:00000084 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:767    .text.L6470_PrepareDaisyChainCommand:000000d0 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1148   .text.L6470_PrepareDaisyChainCommand:000002f0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1153   .text.L6470_PrepareDaisyChainCommand:000002fc $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1386   .text.L6470_PrepareDaisyChainCommand:0000044c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1392   .text.AbsPos_2_Position:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1398   .text.AbsPos_2_Position:00000000 AbsPos_2_Position
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1446   .text.Position_2_AbsPos:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1452   .text.Position_2_AbsPos:00000000 Position_2_AbsPos
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1516   .text.Speed_2_Step_s:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1522   .text.Speed_2_Step_s:00000000 Speed_2_Step_s
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1563   .text.Speed_2_Step_s:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1568   .text.Step_s_2_Speed:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1574   .text.Step_s_2_Speed:00000000 Step_s_2_Speed
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1627   .text.Step_s_2_Speed:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1633   .text.Acc_2_Step_s2:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1639   .text.Acc_2_Step_s2:00000000 Acc_2_Step_s2
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1690   .text.Acc_2_Step_s2:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1696   .text.Step_s2_2_Acc:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1702   .text.Step_s2_2_Acc:00000000 Step_s2_2_Acc
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1756   .text.Step_s2_2_Acc:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1762   .text.Dec_2_Step_s2:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1768   .text.Dec_2_Step_s2:00000000 Dec_2_Step_s2
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1819   .text.Dec_2_Step_s2:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1825   .text.Step_s2_2_Dec:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1831   .text.Step_s2_2_Dec:00000000 Step_s2_2_Dec
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1885   .text.Step_s2_2_Dec:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1891   .text.MaxSpeed_2_Step_s:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1897   .text.MaxSpeed_2_Step_s:00000000 MaxSpeed_2_Step_s
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1948   .text.MaxSpeed_2_Step_s:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1954   .text.Step_s_2_MaxSpeed:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:1960   .text.Step_s_2_MaxSpeed:00000000 Step_s_2_MaxSpeed
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2014   .text.Step_s_2_MaxSpeed:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2020   .text.MinSpeed_2_Step_s:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2026   .text.MinSpeed_2_Step_s:00000000 MinSpeed_2_Step_s
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2077   .text.MinSpeed_2_Step_s:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2083   .text.Step_s_2_MinSpeed:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2089   .text.Step_s_2_MinSpeed:00000000 Step_s_2_MinSpeed
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2143   .text.Step_s_2_MinSpeed:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2153   .text.FsSpd_2_Step_s:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2159   .text.FsSpd_2_Step_s:00000000 FsSpd_2_Step_s
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2222   .text.FsSpd_2_Step_s:00000058 $d
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 152
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2228   .text.Step_s_2_FsSpd:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2234   .text.Step_s_2_FsSpd:00000000 Step_s_2_FsSpd
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2291   .text.Step_s_2_FsSpd:0000004c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2297   .text.IntSpeed_2_Step_s:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2303   .text.IntSpeed_2_Step_s:00000000 IntSpeed_2_Step_s
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2354   .text.IntSpeed_2_Step_s:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2360   .text.Step_s_2_IntSpeed:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2366   .text.Step_s_2_IntSpeed:00000000 Step_s_2_IntSpeed
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2420   .text.Step_s_2_IntSpeed:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2426   .text.StSlp_2_s_Step:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2432   .text.StSlp_2_s_Step:00000000 StSlp_2_s_Step
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2474   .text.StSlp_2_s_Step:0000002c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2479   .text.s_Step_2_StSlp:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2485   .text.s_Step_2_StSlp:00000000 s_Step_2_StSlp
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2540   .text.s_Step_2_StSlp:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2546   .text.FnSlpAcc_2_s_Step:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2552   .text.FnSlpAcc_2_s_Step:00000000 FnSlpAcc_2_s_Step
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2594   .text.FnSlpAcc_2_s_Step:0000002c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2599   .text.s_Step_2_FnSlpAcc:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2605   .text.s_Step_2_FnSlpAcc:00000000 s_Step_2_FnSlpAcc
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2660   .text.s_Step_2_FnSlpAcc:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2666   .text.FnSlpDec_2_s_Step:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2672   .text.FnSlpDec_2_s_Step:00000000 FnSlpDec_2_s_Step
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2714   .text.FnSlpDec_2_s_Step:0000002c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2719   .text.s_Step_2_FnSlpDec:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2725   .text.s_Step_2_FnSlpDec:00000000 s_Step_2_FnSlpDec
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2780   .text.s_Step_2_FnSlpDec:00000044 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2786   .text.OcdTh_2_mA:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2792   .text.OcdTh_2_mA:00000000 OcdTh_2_mA
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2845   .text.OcdTh_2_mA:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2851   .text.mA_2_OcdTh:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2857   .text.mA_2_OcdTh:00000000 mA_2_OcdTh
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2944   .text.mA_2_OcdTh:00000098 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2950   .text.StallTh_2_mA:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:2956   .text.StallTh_2_mA:00000000 StallTh_2_mA
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3010   .text.StallTh_2_mA:0000003c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3016   .text.mA_2_StallTh:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3022   .text.mA_2_StallTh:00000000 mA_2_StallTh
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3109   .text.mA_2_StallTh:00000098 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3115   .text.L6470_SetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5426   .text.L6470_DaisyChainCommand:00000000 L6470_DaisyChainCommand
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3175   .text.L6470_SetParam:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3182   .text.L6470_GetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5560   .text.L6470_ExtractReturnedData:00000000 L6470_ExtractReturnedData
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3262   .text.L6470_GetParam:00000060 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3270   .text.L6470_Run:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3330   .text.L6470_Run:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3337   .text.L6470_StepClock:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3396   .text.L6470_StepClock:0000003c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3403   .text.L6470_Move:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3463   .text.L6470_Move:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3470   .text.L6470_GoTo:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3532   .text.L6470_GoTo:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3539   .text.L6470_GoToDir:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3604   .text.L6470_GoToDir:00000048 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3611   .text.L6470_GoUntil:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3673   .text.L6470_GoUntil:00000044 $d
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 153
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2228   .text.Step_s_2_FsSpd:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2234   .text.Step_s_2_FsSpd:00000000 Step_s_2_FsSpd
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2291   .text.Step_s_2_FsSpd:0000004c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2297   .text.IntSpeed_2_Step_s:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2303   .text.IntSpeed_2_Step_s:00000000 IntSpeed_2_Step_s
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2354   .text.IntSpeed_2_Step_s:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2360   .text.Step_s_2_IntSpeed:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2366   .text.Step_s_2_IntSpeed:00000000 Step_s_2_IntSpeed
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2420   .text.Step_s_2_IntSpeed:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2426   .text.StSlp_2_s_Step:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2432   .text.StSlp_2_s_Step:00000000 StSlp_2_s_Step
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2474   .text.StSlp_2_s_Step:0000002c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2479   .text.s_Step_2_StSlp:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2485   .text.s_Step_2_StSlp:00000000 s_Step_2_StSlp
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2540   .text.s_Step_2_StSlp:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2546   .text.FnSlpAcc_2_s_Step:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2552   .text.FnSlpAcc_2_s_Step:00000000 FnSlpAcc_2_s_Step
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2594   .text.FnSlpAcc_2_s_Step:0000002c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2599   .text.s_Step_2_FnSlpAcc:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2605   .text.s_Step_2_FnSlpAcc:00000000 s_Step_2_FnSlpAcc
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2660   .text.s_Step_2_FnSlpAcc:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2666   .text.FnSlpDec_2_s_Step:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2672   .text.FnSlpDec_2_s_Step:00000000 FnSlpDec_2_s_Step
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2714   .text.FnSlpDec_2_s_Step:0000002c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2719   .text.s_Step_2_FnSlpDec:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2725   .text.s_Step_2_FnSlpDec:00000000 s_Step_2_FnSlpDec
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2780   .text.s_Step_2_FnSlpDec:00000044 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2786   .text.OcdTh_2_mA:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2792   .text.OcdTh_2_mA:00000000 OcdTh_2_mA
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2845   .text.OcdTh_2_mA:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2851   .text.mA_2_OcdTh:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2857   .text.mA_2_OcdTh:00000000 mA_2_OcdTh
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2944   .text.mA_2_OcdTh:00000098 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2950   .text.StallTh_2_mA:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:2956   .text.StallTh_2_mA:00000000 StallTh_2_mA
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3010   .text.StallTh_2_mA:0000003c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3016   .text.mA_2_StallTh:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3022   .text.mA_2_StallTh:00000000 mA_2_StallTh
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3109   .text.mA_2_StallTh:00000098 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3115   .text.L6470_SetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5426   .text.L6470_DaisyChainCommand:00000000 L6470_DaisyChainCommand
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3175   .text.L6470_SetParam:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3182   .text.L6470_GetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5560   .text.L6470_ExtractReturnedData:00000000 L6470_ExtractReturnedData
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3262   .text.L6470_GetParam:00000060 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3270   .text.L6470_Run:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3330   .text.L6470_Run:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3337   .text.L6470_StepClock:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3396   .text.L6470_StepClock:0000003c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3403   .text.L6470_Move:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3463   .text.L6470_Move:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3470   .text.L6470_GoTo:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3532   .text.L6470_GoTo:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3539   .text.L6470_GoToDir:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3604   .text.L6470_GoToDir:00000048 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3611   .text.L6470_GoUntil:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3673   .text.L6470_GoUntil:00000044 $d
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 153
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3680   .text.L6470_ReleaseSW:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3741   .text.L6470_ReleaseSW:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3748   .text.L6470_GoHome:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3804   .text.L6470_GoHome:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3811   .text.L6470_GoMark:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3867   .text.L6470_GoMark:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3874   .text.L6470_ResetPos:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3930   .text.L6470_ResetPos:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3937   .text.L6470_ResetDevice:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:3993   .text.L6470_ResetDevice:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4000   .text.L6470_SoftStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4056   .text.L6470_SoftStop:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4063   .text.L6470_HardStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4119   .text.L6470_HardStop:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4126   .text.L6470_SoftHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4182   .text.L6470_SoftHiZ:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4189   .text.L6470_HardHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4245   .text.L6470_HardHiZ:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4252   .text.L6470_GetStatus:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4319   .text.L6470_GetStatus:00000048 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4326   .text.L6470_PrepareSetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4378   .text.L6470_PrepareSetParam:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4383   .text.L6470_PrepareGetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4434   .text.L6470_PrepareGetParam:0000002c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4439   .text.L6470_PrepareRun:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4491   .text.L6470_PrepareRun:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4496   .text.L6470_PrepareStepClock:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4547   .text.L6470_PrepareStepClock:0000002c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4552   .text.L6470_PrepareMove:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4604   .text.L6470_PrepareMove:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4609   .text.L6470_PrepareGoTo:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4658   .text.L6470_PrepareGoTo:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4663   .text.L6470_PrepareGoToDir:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4715   .text.L6470_PrepareGoToDir:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4720   .text.L6470_PrepareGoUntil:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4774   .text.L6470_PrepareGoUntil:00000034 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4779   .text.L6470_PrepareReleaseSW:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4832   .text.L6470_PrepareReleaseSW:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4837   .text.L6470_PrepareGoHome:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4885   .text.L6470_PrepareGoHome:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4890   .text.L6470_PrepareGoMark:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4938   .text.L6470_PrepareGoMark:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4943   .text.L6470_PrepareResetPos:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4991   .text.L6470_PrepareResetPos:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:4996   .text.L6470_PrepareResetDevice:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5044   .text.L6470_PrepareResetDevice:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5049   .text.L6470_PrepareSoftStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5097   .text.L6470_PrepareSoftStop:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5102   .text.L6470_PrepareHardStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5150   .text.L6470_PrepareHardStop:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5155   .text.L6470_PrepareSoftHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5203   .text.L6470_PrepareSoftHiZ:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5208   .text.L6470_PrepareHardHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5256   .text.L6470_PrepareHardHiZ:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5261   .text.L6470_PrepareGetStatus:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5309   .text.L6470_PrepareGetStatus:00000028 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5314   .text.L6470_PerformPreparedApplicationCommand:00000000 $t
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s 			page 154
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3680   .text.L6470_ReleaseSW:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3741   .text.L6470_ReleaseSW:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3748   .text.L6470_GoHome:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3804   .text.L6470_GoHome:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3811   .text.L6470_GoMark:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3867   .text.L6470_GoMark:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3874   .text.L6470_ResetPos:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3930   .text.L6470_ResetPos:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3937   .text.L6470_ResetDevice:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:3993   .text.L6470_ResetDevice:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4000   .text.L6470_SoftStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4056   .text.L6470_SoftStop:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4063   .text.L6470_HardStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4119   .text.L6470_HardStop:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4126   .text.L6470_SoftHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4182   .text.L6470_SoftHiZ:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4189   .text.L6470_HardHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4245   .text.L6470_HardHiZ:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4252   .text.L6470_GetStatus:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4319   .text.L6470_GetStatus:00000048 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4326   .text.L6470_PrepareSetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4378   .text.L6470_PrepareSetParam:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4383   .text.L6470_PrepareGetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4434   .text.L6470_PrepareGetParam:0000002c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4439   .text.L6470_PrepareRun:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4491   .text.L6470_PrepareRun:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4496   .text.L6470_PrepareStepClock:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4547   .text.L6470_PrepareStepClock:0000002c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4552   .text.L6470_PrepareMove:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4604   .text.L6470_PrepareMove:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4609   .text.L6470_PrepareGoTo:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4658   .text.L6470_PrepareGoTo:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4663   .text.L6470_PrepareGoToDir:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4715   .text.L6470_PrepareGoToDir:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4720   .text.L6470_PrepareGoUntil:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4774   .text.L6470_PrepareGoUntil:00000034 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4779   .text.L6470_PrepareReleaseSW:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4832   .text.L6470_PrepareReleaseSW:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4837   .text.L6470_PrepareGoHome:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4885   .text.L6470_PrepareGoHome:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4890   .text.L6470_PrepareGoMark:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4938   .text.L6470_PrepareGoMark:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4943   .text.L6470_PrepareResetPos:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4991   .text.L6470_PrepareResetPos:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:4996   .text.L6470_PrepareResetDevice:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5044   .text.L6470_PrepareResetDevice:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5049   .text.L6470_PrepareSoftStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5097   .text.L6470_PrepareSoftStop:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5102   .text.L6470_PrepareHardStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5150   .text.L6470_PrepareHardStop:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5155   .text.L6470_PrepareSoftHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5203   .text.L6470_PrepareSoftHiZ:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5208   .text.L6470_PrepareHardHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5256   .text.L6470_PrepareHardHiZ:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5261   .text.L6470_PrepareGetStatus:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5309   .text.L6470_PrepareGetStatus:00000028 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5314   .text.L6470_PerformPreparedApplicationCommand:00000000 $t
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s 			page 154
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5320   .text.L6470_PerformPreparedApplicationCommand:00000000 L6470_PerformPreparedApplicationCommand
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5350   .text.L6470_PerformPreparedApplicationCommand:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5357   .text.L6470_ID:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5363   .text.L6470_ID:00000000 L6470_ID
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5420   .text.L6470_DaisyChainCommand:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5546   .text.L6470_DaisyChainCommand:0000008c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5554   .text.L6470_ExtractReturnedData:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5645   .text.L6470_CheckStatusRegisterFlag:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5696   .text.L6470_CheckStatusRegisterFlag:00000038 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5711   .text.L6470_CheckStatusRegisterFlag:00000074 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5893   .text.L6470_CheckStatusRegisterFlag:00000170 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5898   .rodata:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5902   .text.L6470_GetRegisterName:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5908   .text.L6470_GetRegisterName:00000000 L6470_GetRegisterName
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5963   .text.L6470_GetRegisterName:00000030 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5969   .text.L6470_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:5975   .text.L6470_Config:00000000 L6470_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:6468   .text.L6470_Config:0000032c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccZZIAG8.s:6471   .text.L6470_Config:00000330 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5320   .text.L6470_PerformPreparedApplicationCommand:00000000 L6470_PerformPreparedApplicationCommand
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5350   .text.L6470_PerformPreparedApplicationCommand:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5357   .text.L6470_ID:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5363   .text.L6470_ID:00000000 L6470_ID
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5420   .text.L6470_DaisyChainCommand:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5546   .text.L6470_DaisyChainCommand:0000008c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5554   .text.L6470_ExtractReturnedData:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5645   .text.L6470_CheckStatusRegisterFlag:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5696   .text.L6470_CheckStatusRegisterFlag:00000038 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5711   .text.L6470_CheckStatusRegisterFlag:00000074 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5893   .text.L6470_CheckStatusRegisterFlag:00000170 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5898   .rodata:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5902   .text.L6470_GetRegisterName:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5908   .text.L6470_GetRegisterName:00000000 L6470_GetRegisterName
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5963   .text.L6470_GetRegisterName:00000030 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5969   .text.L6470_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:5975   .text.L6470_Config:00000000 L6470_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:6468   .text.L6470_Config:0000032c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cccpn5kX.s:6471   .text.L6470_Config:00000330 $t
 
 UNDEFINED SYMBOLS
 __aeabi_i2d

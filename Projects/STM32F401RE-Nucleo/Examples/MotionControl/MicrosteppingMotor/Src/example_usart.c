@@ -972,6 +972,25 @@ void USART_CheckAppCmd(void) {
 	}
 }
 
+
+// void USART_CheckAppCmd(void) {
+//     /* Check if UART2 is ready */
+//     if (huart2.State == HAL_UART_STATE_READY) {
+//         /* Check if any text is present in the input buffer */
+//         if (UsartTextString[0] != '\0') {
+//             /* Decode and execute the command */
+//             USART_DecodeTextString(UsartTextString);
+
+//             /* Clear the input buffer */
+//             memset(UsartTextString, 0, sizeof(UsartTextString));
+//         }
+
+//         /* Prepare to receive another command via UART with interrupt */
+//         NucleoUsartReceiveIT(&huart2, UsartTextString, USARTTEXTSTRINGSIZE);
+//     }
+// }
+
+
 /**
  * @brief  Handle text character just received.
  * @param  huart pointer to a UART_HandleTypeDef structure that contains

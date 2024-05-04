@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 1
   28:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
   29:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   30:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 2
 
 
   31:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   *
@@ -93,34 +93,35 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 1
   60:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * @{
   61:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   */
   62:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
-  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #define MICROSTEPPING_MOTOR_EXAMPLE        //!< Uncomment to performe the standalone example
-  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** //#define MICROSTEPPING_MOTOR_USART_EXAMPLE  //!< Uncomment to performe the USART example
-  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if ((defined (MICROSTEPPING_MOTOR_EXAMPLE)) && (defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)))
-  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please select an option only!"
-  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #elif ((!defined (MICROSTEPPING_MOTOR_EXAMPLE)) && (!defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)))
-  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please select an option!"
-  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
-  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if (defined (MICROSTEPPING_MOTOR_USART_EXAMPLE) && (!defined (NUCLEO_USE_USART)))
-  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please define "NUCLEO_USE_USART" in "stm32fxxx_x-nucleo-ihm02a1.h"!"
-  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
-  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
-  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
-  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * @}
-  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   */ /* End of ExampleTypes */
-  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
-  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
-  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * @brief The FW main module
-  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   */
-  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** int main(void)
-  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** {
-  29              		.loc 1 82 1
+  63:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** //#define MICROSTEPPING_MOTOR_EXAMPLE        //Aufgabe 1
+  64:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #define MICROSTEPPING_MOTOR_USART_EXAMPLE   // Aufgabe 2
+  65:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** //#define MICROSTEPPING_MOTOR_USART_EXAMPLE  //!< Uncomment to performe the USART example
+  66:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if ((defined (MICROSTEPPING_MOTOR_EXAMPLE)) && (defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)))
+  67:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please select an option only!"
+  68:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #elif ((!defined (MICROSTEPPING_MOTOR_EXAMPLE)) && (!defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)))
+  69:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please select an option!"
+  70:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
+  71:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if (defined (MICROSTEPPING_MOTOR_USART_EXAMPLE) && (!defined (NUCLEO_USE_USART)))
+  72:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   #error "Please define "NUCLEO_USE_USART" in "stm32fxxx_x-nucleo-ihm02a1.h"!"
+  73:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
+  74:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
+  75:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
+  76:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * @}
+  77:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   */ /* End of ExampleTypes */
+  78:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
+  79:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
+  80:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   * @brief The FW main module
+  81:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   */
+  82:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** int main(void)
+  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** {
+  29              		.loc 1 83 1
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 3
+
+
   33 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 3
-
-
   34              	.LCFI0:
   35              		.cfi_def_cfa_offset 8
   36              		.cfi_offset 7, -8
@@ -128,127 +129,132 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 1
   38 0002 00AF     		add	r7, sp, #0
   39              	.LCFI1:
   40              		.cfi_def_cfa_register 7
-  83:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* NUCLEO board initialization */
-  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   NUCLEO_Board_Init();
-  41              		.loc 1 84 3
+  84:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* NUCLEO board initialization */
+  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   NUCLEO_Board_Init();
+  41              		.loc 1 85 3
   42 0004 FFF7FEFF 		bl	NUCLEO_Board_Init
-  85:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
-  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* X-NUCLEO-IHM02A1 initialization */
-  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   BSP_Init();
-  43              		.loc 1 87 3
+  86:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
+  87:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* X-NUCLEO-IHM02A1 initialization */
+  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   BSP_Init();
+  43              		.loc 1 88 3
   44 0008 FFF7FEFF 		bl	BSP_Init
-  88:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
-  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #ifdef NUCLEO_USE_USART
-  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Transmit the initial message to the PC via UART */
-  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   USART_TxWelcomeMessage();
-  45              		.loc 1 91 3
+  89:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
+  90:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #ifdef NUCLEO_USE_USART
+  91:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Transmit the initial message to the PC via UART */
+  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   USART_TxWelcomeMessage();
+  45              		.loc 1 92 3
   46 000c FFF7FEFF 		bl	USART_TxWelcomeMessage
-  92:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
-  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
-  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if defined (MICROSTEPPING_MOTOR_EXAMPLE)
-  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Perform a batch commands for X-NUCLEO-IHM02A1 */
-  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   //MicrosteppingMotor_Example_01();
-  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   ControlMotorWithButton();
-  47              		.loc 1 97 3
-  48 0010 FFF7FEFF 		bl	ControlMotorWithButton
+  93:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
+  94:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
+  95:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #if defined (MICROSTEPPING_MOTOR_EXAMPLE)
+  96:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Perform a batch commands for X-NUCLEO-IHM02A1 */
+  97:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   //MicrosteppingMotor_Example_01();
+  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   //ControlMotorWithButton();           // Aufgabe 1
+  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
+ 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Infinite loop */
+ 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   while (1);
+ 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #elif defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)
+ 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Fill the L6470_DaisyChainMnemonic structure */
+ 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   Fill_L6470_DaisyChainMnemonic();
+  47              		.loc 1 104 3
+  48 0010 FFF7FEFF 		bl	Fill_L6470_DaisyChainMnemonic
   49              	.L2:
-  98:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
-  99:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Infinite loop */
- 100:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   while (1);
-  50              		.loc 1 100 9 discriminator 1
-  51 0014 FEE7     		b	.L2
-  52              		.cfi_endproc
-  53              	.LFE128:
-  55              		.section	.text.assert_failed,"ax",%progbits
-  56              		.align	1
-  57              		.global	assert_failed
-  58              		.syntax unified
-  59              		.thumb
-  60              		.thumb_func
-  62              	assert_failed:
-  63              	.LFB129:
- 101:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #elif defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)
- 102:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Fill the L6470_DaisyChainMnemonic structure */
- 103:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   Fill_L6470_DaisyChainMnemonic();
- 104:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
- 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Infinite loop */
- 106:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   while (1)
- 107:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   {
- 108:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     /* Check if any Application Command for L6470 has been entered by USART */
- 109:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     USART_CheckAppCmd();
- 110:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   }
- 111:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 4
+ 105:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   
+ 106:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* Infinite loop */
+ 107:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   while (1)
+ 108:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   {
+ 109:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     /* Check if any Application Command for L6470 has been entered by USART */
+ 110:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     USART_CheckAppCmd();
+  50              		.loc 1 110 5 discriminator 1
+  51 0014 FFF7FEFF 		bl	USART_CheckAppCmd
+  52 0018 FCE7     		b	.L2
+  53              		.cfi_endproc
+  54              	.LFE128:
+  56              		.section	.text.assert_failed,"ax",%progbits
+  57              		.align	1
+  58              		.global	assert_failed
+  59              		.syntax unified
+  60              		.thumb
+  61              		.thumb_func
+  63              	assert_failed:
+  64              	.LFB129:
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 4
 
 
- 112:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** }
- 113:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
- 114:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #ifdef USE_FULL_ASSERT
- 115:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
- 116:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
- 117:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @brief Reports the name of the source file and the source line number
- 118:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * where the assert_param error has occurred.
- 119:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @param file: pointer to the source file name
- 120:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @param line: assert_param error line source number
- 121:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @retval None
- 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    */
- 123:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** void assert_failed(uint8_t* file, uint32_t line)
- 124:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** {
-  64              		.loc 1 124 1
-  65              		.cfi_startproc
-  66              		@ args = 0, pretend = 0, frame = 8
-  67              		@ frame_needed = 1, uses_anonymous_args = 0
-  68              		@ link register save eliminated.
-  69 0000 80B4     		push	{r7}
-  70              	.LCFI2:
-  71              		.cfi_def_cfa_offset 4
-  72              		.cfi_offset 7, -4
-  73 0002 83B0     		sub	sp, sp, #12
-  74              	.LCFI3:
-  75              		.cfi_def_cfa_offset 16
-  76 0004 00AF     		add	r7, sp, #0
-  77              	.LCFI4:
-  78              		.cfi_def_cfa_register 7
-  79 0006 7860     		str	r0, [r7, #4]
-  80 0008 3960     		str	r1, [r7]
- 125:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* USER CODE BEGIN 6 */
- 126:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* User can add his own implementation to report the file name and line number,
- 127:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
- 128:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* USER CODE END 6 */
- 129:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
- 130:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** }
-  81              		.loc 1 130 1
-  82 000a 00BF     		nop
-  83 000c 0C37     		adds	r7, r7, #12
-  84              	.LCFI5:
-  85              		.cfi_def_cfa_offset 4
-  86 000e BD46     		mov	sp, r7
-  87              	.LCFI6:
-  88              		.cfi_def_cfa_register 13
-  89              		@ sp needed
-  90 0010 5DF8047B 		ldr	r7, [sp], #4
-  91              	.LCFI7:
-  92              		.cfi_restore 7
-  93              		.cfi_def_cfa_offset 0
-  94 0014 7047     		bx	lr
-  95              		.cfi_endproc
-  96              	.LFE129:
-  98              		.text
-  99              	.Letext0:
- 100              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
- 101              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s 			page 5
+ 111:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   }
+ 112:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #endif
+ 113:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** }
+ 114:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
+ 115:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** #ifdef USE_FULL_ASSERT
+ 116:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
+ 117:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** /**
+ 118:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @brief Reports the name of the source file and the source line number
+ 119:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * where the assert_param error has occurred.
+ 120:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @param file: pointer to the source file name
+ 121:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @param line: assert_param error line source number
+ 122:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    * @retval None
+ 123:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****    */
+ 124:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** void assert_failed(uint8_t* file, uint32_t line)
+ 125:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** {
+  65              		.loc 1 125 1
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 8
+  68              		@ frame_needed = 1, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  70 0000 80B4     		push	{r7}
+  71              	.LCFI2:
+  72              		.cfi_def_cfa_offset 4
+  73              		.cfi_offset 7, -4
+  74 0002 83B0     		sub	sp, sp, #12
+  75              	.LCFI3:
+  76              		.cfi_def_cfa_offset 16
+  77 0004 00AF     		add	r7, sp, #0
+  78              	.LCFI4:
+  79              		.cfi_def_cfa_register 7
+  80 0006 7860     		str	r0, [r7, #4]
+  81 0008 3960     		str	r1, [r7]
+ 126:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* USER CODE BEGIN 6 */
+ 127:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* User can add his own implementation to report the file name and line number,
+ 128:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+ 129:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c ****   /* USER CODE END 6 */
+ 130:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** 
+ 131:Projects/STM32F401RE-Nucleo/Examples/MotionControl/MicrosteppingMotor/Src/main.c **** }
+  82              		.loc 1 131 1
+  83 000a 00BF     		nop
+  84 000c 0C37     		adds	r7, r7, #12
+  85              	.LCFI5:
+  86              		.cfi_def_cfa_offset 4
+  87 000e BD46     		mov	sp, r7
+  88              	.LCFI6:
+  89              		.cfi_def_cfa_register 13
+  90              		@ sp needed
+  91 0010 5DF8047B 		ldr	r7, [sp], #4
+  92              	.LCFI7:
+  93              		.cfi_restore 7
+  94              		.cfi_def_cfa_offset 0
+  95 0014 7047     		bx	lr
+  96              		.cfi_endproc
+  97              	.LFE129:
+  99              		.text
+ 100              	.Letext0:
+ 101              		.file 2 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 5
+
+
+ 102              		.file 3 "c:\\programdata\\chocolatey\\lib\\gcc-arm-embedded\\tools\\gcc-arm-none-eabi-10.3-2021.10
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s:20     .text.main:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s:26     .text.main:00000000 main
-C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s:56     .text.assert_failed:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\cc9cv34H.s:62     .text.assert_failed:00000000 assert_failed
+C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s:20     .text.main:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s:26     .text.main:00000000 main
+C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s:57     .text.assert_failed:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccqQCctj.s:63     .text.assert_failed:00000000 assert_failed
 
 UNDEFINED SYMBOLS
 NUCLEO_Board_Init
 BSP_Init
 USART_TxWelcomeMessage
-ControlMotorWithButton
+Fill_L6470_DaisyChainMnemonic
+USART_CheckAppCmd

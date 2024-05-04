@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stm32f427xx.h": "c"
+        "stm32f427xx.h": "c",
+        "example_usart.h": "c",
+        "xnucleoihm02a1_interface.h": "c"
     }
 }

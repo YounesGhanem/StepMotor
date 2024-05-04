@@ -60,7 +60,8 @@
   * @{
   */
 
-#define MICROSTEPPING_MOTOR_EXAMPLE        //!< Uncomment to performe the standalone example
+//#define MICROSTEPPING_MOTOR_EXAMPLE        //Aufgabe 1
+#define MICROSTEPPING_MOTOR_USART_EXAMPLE   // Aufgabe 2
 //#define MICROSTEPPING_MOTOR_USART_EXAMPLE  //!< Uncomment to performe the USART example
 #if ((defined (MICROSTEPPING_MOTOR_EXAMPLE)) && (defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)))
   #error "Please select an option only!"
@@ -94,7 +95,7 @@ int main(void)
 #if defined (MICROSTEPPING_MOTOR_EXAMPLE)
   /* Perform a batch commands for X-NUCLEO-IHM02A1 */
   //MicrosteppingMotor_Example_01();
-  ControlMotorWithButton();
+  //ControlMotorWithButton();           // Aufgabe 1
   
   /* Infinite loop */
   while (1);
