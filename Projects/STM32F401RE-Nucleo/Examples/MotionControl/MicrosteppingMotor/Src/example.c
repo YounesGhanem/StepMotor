@@ -280,7 +280,23 @@ void ControlMotorWithButton(void)
 
 
 
+void isButtonPressed(void)
+{
+    static uint8_t lastButtonState = GPIO_PIN_SET; // save last state
+    uint8_t currentState = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
 
+    if (currentState == GPIO_PIN_RESET && lastButtonState == GPIO_PIN_SET)
+    {
+      // Home position  
+      //BSP_L6470_GoHome(uint8_t ExpBrd_Id, uint8_t L6470_Id)
+      BSP_L6470_GoHome(0, 0);
+      BSP_L6470_GoHome(0, 1);
+
+    }
+
+    lastButtonState = currentState;  // Update the last state of the button
+    HAL_Delay(10);  // Short delay for debouncing and reducing CPU load
+}
 
 
 
