@@ -302,7 +302,32 @@ void isButtonPressed(void)
 
 
 
+void USART_DisplayHelpMenu(void) {
+    const char *helpMenu = 
+    "Quick and Dirty Application for Stepper Motor\r\n"
+    "Writer: Younès Ghanem\r\n"
+    "\r\n"
+    "\r\n"
+    "HELP MENU: Motor Control Commands\r\n"
+    "---------------------------------\r\n"
+    "Command format: [MotorID].[Command].[Direction].[Value]\r\n"
+    "\n"
+    "Where,\r\n"
+    "  MotorID: M0, M1 - Identifier for motors connected to the controller.\r\n"
+    "  Command: RUN, MOV, GOTO, SOFTSTOP, HARDSTOP etc. - Action to be performed by the motor.\r\n"
+    "  Direction: FWD (Forward), REV (Reverse) - Direction for motion commands.\r\n"
+    "  Value: Numeric value, depends on the command (e.g., speed, position).\r\n"
+    "\n"
+    "Examples:\r\n"
+    "  M1.RUN.FWD.200   - Runs motor M1 forward at speed 200.\r\n"
+    "  M1.MOV.REV.500   - Moves motor M2 in reverse by 500 steps.\r\n"
+    "  M1.GOTO.FWD.1000 - Commands motor M1 to go to position 1000 in forward direction.\r\n"
+    "  M0.STOP          - Stops motor M3 immediately.\r\n"
+    "\n"
+    "Note: Ensure to consult the motor driver datasheet for specific command limitations.\r\n";
 
+    USART_Transmit(&huart2, (uint8_t *)helpMenu);  // Replace 'huart2' with your configured USART handler
+}
 
 
 

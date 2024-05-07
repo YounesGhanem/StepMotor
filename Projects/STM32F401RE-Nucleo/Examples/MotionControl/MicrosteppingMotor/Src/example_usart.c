@@ -60,6 +60,7 @@ typedef enum {
 	DECODE_1st_PARAM,   //!< L6470 Application Commad 1st parameter decoding
 	DECODE_2nd_PARAM,   //!< L6470 Application Commad 2nd parameter decoding
 	DECODE_3rd_PARAM,   //!< L6470 Application Commad 3rd parameter decoding
+	DECODE_SAVE
 } eL6470_UsartTextStringDecodingStatus;
 
 /**
@@ -70,6 +71,8 @@ typedef enum {
  * @addtogroup ExampleUsartPrivateMacros
  * @{
  */
+
+void SaveMotorPositions(uint32_t motorPosition0, uint32_t motorPosition1); //forward declaration
 
 #define NucleoUsartReceiveIT    HAL_UART_Receive_IT     //!< Rename the HAL function to receive an amount of data in non blocking mode.
 #ifdef STM32F072xB
@@ -165,7 +168,8 @@ FlagStatus USART_SplitTextString(uint8_t *pTextString,
 	while (ch != '\0') {
 		switch (ch) {
 		case '.':
-			if (UsartTextStringDecodingStatus != DECODE_3rd_PARAM) {
+			if (UsartTextStringDecodingStatus != DECODE_SAVE ) //DECODE_3rd_PARAM) {
+			{
 				UsartTextStringDecodingStatus++;
 				k_id = 0;
 			} else {
@@ -197,13 +201,21 @@ FlagStatus USART_SplitTextString(uint8_t *pTextString,
 					*(((pL6470_TextCommandBundle + CmdTxt_id)->MotorName)
 							+ (k_id + 1)) = '\0';
 					break;
-				case DECODE_COMMAND:
-					k_idmax = 11;
-					*(((pL6470_TextCommandBundle + CmdTxt_id)->CommandName)
-							+ k_id) = ch;
-					*(((pL6470_TextCommandBundle + CmdTxt_id)->CommandName)
-							+ (k_id + 1)) = '\0';
+				 case DECODE_COMMAND:
+				 	k_idmax = 11;
+				 	*(((pL6470_TextCommandBundle + CmdTxt_id)->CommandName)
+				 			+ k_id) = ch;
+				 	*(((pL6470_TextCommandBundle + CmdTxt_id)->CommandName)
+				 			+ (k_id + 1)) = '\0';
+				 	break;
+
+				case DECODE_SAVE:
+					k_idmax = 4;
+					*((pL6470_TextCommandBundle + CmdTxt_id)->CommandName + k_id) = ch;
+				 	*(((pL6470_TextCommandBundle + CmdTxt_id)->CommandName)
+				 			+ (k_id + 1)) = '\0';
 					break;
+
 				case DECODE_1st_PARAM:
 					k_idmax = 10;
 					*(((pL6470_TextCommandBundle + CmdTxt_id)->Param[0]) + k_id) =
@@ -265,6 +277,9 @@ FlagStatus USART_CheckTextCommandBundle(
 	uint32_t NumericValue; /* The numeric value to be used into the application command */
 	eL6470_DirId_t L6470_DirId;
 	eL6470_ActId_t L6470_ActId;
+
+	uint32_t motorPosition0;
+	uint32_t motorPosition1;
 
 	/* Reset the structure used to send the command to the L6470 Daisy Chain through the SPI */
 	i = 0;
@@ -723,6 +738,18 @@ FlagStatus USART_CheckTextCommandBundle(
 							0x00;
 				}
 				break;
+			case L6470_SAVE_ID:
+					/* getPosition*/
+					motorPosition0 = BSP_L6470_GetParam(0, 1, L6470_ABS_POS_ID);  //L6470_1
+					motorPosition1 = BSP_L6470_GetParam(0, 0, L6470_ABS_POS_ID);  //L6470_0
+
+					SaveMotorPositions(motorPosition0, motorPosition1);
+
+
+
+
+				break;
+
 			}
 		} else {
 #ifdef NUCLEO_USE_USART
@@ -744,6 +771,77 @@ FlagStatus USART_CheckTextCommandBundle(
 
 	return SET;
 }
+
+
+void SaveMotorPositions(uint32_t motorPosition0, uint32_t motorPosition1) {
+    uint32_t data[2];
+    data[0] = motorPosition0; // Stocke la position du premier moteur
+    data[1] = motorPosition1; // Stocke la position du deuxième moteur
+
+    // Adresse du début du secteur 7, cette valeur est un exemple
+    uint32_t sectorAddress = 0x08060000; 
+    Flash_WriteData(sectorAddress, data, 2); // Écrit deux mots de 32 bits
+}
+
+void Flash_WriteData(uint32_t StartSectorAddress, uint32_t *Data, uint32_t numberOfWords) {
+    HAL_FLASH_Unlock();
+
+    // Configuration pour l'effacement du secteur
+    FLASH_EraseInitTypeDef EraseInitStruct;
+    uint32_t SectorError;
+    EraseInitStruct.TypeErase = FLASH_TYPEERASE_SECTORS;
+    EraseInitStruct.VoltageRange = FLASH_VOLTAGE_RANGE_3;
+    EraseInitStruct.Sector = FLASH_SECTOR_7;
+    EraseInitStruct.NbSectors = 1;
+
+   // Erase memory
+    if (HAL_FLASHEx_Erase(&EraseInitStruct, &SectorError) != HAL_OK) {
+        // Gestion d'erreur
+        HAL_FLASH_Lock();
+        return;
+    }
+
+    // Write memory
+    for (uint32_t i = 0; i < numberOfWords; i++) {
+        if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, StartSectorAddress + i * 4, Data[i]) != HAL_OK) {
+            //manage error
+            HAL_FLASH_Lock();
+            return;
+        }
+    }
+
+    HAL_FLASH_Lock();
+}
+
+
+
+// void SaveMotorPositions(uint32_t motorPosition0, uint32_t motorPosition1) {
+//     uint64_t data[2];
+//     data[0] = motorPosition0; // Assurez-vous que les données correspondent à la taille de l'écriture (ici double mot)
+//     data[1] = motorPosition1;
+
+//     // Adresse du début du secteur 7, cette valeur est un exemple
+//     uint32_t sectorAddress = 0x08060000; 
+//     Flash_WriteData(sectorAddress, data, 2);
+// }
+
+
+// void Flash_WriteData(uint32_t StartSectorAddress, uint64_t *Data, uint32_t numberOfWords) {
+//     HAL_FLASH_Unlock();
+
+//     // Effacement de la mémoire
+//     FLASH_Erase_Sector(FLASH_SECTOR_7, VOLTAGE_RANGE_3);
+
+//     // Écriture de la mémoire
+//     for (uint32_t i = 0; i < numberOfWords; i++) {
+//         HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, StartSectorAddress + i * 8, Data[i]);
+//     }
+
+//     HAL_FLASH_Lock();
+// }
+
+
+
 
 /**
  * @brief Decode the command string entered via USART
@@ -932,6 +1030,40 @@ void USART_TxWelcomeMessage(void) {
 	USART_Transmit(&huart2, (uint8_t* )" STMicroelectronics, 2015\r\n\r\n");
 }
 
+
+void USART_TxHelpMenu(void) {
+    /* Send header and introduction */
+
+	USART_Transmit(&huart2,"Quick and Dirty Application to command two Step Motors\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" Younès Ghanem\r\n");
+	USART_Transmit(&huart2, (uint8_t *)"\r\n");
+	USART_Transmit(&huart2, (uint8_t *)"\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" HELP MENU: Motor Control Commands\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" ---------------------------------\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" Understand how to structure commands:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" [MotorID].[Command].[Direction].[Value]\r\n\r\n");
+
+    /* Detailed command descriptions */
+    USART_Transmit(&huart2, (uint8_t *)" MotorID:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   M0, M1 - Identifiers for motors connected.\r\n\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" Command:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   RUN, MOV, GOTO, STOP - Actions for the motor.\r\n\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" Direction:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   FWD (Forward), REV (Reverse) - Motion direction.\r\n\r\n");
+    USART_Transmit(&huart2, (uint8_t *)" Value:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   Numeric, depends on the command - e.g., speed, steps.\r\n\r\n");
+
+    /* Command examples */
+    USART_Transmit(&huart2, (uint8_t *)" Examples:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   M1.RUN.FWD.200 - Motor M1 runs forward at speed 200.\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   M2.MOV.REV.500 - Motor M2 moves reverse 500 steps.\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   M1.GOTO.FWD.1000 - Motor M1 goes to position 1000 forward.\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   M3.SOFTSTOP - Stops Motor M0 immediately.\r\n\r\n");
+
+    /* Additional notes */
+    USART_Transmit(&huart2, (uint8_t *)" Note:\r\n");
+    USART_Transmit(&huart2, (uint8_t *)"   Consult motor driver datasheet for specific command details.\r\n\r\n");
+}
 /**
  * @brief  Send a text string via USART.
  * @param  huart       pointer to a UART_HandleTypeDef structure that contains

@@ -121,8 +121,10 @@ extern sL6470_DaisyChainMnemonic L6470_DaisyChainMnemonic[];
   */
 
 void USART_TxWelcomeMessage(void);
+void USART_TxHelpMenu(void);
 void USART_Transmit(UART_HandleTypeDef* huart, uint8_t* TextString);
 void USART_CheckAppCmd(void);
+void USART_DisplayHelpMenu(void);
 void isButtonPressed(void);
 void USART_ITCharManager(UART_HandleTypeDef* huart);
 void USART_PrintRegisterValues(uint8_t ExpBrd, uint8_t L6470_Id);

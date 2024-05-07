@@ -36,29 +36,7 @@
 #include "example.h"
 #include "example_usart.h"
 
-/**
-  * @defgroup   MotionControl
-  * @{
-  */
 
-/**
-  * @addtogroup BSP
-  * @{
-  */
-
-/**
-  * @}
-  */ /* End of BSP */
-
-/**
-  * @addtogroup MicrosteppingMotor_Example
-  * @{
-  */
-
-/**
-  * @defgroup   ExampleTypes
-  * @{
-  */
 
 //#define MICROSTEPPING_MOTOR_EXAMPLE        //Aufgabe 1
 #define MICROSTEPPING_MOTOR_USART_EXAMPLE   // Aufgabe 2
@@ -72,51 +50,14 @@
   #error "Please define "NUCLEO_USE_USART" in "stm32fxxx_x-nucleo-ihm02a1.h"!"
 #endif
 
+/* Save the motor position in flash*/
+#define FLASH_MOTOR1_ADDR   (uint32_t)0x08060000  // Motor 0
+#define FLASH_MOTOR2_ADDR   (uint32_t)0x08060004  // Motor 1
 
-
-#define FLASH_USER_START_ADDR   ((uint32_t)0x08008000) // Start address of sector 2 (change according to your memory layout)
-
-HAL_StatusTypeDef savePositionToFlash(uint32_t position) 
+uint32_t readMotorPositionFromFlash(uint32_t address) 
 {
-    HAL_FLASH_Unlock();
-
-    // Clear pending flags (if any)
-    __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_EOP | FLASH_FLAG_OPERR | FLASH_FLAG_WRPERR | 
-                           FLASH_FLAG_PGAERR | FLASH_FLAG_PGPERR | FLASH_FLAG_PGSERR);
-
-    // Define the erase sector information
-    FLASH_EraseInitTypeDef EraseInitStruct;
-    EraseInitStruct.TypeErase = FLASH_TYPEERASE_SECTORS;
-    EraseInitStruct.VoltageRange = FLASH_VOLTAGE_RANGE_3;
-    EraseInitStruct.Sector = FLASH_SECTOR_2;
-    EraseInitStruct.NbSectors = 1;
-
-    uint32_t SectorError;
-    if (HAL_FLASHEx_Erase(&EraseInitStruct, &SectorError) != HAL_OK) {
-        HAL_FLASH_Lock();
-        return HAL_ERROR;
-    }
-
-    // Program the user Flash area word by word
-    if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, FLASH_USER_START_ADDR, position) != HAL_OK) {
-        HAL_FLASH_Lock();
-        return HAL_ERROR;
-    }
-
-    HAL_FLASH_Lock();
-    return HAL_OK;
+    return *(volatile uint32_t*)address;  // Lecture directe de la mémoire flash
 }
-
-
-uint32_t readPositionFromFlash() 
-{
-    return *(uint32_t*)FLASH_USER_START_ADDR;
-}
-
-
-
-
-
 
 /**
   * @brief The FW main module
@@ -128,29 +69,35 @@ int main(void)
   
   /* X-NUCLEO-IHM02A1 initialization */
   BSP_Init();
+
+  uint32_t motorPosition0 = readMotorPositionFromFlash(FLASH_MOTOR1_ADDR);
+  uint32_t motorPosition1 = readMotorPositionFromFlash(FLASH_MOTOR2_ADDR);
   
 #ifdef NUCLEO_USE_USART
   /* Transmit the initial message to the PC via UART */
-  USART_TxWelcomeMessage();
+  //USART_TxWelcomeMessage();
+  USART_TxHelpMenu();
 #endif
   
 #if defined (MICROSTEPPING_MOTOR_EXAMPLE)
   /* Perform a batch commands for X-NUCLEO-IHM02A1 */
   //MicrosteppingMotor_Example_01();
-  //ControlMotorWithButton();           // Aufgabe 1
+  ControlMotorWithButton();           // Aufgabe 1
   
   /* Infinite loop */
   while (1);
 #elif defined (MICROSTEPPING_MOTOR_USART_EXAMPLE)
   /* Fill the L6470_DaisyChainMnemonic structure */
   Fill_L6470_DaisyChainMnemonic();
-  
+
+  BSP_L6470_GoTo(0,0,motorPosition0);
+  BSP_L6470_GoTo(0,1,motorPosition1);
   /* Infinite loop */
   while (1)
   {
     /* Check if any Application Command for L6470 has been entered by USART */
     USART_CheckAppCmd();
-    isButtonPressed(); 
+    isButtonPressed();
   }
 #endif
 }
