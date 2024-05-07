@@ -740,8 +740,8 @@ FlagStatus USART_CheckTextCommandBundle(
 				break;
 			case L6470_SAVE_ID:
 					/* getPosition*/
-					motorPosition0 = BSP_L6470_GetParam(0, 1, L6470_ABS_POS_ID);  //L6470_1
-					motorPosition1 = BSP_L6470_GetParam(0, 0, L6470_ABS_POS_ID);  //L6470_0
+					motorPosition0 = BSP_L6470_GetParam(0, 0, L6470_ABS_POS_ID);  //L6470_1
+					motorPosition1 = BSP_L6470_GetParam(0, 1, L6470_ABS_POS_ID);  //L6470_0
 
 					SaveMotorPositions(motorPosition0, motorPosition1);
 
