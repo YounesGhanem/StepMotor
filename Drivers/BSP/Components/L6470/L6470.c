@@ -115,7 +115,8 @@ const sL6470_ApplicationCommand_t L6470_ApplicationCommand[L6470APPCMDIDSIZE] = 
   {"HARDSTOP",    0xB8, 0},
   {"SOFTHIZ",     0xA0, 0},
   {"HARDHIZ",     0xA8, 0},
-  {"GETSTATUS",   0xD0, 0}
+  {"GETSTATUS",   0xD0, 0},
+  {"SAVE",        0x00, 0}
 };
 
 /**

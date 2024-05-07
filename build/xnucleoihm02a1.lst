@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   55      00000000 
   56 003c 01       		.byte	1
   57 003d 000000   		.space	3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 2
 
 
   58 0040 00000000 		.word	BSP_L6470_0_1_Config
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   88 01a8 00000000 		.word	BSP_L6470_3_1_Config
   89 01ac 00000000 		.word	L6470Command
   90 01b0 00000000 		.space	48
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 3
 
 
   90      00000000 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  147              		.align	2
  150              	L6470_nFLAG_GPIO:
  151 0000 04000000 		.word	4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 4
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 4
 
 
  152 0004 00080240 		.word	1073874944
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   23:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
   24:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
   25:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 5
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 5
 
 
   26:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   80:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @brief The data structure for all further instances to stepper motor drivers.
   81:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */
   82:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** StepperMotorDriverHandle_t L6470DrvMtx[4][2] =
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 6
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 6
 
 
   83:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  137:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** StepperMotorBoardHandle_t XNUCLEOIHM02A1Drv[4] =
  138:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** {
  139:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   {
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 7
 
 
  140:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****     0,
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  194:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @brief  The data structure to store the actual GPIO information about the L6470 nCS.
  195:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */
  196:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** sL6470_GPIO L6470_nCS_GPIO;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 8
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 8
 
 
  197:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** /**
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  251:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** 
  252:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** /**
  253:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @}
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 9
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 9
 
 
  254:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */ /* End of X-NUCLEO-IHM02A1_Private_Functions */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  218 001a 1123     		movs	r3, #17
  219 001c 7B60     		str	r3, [r7, #4]
  279:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 10
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 10
 
 
  220              		.loc 1 279 24
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  262 0062 0620     		movs	r0, #6
  263 0064 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  292:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** //  HAL_NVIC_EnableIRQ(L6470_nBUSY_SYNC_IRQn);
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 11
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 11
 
 
  293:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  308:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****     GPIO_CLK_ENABLE(L6470_nCS_GPIO_Array[ExpBrd].gpio_clk_enable);
  303              		.loc 1 308 5 discriminator 3
  304 00a8 1D4B     		ldr	r3, .L4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 12
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 12
 
 
  305 00aa 196B     		ldr	r1, [r3, #48]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  353 00fe FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  354 0100 0133     		adds	r3, r3, #1
  355 0102 FB75     		strb	r3, [r7, #23]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 13
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 13
 
 
  356              	.L2:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  402 0000 80B5     		push	{r7, lr}
  403              	.LCFI5:
  404              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 14
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 14
 
 
  405              		.cfi_offset 7, -8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  442 003a 1C4B     		ldr	r3, .L11+4
  443 003c 5B68     		ldr	r3, [r3, #4]
  444 003e 1B4A     		ldr	r2, .L11+4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 15
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 15
 
 
  445 0040 1189     		ldrh	r1, [r2, #8]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  486 0084 FFF7FEFF 		bl	EXPBRD_ID
  487 0088 0346     		mov	r3, r0
  488 008a 1A46     		mov	r2, r3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 16
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 16
 
 
  332:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  532              		.cfi_def_cfa_offset 8
  533              		.cfi_offset 7, -8
  534              		.cfi_offset 14, -4
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 17
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 17
 
 
  535 0002 82B0     		sub	sp, sp, #8
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  577              		.align	1
  578              		.global	BSP_L6470_SetParam
  579              		.syntax unified
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 18
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 18
 
 
  580              		.thumb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  609 0016 1846     		mov	r0, r3
  610 0018 FFF7FEFF 		bl	BSP_Select
  611 001c 0346     		mov	r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 19
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 19
 
 
  612              		.loc 1 395 6
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  653 0002 82B0     		sub	sp, sp, #8
  654              	.LCFI21:
  655              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 20
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 20
 
 
  656 0004 00AF     		add	r7, sp, #0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  702              		.thumb
  703              		.thumb_func
  705              	BSP_L6470_Run:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 21
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 21
 
 
  706              	.LFB133:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  436:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** }
  744              		.loc 1 436 1
  745 002e 00BF     		nop
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 22
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 22
 
 
  746 0030 0837     		adds	r7, r7, #8
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  791 001a 0346     		mov	r3, r0
  792              		.loc 1 447 6
  793 001c 002B     		cmp	r3, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 23
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 23
 
 
  794 001e 05D0     		beq	.L28
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  835              		.cfi_def_cfa_offset 16
  836 0004 00AF     		add	r7, sp, #0
  837              	.LCFI37:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 24
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 24
 
 
  838              		.cfi_def_cfa_register 7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  474:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @param  L6470_Id        The L6470 identifier inside the daisy chain
  475:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @param  AbsPos          The L6470 absolute position to be reached
  476:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 25
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 25
 
 
  477:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** void BSP_L6470_GoTo(uint8_t ExpBrd_Id, uint8_t L6470_Id, uint32_t AbsPos)
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  928              	.LFE136:
  930              		.section	.text.BSP_L6470_GoToDir,"ax",%progbits
  931              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 26
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 26
 
 
  932              		.global	BSP_L6470_GoToDir
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  972 0026 3A68     		ldr	r2, [r7]
  973 0028 1846     		mov	r0, r3
  974 002a FFF7FEFF 		bl	L6470_GoToDir
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 27
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 27
 
 
  975              	.L37:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1018 000e 2346     		mov	r3, r4
  1019 0010 FB71     		strb	r3, [r7, #7]
  1020 0012 0346     		mov	r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 28
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 28
 
 
  1021 0014 BB71     		strb	r3, [r7, #6]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  528:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */
  529:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** void BSP_L6470_ReleaseSW(uint8_t ExpBrd_Id, uint8_t L6470_Id, eL6470_ActId_t L6470_ActId, eL6470_Di
  530:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** {
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 29
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 29
 
 
  1063              		.loc 1 530 1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1110              		.cfi_def_cfa_offset 12
  1111 003c BD46     		mov	sp, r7
  1112              	.LCFI59:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 30
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 30
 
 
  1113              		.cfi_def_cfa_register 13
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1156              		.loc 1 550 5
  1157 001e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  1158 0020 1846     		mov	r0, r3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 31
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 31
 
 
  1159 0022 FFF7FEFF 		bl	L6470_GoHome
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1203              		.loc 1 562 7
  1204 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1205 0012 1846     		mov	r0, r3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 32
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 32
 
 
  1206 0014 FFF7FEFF 		bl	BSP_Select
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1249              		.cfi_def_cfa_offset 16
  1250 0004 00AF     		add	r7, sp, #0
  1251              	.LCFI72:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 33
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 33
 
 
  1252              		.cfi_def_cfa_register 7
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1293              		.loc 1 590 1
  1294              		.cfi_startproc
  1295              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 34
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 34
 
 
  1296              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1344              		.thumb_func
  1346              	BSP_L6470_SoftStop:
  1347              	.LFB144:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 35
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 35
 
 
  598:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1387              	.LCFI84:
  1388              		.cfi_def_cfa_register 13
  1389              		@ sp needed
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 36
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 36
 
 
  1390 002c 80BD     		pop	{r7, pc}
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1433 0020 1846     		mov	r0, r3
  1434 0022 FFF7FEFF 		bl	L6470_HardStop
  1435              	.L61:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 37
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 37
 
 
  626:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   }
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1480 0012 1846     		mov	r0, r3
  1481 0014 FFF7FEFF 		bl	BSP_Select
  1482 0018 0346     		mov	r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 38
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 38
 
 
  1483              		.loc 1 637 6
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1526              	.LCFI97:
  1527              		.cfi_def_cfa_register 7
  1528 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 39
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 39
 
 
  1529 0008 0A46     		mov	r2, r1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1569              		.cfi_startproc
  1570              		@ args = 0, pretend = 0, frame = 8
  1571              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 40
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 40
 
 
  1572 0000 80B5     		push	{r7, lr}
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1617              	.LFE148:
  1619              		.section	.text.BSP_L6470_PerformPreparedApplicationCommand,"ax",%progbits
  1620              		.align	1
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 41
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 41
 
 
  1621              		.global	BSP_L6470_PerformPreparedApplicationCommand
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  694:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   }
  695:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   else
  696:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****     return NULL;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 42
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 42
 
 
  1658              		.loc 1 696 12
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1703 0010 7B71     		strb	r3, [r7, #5]
  708:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   /* Initialize the used GPIO for the L6470 nCS related to the addressed X-NUCLEO-IHM02A1 */
  709:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   if (BSP_Select(ExpBrd_Id))
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 43
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 43
 
 
  1704              		.loc 1 709 7
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  724:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   * @note If the position is not allowable the returned value is 0xFF.
  725:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   */
  726:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** uint8_t EXPBRD_ID(uint8_t position)
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 44
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 44
 
 
  727:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** {
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1791              		.section	.text.BSP_Select,"ax",%progbits
  1792              		.align	1
  1793              		.global	BSP_Select
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 45
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 45
 
 
  1794              		.syntax unified
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1837 002a 5B00     		lsls	r3, r3, #1
  1838 002c 1344     		add	r3, r3, r2
  1839 002e 9B00     		lsls	r3, r3, #2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 46
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 46
 
 
  1840 0030 0B44     		add	r3, r3, r1
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1889              		.align	1
  1890              		.global	BSP_Init
  1891              		.syntax unified
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 47
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 47
 
 
  1892              		.thumb
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1930              		.global	BSP_L6470_BusySynchEventManager
  1931              		.syntax unified
  1932              		.thumb
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 48
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 48
 
 
  1933              		.thumb_func
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   31:Drivers/CMSIS/Include/core_cmInstr.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
   32:Drivers/CMSIS/Include/core_cmInstr.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
   33:Drivers/CMSIS/Include/core_cmInstr.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 49
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 49
 
 
   34:Drivers/CMSIS/Include/core_cmInstr.h ****    POSSIBILITY OF SUCH DAMAGE.
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
   88:Drivers/CMSIS/Include/core_cmInstr.h ****     Instruction Synchronization Barrier flushes the pipeline in the processor,
   89:Drivers/CMSIS/Include/core_cmInstr.h ****     so that all instructions following the ISB are fetched from cache or
   90:Drivers/CMSIS/Include/core_cmInstr.h ****     memory, after the instruction has been completed.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 50
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 50
 
 
   91:Drivers/CMSIS/Include/core_cmInstr.h ****  */
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  145:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  Reverse byte order in signed short value
  146:Drivers/CMSIS/Include/core_cmInstr.h **** 
  147:Drivers/CMSIS/Include/core_cmInstr.h ****     This function reverses the byte order in a signed short value with sign extension to integer.
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 51
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 51
 
 
  148:Drivers/CMSIS/Include/core_cmInstr.h **** 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  202:Drivers/CMSIS/Include/core_cmInstr.h ****     result |= value & 1;
  203:Drivers/CMSIS/Include/core_cmInstr.h ****     s--;
  204:Drivers/CMSIS/Include/core_cmInstr.h ****   }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 52
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 52
 
 
  205:Drivers/CMSIS/Include/core_cmInstr.h ****   result <<= s;                       // shift when v's highest bits are zero
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  259:Drivers/CMSIS/Include/core_cmInstr.h ****     \return          0  Function succeeded
  260:Drivers/CMSIS/Include/core_cmInstr.h ****     \return          1  Function failed
  261:Drivers/CMSIS/Include/core_cmInstr.h ****  */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 53
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 53
 
 
  262:Drivers/CMSIS/Include/core_cmInstr.h **** #define __STREXB(value, ptr)              __strex(value, ptr)
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  316:Drivers/CMSIS/Include/core_cmInstr.h **** #define __USAT                            __usat
  317:Drivers/CMSIS/Include/core_cmInstr.h **** 
  318:Drivers/CMSIS/Include/core_cmInstr.h **** 
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 54
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 54
 
 
  319:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  Rotate Right with Extend (32 bit)
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  373:Drivers/CMSIS/Include/core_cmInstr.h **** #define __STRBT(value, ptr)               __strt(value, ptr)
  374:Drivers/CMSIS/Include/core_cmInstr.h **** 
  375:Drivers/CMSIS/Include/core_cmInstr.h **** 
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 55
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 55
 
 
  376:Drivers/CMSIS/Include/core_cmInstr.h **** /** \brief  STRT Unprivileged (16 bit)
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  1962              	.LBE6:
  779:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   __NOP();
  780:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 56
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 56
 
 
  1963              		.loc 1 780 1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  788:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** }
  2011              		.loc 1 788 1
  2012 0008 00BF     		nop
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 57
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 57
 
 
  2013 000a BD46     		mov	sp, r7
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2059              	.L90:
  2060 0018 00000000 		.word	L6470_nSTBY_nRST_GPIO
  2061              		.cfi_endproc
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 58
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 58
 
 
  2062              	.LFE156:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2105 001a 80BD     		pop	{r7, pc}
  2106              	.L94:
  2107              		.align	2
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 59
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 59
 
 
  2108              	.L93:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2152              		.cfi_def_cfa_register 13
  2153              		@ sp needed
  2154 001a 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 60
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 60
 
 
  2155              	.L97:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2199 0018 BD46     		mov	sp, r7
  2200              	.LCFI153:
  2201              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 61
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 61
 
 
  2202              		@ sp needed
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2246              	.LCFI157:
  2247              		.cfi_def_cfa_offset 8
  2248 0018 BD46     		mov	sp, r7
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 62
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 62
 
 
  2249              	.LCFI158:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2292              		.loc 1 860 1
  2293 0014 00BF     		nop
  2294 0016 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 63
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 63
 
 
  2295              	.LCFI162:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2339 000e F868     		ldr	r0, [r7, #12]
  2340 0010 FFF7FEFF 		bl	L6470_Config
  873:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c **** }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 64
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 64
 
 
  2341              		.loc 1 873 1
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  885:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   L6470_Config(StepperMotorDriverHandle, MotorParameterData);
  2386              		.loc 1 885 3
  2387 000c 7968     		ldr	r1, [r7, #4]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 65
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 65
 
 
  2388 000e F868     		ldr	r0, [r7, #12]
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2432              		.loc 1 897 28
  2433 0008 044B     		ldr	r3, .L114
  2434 000a FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 66
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 66
 
 
  898:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   L6470_Config(StepperMotorDriverHandle, MotorParameterData);
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  908:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   StepperMotorDriverHandle_t *StepperMotorDriverHandle;
  909:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   
  910:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   StepperMotorDriverHandle = &L6470DrvMtx[2][0];
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 67
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 67
 
 
  2481              		.loc 1 910 28
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2527              	.LCFI186:
  2528              		.cfi_def_cfa_register 7
  2529 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 68
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 68
 
 
  921:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   StepperMotorDriverHandle_t *StepperMotorDriverHandle;
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2573              	.LCFI190:
  2574              		.cfi_def_cfa_offset 24
  2575 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 69
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 69
 
 
  2576              	.LCFI191:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2619              		.cfi_offset 7, -8
  2620              		.cfi_offset 14, -4
  2621 0002 84B0     		sub	sp, sp, #16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 70
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 70
 
 
  2622              	.LCFI195:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2665 0000 80B5     		push	{r7, lr}
  2666              	.LCFI199:
  2667              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 71
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 71
 
 
  2668              		.cfi_offset 7, -8
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2716              	.L132:
  966:Drivers/BSP/X-NUCLEO-IHM02A1/xnucleoihm02a1.c ****   if (id == EXPBRD_ID(3))
  2717              		.loc 1 966 13
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 72
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 72
 
 
  2718 0046 0320     		movs	r0, #3
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2762              		.loc 1 978 1
  2763              		.cfi_startproc
  2764              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 73
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 73
 
 
  2765              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2814              	.LCFI208:
  2815              		.cfi_def_cfa_register 13
  2816              		@ sp needed
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 74
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 74
 
 
  2817 0034 80BD     		pop	{r7, pc}
@@ -4394,138 +4394,138 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 1
  2828              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
  2829              		.file 9 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
  2830              		.file 10 "Drivers/BSP/Components/L6470/L6470.h"
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 75
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 75
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 xnucleoihm02a1.c
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:24     .data.XNUCLEOIHM02A1Command:00000000 XNUCLEOIHM02A1Command
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:21     .data.XNUCLEOIHM02A1Command:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:583    .text.BSP_L6470_SetParam:00000000 BSP_L6470_SetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:642    .text.BSP_L6470_GetParam:00000000 BSP_L6470_GetParam
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:705    .text.BSP_L6470_Run:00000000 BSP_L6470_Run
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:764    .text.BSP_L6470_StepClock:00000000 BSP_L6470_StepClock
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:822    .text.BSP_L6470_Move:00000000 BSP_L6470_Move
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:881    .text.BSP_L6470_GoTo:00000000 BSP_L6470_GoTo
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:937    .text.BSP_L6470_GoToDir:00000000 BSP_L6470_GoToDir
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:996    .text.BSP_L6470_GoUntil:00000000 BSP_L6470_GoUntil
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1061   .text.BSP_L6470_ReleaseSW:00000000 BSP_L6470_ReleaseSW
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1126   .text.BSP_L6470_GoHome:00000000 BSP_L6470_GoHome
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1181   .text.BSP_L6470_GoMark:00000000 BSP_L6470_GoMark
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1236   .text.BSP_L6470_ResetPos:00000000 BSP_L6470_ResetPos
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1291   .text.BSP_L6470_ResetDevice:00000000 BSP_L6470_ResetDevice
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1346   .text.BSP_L6470_SoftStop:00000000 BSP_L6470_SoftStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1401   .text.BSP_L6470_HardStop:00000000 BSP_L6470_HardStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1456   .text.BSP_L6470_SoftHiZ:00000000 BSP_L6470_SoftHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1511   .text.BSP_L6470_HardHiZ:00000000 BSP_L6470_HardHiZ
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1566   .text.BSP_L6470_GetStatus:00000000 BSP_L6470_GetStatus
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1681   .text.BSP_L6470_CheckStatusRegisterFlag:00000000 BSP_L6470_CheckStatusRegisterFlag
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:50     .data.L6470DrvMtx:00000000 L6470DrvMtx
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:47     .data.L6470DrvMtx:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2267   .text.BSP_L6470_0_0_Config:00000000 BSP_L6470_0_0_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2316   .text.BSP_L6470_0_1_Config:00000000 BSP_L6470_0_1_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2365   .text.BSP_L6470_1_0_Config:00000000 BSP_L6470_1_0_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2414   .text.BSP_L6470_1_1_Config:00000000 BSP_L6470_1_1_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2463   .text.BSP_L6470_2_0_Config:00000000 BSP_L6470_2_0_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2512   .text.BSP_L6470_2_1_Config:00000000 BSP_L6470_2_1_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2561   .text.BSP_L6470_3_0_Config:00000000 BSP_L6470_3_0_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2610   .text.BSP_L6470_3_1_Config:00000000 BSP_L6470_3_1_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:96     .data.XNUCLEOIHM02A1Drv:00000000 XNUCLEOIHM02A1Drv
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:93     .data.XNUCLEOIHM02A1Drv:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2071   .text.BSP_0_Config:00000000 BSP_0_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1798   .text.BSP_Select:00000000 BSP_Select
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2120   .text.BSP_1_Config:00000000 BSP_1_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2169   .text.BSP_2_Config:00000000 BSP_2_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2218   .text.BSP_3_Config:00000000 BSP_3_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:130    .data.L6470_nSTBY_nRST_GPIO:00000000 L6470_nSTBY_nRST_GPIO
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:127    .data.L6470_nSTBY_nRST_GPIO:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:140    .data.L6470_nBUSY_SYNC_GPIO:00000000 L6470_nBUSY_SYNC_GPIO
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:137    .data.L6470_nBUSY_SYNC_GPIO:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:150    .data.L6470_nFLAG_GPIO:00000000 L6470_nFLAG_GPIO
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:147    .data.L6470_nFLAG_GPIO:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:160    .bss.L6470_nCS_GPIO:00000000 L6470_nCS_GPIO
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:157    .bss.L6470_nCS_GPIO:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:167    .data.L6470_nCS_GPIO_Array:00000000 L6470_nCS_GPIO_Array
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:164    .data.L6470_nCS_GPIO_Array:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:177    .bss.StatusBuffer:00000000 StatusBuffer
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:174    .bss.StatusBuffer:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:180    .text.BSP_NUCLEO_GPIO_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:186    .text.BSP_NUCLEO_GPIO_Init:00000000 BSP_NUCLEO_GPIO_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1744   .text.EXPBRD_ID:00000000 EXPBRD_ID
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:380    .text.BSP_NUCLEO_GPIO_Init:00000120 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:390    .text.BSP_L6470_Init:00000000 $t
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 76
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:24     .data.XNUCLEOIHM02A1Command:00000000 XNUCLEOIHM02A1Command
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:21     .data.XNUCLEOIHM02A1Command:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:583    .text.BSP_L6470_SetParam:00000000 BSP_L6470_SetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:642    .text.BSP_L6470_GetParam:00000000 BSP_L6470_GetParam
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:705    .text.BSP_L6470_Run:00000000 BSP_L6470_Run
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:764    .text.BSP_L6470_StepClock:00000000 BSP_L6470_StepClock
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:822    .text.BSP_L6470_Move:00000000 BSP_L6470_Move
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:881    .text.BSP_L6470_GoTo:00000000 BSP_L6470_GoTo
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:937    .text.BSP_L6470_GoToDir:00000000 BSP_L6470_GoToDir
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:996    .text.BSP_L6470_GoUntil:00000000 BSP_L6470_GoUntil
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1061   .text.BSP_L6470_ReleaseSW:00000000 BSP_L6470_ReleaseSW
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1126   .text.BSP_L6470_GoHome:00000000 BSP_L6470_GoHome
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1181   .text.BSP_L6470_GoMark:00000000 BSP_L6470_GoMark
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1236   .text.BSP_L6470_ResetPos:00000000 BSP_L6470_ResetPos
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1291   .text.BSP_L6470_ResetDevice:00000000 BSP_L6470_ResetDevice
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1346   .text.BSP_L6470_SoftStop:00000000 BSP_L6470_SoftStop
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1401   .text.BSP_L6470_HardStop:00000000 BSP_L6470_HardStop
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1456   .text.BSP_L6470_SoftHiZ:00000000 BSP_L6470_SoftHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1511   .text.BSP_L6470_HardHiZ:00000000 BSP_L6470_HardHiZ
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1566   .text.BSP_L6470_GetStatus:00000000 BSP_L6470_GetStatus
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1681   .text.BSP_L6470_CheckStatusRegisterFlag:00000000 BSP_L6470_CheckStatusRegisterFlag
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:50     .data.L6470DrvMtx:00000000 L6470DrvMtx
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:47     .data.L6470DrvMtx:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2267   .text.BSP_L6470_0_0_Config:00000000 BSP_L6470_0_0_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2316   .text.BSP_L6470_0_1_Config:00000000 BSP_L6470_0_1_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2365   .text.BSP_L6470_1_0_Config:00000000 BSP_L6470_1_0_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2414   .text.BSP_L6470_1_1_Config:00000000 BSP_L6470_1_1_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2463   .text.BSP_L6470_2_0_Config:00000000 BSP_L6470_2_0_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2512   .text.BSP_L6470_2_1_Config:00000000 BSP_L6470_2_1_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2561   .text.BSP_L6470_3_0_Config:00000000 BSP_L6470_3_0_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2610   .text.BSP_L6470_3_1_Config:00000000 BSP_L6470_3_1_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:96     .data.XNUCLEOIHM02A1Drv:00000000 XNUCLEOIHM02A1Drv
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:93     .data.XNUCLEOIHM02A1Drv:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2071   .text.BSP_0_Config:00000000 BSP_0_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1798   .text.BSP_Select:00000000 BSP_Select
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2120   .text.BSP_1_Config:00000000 BSP_1_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2169   .text.BSP_2_Config:00000000 BSP_2_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2218   .text.BSP_3_Config:00000000 BSP_3_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:130    .data.L6470_nSTBY_nRST_GPIO:00000000 L6470_nSTBY_nRST_GPIO
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:127    .data.L6470_nSTBY_nRST_GPIO:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:140    .data.L6470_nBUSY_SYNC_GPIO:00000000 L6470_nBUSY_SYNC_GPIO
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:137    .data.L6470_nBUSY_SYNC_GPIO:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:150    .data.L6470_nFLAG_GPIO:00000000 L6470_nFLAG_GPIO
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:147    .data.L6470_nFLAG_GPIO:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:160    .bss.L6470_nCS_GPIO:00000000 L6470_nCS_GPIO
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:157    .bss.L6470_nCS_GPIO:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:167    .data.L6470_nCS_GPIO_Array:00000000 L6470_nCS_GPIO_Array
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:164    .data.L6470_nCS_GPIO_Array:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:177    .bss.StatusBuffer:00000000 StatusBuffer
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:174    .bss.StatusBuffer:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:180    .text.BSP_NUCLEO_GPIO_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:186    .text.BSP_NUCLEO_GPIO_Init:00000000 BSP_NUCLEO_GPIO_Init
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1744   .text.EXPBRD_ID:00000000 EXPBRD_ID
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:380    .text.BSP_NUCLEO_GPIO_Init:00000120 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:390    .text.BSP_L6470_Init:00000000 $t
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 76
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:396    .text.BSP_L6470_Init:00000000 BSP_L6470_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:512    .text.BSP_L6470_Init:000000a8 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:518    .text.BSP_IRQ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:524    .text.BSP_IRQ:00000000 BSP_IRQ
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:577    .text.BSP_L6470_SetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:636    .text.BSP_L6470_GetParam:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:699    .text.BSP_L6470_Run:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:758    .text.BSP_L6470_StepClock:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:816    .text.BSP_L6470_Move:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:875    .text.BSP_L6470_GoTo:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:931    .text.BSP_L6470_GoToDir:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:990    .text.BSP_L6470_GoUntil:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1055   .text.BSP_L6470_ReleaseSW:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1120   .text.BSP_L6470_GoHome:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1175   .text.BSP_L6470_GoMark:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1230   .text.BSP_L6470_ResetPos:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1285   .text.BSP_L6470_ResetDevice:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1340   .text.BSP_L6470_SoftStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1395   .text.BSP_L6470_HardStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1450   .text.BSP_L6470_SoftHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1505   .text.BSP_L6470_HardHiZ:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1560   .text.BSP_L6470_GetStatus:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1620   .text.BSP_L6470_PerformPreparedApplicationCommand:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1626   .text.BSP_L6470_PerformPreparedApplicationCommand:00000000 BSP_L6470_PerformPreparedApplicationCommand
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1675   .text.BSP_L6470_CheckStatusRegisterFlag:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1738   .text.EXPBRD_ID:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1792   .text.BSP_Select:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1883   .text.BSP_Select:00000064 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1889   .text.BSP_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1895   .text.BSP_Init:00000000 BSP_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1929   .text.BSP_L6470_BusySynchEventManager:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1935   .text.BSP_L6470_BusySynchEventManager:00000000 BSP_L6470_BusySynchEventManager
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1978   .text.BSP_L6470_FlagEventManager:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:1984   .text.BSP_L6470_FlagEventManager:00000000 BSP_L6470_FlagEventManager
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2026   .text.BSP_EmergencyStop:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2032   .text.BSP_EmergencyStop:00000000 BSP_EmergencyStop
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2060   .text.BSP_EmergencyStop:00000018 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2065   .text.BSP_0_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2760   .text.BSP_Config:00000000 BSP_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2109   .text.BSP_0_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2114   .text.BSP_1_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2158   .text.BSP_1_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2163   .text.BSP_2_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2207   .text.BSP_2_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2212   .text.BSP_3_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2256   .text.BSP_3_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2261   .text.BSP_L6470_0_0_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2305   .text.BSP_L6470_0_0_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2310   .text.BSP_L6470_0_1_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2354   .text.BSP_L6470_0_1_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2359   .text.BSP_L6470_1_0_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2403   .text.BSP_L6470_1_0_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2408   .text.BSP_L6470_1_1_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2452   .text.BSP_L6470_1_1_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2457   .text.BSP_L6470_2_0_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2501   .text.BSP_L6470_2_0_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2506   .text.BSP_L6470_2_1_Config:00000000 $t
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s 			page 77
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:396    .text.BSP_L6470_Init:00000000 BSP_L6470_Init
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:512    .text.BSP_L6470_Init:000000a8 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:518    .text.BSP_IRQ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:524    .text.BSP_IRQ:00000000 BSP_IRQ
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:577    .text.BSP_L6470_SetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:636    .text.BSP_L6470_GetParam:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:699    .text.BSP_L6470_Run:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:758    .text.BSP_L6470_StepClock:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:816    .text.BSP_L6470_Move:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:875    .text.BSP_L6470_GoTo:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:931    .text.BSP_L6470_GoToDir:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:990    .text.BSP_L6470_GoUntil:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1055   .text.BSP_L6470_ReleaseSW:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1120   .text.BSP_L6470_GoHome:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1175   .text.BSP_L6470_GoMark:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1230   .text.BSP_L6470_ResetPos:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1285   .text.BSP_L6470_ResetDevice:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1340   .text.BSP_L6470_SoftStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1395   .text.BSP_L6470_HardStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1450   .text.BSP_L6470_SoftHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1505   .text.BSP_L6470_HardHiZ:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1560   .text.BSP_L6470_GetStatus:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1620   .text.BSP_L6470_PerformPreparedApplicationCommand:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1626   .text.BSP_L6470_PerformPreparedApplicationCommand:00000000 BSP_L6470_PerformPreparedApplicationCommand
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1675   .text.BSP_L6470_CheckStatusRegisterFlag:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1738   .text.EXPBRD_ID:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1792   .text.BSP_Select:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1883   .text.BSP_Select:00000064 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1889   .text.BSP_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1895   .text.BSP_Init:00000000 BSP_Init
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1929   .text.BSP_L6470_BusySynchEventManager:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1935   .text.BSP_L6470_BusySynchEventManager:00000000 BSP_L6470_BusySynchEventManager
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1978   .text.BSP_L6470_FlagEventManager:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:1984   .text.BSP_L6470_FlagEventManager:00000000 BSP_L6470_FlagEventManager
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2026   .text.BSP_EmergencyStop:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2032   .text.BSP_EmergencyStop:00000000 BSP_EmergencyStop
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2060   .text.BSP_EmergencyStop:00000018 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2065   .text.BSP_0_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2760   .text.BSP_Config:00000000 BSP_Config
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2109   .text.BSP_0_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2114   .text.BSP_1_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2158   .text.BSP_1_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2163   .text.BSP_2_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2207   .text.BSP_2_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2212   .text.BSP_3_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2256   .text.BSP_3_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2261   .text.BSP_L6470_0_0_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2305   .text.BSP_L6470_0_0_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2310   .text.BSP_L6470_0_1_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2354   .text.BSP_L6470_0_1_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2359   .text.BSP_L6470_1_0_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2403   .text.BSP_L6470_1_0_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2408   .text.BSP_L6470_1_1_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2452   .text.BSP_L6470_1_1_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2457   .text.BSP_L6470_2_0_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2501   .text.BSP_L6470_2_0_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2506   .text.BSP_L6470_2_1_Config:00000000 $t
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s 			page 77
 
 
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2550   .text.BSP_L6470_2_1_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2555   .text.BSP_L6470_3_0_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2599   .text.BSP_L6470_3_0_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2604   .text.BSP_L6470_3_1_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2648   .text.BSP_L6470_3_1_Config:0000001c $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2653   .text.BSP_GetExpansionBoardHandle:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2659   .text.BSP_GetExpansionBoardHandle:00000000 BSP_GetExpansionBoardHandle
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2746   .text.BSP_GetExpansionBoardHandle:00000064 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccBzMeVY.s:2754   .text.BSP_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2550   .text.BSP_L6470_2_1_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2555   .text.BSP_L6470_3_0_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2599   .text.BSP_L6470_3_0_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2604   .text.BSP_L6470_3_1_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2648   .text.BSP_L6470_3_1_Config:0000001c $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2653   .text.BSP_GetExpansionBoardHandle:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2659   .text.BSP_GetExpansionBoardHandle:00000000 BSP_GetExpansionBoardHandle
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2746   .text.BSP_GetExpansionBoardHandle:00000064 $d
+C:\Users\ep_ygh\AppData\Local\Temp\cc7XePeG.s:2754   .text.BSP_Config:00000000 $t
 
 UNDEFINED SYMBOLS
 L6470_PerformPreparedApplicationCommand

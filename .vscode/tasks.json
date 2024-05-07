@@ -34,5 +34,23 @@
                 "panel": "dedicated"
             }
         }
+        {
+            "label": "build and clean",
+            "type": "shell",
+            "command": "make && make clean",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        }
+        
     ]
 }

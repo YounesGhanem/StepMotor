@@ -2,6 +2,16 @@
     "files.associations": {
         "stm32f427xx.h": "c",
         "example_usart.h": "c",
-        "xnucleoihm02a1_interface.h": "c"
+        "xnucleoihm02a1_interface.h": "c",
+        "xnucleoihm02a1.h": "c",
+        "example.h": "c",
+        "l6470.h": "c",
+        "microstepping_motor.h": "c",
+        "stdint.h": "c",
+        "params.h": "c",
+        "stm32f4xx_nucleo.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "stm32f4xx.h": "c",
+        "stm32f4xx_hal_conf.h": "c"
     }
 }

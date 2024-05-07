@@ -22,6 +22,7 @@
 
         ],
         "preLaunchTask": "build",
+        //"prelaunchTask": "build and clean",
         "postDebugTask": "kill-gdb-server",
       }
     ]

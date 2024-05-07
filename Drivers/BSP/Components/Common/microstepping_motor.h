@@ -116,7 +116,8 @@ typedef enum {
   L6470_HARDSTOP_ID,            //!< Stops motor immediately
   L6470_SOFTHIZ_ID,             //!< Puts the bridges into high impedance status after a deceleration phase
   L6470_HARDHIZ_ID,             //!< Puts the bridges into high impedance status immediately
-  L6470_GETSTATUS_ID            //!< Returns the STATUS register value
+  L6470_GETSTATUS_ID,           //!< Returns the STATUS register value
+  L6470_SAVE_ID                   //!< Save current position
 } eL6470_AppCmdId_t;
 
 /**

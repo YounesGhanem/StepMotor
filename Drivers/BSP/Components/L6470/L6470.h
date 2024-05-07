@@ -167,7 +167,7 @@ typedef struct {
   */ /* End of L6470_Register_Max_Values */
 
 #define L6470REGIDSIZE          25                  //!< Max number of identifiers of L6470 Registers
-#define L6470APPCMDIDSIZE       19                  //!< Max number of identifiers of L6470 Application Commands
+#define L6470APPCMDIDSIZE       20                  //!< Max number of identifiers of L6470 Application Commands
 #define L6470DIRIDSIZE           2                  //!< Max number of identifiers of L6470 directions
 #define L6470ACTIDSIZE           2                  //!< Max number of identifiers of actions to perform about ABS_POS register
 #define L6470MAXSPICMDBYTESIZE   4                  //!< Max number of byte to send via SPI to perform an application command

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
    1:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
    2:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   ******************************************************************************
    3:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @file    xnucleoihm02a1_interface.c
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 2
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 2
 
 
    4:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief   This file is used as interface between the 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
   58:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** /**
   59:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   * @brief  The data structure for all further instances to ADC.
   60:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 3
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 3
 
 
   61:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** ADC_HandleTypeDef hadc1;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
   53              		@ frame_needed = 1, uses_anonymous_args = 0
   54 0000 80B5     		push	{r7, lr}
   55              	.LCFI0:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 4
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 4
 
 
   56              		.cfi_def_cfa_offset 8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
   99 0042 1023     		movs	r3, #16
  100 0044 3B63     		str	r3, [r7, #48]
  123:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 5
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 5
 
 
  101              		.loc 1 123 34
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  142 0088 FFF7FEFF 		bl	HAL_RCC_ClockConfig
  137:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** 
  138:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** }
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 6
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 6
 
 
  143              		.loc 1 138 1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  152:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   /* Configures LED GPIO */
  153:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   BSP_LED_Init(LED2);
  186              		.loc 1 153 3
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 7
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 7
 
 
  187 000c 0020     		movs	r0, #0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  226              		.global	MX_SPI1_Init
  227              		.syntax unified
  228              		.thumb
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 8
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 8
 
 
  229              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  196:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
  260              		.loc 1 196 23
  261 001a 2D4B     		ldr	r3, .L16
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 9
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 9
 
 
  262 001c 0022     		movs	r2, #0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  303 005e 0023     		movs	r3, #0
  304 0060 FB60     		str	r3, [r7, #12]
  305 0062 2AE0     		b	.L8
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 10
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 10
 
 
  306              	.L7:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  232:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****           {
  233:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_32;
  338              		.loc 1 233 35
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 11
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 11
 
 
  339 008e 2023     		movs	r3, #32
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  370              		.loc 1 256 24 discriminator 1
  371 00b8 FEE7     		b	.L15
  372              	.L8:
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 12
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 12
 
 
  257:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****                 }
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  278:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - 8-Bits
  279:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPOL High
  280:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - CPHA 2nd Edge
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 13
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 13
 
 
  281:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         - Baud Rate lower than 5 MBits/s
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  296:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   hspi2.Init.NSS = SPI_NSS_SOFT;
  447              		.loc 1 296 18
  448 002c 284B     		ldr	r3, .L28
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 14
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 14
 
 
  449 002e 4FF40072 		mov	r2, #512
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  487 006a 0823     		movs	r3, #8
  488 006c FB60     		str	r3, [r7, #12]
  489 006e 24E0     		b	.L20
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 15
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 15
 
 
  490              	.L21:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  335:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****             {
  336:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****               spi_baudrateprescaler = SPI_BAUDRATEPRESCALER_64;
  522              		.loc 1 336 37
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 16
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 16
 
 
  523 009a 2823     		movs	r3, #40
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  550 00bc FB68     		ldr	r3, [r7, #12]
  551 00be D361     		str	r3, [r2, #28]
  364:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   HAL_SPI_Init(&hspi2);
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 17
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 17
 
 
  552              		.loc 1 364 3
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  593              	.LCFI20:
  594              		.cfi_def_cfa_register 7
  380:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   huart2.Instance = USART2;
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 18
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 18
 
 
  595              		.loc 1 380 19
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  641              		.section	.text.MX_ADC1_Init,"ax",%progbits
  642              		.align	1
  643              		.global	MX_ADC1_Init
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 19
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 19
 
 
  644              		.syntax unified
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  682              		.loc 1 406 29
  683 0024 194B     		ldr	r3, .L34+4
  684 0026 0022     		movs	r2, #0
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 20
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 20
 
 
  685 0028 5A60     		str	r2, [r3, #4]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  725              		.loc 1 420 19
  726 0066 0823     		movs	r3, #8
  727 0068 BB60     		str	r3, [r7, #8]
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 21
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 21
 
 
  421:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   sConfig.Rank = 1;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  438:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   *         (HAL, Clock, NVIC, LED and user button)
  439:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****   */
  440:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** void NUCLEO_Board_Init(void)
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 22
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 22
 
 
  441:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c **** {
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  796              		.cfi_endproc
  797              	.LFE135:
  799              		.section	.text.User_LED_Blinking,"ax",%progbits
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 23
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 23
 
 
  800              		.align	1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  838              		.loc 1 482 5 discriminator 3
  839 001c 0020     		movs	r0, #0
  840 001e FFF7FEFF 		bl	BSP_LED_On
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 24
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 24
 
 
  483:Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.c ****     /* ms delay */
@@ -1438,45 +1438,45 @@ ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 1
  886              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
  887              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
  888              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 25
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 25
 
 
  889              		.file 13 "Drivers/BSP/STM32F4xx-Nucleo/stm32f4xx_nucleo.h"
  890              		.file 14 "Drivers/BSP/X-NUCLEO-IHM02A1/NUCLEO-F401RE/xnucleoihm02a1_interface.h"
-ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s 			page 26
+ARM GAS  C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 xnucleoihm02a1_interface.c
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:24     .bss.hadc1:00000000 hadc1
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:21     .bss.hadc1:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:31     .bss.hspi1:00000000 hspi1
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:28     .bss.hspi1:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:38     .bss.hspi2:00000000 hspi2
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:35     .bss.hspi2:00000000 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:41     .text.SystemClock_Config:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:47     .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:156    .text.SystemClock_Config:00000094 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:162    .text.MX_GPIO_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:168    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:196    .text.MX_SPI_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:202    .text.MX_SPI_Init:00000000 MX_SPI_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:231    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:225    .text.MX_SPI1_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:393    .text.MX_SPI1_Init:000000d0 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:400    .text.MX_SPI2_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:406    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:568    .text.MX_SPI2_Init:000000d0 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:575    .text.MX_USART2_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:581    .text.MX_USART2_Init:00000000 MX_USART2_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:636    .text.MX_USART2_Init:00000040 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:642    .text.MX_ADC1_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:648    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:752    .text.MX_ADC1_Init:00000088 $d
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:759    .text.NUCLEO_Board_Init:00000000 $t
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:765    .text.NUCLEO_Board_Init:00000000 NUCLEO_Board_Init
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:806    .text.User_LED_Blinking:00000000 User_LED_Blinking
-C:\Users\ep_ygh\AppData\Local\Temp\ccUkn6JL.s:800    .text.User_LED_Blinking:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:24     .bss.hadc1:00000000 hadc1
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:21     .bss.hadc1:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:31     .bss.hspi1:00000000 hspi1
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:28     .bss.hspi1:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:38     .bss.hspi2:00000000 hspi2
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:35     .bss.hspi2:00000000 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:41     .text.SystemClock_Config:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:47     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:156    .text.SystemClock_Config:00000094 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:162    .text.MX_GPIO_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:168    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:196    .text.MX_SPI_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:202    .text.MX_SPI_Init:00000000 MX_SPI_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:231    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:225    .text.MX_SPI1_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:393    .text.MX_SPI1_Init:000000d0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:400    .text.MX_SPI2_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:406    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:568    .text.MX_SPI2_Init:000000d0 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:575    .text.MX_USART2_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:581    .text.MX_USART2_Init:00000000 MX_USART2_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:636    .text.MX_USART2_Init:00000040 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:642    .text.MX_ADC1_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:648    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:752    .text.MX_ADC1_Init:00000088 $d
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:759    .text.NUCLEO_Board_Init:00000000 $t
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:765    .text.NUCLEO_Board_Init:00000000 NUCLEO_Board_Init
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:806    .text.User_LED_Blinking:00000000 User_LED_Blinking
+C:\Users\ep_ygh\AppData\Local\Temp\ccUAe7xm.s:800    .text.User_LED_Blinking:00000000 $t
 
 UNDEFINED SYMBOLS
 HAL_RCC_OscConfig
